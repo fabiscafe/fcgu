@@ -1,0 +1,46 @@
+# Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+# Contributor: Fabian Bornschein <plusfabi@gmail.com>
+options=(debug !strip)
+
+pkgname=at-spi2-core
+pkgver=2.39.90.1
+pkgrel=1
+pkgdesc="Protocol definitions and daemon for D-Bus at-spi"
+url="https://gitlab.gnome.org/GNOME/at-spi2-core"
+arch=(x86_64)
+license=(GPL2)
+depends=(dbus glib2 libxtst systemd-libs)
+makedepends=(gobject-introspection git gtk-doc meson dbus-broker systemd)
+optdepends=('dbus-broker: Alternative bus implementation')
+_commit=bf42baac000c08a2c943a373c499f36846bed61f  # tags/AT_SPI2_CORE_2_39_90_1^0
+source=("git+https://gitlab.gnome.org/GNOME/at-spi2-core.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/^AT_SPI2_CORE_//;s/_/./g;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build \
+    -D default_bus=dbus-broker \
+    -D docs=true
+  meson compile -C build
+}
+
+check() {
+  # memory test fails without desktop
+  # broker fails to launch without journald
+  dbus-run-session meson test -C build --print-errorlogs || :
+}
+
+package() {
+  DESTDIR="$pkgdir" meson install -C build
+}
+
+# vim:set ts=2 sw=2 et:

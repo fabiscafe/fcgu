@@ -1,0 +1,67 @@
+The following modules have a new version:
+ - at-spi2-core (2.39.1 => 2.39.90.1) OK DBG
+ - baobab (3.38.0 => 40.beta) OK DBG
+ - dconf (0.38.0 => 0.39.1) OK DBG
+ - eog (40.alpha => 40.beta) OK DBG
+ - epiphany (40.alpha => 40.beta) OK DBG
+ - evince (3.39.1 => 3.39.2) OK DBG
+ - evolution-data-server (3.39.1 => 3.39.2) OK DBG
+ - folks (0.14.0 => 0.15.2) OK DBG
+ - gjs (1.67.1 => 1.67.2) OK DBG
+ - glib (2.67.2 => 2.67.4) OK DBG
+ - glibmm (2.64.5 => 2.66.0) OK; ARCH
+ - gnome-autoar (0.2.4 => 0.3.0) OK DBG
+ - gnome-boxes (3.38.2 => 40.beta)
+ - gnome-calculator (40.alpha => 40.beta) OK DBG
+ - gnome-calendar (40.alpha => 40.beta) OK DBG
+ - gnome-characters (3.34.0 => 40.beta) Fails to Build
+ - gnome-clocks (3.38.0 => 40.beta) OK DBG
+ - gnome-contacts (3.38.1 => 40.alpha) (*) OK DBG
+ - gnome-control-center (3.38.3 => 40.beta) (*) OK DBG
+ - gnome-desktop (40.alpha.0 => 40.beta) OK DBG
+ - gnome-disk-utility (40.alpha => 40.beta) OK DBG
+ - gnome-font-viewer (3.34.0 => 40.beta) OK DBG
+ - gnome-initial-setup (40.alpha => 40.beta) OK DBG
+ - gnome-maps (40.alpha => 40.beta) OK DBG
+ - gnome-photos (3.38.0 => 3.38.1) OK; ARCH
+ - gnome-screenshot (3.38.0 => 40.beta) OK DBG
+ - gnome-session (3.38.0 => 40.beta) OK DBG
+ - gnome-settings-daemon (40.alpha.1 => 40.beta) OK DBG
+ - gnome-shell (40.alpha.1.1 => 40.beta) OK DBG
+ - gnome-shell-extensions (40.alpha.1.1 => 40.beta) OK DBG
+ - gnome-software (3.38.0 => 40.beta) OK DBG
+ - gnome-system-monitor (40.alpha => 40.beta) OK DBG
+ - gnome-terminal (3.38.2 => 3.39.90) (*) OK DBG
+ - gnome-user-docs (3.38.2 => 40.beta) OK DBG
+ - gnome-weather (40.alpha => 40.beta) (*) OK DBG
+ - gsettings-desktop-schemas (40.alpha => 40.beta) OK DBG
+ - gtk (4.0.2 => 4.1.0) OK DBG
+ - gtk+ (3.24.24 => 3.24.26) OK; ARCH
+ - gtkmm (3.24.3 => 3.24.4) OK; ARCH
+ - gvfs (1.47.1 => 1.47.90) OK DBG
+ - json-glib (1.6.0 => 1.6.2) OK; ARCH
+ - libgdata (0.17.13 => 0.18.0) OK; ARCH
+ - libgweather (40.alpha.1 => 40.beta) OK DBG
+ - libhandy (1.0.3 => 1.1.90) OK DBG
+ - librsvg (2.50.2 => 2.51.0) OK DBG
+ - mutter (40.alpha.1.1 => 40.beta) OK DBG
+ - nautilus (40.alpha => 40.beta) OK DBG
+ - orca (3.38.2 => 40.beta) OK DBG
+ - pango (1.48.1 => 1.48.2) OK; ARCH
+ - pangomm (2.42.2 => 2.46.0) OK; ARCH
+ - rygel (0.40.0 => 0.40.1) OK; ARCH
+ - tracker (3.1.0.alpha => 3.1.0.beta) OK DBG
+ - tracker-miners (3.1.0.alpha => 3.1.0.beta) OK DBG
+ - vala (0.50.3 => 0.51.2) OK DBG
+ - vte (0.62.2 => 0.63.91) (*) OK DBG
+ - yelp (3.38.2 => 40.beta) OK DBG
+ - yelp-tools (3.38.0 => 40.beta) OK DBG
+ - yelp-xsl (3.38.2 => 40.beta) OK DBG
+ 
+ EXTRA
+ - Sysproof OK DBG
+ - Webkit2gtk OK DBG
+ - Gedit OK DBG +patch
+ - Geary 40.alpha OK DBG
+ 
+This includes all packages from the gnome40 beta https://download.gnome.org/core/40/40.beta/NEWS (Except of gnome-characters, which doesn't build for me right now) as well as some fixes for the likes of gedit(cherrypick) to make it work with gnome40 and or package updates like for geary, sysprof, webkit2gtk also to have it in a working state.
