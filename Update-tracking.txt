@@ -63,5 +63,4 @@ The following modules have a new version:
  - Webkit2gtk OK DBG
  - Gedit OK DBG +patch
  - Geary 40.alpha OK DBG
- 
-This includes all packages from the gnome40 beta https://download.gnome.org/core/40/40.beta/NEWS (Except of gnome-characters, which doesn't build for me right now) as well as some fixes for the likes of gedit(cherrypick) to make it work with gnome40 and or package updates like for geary, sysprof, webkit2gtk also to have it in a working state.
+ - Evolution OK DBG
