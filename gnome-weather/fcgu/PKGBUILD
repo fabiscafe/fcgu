@@ -1,5 +1,5 @@
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-# Contributor: Fabian Bornschein <plusfabi@gmail.com>
+# Contributor: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 options=(debug !strip)
 
 pkgname=gnome-weather

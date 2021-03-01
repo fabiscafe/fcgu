@@ -4,7 +4,7 @@
 # Contributor: Eric Belanger <belanger@astro.umontreal.ca>
 # Contributor: aeolist <aeolist@hotmail.com>
 # Contributor: Gabriel Rauter <rauter.gabriel@gmail.com>
-# Contributor: Fabian Bornschein <plusfabi@gmail.com>
+# Contributor: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 options=(debug !strip)
 
 pkgname=sysprof
