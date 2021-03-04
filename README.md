@@ -9,7 +9,7 @@ You can add it as an overlay repo in your *pacman.conf*, above the **[core]** se
 
 ```
 [fcgu]
-Server = TODO/$repo
+Server = http://34.105.163.196/$repo
 SigLevel = Optional
 ```
 
@@ -25,7 +25,7 @@ Here a preview how it should look:
 #Include = /etc/pacman.d/mirrorlist
 
 [fcgu]
-Server = TODO/$repo
+http://34.105.163.196/$repo
 SigLevel = Optional
 
 [core]
