@@ -1,5 +1,7 @@
 # Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 # Contributor: Ionut Biru <ibiru@archlinux.org>
+# Contributor: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+options=(debug !strip)
 
 pkgname=gnome-tweaks
 pkgver=40.beta
@@ -17,7 +19,7 @@ replaces=(gnome-tweak-tool)
 _commit=a631b7d0b590af3154426658cbbb6ca25c6c0dea # tags/40.beta
 source=("git+https://gitlab.gnome.org/GNOME/gnome-tweaks.git#commit=$_commit")
 sha256sums=('SKIP')
-options=(debug !strip)
+
 
 pkgver() {
   cd $pkgname

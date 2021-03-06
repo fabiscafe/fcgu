@@ -64,3 +64,4 @@ The following modules have a new version:
  - Gedit OK DBG +patch
  - Geary 40.alpha OK DBG
  - Evolution OK DBG
+ - Gnome-tweaks 40.beta
