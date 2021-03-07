@@ -25,7 +25,7 @@ Here a preview how it should look:
 #Include = /etc/pacman.d/mirrorlist
 
 [fcgu]
-http://34.105.163.196/$repo
+Server = http://34.105.163.196/$repo
 SigLevel = Optional
 
 [core]
