@@ -26,7 +26,6 @@ This repo is made as an overlay repo. This means it will replace the Arch-GNOME 
 ```
 [fcgu]
 Server = http://34.105.163.196/$repo
-SigLevel = Optional
 ```
 
 Here a preview how it should look:
@@ -42,7 +41,6 @@ Here a preview how it should look:
 
 [fcgu]
 Server = http://34.105.163.196/$repo
-SigLevel = Optional
 
 [core]
 Include = /etc/pacman.d/mirrorlist
