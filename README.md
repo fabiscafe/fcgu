@@ -2,10 +2,26 @@
 FCGU is a GNOME Unstable repo, by a Arch Linux community member named Fabiscafe.
 
 ## Whats in this repo?
-Mostly Beta and RC releases of GNOME software with debug-symbols enabled. So you can help testing, reporting and fixing.
+Mostly Beta and RC releases of GNOME software with debug-symbols enabled. For easy testing and bugreporting porposes.
 
 ## How to add it?
-You can add it as an overlay repo in your *pacman.conf*, above the **[core]** section
+### Keyring
+In order to have trustworthy packages, fcgu packages are signed. Because this requires an external gpg key, a user needs to add them as trusted key. There are 2 options to do this:
+#### AUR helper
+If there is an an AUR-helper, install [fcgu-keyring](https://aur.archlinux.org/packages/fcgu-keyring).
+
+#### Manually
+This will clone, build and install the AUR PKGBUILD
+
+```
+pacman -S git
+git clone https://aur.archlinux.org/fcgu-keyring.git
+cd fcgu-keyring
+makepkg -cis
+```
+
+### Add the repo
+This repo is made as an overlay repo. This means it will replace the Arch-GNOME packages. It will not install side-by-side. To work as overlay the repo needs to be above the **[core]** section in *pacman.conf*.
 
 ```
 [fcgu]
@@ -39,16 +55,16 @@ Include = /etc/pacman.d/mirrorlist
 ...
 ```
 
-If that's done, just update your system (`pacman -Syu`)
+If that's done, a full system update is required (`pacman -Syu`)
 
 ## Will this kill my setup?
-As you can see by reading the name, this repo will bring in unstable development software. It's not reliable in any way.
+This repo will bring in unstable development software. It's not reliable in any way, and should only be used for testing purpose.
 
 ## How to change back to Arch' default GNOME?
-Remove the repo from */etc/pacman.conf* and run `pacman -Syuu`. This will downgrade all packages to the Arch-repo versions.
+Its always powwisble to change back to Arch-defaults by editing */etc/pacman.conf* (to remove the repo that was added before) and run `pacman -Syuu`. This will downgrade all packages to the Arch-repo versions.
 
-## Is there more to know?
-Currently the repo doesn't come with signed packages. So it's dangerouse to use them. This might change in the future.
+## What happens after the stable release is shipped?
+Once the stable version of GNOME arrives Arch Linux official repository, this fcgu will remove its packages, so pacman will switch to the official repo again.
 
 ## Where can I talk to you?
 We're on
