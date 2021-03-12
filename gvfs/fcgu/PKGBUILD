@@ -5,7 +5,7 @@ options=(debug !strip)
 
 pkgbase=gvfs
 pkgname=(gvfs gvfs-{smb,afc,gphoto2,goa,mtp,nfs,google})
-pkgver=1.47.90
+pkgver=1.47.91
 pkgrel=1
 pkgdesc="Virtual filesystem implementation for GIO"
 url="https://wiki.gnome.org/Projects/gvfs"
@@ -17,7 +17,7 @@ makedepends=(dbus libgphoto2 libimobiledevice smbclient docbook-xsl gtk3 libmtp
              gnome-online-accounts libnfs libgdata git gtk-doc python meson
              openssh)
 groups=(gnome)
-_commit=ccc7d1fc352f4fa3289b85f3338e5d7ce2f884c1  # tags/1.47.90^0
+_commit=073759ceee27420a6d08e52431a9f23658908b1d  # tags/1.47.91^0
 source=("git+https://gitlab.gnome.org/GNOME/gvfs.git#commit=$_commit"
         gvfsd.hook)
 sha256sums=('SKIP'
