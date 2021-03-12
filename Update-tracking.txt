@@ -12,7 +12,7 @@ gedit 3.38.1
 gjs 1.67.2
 glib2 2.67.6
 gnome-autoar 0.3.0
-gnome-boxes 40.beta
+gnome-boxes 40.rc
 gnome-calculator 40.beta
 gnome-calendar 40.rc
 gnome-characters ERR
@@ -43,6 +43,7 @@ gvfs 1.47.91
 libgweather 40.beta
 libhandy 1.2.0
 librsvg 2.51.0
+libvirt-glib 4.0.0
 mutter 40.beta+16+g3bbfaa03b
 nautilus 40.beta
 orca 40.rc
