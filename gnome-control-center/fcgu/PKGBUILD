@@ -4,7 +4,7 @@
 options=(debug !strip)
 
 pkgname=gnome-control-center
-pkgver=40.beta
+pkgver=40.rc
 pkgrel=1
 pkgdesc="GNOME's main interface to configure various aspects of the desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-control-center"
@@ -23,7 +23,7 @@ optdepends=('system-config-printer: Printer settings'
             'rygel: media sharing'
             'openssh: remote login')
 groups=(gnome)
-_commit=29fe60032e6f8f2d4125e78226c8fda0ce209ee0  # tags/40.beta^0
+_commit=e5ad8e7626baaaa2d7be4c8022704e72db33f2c7  # tags/40.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-control-center.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
@@ -31,7 +31,7 @@ sha256sums=('SKIP'
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/^GNOME_CONTROL_CENTER_//;s/_/./g;s/-/+/g'
+  git describe --tags | sed 's/-/+/g'
 }
 
 prepare() {
