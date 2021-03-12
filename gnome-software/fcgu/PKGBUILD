@@ -6,7 +6,7 @@ options=(debug !strip)
 
 pkgbase=gnome-software
 pkgname=(gnome-software gnome-software-packagekit-plugin)
-pkgver=40.beta
+pkgver=40.rc
 pkgrel=1
 pkgdesc="GNOME Software Tools"
 url="https://wiki.gnome.org/Apps/Software/"
@@ -17,7 +17,7 @@ depends=(libxmlb gnome-desktop gsettings-desktop-schemas gspell libpackagekit-gl
 makedepends=(appstream-glib gnome-desktop libpackagekit-glib flatpak fwupd 
              docbook-xsl git gobject-introspection gspell gtk-doc meson valgrind
              gnome-online-accounts libxmlb malcontent sysprof)
-_commit=4f7915fa6db4cacd93a665a9c5ef7164663e8c59  # tags/40.beta^0
+_commit=09cef1f791d7fda44656ffcdd7fb325a8b4f1012  # tags/40.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-software.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -62,8 +62,8 @@ package_gnome-software() {
   DESTDIR="$pkgdir" meson install -C build
 
 ### Split gnome-software-packagekit-plugin
-  _pick packagekit-plugin "$pkgdir"/usr/lib/gs-plugins-*/libgs_plugin_packagekit*.so
-  _pick packagekit-plugin "$pkgdir"/usr/lib/gs-plugins-*/libgs_plugin_systemd-updates.so
+  _pick packagekit-plugin "$pkgdir"/usr/lib/gnome-software/plugins-*/libgs_plugin_packagekit*.so
+  _pick packagekit-plugin "$pkgdir"/usr/lib/gnome-software/plugins-*/libgs_plugin_systemd-updates.so
 }
 
 package_gnome-software-packagekit-plugin() {
