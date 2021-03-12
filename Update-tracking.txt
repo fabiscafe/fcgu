@@ -30,7 +30,7 @@ gnome-settings-daemon 40.beta
 gnome-shell 40.beta
 gnome-shell-extensions 40.beta
 gnome-software 40.rc
-gnome-system-monitor 40.beta
+gnome-system-monitor 40.rc
 gnome-terminal 3.39.90
 gnome-tweaks 40.beta
 gnome-user-docs 40.beta

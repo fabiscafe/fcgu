@@ -4,16 +4,16 @@
 options=(debug !strip)
 
 pkgname=gnome-system-monitor
-pkgver=40.beta
+pkgver=40.rc
 pkgrel=1
 pkgdesc="View current processes and monitor system state"
 url="https://wiki.gnome.org/Apps/SystemMonitor"
 arch=(x86_64)
 license=(GPL)
-depends=(libgtop gtkmm3 librsvg systemd)
+depends=(libgtop gtkmm3 librsvg systemd libhandy)
 makedepends=(meson yelp-tools git)
 groups=(gnome)
-_commit=8d9e9d19675d7bec56477bf1a5a8f621bf8366ca  # tags/40.beta^0
+_commit=0ea372a8c0683897c65ebfae40194cd08183e3eb  # tags/40.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-system-monitor.git#commit=$_commit")
 sha256sums=('SKIP')
 
