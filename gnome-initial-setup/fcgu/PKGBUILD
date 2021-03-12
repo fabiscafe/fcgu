@@ -3,7 +3,7 @@
 options=(debug !strip)
 
 pkgname=gnome-initial-setup
-pkgver=40.beta
+pkgver=40.rc
 pkgrel=1
 pkgdesc="Simple, easy, and safe way to prepare a new system"
 arch=(x86_64)
@@ -15,7 +15,7 @@ depends=(nm-connection-editor accountsservice cheese gnome-desktop libgweather
 makedepends=(git meson)
 optdepends=('gdm: GDM Initial Setup mode'
             'gnome-getting-started-docs: GNOME Welcome Tour')
-_commit=f263bf878a8fb00208cf3c024a60b2c8abbecb07  # tags/40.beta^0
+_commit=421ee3293c9a6b867b9a199ef00bc07c8831aacd  # tags/40.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-initial-setup.git#commit=$_commit")
 sha256sums=('SKIP')
 

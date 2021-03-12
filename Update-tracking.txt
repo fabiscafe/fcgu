@@ -22,7 +22,7 @@ gnome-control-center 40.beta
 gnome-desktop 40.beta
 gnome-disk-utility 40.beta
 gnome-font-viewer 40.beta
-gnome-initial-setup 40.beta
+gnome-initial-setup 40.rc
 gnome-maps 40.beta
 gnome-screenshot 40.rc
 gnome-session 40.beta
