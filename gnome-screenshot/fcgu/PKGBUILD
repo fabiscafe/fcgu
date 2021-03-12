@@ -4,7 +4,7 @@
 options=(debug !strip)
 
 pkgname=gnome-screenshot
-pkgver=40.beta
+pkgver=40.rc
 pkgrel=1
 pkgdesc="Take pictures of your screen"
 url="https://gitlab.gnome.org/GNOME/gnome-screenshot"
@@ -13,7 +13,7 @@ license=(GPL2)
 depends=(gtk3 libcanberra libhandy)
 makedepends=(git meson appstream-glib)
 groups=(gnome)
-_commit=324c4550bfe8e70517109998a330edb583af6fd9  # tags/40.beta^0
+_commit=1526c248c31888e13a4ca410811f373899256258  # tags/40.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-screenshot.git#commit=$_commit")
 sha256sums=('SKIP')
 
