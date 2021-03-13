@@ -1,6 +1,6 @@
 at-spi2-core 2.39.90.1
 baobab 40.beta
-dconf 0.39.1
+dconf 0.40.0
 eog 40.beta
 epiphany 40.rc
 evince 3.39.2

@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=dconf
-pkgver=0.39.1
-pkgrel=1.1
+pkgver=0.40.0
+pkgrel=0.1
 pkgdesc="Configuration database system"
 url="https://wiki.gnome.org/Projects/dconf"
 arch=(x86_64)
@@ -14,7 +14,7 @@ depends=(glib2)
 makedepends=(vala dbus git gtk-doc python meson bash-completion)
 provides=(libdconf.so)
 install=dconf.install
-_commit=da56828a0df4e1d6b66f69f556f74fa024137cb2  # tags/0.39.1^0
+_commit=4c0a26052efafae923eba42d14c5cb88da745de2  # tags/0.40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/dconf.git#commit=$_commit"
         dconf-update dconf-update.hook)
 sha256sums=('SKIP'
