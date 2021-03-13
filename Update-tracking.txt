@@ -23,7 +23,7 @@ gnome-desktop 40.beta
 gnome-disk-utility 40.beta
 gnome-font-viewer 40.beta
 gnome-initial-setup 40.rc
-gnome-maps 40.beta
+gnome-maps 40.rc
 gnome-screenshot 40.rc
 gnome-session 40.beta
 gnome-settings-daemon 40.beta
