@@ -11,7 +11,7 @@ geary 40.alpha+132+g26978c42
 gedit 3.38.1
 gjs 1.67.2
 glib2 2.67.6
-gnome-autoar 0.3.0
+gnome-autoar 0.3.1
 gnome-boxes 40.rc
 gnome-calculator 40.rc
 gnome-calendar 40.rc
