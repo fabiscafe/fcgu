@@ -45,7 +45,7 @@ libhandy 1.2.0
 librsvg 2.51.0
 libvirt-glib 4.0.0
 mutter 40.beta+16+g3bbfaa03b
-nautilus 40.beta
+nautilus 40.rc
 orca 40.rc
 sysprof 3.39.94
 tracker3 3.1.0.beta
