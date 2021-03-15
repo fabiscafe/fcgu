@@ -26,7 +26,7 @@ gnome-initial-setup 40.rc
 gnome-maps 40.rc
 gnome-screenshot 40.rc
 gnome-session 40.beta
-gnome-settings-daemon 40.beta
+gnome-settings-daemon 40.rc
 gnome-shell 40.beta
 gnome-shell-extensions 40.beta
 gnome-software 40.rc
