@@ -5,7 +5,7 @@
 options=(debug !strip)
 
 pkgname=gnome-shell
-pkgver=40.beta
+pkgver=40.rc
 pkgrel=1
 epoch=1
 pkgdesc="Next generation desktop shell"
@@ -22,7 +22,7 @@ optdepends=('gnome-control-center: System settings'
             'evolution-data-server: Evolution calendar integration')
 groups=(gnome)
 install=gnome-shell.install
-_commit=706d7beed7d450e396df02fab820a86509b914d4  # tags/40.beta^0
+_commit=1d5f3f14faed4dc838588a09af164b0682c1a6d6  # tags/40.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-shell.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
