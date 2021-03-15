@@ -1,0 +1,36 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Adrian Perez de Castro <aperez@igalia.com>
+options=(debug !strip)
+
+pkgname=gi-docgen
+pkgver=2021.2
+pkgrel=1
+pkgdesc="A documentation generator for GObject-based libraries"
+url=https://gitlab.gnome.org/ebassi/gi-docgen
+license=(GPL)
+arch=(any)
+_commit=24bb7e66d47ff2e87d44e712fb1cc0a4ea5e9548  # tags/2021.2^0
+source=("git+https://gitlab.gnome.org/ebassi/gi-docgen.git#commit=$_commit")
+depends=(python-markdown python-markupsafe python-pygments
+         python-jinja python-toml python-typogrify)
+makedepends=(meson git)
+sha512sums=('SKIP')
+
+pkgver() {
+  cd "${pkgname}"
+  git describe --tags | sed 's/-/+/g'
+}
+
+build() {
+  cd "${srcdir}"
+  arch-meson "${pkgname}" build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  DESTDIR="${pkgdir}" meson install -C build
+}
