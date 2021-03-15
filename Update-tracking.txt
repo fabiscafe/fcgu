@@ -48,7 +48,7 @@ mutter 40.beta+16+g3bbfaa03b
 nautilus 40.rc
 orca 40.rc
 sysprof 3.39.94
-tracker3 3.1.0.beta
+tracker3 3.1.0.rc
 tracker3-miners 3.1.0.beta
 vala 0.51.91
 vte3 0.63.91
