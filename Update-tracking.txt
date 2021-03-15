@@ -36,7 +36,7 @@ gnome-tweaks 40.beta
 gnome-user-docs 40.rc
 gnome-weather 40.beta
 gobject-introspection 1.67.1
-gsettings-desktop-schemas 40.beta
+gsettings-desktop-schemas 40.rc
 gtk3 3.24.27
 gtk4 4.1.1
 gvfs 1.47.91
