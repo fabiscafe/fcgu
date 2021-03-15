@@ -5,7 +5,7 @@
 options=(debug !strip)
 
 pkgname=mutter
-pkgver=40.beta+16+g3bbfaa03b
+pkgver=40.rc
 pkgrel=1
 pkgdesc="A window manager for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
@@ -20,7 +20,7 @@ checkdepends=(xorg-server-xvfb)
 provides=(libmutter-8.so)
 groups=(gnome)
 install=mutter.install
-_commit=3bbfaa03b3944a856540eaca00f76f3975e09cfd # tags/40.beta^0
+_commit=0986556b60eef1b4c0c7b44e737346aa6976110f # tags/40.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit")
 sha256sums=('SKIP')
 
