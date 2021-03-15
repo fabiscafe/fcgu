@@ -9,7 +9,6 @@ evolution-data-server 3.39.3
 folks 0.15.2
 geary 40.alpha+132+g26978c42
 gedit 3.38.1
-gi-docgen 2021.2
 gjs 1.67.3
 glib2 2.67.6
 gnome-autoar 0.3.1
