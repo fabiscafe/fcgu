@@ -28,7 +28,7 @@ gnome-screenshot 40.rc
 gnome-session 40.beta
 gnome-settings-daemon 40.rc
 gnome-shell 40.rc
-gnome-shell-extensions 40.beta
+gnome-shell-extensions 40.rc
 gnome-software 40.rc
 gnome-system-monitor 40.rc
 gnome-terminal 3.39.90
