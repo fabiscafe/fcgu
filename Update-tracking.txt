@@ -10,7 +10,7 @@ folks 0.15.2
 geary 40.alpha+132+g26978c42
 gedit 3.38.1
 gjs 1.67.3
-glib2 2.67.6
+glib2 2.68.0
 gnome-autoar 0.3.1
 gnome-boxes 40.rc
 gnome-calculator 40.rc
