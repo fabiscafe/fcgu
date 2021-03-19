@@ -34,7 +34,7 @@ gnome-terminal 3.39.90
 gnome-tweaks 40.beta
 gnome-user-docs 40.rc
 gnome-weather 40.beta
-gobject-introspection 1.67.1
+gobject-introspection 1.68.0
 gsettings-desktop-schemas 40.rc
 gtk3 3.24.27
 gtk4 4.1.2
