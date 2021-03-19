@@ -20,7 +20,6 @@ gnome-clocks 40.beta
 gnome-contacts 40.beta
 gnome-control-center 40.rc
 gnome-desktop 40.beta
-gnome-disk-utility 40.rc
 gnome-font-viewer 40.beta
 gnome-initial-setup 40.rc
 gnome-maps 40.rc
