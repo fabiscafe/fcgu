@@ -12,7 +12,7 @@ gedit 3.38.1
 gjs 1.67.3
 glib2 2.68.0
 gnome-autoar 0.3.1
-gnome-boxes 40.rc
+gnome-boxes 40.0
 gnome-calculator 40.rc
 gnome-calendar 40.rc
 gnome-characters ERR
