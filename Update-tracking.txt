@@ -21,7 +21,7 @@ gnome-contacts 40.beta
 gnome-control-center 40.rc
 gnome-desktop(gnome-utility-library) 40.rc 
 gnome-font-viewer 40.beta
-gnome-initial-setup 40.rc
+gnome-initial-setup 40.0
 gnome-maps 40.rc
 gnome-screenshot 40.rc
 gnome-session 40.beta
