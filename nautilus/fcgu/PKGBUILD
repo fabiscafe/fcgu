@@ -5,8 +5,8 @@ options=(debug !strip)
 
 pkgbase=nautilus
 pkgname=(nautilus libnautilus-extension)
-pkgver=40.rc
-pkgrel=1
+pkgver=40
+pkgrel=0.1
 pkgdesc="Default file manager for GNOME"
 url="https://wiki.gnome.org/Apps/Files"
 arch=(x86_64)
@@ -15,7 +15,7 @@ depends=(libgexiv2 libportal gnome-desktop gvfs dconf tracker3 tracker3-miners
          gnome-autoar gst-plugins-base-libs libhandy)
 makedepends=(gobject-introspection git gtk-doc meson appstream-glib)
 checkdepends=(python-gobject)
-_commit=9d75d506056dbc4a0dbad9c74334c39f1f478863  # tags/40.rc^0
+_commit=fad09fd58d5667809b7a121dca2abbfe62602b24  # tags/40^0
 source=("git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgd.git")
 sha256sums=('SKIP'
