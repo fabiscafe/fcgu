@@ -38,7 +38,7 @@ gobject-introspection 1.67.1
 gsettings-desktop-schemas 40.rc
 gtk3 3.24.27
 gtk4 4.1.2
-gvfs 1.47.91
+gvfs 1.48.0
 libgweather 40.beta
 libhandy 1.2.0
 librsvg 2.51.0
