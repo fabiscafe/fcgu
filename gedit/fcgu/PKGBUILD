@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=gedit
-pkgver=3.38.1
-pkgrel=1.1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="GNOME Text Editor"
 url="https://wiki.gnome.org/Apps/Gedit"
 arch=(x86_64)
@@ -17,14 +17,11 @@ makedepends=(yelp-tools vala gobject-introspection git gtk-doc meson
 optdepends=('gedit-plugins: Additional features')
 conflicts=('gedit-code-assistance<=3.16.0+4+gd19b879-1')
 groups=(gnome)
-_commit=3c327559e6b59a0d7b4c8c61764685224ad10752  # tags/3.38.1^0
+_commit=bc468f86caa42dcaccdbb952b987e1bd92e3a112  # tags/40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gedit.git#commit=$_commit"
-        "git+https://gitlab.gnome.org/GNOME/libgd.git"
-        ## cherrypick patch to fix up gedit with never nautilus
-        "0001-drop-use-of-confirm-trash.diff::https://gitlab.gnome.org/GNOME/gedit/-/commit/8f6490c602991a456413e0053429bb7b4c70d4b6.diff")
+        "git+https://gitlab.gnome.org/GNOME/libgd.git")
 sha256sums=('SKIP'
-            'SKIP'
-            'bcee6571ff2ef5ec58284fdfc5b9add4f1078925937043c8425ae0c621bbf634')
+            'SKIP')
 
 pkgver() {
   cd $pkgname
@@ -33,7 +30,6 @@ pkgver() {
 
 prepare() {
   cd $pkgname
-  git apply -3 ../0001-drop-use-of-confirm-trash.diff
   git submodule init
   git submodule set-url subprojects/libgd "$srcdir/libgd"
   git submodule update
