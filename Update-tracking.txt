@@ -54,5 +54,5 @@ vala 0.52.00
 vte3 0.64.0
 webkit2gtk 2.31.91
 yelp 40.rc
-yelp-tools 40.rc
+yelp-tools 40.0
 yelp-xsl 40.0

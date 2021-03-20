@@ -4,15 +4,15 @@
 options=(debug !strip)
 
 pkgname=yelp-tools
-pkgver=40.rc
-pkgrel=1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="Collection of tools for building and converting documentation"
 url="https://gitlab.gnome.org/GNOME/yelp-tools"
 arch=(any)
 depends=(yelp-xsl libxslt libxml2 itstool docbook-xsl mallard-ducktype python-lxml)
 makedepends=(git meson)
 license=(GPL)
-_commit=435095c84903047fb425c19b6450fe53e18b1c72  # tags/40.rc^0
+_commit=00297c603474c28c757da82732e70e23dc6c0e2d  # tags/40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/yelp-tools.git#commit=$_commit")
 sha256sums=('SKIP')
 
