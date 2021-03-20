@@ -8,8 +8,8 @@
 options=(debug !strip)
 
 pkgname=sysprof
-pkgver=3.39.94
-pkgrel=1
+pkgver=3.40.0
+pkgrel=0.1
 pkgdesc="Kernel based performance profiler"
 url="https://wiki.gnome.org/Apps/Sysprof"
 license=(GPL)
@@ -17,7 +17,7 @@ arch=(x86_64)
 depends=(gtk3 polkit libdazzle)
 makedepends=(yelp-tools git meson)
 groups=(gnome-extra)
-_commit=311405fd84a751cc461e2af3e2c83a5c15ffa786  # tags/3.39.94^0
+_commit=5463c965b1d2c2fc82160a5b7371980c39b6283c  # tags/3.40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/sysprof.git#commit=$_commit")
 sha256sums=('SKIP')
 
