@@ -26,7 +26,7 @@ gnome-maps 40.0
 gnome-screenshot 40.rc
 gnome-session 40.beta
 gnome-settings-daemon 40.rc
-gnome-shell 40.rc
+gnome-shell 40.0
 gnome-shell-extensions 40.rc
 gnome-software 40.0
 gnome-system-monitor 40.0
