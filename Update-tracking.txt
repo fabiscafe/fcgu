@@ -50,7 +50,7 @@ sysprof 3.40.0
 tracker3 3.1.0.rc
 tracker3-miners 3.1.0.rc
 vala 0.52.00
-vte3 0.63.91
+vte3 0.64.0
 webkit2gtk 2.31.91
 yelp 40.rc
 yelp-tools 40.rc
