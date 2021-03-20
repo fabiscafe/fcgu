@@ -9,7 +9,7 @@ evolution-data-server 3.40.0
 folks 0.15.2
 geary 40.alpha+132+g26978c42
 gedit 40.0
-gjs 1.67.3
+gjs 1.68.0
 glib2 2.68.0
 gnome-autoar 0.3.1
 gnome-boxes 40.0
