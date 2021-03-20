@@ -1,4 +1,4 @@
-at-spi2-core 2.39.91
+at-spi2-core 2.40.0
 baobab 40.beta
 dconf 0.40.0
 eog 40.rc

@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=at-spi2-core
-pkgver=2.39.91
-pkgrel=1
+pkgver=2.40.0
+pkgrel=0.1
 pkgdesc="Protocol definitions and daemon for D-Bus at-spi"
 url="https://gitlab.gnome.org/GNOME/at-spi2-core"
 arch=(x86_64)
@@ -13,7 +13,7 @@ license=(GPL2)
 depends=(dbus glib2 libxtst systemd-libs)
 makedepends=(gobject-introspection git gtk-doc meson dbus-broker systemd)
 optdepends=('dbus-broker: Alternative bus implementation')
-_commit=3e0e0bcd5dcc986bc918ea1571f60ff7f578a8a9  # tags/AT_SPI2_CORE_2_39_91^0
+_commit=303ff15ea793189e1e8855b32df967e0a05fe08c  # tags/AT_SPI2_CORE_2_40_0^0
 source=("git+https://gitlab.gnome.org/GNOME/at-spi2-core.git#commit=$_commit")
 sha256sums=('SKIP')
 
