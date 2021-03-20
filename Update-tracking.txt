@@ -32,7 +32,7 @@ gnome-software 40.0
 gnome-system-monitor 40.0
 gnome-terminal 3.40.0
 gnome-tweaks 40.beta
-gnome-user-docs 40.rc
+gnome-user-docs 40.0
 gnome-weather 40.beta
 gobject-introspection 1.68.0
 gsettings-desktop-schemas 40.rc
