@@ -10,7 +10,6 @@ folks 0.15.2
 geary 40.alpha+132+g26978c42
 gedit 40.0
 gjs 1.68.0
-glib2 2.68.0
 gnome-autoar 0.3.1
 gnome-boxes 40.0
 gnome-calculator 40.0
@@ -34,7 +33,6 @@ gnome-terminal 3.40.0
 gnome-tweaks 40.beta
 gnome-user-docs 40.0
 gnome-weather 40.beta
-gobject-introspection 1.68.0
 gsettings-desktop-schemas 40.rc
 gtk3 3.24.27
 gtk4 4.1.2
