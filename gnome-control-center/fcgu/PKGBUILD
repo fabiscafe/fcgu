@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=gnome-control-center
-pkgver=40.rc
-pkgrel=1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="GNOME's main interface to configure various aspects of the desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-control-center"
 license=(GPL2)
@@ -23,7 +23,7 @@ optdepends=('system-config-printer: Printer settings'
             'rygel: media sharing'
             'openssh: remote login')
 groups=(gnome)
-_commit=e5ad8e7626baaaa2d7be4c8022704e72db33f2c7  # tags/40.rc^0
+_commit=49d71c07b5b3ce59e035b785310cba4fcf903868  # tags/40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-control-center.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
