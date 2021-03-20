@@ -5,7 +5,7 @@ options=(debug !strip)
 
 pkgname=gjs
 pkgver=1.67.3
-pkgrel=2
+pkgrel=3
 epoch=2
 pkgdesc="Javascript Bindings for GNOME"
 url="https://wiki.gnome.org/Projects/Gjs"
@@ -16,8 +16,10 @@ makedepends=(gobject-introspection git meson dbus sysprof)
 checkdepends=(valgrind xorg-server-xvfb gtk3)
 provides=(libgjs.so)
 _commit=a161ca94a312615218cc2ec15b315345c5ba3120  # tags/1.67.3^0
-source=("git+https://gitlab.gnome.org/GNOME/gjs.git#commit=$_commit")
-sha256sums=('SKIP')
+source=("git+https://gitlab.gnome.org/GNOME/gjs.git#commit=$_commit"
+	"0001-object_Ignore_toggle_notifications_after_disposal.patch::https://gitlab.gnome.org/GNOME/gjs/-/merge_requests/588.diff")
+sha256sums=('SKIP'
+            '4c59968b0d264fc8a0d77b1f690f8ea1ada28f912f2140c662fde51a0c6a7e38')
 
 pkgver() {
   cd $pkgname
@@ -26,6 +28,7 @@ pkgver() {
 
 prepare() {
   cd $pkgname
+  git apply -3 ../0001-object_Ignore_toggle_notifications_after_disposal.patch # Merge 588 ahead of time for testing
 }
 
 build() {
