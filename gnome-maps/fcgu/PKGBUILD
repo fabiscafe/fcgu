@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=gnome-maps
-pkgver=40.rc
-pkgrel=1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="A simple GNOME 3 maps application"
 url="https://wiki.gnome.org/Apps/Maps"
 arch=(x86_64)
@@ -13,7 +13,7 @@ license=(GPL)
 depends=(geocode-glib geoclue gjs libchamplain libgee libhandy folks gfbgraph)
 makedepends=(gobject-introspection git meson yelp-tools)
 groups=(gnome)
-_commit=3eda8f920886672d76dd8dc050c17e810faf46ca  # tags/v40.rc^0
+_commit=05aede7d2a6e59f810b87f69eb1cc79983096692  # tags/v40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-maps.git#commit=$_commit")
 sha256sums=('SKIP')
 

@@ -22,7 +22,7 @@ gnome-control-center 40.rc
 gnome-desktop(gnome-utility-library) 40.rc 
 gnome-font-viewer 40.beta
 gnome-initial-setup 40.0
-gnome-maps 40.rc
+gnome-maps 40.0
 gnome-screenshot 40.rc
 gnome-session 40.beta
 gnome-settings-daemon 40.rc
