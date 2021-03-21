@@ -33,7 +33,7 @@ gnome-terminal 3.40.0
 gnome-tweaks 40.beta
 gnome-user-docs 40.0
 gnome-weather 40.0
-gsettings-desktop-schemas 40.rc
+gsettings-desktop-schemas 40.0
 gtk3 3.24.27
 gtk4 4.1.2
 gvfs 1.48.0
