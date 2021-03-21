@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=eog
-pkgver=40.rc
-pkgrel=1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="Eye of Gnome: An image viewing and cataloging program"
 url="https://wiki.gnome.org/Apps/EyeOfGnome"
 arch=(x86_64)
@@ -14,7 +14,7 @@ depends=(gnome-desktop libexif lcms2 exempi libpeas librsvg dconf libportal)
 makedepends=(gobject-introspection gtk-doc git meson yelp-tools)
 optdepends=('eog-plugins: Additional features')
 groups=(gnome)
-_commit=3e37d373eaafc17af58a1356bd6d94437afe7d8e  # tags/40.rc^0
+_commit=93b113cb0635997b8b8502229a379880cec0d5bc  # tags/40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/eog.git#commit=$_commit")
 sha256sums=('SKIP')
 
