@@ -3,8 +3,8 @@
 options=(debug !strip)
 
 pkgname=gnome-settings-daemon
-pkgver=40.rc
-pkgrel=1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="GNOME Settings Daemon"
 url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
 arch=(x86_64)
@@ -17,7 +17,7 @@ checkdepends=(python-gobject python-dbusmock)
 optdepends=('usbguard: USB protection support')
 groups=(gnome)
 backup=(etc/xdg/Xwayland-session.d/00-xrdb)
-_commit=7d548994fe8679a499e6c49bf2369a194042d467  # tags/40.rc^0
+_commit=2974cd501a842059ae4ff294ab86d77788ec8fd7  # tags/40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-settings-daemon.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
