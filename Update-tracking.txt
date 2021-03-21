@@ -1,5 +1,5 @@
 at-spi2-core 2.40.0
-baobab 40.beta
+baobab 40.0
 dconf 0.40.0
 eog 40.rc
 epiphany 40.0
