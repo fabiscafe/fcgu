@@ -32,7 +32,7 @@ gnome-system-monitor 40.0
 gnome-terminal 3.40.0
 gnome-tweaks 40.beta
 gnome-user-docs 40.0
-gnome-weather 40.beta
+gnome-weather 40.0
 gsettings-desktop-schemas 40.rc
 gtk3 3.24.27
 gtk4 4.1.2
