@@ -3,8 +3,8 @@
 options=(debug !strip)
 
 pkgname=tracker3-miners
-pkgver=3.1.0.rc
-pkgrel=1
+pkgver=3.1.0
+pkgrel=0.1
 pkgdesc="Collection of data extractors for Tracker/Nepomuk"
 url="https://wiki.gnome.org/Projects/Tracker"
 arch=(x86_64)
@@ -15,7 +15,7 @@ depends=(tracker3 gst-plugins-base-libs exempi libexif libcue libgrss libgsf
 makedepends=(git meson vala asciidoc)
 checkdepends=(python-gobject gst-plugins-good gst-plugins-base gst-libav)
 groups=(gnome)
-_commit=acff89e87fa7ffc2cc72ba67ad93c81047975c93  # tags/3.1.0.rc^0
+_commit=fc4287e213bc3568b3012433b9466d0c207e174d  # tags/3.1.0^0
 source=("git+https://gitlab.gnome.org/GNOME/tracker-miners.git#commit=$_commit")
 sha256sums=('SKIP')
 
