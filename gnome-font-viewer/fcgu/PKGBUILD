@@ -3,8 +3,8 @@
 options=(debug !strip)
 
 pkgname=gnome-font-viewer
-pkgver=40.beta
-pkgrel=1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="A font viewer utility for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-font-viewer"
 arch=(x86_64)
@@ -12,7 +12,7 @@ license=(GPL)
 depends=(gtk3 gnome-desktop libhandy )
 makedepends=(git meson)
 groups=(gnome)
-_commit=a7acdb89f1db7380ecd530a97f6ade1cf2dad96c  # tags/40.beta^0
+_commit=582be4681447e7d7f3d012d0224ddf07fee10ef2  # tags/40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-font-viewer.git#commit=$_commit")
 sha256sums=('SKIP')
 
