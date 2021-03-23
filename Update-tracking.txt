@@ -44,7 +44,7 @@ libvirt-glib 4.0.0
 mutter 40.0
 nautilus 40.0
 orca 40.0
-sysprof 3.40.0
+sysprof 3.40.1
 tepl master (wait for 6)
 tracker3 3.1.0
 tracker3-miners 3.1.0
