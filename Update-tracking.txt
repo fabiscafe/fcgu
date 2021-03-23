@@ -18,7 +18,7 @@ gnome-characters 40.0 ERR https://gitlab.gnome.org/GNOME/gnome-characters/-/issu
 gnome-clocks 40.beta
 gnome-contacts 40.0
 gnome-control-center 40.0
-gnome-desktop(gnome-utility-library) 40.rc 
+gnome-desktop(gnome-utility-library) 40.0 
 gnome-font-viewer 40.0
 gnome-initial-setup 40.0
 gnome-maps 40.0
