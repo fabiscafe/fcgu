@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=gnome-contacts
-pkgver=40.beta
-pkgrel=1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="Contacts Manager for GNOME"
 url="https://wiki.gnome.org/Apps/Contacts"
 arch=(x86_64)
@@ -14,7 +14,7 @@ depends=(gtk3 folks gnome-desktop dconf gnome-online-accounts libgee cheese
          libhandy)
 makedepends=(vala gobject-introspection git meson appstream-glib)
 groups=(gnome)
-_commit=54f8fd7e4df204751ab096668b038946559df053  # tags/40.beta^0
+_commit=8c27ab8cb5e7fcdfe40a27e9744bd1299360a7c4  # tags/40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-contacts.git#commit=$_commit")
 sha256sums=('SKIP')
 

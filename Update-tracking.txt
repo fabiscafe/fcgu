@@ -16,7 +16,7 @@ gnome-calculator 40.0
 gnome-calendar 40.0
 gnome-characters 40.0 ERR https://gitlab.gnome.org/GNOME/gnome-characters/-/issues/86
 gnome-clocks 40.beta
-gnome-contacts 40.beta
+gnome-contacts 40.0
 gnome-control-center 40.0
 gnome-desktop(gnome-utility-library) 40.rc 
 gnome-font-viewer 40.0
