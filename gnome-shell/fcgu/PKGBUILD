@@ -6,7 +6,7 @@ options=(debug !strip)
 
 pkgname=gnome-shell
 pkgver=40.0
-pkgrel=0.1
+pkgrel=0.2
 epoch=1
 pkgdesc="Next generation desktop shell"
 url="https://wiki.gnome.org/Projects/GnomeShell"
