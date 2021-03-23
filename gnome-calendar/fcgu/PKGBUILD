@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=gnome-calendar
-pkgver=40.rc
-pkgrel=1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="Simple and beautiful calendar application designed to perfectly fit the GNOME desktop"
 url="https://wiki.gnome.org/Apps/Calendar"
 arch=(x86_64)
@@ -16,7 +16,7 @@ makedepends=(python appstream-glib git meson)
 checkdepends=(xorg-server-xvfb)
 optdepends=('evolution: ICS file import')
 groups=(gnome)
-_commit=2465b9e7bec700c2935c1528dd22a215dcafa222  # tags/40.rc^0
+_commit=62749c165a7b471e89842733b96311555ab374ba  # tags/40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-calendar.git#commit=$_commit")
 sha256sums=('SKIP')
 
