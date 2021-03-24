@@ -1,6 +1,8 @@
 # FCGU
 FCGU is a GNOME Unstable repo, by a Arch Linux community member named Fabiscafe.
 
+![FCGU](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/fcgu.png)
+
 ## Whats in this repo?
 Mostly Beta and RC releases of GNOME software with debug-symbols enabled. For easy testing and bugreporting porposes.
 
@@ -54,6 +56,8 @@ Include = /etc/pacman.d/mirrorlist
 ```
 
 If that's done, a full system update is required (`pacman -Syu`)
+
+<video controls="false" allowfullscreen="false" src="https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/video.webm">
 
 ## Will this kill my setup?
 This repo will bring in unstable development software. It's not reliable in any way, and should only be used for testing purpose.
