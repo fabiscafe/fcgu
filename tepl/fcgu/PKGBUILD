@@ -5,8 +5,8 @@
 options=(debug !strip)
 
 pkgname=tepl
-pkgver=5.1.1+107+gc20a87d
-pkgrel=1
+pkgver=6.0.0.0
+pkgrel=0.1
 pkgdesc="Library that eases the development of GtkSourceView-based text editors and IDEs"
 url="https://wiki.gnome.org/Projects/Tepl"
 arch=(x86_64)
@@ -14,7 +14,7 @@ license=(LGPL3)
 depends=(amtk gtksourceview4 uchardet)
 makedepends=(gobject-introspection gtk-doc vala git meson)
 checkdepends=(xorg-server-xvfb)
-_commit=c20a87d63cc202e1c2768b5d8d2cadaca3ec9a4e  # tags/master^0
+_commit=51b15258e130d2b5134f6cd5ff7f91c75e0a482a  # tags/6.0.0.0^0
 source=("git+https://gitlab.gnome.org/GNOME/tepl.git#commit=$_commit")
 sha256sums=('SKIP')
 
