@@ -37,7 +37,7 @@ gsettings-desktop-schemas 40.0
 gtk3 3.24.27
 gtk4 4.1.2
 gvfs 1.48.0
-libgweather 40.beta
+libgweather 40.0
 libhandy 1.2.0
 librsvg 2.51.0
 libvirt-glib 4.0.0

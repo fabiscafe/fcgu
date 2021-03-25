@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=libgweather
-pkgver=40.beta
-pkgrel=1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="Location and timezone database and weather-lookup library"
 url="https://wiki.gnome.org/Projects/LibGWeather"
 arch=(x86_64)
@@ -13,7 +13,7 @@ license=(LGPL)
 depends=(libsoup gtk3 geocode-glib dconf)
 makedepends=(gobject-introspection python-gobject vala git gtk-doc glade meson)
 provides=(libgweather-3.so)
-_commit=ee7093c75a88df0725c76544dc5fd8f64564851a  # tags/40.beta ^0
+_commit=85e157dade2ce9f252c93e8ec2b7a88f6fe78016  # tags/40.0 ^0
 source=("git+https://gitlab.gnome.org/GNOME/libgweather.git#commit=$_commit")
 sha256sums=('SKIP')
 
