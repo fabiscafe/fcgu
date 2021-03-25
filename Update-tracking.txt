@@ -9,7 +9,6 @@ folks 0.15.2
 geary 40.alpha+139+gfaea41f0
 gedit 40.0
 gjs 1.68.0
-gnome-autoar 0.3.1
 gnome-boxes 40.0
 gnome-calculator 40.0
 gnome-calendar 40.0
