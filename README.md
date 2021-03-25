@@ -3,7 +3,7 @@ or short "FCGU" is a GNOME Unstable repository for [**Arch Linux**](https://arch
 
 Talk to us on Matrix: [#fcgu:matrix.org](https://matrix.to/#/#fcgu:matrix.org?via=matrix.org) 
 <p align="center">
-[FCGU](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/fcgu.png)
+![FCGU](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/fcgu.png)
 </p>
 
 ## Installation
@@ -52,7 +52,7 @@ Include = /etc/pacman.d/mirrorlist
 
 If that's done, a full system update is required (`pacman -Syu`)
 <p align="center">
-[preview](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/video.gif)
+![preview](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/video.gif)
 </p>
 
 ## Will this kill my setup?
