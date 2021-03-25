@@ -1,6 +1,5 @@
 at-spi2-core 2.40.0
 baobab 40.0
-dconf 0.40.0
 eog 40.0
 epiphany 40.0
 evince 3.39.2
@@ -38,7 +37,6 @@ gtk3 3.24.27
 gtk4 4.1.2
 gvfs 1.48.0
 libgweather 40.0
-libhandy 1.2.0
 librsvg 2.51.0
 libvirt-glib 4.0.0
 mutter 40.0
