@@ -49,7 +49,6 @@ tepl 6.0.0.0
 tracker3 3.1.0
 tracker3-miners 3.1.0
 vala 0.52.00
-vte3 0.64.0
 webkit2gtk 2.31.91
 yelp 40.0
 yelp-tools 40.0
