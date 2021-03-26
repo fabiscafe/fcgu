@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=evince
-pkgver=3.39.2
-pkgrel=1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))"
 url="https://wiki.gnome.org/Apps/Evince"
 arch=(x86_64)
@@ -19,7 +19,7 @@ optdepends=('texlive-bin: DVI support'
             'gvfs: bookmark support and session saving')
 provides=(libev{document,view}3.so)
 groups=(gnome)
-_commit=fa7a77fbba13ce756115e1c6e8fde0d5c2bb3adf  # tags/3.39.2^0
+_commit=288be740b5bbb59757db5038ab435ceb7a334dcf  # tags/40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/evince.git#commit=$_commit")
 sha256sums=('SKIP')
 
