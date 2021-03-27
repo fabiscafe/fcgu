@@ -16,7 +16,6 @@ gnome-system-monitor 40.0
 gnome-tweaks 40.beta
 gnome-user-docs 40.0
 gnome-weather 40.0
-gsettings-desktop-schemas 40.0
 gtk3 3.24.27
 gtk4 4.1.2
 libgweather 40.0
