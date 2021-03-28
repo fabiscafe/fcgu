@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=gnome-tweaks
-pkgver=40.beta
-pkgrel=1
+pkgver=40.0
+pkgrel=0.1
 pkgdesc="Graphical interface for advanced GNOME 3 settings (Tweak Tool)"
 url="https://wiki.gnome.org/Apps/Tweaks"
 arch=(any)
@@ -16,7 +16,7 @@ groups=(gnome-extra)
 provides=("gnome-tweak-tool=$pkgver")
 conflicts=(gnome-tweak-tool)
 replaces=(gnome-tweak-tool)
-_commit=a631b7d0b590af3154426658cbbb6ca25c6c0dea # tags/40.beta
+_commit=7a16849f498c8a57d525eb9184a8b0163e2ddcbb # tags/40.0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-tweaks.git#commit=$_commit")
 sha256sums=('SKIP')
 
