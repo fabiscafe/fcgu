@@ -15,7 +15,7 @@ gnome-system-monitor 40.0
 gnome-tweaks 40.0
 gnome-user-docs 40.0
 gnome-weather 40.0
-gtk4 4.1.2
+gtk4 4.2.0
 libgweather 40.0
 librsvg 2.51.0
 mutter 40.0
