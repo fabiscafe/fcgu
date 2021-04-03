@@ -1,7 +1,14 @@
-# FabisCafe Gnome Unstable
+# FabisCafe Gnome Unstable <a href="https://liberapay.com/Fabiscafe/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 or short "FCGU" is a GNOME Unstable repository for [**Arch Linux**](https://archlinux.org). That contains *alpha*, *beta* and *rc* releases of GNOME for testing and bugreporting purposes.
 
-Talk to us on Matrix: [#fcgu:matrix.org](https://matrix.to/#/#fcgu:matrix.org?via=matrix.org) 
+<img src="https://img.shields.io/liberapay/receives/Fabiscafe.svg?logo=liberapay">
+
+
+## Looking For New Mirrors
+FCGU is a free community project. That's why we need your help. If you own a server that could become a mirror of the project, please let us know.
+
+Talk to us on Matrix: [#fcgu:matrix.org](https://matrix.to/#/#fcgu:matrix.org?via=matrix.org)  - EMail: fabiscafe -car- mailbox -dog- org
+
 <p align="center">
 ![FCGU](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/fcgu.png)
 </p>
@@ -22,7 +29,7 @@ This repo is made as an overlay repo. This means it will replace the Arch-GNOME 
 
 ```
 [fcgu]
-Server = http://34.105.163.196/$repo
+Server = <looking for new mirrors>
 ```
 
 Here a preview how it should look:
@@ -37,7 +44,7 @@ Here a preview how it should look:
 #Include = /etc/pacman.d/mirrorlist
 
 [fcgu]
-Server = http://34.105.163.196/$repo
+Server = <looking for new mirrors>
 
 [core]
 Include = /etc/pacman.d/mirrorlist
