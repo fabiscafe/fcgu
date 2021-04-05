@@ -29,7 +29,8 @@ This repo is made as an overlay repo. This means it will replace the Arch-GNOME 
 
 ```
 [fcgu]
-Server = <looking for new mirrors>
+Server = https://gnome.holmie.xyz/$repo
+#Server = <looking for new mirrors>
 ```
 
 Here a preview how it should look:
@@ -44,7 +45,8 @@ Here a preview how it should look:
 #Include = /etc/pacman.d/mirrorlist
 
 [fcgu]
-Server = <looking for new mirrors>
+Server = https://gnome.holmie.xyz/$repo
+#Server = <looking for new mirrors>
 
 [core]
 Include = /etc/pacman.d/mirrorlist
@@ -70,7 +72,8 @@ The repo needs to be removed from */etc/pacman.conf*
 
 ```
 [fcgu]
-Server = http://34.105.163.196/$repo
+Server = https://gnome.holmie.xyz/$repo
+#Server = <looking for new mirrors>
 ```
 When thats done a `pacman -Syuu` will downgrade all packages to the Arch-repo versions.
 
