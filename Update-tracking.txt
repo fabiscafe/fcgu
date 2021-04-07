@@ -1,6 +1,5 @@
 folks 0.15.2
 geary-1:40.alpha+167+g68f860a7
-gnome-tweaks 40.0
 gnome-weather 40.0
 libgweather 40.0
 librsvg 2.51.0
