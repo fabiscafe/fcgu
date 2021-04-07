@@ -8,7 +8,6 @@ gnome-control-center 40.0
 gnome-initial-setup 40.0
 gnome-session 40.beta
 gnome-settings-daemon 40.0
-gnome-shell 40.0
 gnome-shell-extensions 40.0
 gnome-tweaks 40.0
 gnome-weather 40.0
