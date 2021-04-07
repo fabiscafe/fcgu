@@ -1,6 +1,5 @@
 folks 0.15.2
 geary-1:40.alpha+167+g68f860a7
-gnome-calendar 40.0
 gnome-contacts 40.0
 gnome-control-center 40.0
 gnome-initial-setup 40.0
