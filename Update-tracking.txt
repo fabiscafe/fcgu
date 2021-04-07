@@ -11,7 +11,6 @@ gnome-settings-daemon 40.0
 gnome-shell 40.0
 gnome-shell-extensions 40.0
 gnome-tweaks 40.0
-gnome-user-docs 40.0
 gnome-weather 40.0
 gtk4 4.2.0
 libgweather 40.0
