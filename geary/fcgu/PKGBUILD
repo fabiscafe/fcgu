@@ -5,7 +5,7 @@
 options=(debug !strip)
 
 pkgname=geary
-pkgver=40.alpha+174+g1de50614
+pkgver=40.rc
 pkgrel=1
 epoch=1
 pkgdesc='A lightweight email client for the GNOME desktop'
@@ -53,7 +53,7 @@ makedepends=(
   vala
   yelp-tools
 )
-_commit=1de50614d11ae6e3f724b5e79a730261de21fa4e  # tags/mainline
+_commit=c28edda276e321ce87d568294f44afc3ccad0891  # tags/40.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/geary.git#commit=$_commit")
 validpgpkeys=(3A2EF7F138557A145F2866E99FAB18747A8FC649) # Michael James Gratton <mike@vee.net>
 sha256sums=(SKIP)
