@@ -5,8 +5,8 @@
 options=(debug !strip)
 
 pkgname=geary
-pkgver=40.rc
-pkgrel=2
+pkgver=40.0
+pkgrel=0.1
 epoch=1
 pkgdesc='A lightweight email client for the GNOME desktop'
 arch=(x86_64)
@@ -38,11 +38,6 @@ depends=(
   pango
   sqlite
   webkit2gtk
-  ## https://gitlab.gnome.org/GNOME/geary/-/issues/1167
-  hspell
-  libvoikko
-  nuspell
-  ##
 )
 makedepends=(
   appstream-glib
@@ -53,7 +48,7 @@ makedepends=(
   vala
   yelp-tools
 )
-_commit=c28edda276e321ce87d568294f44afc3ccad0891  # tags/40.rc^0
+_commit=e561775c1580a9f60a726355b2b897bfc9cb3382  # tags/gnome-40.0^0
 source=("git+https://gitlab.gnome.org/GNOME/geary.git#commit=$_commit")
 validpgpkeys=(3A2EF7F138557A145F2866E99FAB18747A8FC649) # Michael James Gratton <mike@vee.net>
 sha256sums=(SKIP)
