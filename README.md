@@ -7,7 +7,7 @@ or short "FCGU" is a GNOME Unstable repository for [**Arch Linux**](https://arch
 ## Looking For New Mirrors
 FCGU is a free community project. That's why we need your help. If you own a server that could become a mirror of the project, please let us know.
 
-Talk to us on Matrix: [#fcgu:matrix.org](https://matrix.to/#/#fcgu:matrix.org?via=matrix.org)  - EMail: fabiscafe -car- mailbox -dog- org
+Talk to us on Matrix: [#fcgu:matrix.org](https://matrix.to/#/#fcgu:matrix.org?via=matrix.org)  - EMail: fabiscafe -cat- mailbox -dog- org
 
 <p align="center">
 ![FCGU](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/fcgu.png)
@@ -29,7 +29,6 @@ This repo is made as an overlay repo. This means it will replace the Arch-GNOME 
 
 ```
 [fcgu]
-Server = https://gnome.holmie.xyz/$repo
 #Server = <looking for new mirrors>
 ```
 
@@ -45,7 +44,6 @@ Here a preview how it should look:
 #Include = /etc/pacman.d/mirrorlist
 
 [fcgu]
-Server = https://gnome.holmie.xyz/$repo
 #Server = <looking for new mirrors>
 
 [core]
@@ -72,7 +70,6 @@ The repo needs to be removed from */etc/pacman.conf*
 
 ```
 [fcgu]
-Server = https://gnome.holmie.xyz/$repo
 #Server = <looking for new mirrors>
 ```
 When thats done a `pacman -Syuu` will downgrade all packages to the Arch-repo versions.
