@@ -15,13 +15,11 @@ Talk to us on Matrix: [#fcgu:matrix.org](https://app.element.io/#/room/#fcgu:mat
 
 ## Installation
 ### Keyring
-All of our packages are signed, to be able to install trustworthy packages the user needs to install [fabiscafe-keyring(AUR)](https://aur.archlinux.org/packages/fabiscafe-keyring) first.
+All of our packages are signed, to be able to install trustworthy packages necessary to install and trust the signing-key first.
 
 ```
-pacman -S git
-git clone https://aur.archlinux.org/fabiscafe-keyring.git
-cd fabiscafe-keyring
-makepkg -cis
+pacman-key --keyserver hkps://keys.openpgp.org --recv-keys 6E58E886A8E07538A2485FAED6A4F386B4881229
+pacman-key --lsign-key 6E58E886A8E07538A2485FAED6A4F386B4881229
 ```
 
 ### Add the repo
