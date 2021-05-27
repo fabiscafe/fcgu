@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=librsvg
-pkgver=2.51.1
-pkgrel=2
+pkgver=2.51.2
+pkgrel=1
 epoch=2
 pkgdesc="SVG rendering library"
 url="https://wiki.gnome.org/Projects/LibRsvg"
@@ -14,7 +14,7 @@ license=(LGPL)
 depends=(gdk-pixbuf2 pango)
 makedepends=(gobject-introspection vala gtk-doc git rust)
 provides=(librsvg-${pkgver%%.*}.so)
-_commit=e9431c8096f24b050f2b4316f4b513f22ab5e58a # tags/2.51.1^0
+_commit=4d865243b2a289d494d0dfc5793ec817d76691e6 # tags/2.51.2^0
 source=("git+https://gitlab.gnome.org/GNOME/librsvg.git#commit=$_commit")
 sha256sums=('SKIP')
 

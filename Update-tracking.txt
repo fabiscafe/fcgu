@@ -1,2 +1,2 @@
 folks 0.15.2
-librsvg 2.51.1
+librsvg 2.51.2
