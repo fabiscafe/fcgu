@@ -7,8 +7,10 @@ gnome-maps v41.alpha
 gnome-terminal 3.41.0
 librsvg 2.51.4
 nautilus 41.alpha
+orca ORCA_41_ALPHA
 
 # Exclude
 epiphany
+folks
 glib
 webkit2gtk
