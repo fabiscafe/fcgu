@@ -14,7 +14,7 @@ groups=(gnome)
 depends=('cdrtools' 'edk2-ovmf' 'gtksourceview4' 'gtk-vnc' 'libarchive' 'libgudev' 'libhandy'
          'libosinfo' 'libsecret' 'libvirt-glib' 'mtools' 'qemu' 'spice-gtk' 'tracker3'
          'webkit2gtk')
-makedepends=(git  gobject-introspection 'itstool' meson spice-protocol vala)
+makedepends=('git' 'gobject-introspection' 'itstool' 'meson' 'spice-protocol' 'vala')
 _commit=638ea628606a870208ed46765cfc219b7221e534  # tags/41.alpha^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-boxes.git#commit=$_commit"
         "git+https://gitlab.gnome.org/felipeborges/libovf-glib.git")
