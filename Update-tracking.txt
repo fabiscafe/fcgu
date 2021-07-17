@@ -3,6 +3,7 @@ evolution 3.41.1
 evolution-data-server 3.41.1
 gnome-boxes 41.alpha
 gnome-calculator 41.alpha
+gnome-desktop 41.alpha
 gnome-disk-utility 41.alpha
 gnome-initial-setup 41.alpha
 gnome-maps v41.alpha
