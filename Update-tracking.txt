@@ -10,6 +10,7 @@ gnome-initial-setup 41.alpha
 gnome-maps v41.alpha
 gnome-software 41.alpha
 gnome-terminal 3.41.0
+gsettings-desktop-schemas 41.alpha
 librsvg 2.51.4
 nautilus 41.alpha
 orca ORCA_41_ALPHA
