@@ -3,7 +3,6 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 options=(debug !strip)
 
-
 pkgname=gnome-control-center
 pkgver=41.alpha
 pkgrel=1
