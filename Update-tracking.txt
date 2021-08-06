@@ -3,6 +3,7 @@ evolution 3.41.1
 evolution-data-server 3.41.1
 gdm 41.alpha
 gedit 41.alpha
+gjs 1.69.1
 gnome-boxes 41.alpha
 gnome-calculator 41.alpha
 gnome-calendar 41.alpha1
