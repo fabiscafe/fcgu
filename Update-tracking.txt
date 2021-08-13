@@ -1,5 +1,5 @@
 evince 41.alpha
-evolution 3.41.1
+evolution 3.41.2
 evolution-data-server 3.41.2
 gdm 41.alpha
 gedit 41.alpha
