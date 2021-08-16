@@ -17,7 +17,7 @@ gnome-software 41.beta
 gnome-terminal 3.41.90
 gsettings-desktop-schemas 41.alpha
 librsvg 2.51.4
-nautilus 41.alpha
+nautilus 41.beta
 orca ORCA_41_ALPHA
 yelp-tools 41.beta
 yelp-xsl 41.beta
