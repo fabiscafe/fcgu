@@ -11,7 +11,7 @@ gnome-control-center 41.alpha
 gnome-desktop 41.alpha
 gnome-disk-utility 41.alpha
 gnome-initial-setup 41.alpha
-gnome-maps v41.alpha
+gnome-maps v41.beta
 gnome-software 41.beta
 gnome-terminal 3.41.0
 gsettings-desktop-schemas 41.alpha
