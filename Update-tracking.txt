@@ -18,6 +18,7 @@ gnome-software 41.beta
 gnome-terminal 3.41.90
 gsettings-desktop-schemas 41.alpha
 librsvg 2.51.4
+libsoup3 2.99.9
 nautilus 41.beta
 orca ORCA_41_ALPHA
 vte3 0.65.91
