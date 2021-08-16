@@ -10,7 +10,7 @@ gnome-calendar 41.alpha1
 gnome-control-center 41.beta
 gnome-desktop 41.alpha
 gnome-disk-utility 41.alpha
-gnome-initial-setup 41.alpha
+gnome-initial-setup 41.beta
 gnome-maps v41.beta
 gnome-software 41.beta
 gnome-terminal 3.41.0
