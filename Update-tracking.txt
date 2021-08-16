@@ -19,6 +19,7 @@ librsvg 2.51.4
 nautilus 41.alpha
 orca ORCA_41_ALPHA
 yelp-tools 41.beta
+yelp-xsl 41.beta
 
 # Wontbuild
 vte3 0.65.90 => https://gitlab.gnome.org/GNOME/vte/-/issues/2508
