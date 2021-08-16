@@ -13,7 +13,7 @@ gnome-disk-utility 41.alpha
 gnome-initial-setup 41.beta
 gnome-maps v41.beta
 gnome-software 41.beta
-gnome-terminal 3.41.0
+gnome-terminal 3.41.90
 gsettings-desktop-schemas 41.alpha
 librsvg 2.51.4
 nautilus 41.alpha
