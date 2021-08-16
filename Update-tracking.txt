@@ -18,6 +18,7 @@ gsettings-desktop-schemas 41.alpha
 librsvg 2.51.4
 nautilus 41.alpha
 orca ORCA_41_ALPHA
+yelp-tools 41.beta
 
 # Exclude
 epiphany
