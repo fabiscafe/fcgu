@@ -10,7 +10,7 @@ gnome-calculator 41.alpha
 gnome-calendar 41.alpha1
 gnome-control-center 41.beta
 gnome-desktop 41.alpha
-gnome-disk-utility 41.alpha
+gnome-disk-utility 41.beta
 gnome-initial-setup 41.beta
 gnome-maps v41.beta
 gnome-software 41.beta
