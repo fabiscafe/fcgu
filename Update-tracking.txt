@@ -19,6 +19,7 @@ gsettings-desktop-schemas 41.alpha
 librsvg 2.51.4
 nautilus 41.beta
 orca ORCA_41_ALPHA
+webkit2gtk 2.33.2
 yelp-tools 41.beta
 yelp-xsl 41.beta
 
@@ -30,4 +31,4 @@ yelp 41.beta (Requires webkit2gtk)
 epiphany
 folks
 glib
-webkit2gtk
+
