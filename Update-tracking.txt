@@ -5,6 +5,7 @@ evolution-data-server 3.41.2
 gdm 41.alpha
 gedit 41.alpha
 gjs 1.69.1
+glib2 2.69.1
 gnome-boxes 41.alpha
 gnome-calculator 41.alpha
 gnome-calendar 41.alpha1
@@ -30,5 +31,4 @@ yelp-xsl 41.beta
 yelp 41.beta (Requires webkit2gtk)
 epiphany
 folks
-glib
 
