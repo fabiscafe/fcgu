@@ -26,6 +26,7 @@ yelp-xsl 41.beta
 vte3 0.65.90 => https://gitlab.gnome.org/GNOME/vte/-/issues/2508
 
 # Exclude
+yelp 41.beta (Requires webkit2gtk)
 epiphany
 folks
 glib
