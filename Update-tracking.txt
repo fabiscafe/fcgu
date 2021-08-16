@@ -7,7 +7,7 @@ gjs 1.69.1
 gnome-boxes 41.alpha
 gnome-calculator 41.alpha
 gnome-calendar 41.alpha1
-gnome-control-center 41.alpha
+gnome-control-center 41.beta
 gnome-desktop 41.alpha
 gnome-disk-utility 41.alpha
 gnome-initial-setup 41.alpha
