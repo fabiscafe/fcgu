@@ -1,4 +1,5 @@
 eog 41.beta
+epiphany 41.beta
 evince 41.alpha
 evolution 3.41.2
 evolution-data-server 3.41.2
@@ -30,6 +31,5 @@ yelp-xsl 41.beta
 # Wontbuild
 
 # Exclude
-epiphany
 folks
 
