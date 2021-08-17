@@ -5,13 +5,13 @@ options=(debug !strip)
 
 pkgname=webkit2gtk
 pkgver=2.33.2
-pkgrel=2
+pkgrel=1
 pkgdesc="Web content engine for GTK"
 url="https://webkitgtk.org"
 arch=(x86_64)
 license=(custom)
 depends=(cairo fontconfig freetype2 libgcrypt glib2 gtk3 harfbuzz harfbuzz-icu
-         icu libjpeg libsoup3 libxml2 zlib libpng sqlite atk libwebp at-spi2-core
+         icu libjpeg libsoup libxml2 zlib libpng sqlite atk libwebp at-spi2-core
          libegl libgl libgles libwpe wpebackend-fdo libxslt libsecret libtasn1
          enchant libx11 libxext libice libxt wayland libnotify hyphen openjpeg2
          woff2 libsystemd bubblewrap libseccomp xdg-dbus-proxy gstreamer
@@ -41,13 +41,14 @@ build() {
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -DCMAKE_SKIP_RPATH=ON \
     -DENABLE_GTKDOC=ON \
-    -DENABLE_MINIBROWSER=ON
+    -DENABLE_MINIBROWSER=ON \
+    -DUSE_SOUP2=ON
   cmake --build build
 }
 
 package() {
   depends+=(libwpe-1.0.so libWPEBackend-fdo-1.0.so)
-  provides+=(libjavascriptcoregtk-4.1.so libwebkit2gtk-4.1.so)
+  provides+=(libjavascriptcoregtk-4.0.so libwebkit2gtk-4.0.so)
 
   DESTDIR="$pkgdir" cmake --install build
 
