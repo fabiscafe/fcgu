@@ -23,13 +23,13 @@ nautilus 41.beta
 orca ORCA_41_ALPHA
 vte3 0.65.91
 webkit2gtk 2.33.2
+yelp 41.beta
 yelp-tools 41.beta
 yelp-xsl 41.beta
 
 # Wontbuild
 
 # Exclude
-yelp 41.beta (Requires webkit2gtk)
 epiphany
 folks
 

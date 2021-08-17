@@ -1,0 +1,41 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+options=(debug !strip)
+
+pkgname=yelp
+pkgver=41.beta
+pkgrel=1
+pkgdesc="Get help with GNOME"
+url="https://wiki.gnome.org/Apps/Yelp"
+license=(GPL)
+arch=(x86_64)
+depends=(webkit2gtk libwebkit2gtk-4.1.so yelp-xsl libxslt xz bzip2)
+makedepends=(gtk-doc itstool autoconf-archive git appstream-glib)
+groups=(gnome)
+_commit=d8f322d77a4f21e89f5ded826970c0e16965ff8f  # tags/41.beta^0
+source=("git+https://gitlab.gnome.org/GNOME/yelp.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+  NOCONFIGURE=1 ./autogen.sh
+}
+
+build() {
+  cd $pkgname
+  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+    --disable-static --enable-gtk-doc --enable-compile-warnings=minimum
+  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+  make
+}
+
+package() {
+  cd $pkgname
+  make DESTDIR="$pkgdir" install
+}
