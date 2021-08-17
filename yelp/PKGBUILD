@@ -5,12 +5,12 @@ options=(debug !strip)
 
 pkgname=yelp
 pkgver=41.beta
-pkgrel=1
+pkgrel=2
 pkgdesc="Get help with GNOME"
 url="https://wiki.gnome.org/Apps/Yelp"
 license=(GPL)
 arch=(x86_64)
-depends=(webkit2gtk libwebkit2gtk-4.1.so yelp-xsl libxslt xz bzip2)
+depends=(webkit2gtk yelp-xsl libxslt xz bzip2)
 makedepends=(gtk-doc itstool autoconf-archive git appstream-glib)
 groups=(gnome)
 _commit=d8f322d77a4f21e89f5ded826970c0e16965ff8f  # tags/41.beta^0
@@ -30,7 +30,8 @@ prepare() {
 build() {
   cd $pkgname
   ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-    --disable-static --enable-gtk-doc --enable-compile-warnings=minimum
+    --disable-static --enable-gtk-doc --enable-compile-warnings=minimum \
+    --with-webkit2gtk-4-0
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
   make
 }
