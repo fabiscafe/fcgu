@@ -6,7 +6,7 @@ options=(debug !strip)
 
 pkgname=mutter
 pkgver=41.beta
-pkgrel=1
+pkgrel=2
 pkgdesc="A window manager for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
 arch=(x86_64)
@@ -63,7 +63,7 @@ _check() (
 check() {
   dbus-run-session xvfb-run \
     -s '-screen 0 1920x1080x24 -nolisten local +iglx -noreset' \
-    bash -c "$(declare -f _check); _check" || true
+    bash -c "$(declare -f _check); _check"
 }
 
 package() {
