@@ -1,0 +1,40 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Balló György <ballogyor+arch at gmail dot com>
+options=(debug !strip)
+
+pkgname=gnome-podcasts
+pkgver=0.5.0beta
+pkgrel=1
+pkgdesc="Podcast application for GNOME"
+arch=(x86_64)
+url="https://gitlab.gnome.org/World/podcasts"
+license=(GPL3)
+depends=(gst-plugins-bad gst-plugins-base gst-plugins-good libhandy)
+makedepends=(git meson rust)
+optdepends=('gst-plugins-ugly: Extra media codecs'
+            'gst-libav: Extra media codecs')
+_commit=a166de22a0a79a090168d97631f690eb23c50381  # tags/0.5.0-beta^0
+source=("git+https://gitlab.gnome.org/World/podcasts.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd podcasts
+  git describe --tags | sed 's/-b/b/g;s/-/+/g' #https://gitlab.gnome.org/World/podcasts/-/issues/227
+}
+
+prepare() {
+  cd podcasts
+}
+
+build() {
+  arch-meson podcasts build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs || true
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
