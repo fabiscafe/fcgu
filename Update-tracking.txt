@@ -26,7 +26,7 @@ librsvg 2.51.4
 libsoup3 2.99.9
 mutter 41.beta
 nautilus 41.beta
-orca ORCA_41_ALPHA
+orca ORCA_41_BETA
 vte3 0.65.91
 webkit2gtk 2.33.3
 yelp 41.beta
