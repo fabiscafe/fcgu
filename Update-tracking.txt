@@ -21,6 +21,7 @@ gnome-shell-extensions 41.beta
 gnome-settings-daemon 40.0.1+61+gca678e10
 gnome-software 41.beta
 gnome-terminal 3.41.90
+gnome-text-editor 41.alpha1
 gsettings-desktop-schemas 41.alpha
 gtksourceview5 5.1.0
 librsvg 2.51.4
