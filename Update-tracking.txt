@@ -22,6 +22,7 @@ gnome-settings-daemon 40.0.1+61+gca678e10
 gnome-software 41.beta
 gnome-terminal 3.41.90
 gsettings-desktop-schemas 41.alpha
+gtksourceview5 5.1.0
 librsvg 2.51.4
 libsoup3 2.99.9
 mutter 41.beta
