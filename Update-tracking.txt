@@ -1,3 +1,4 @@
+callaudiod 0.1.0
 eog 41.beta
 epiphany 41.beta
 evince 41.alpha
