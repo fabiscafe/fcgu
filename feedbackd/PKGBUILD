@@ -1,0 +1,35 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+options=(debug !strip)
+
+pkgname=feedbackd
+pkgver=0.0.0+git20210426
+pkgrel=1
+pkgdesc="A daemon to provide haptic (and later more) feedback on events"
+arch=(x86_64)
+url="https://source.puri.sm/Librem5/feedbackd"
+license=(GPL3)
+depends=(gsound libgudev json-glib)
+makedepends=(git gobject-introspection meson vala)
+_commit=48b4bb97d62fa1917a9e54852f593d3190ef188c  # tags/0.0.0+git20210426^0
+source=("git+https://source.puri.sm/Librem5/feedbackd.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/-/+/g;s/^v//g'
+}
+
+build() {
+  arch-meson $pkgname build \
+    -D gtk_doc=true \
+    -D tests=false
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "${pkgdir}"
+}

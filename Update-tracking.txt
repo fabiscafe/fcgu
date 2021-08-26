@@ -4,6 +4,7 @@ epiphany 41.beta
 evince 41.alpha
 evolution 3.41.2
 evolution-data-server 3.41.2
+feedbackd 0.0.0+git20210426
 gdm 41.alpha
 gedit 41.alpha
 gjs 1.69.2
