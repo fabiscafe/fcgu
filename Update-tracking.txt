@@ -22,7 +22,7 @@ gnome-music 41.beta
 gnome-podcasts 0.5.0beta
 gnome-shell 41.beta
 gnome-shell-extensions 41.beta
-gnome-settings-daemon 40.0.1+61+gca678e10
+gnome-settings-daemon 41.rc
 gnome-software 41.beta
 gnome-terminal 3.41.90
 gnome-text-editor 41.beta1
