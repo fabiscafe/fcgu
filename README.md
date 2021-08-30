@@ -23,10 +23,11 @@ pacman-key --lsign-key 6E58E886A8E07538A2485FAED6A4F386B4881229
 ```
 
 ### Add the repo
-This repo is made as an overlay repo. This means it will replace the Arch-GNOME packages. It will **not** install **side-by-side**. To work as overlay the repo needs to be above the **[core]** section in */etc/pacman.conf*.
+This repo should be below the core repo, but above every other one. It will **not** install **side-by-side**. To work as overlay the repo needs to be above the **[core]** section in */etc/pacman.conf*.
 
 ```
 [fcgu]
+Server = https://$repo.fabis.cafe/$repo
 #Server = <looking for new mirrors>
 ```
 
@@ -41,11 +42,12 @@ Here a preview how it should look:
 #[testing]
 #Include = /etc/pacman.d/mirrorlist
 
-[fcgu]
-#Server = <looking for new mirrors>
-
 [core]
 Include = /etc/pacman.d/mirrorlist
+
+[fcgu]
+Server = https://$repo.fabis.cafe/$repo
+#Server = <looking for new mirrors>
 
 [extra]
 Include = /etc/pacman.d/mirrorlist
@@ -68,6 +70,7 @@ The repo needs to be removed from */etc/pacman.conf*
 
 ```
 [fcgu]
+Server = https://$repo.fabis.cafe/$repo
 #Server = <looking for new mirrors>
 ```
 When thats done a `pacman -Syuu` will downgrade all packages to the Arch-repo versions.
