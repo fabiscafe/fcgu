@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=yelp
-pkgver=41.beta
-pkgrel=2
+pkgver=41.beta2
+pkgrel=1
 pkgdesc="Get help with GNOME"
 url="https://wiki.gnome.org/Apps/Yelp"
 license=(GPL)
@@ -13,7 +13,7 @@ arch=(x86_64)
 depends=(webkit2gtk yelp-xsl libxslt xz bzip2)
 makedepends=(gtk-doc itstool autoconf-archive git appstream-glib)
 groups=(gnome)
-_commit=d8f322d77a4f21e89f5ded826970c0e16965ff8f  # tags/41.beta^0
+_commit=89e25b87be0a9cc9c67261ac3615dd28f4485d90  # tags/41.beta2^0
 source=("git+https://gitlab.gnome.org/GNOME/yelp.git#commit=$_commit")
 sha256sums=('SKIP')
 
