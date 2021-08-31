@@ -5,7 +5,7 @@ options=(debug !strip)
 
 pkgname=gnome-control-center
 pkgver=41.beta
-pkgrel=1
+pkgrel=2
 pkgdesc="GNOME's main interface to configure various aspects of the desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-control-center"
 license=(GPL2)
@@ -21,7 +21,8 @@ optdepends=('system-config-printer: Printer settings'
             'gnome-user-share: WebDAV file sharing'
             'gnome-remote-desktop: screen sharing'
             'rygel: media sharing'
-            'openssh: remote login')
+            'openssh: remote login'
+            'power-profiles-daemon: power-profile integration')
 groups=(gnome)
 _commit=6e6451feb23a891efc4d5503bf4483ced2f51855  # tags/41.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-control-center.git#commit=$_commit"
