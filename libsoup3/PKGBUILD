@@ -5,16 +5,15 @@ options=(debug !strip)
 
 pkgname=libsoup3
 pkgver=2.99.9
-pkgrel=1
+pkgrel=2
 pkgdesc="HTTP client/server library for GNOME"
 url="https://wiki.gnome.org/Projects/libsoup"
 arch=(x86_64)
 license=(LGPL)
-depends=("glib2>=2.69.0" libxml2 glib-networking sqlite krb5 libpsl brotli)
+depends=("glib2>=2.69.0" libxml2 "glib-networking>=2.70.beta" sqlite krb5 libnghttp2 libpsl brotli)
 makedepends=(gobject-introspection python python-quart vala git gtk-doc meson samba)
 checkdepends=(apache php-apache)
-optdepends=('samba: Windows Domain SSO'
-	    'libnghttp2')
+optdepends=('samba: Windows Domain SSO')
 provides=(libsoup-3.0.so libsoup-gnome-3.0.so)
 _commit=dc9b33385e8766a3d1f7012dec0144f32c87d26f  # tags/2.99.9^0
 source=("git+https://gitlab.gnome.org/GNOME/libsoup.git#commit=$_commit")
@@ -23,10 +22,6 @@ sha256sums=('SKIP')
 pkgver() {
   cd libsoup
   git describe --tags | sed 's/-/+/g'
-}
-
-prepare() {
-  cd libsoup
 }
 
 build() {
@@ -38,11 +33,9 @@ build() {
 }
 
 check() {
-  # SSL test flaky
-  # https://gitlab.gnome.org/GNOME/libsoup/-/issues/188
-  meson test -C build --print-errorlogs || :
+  meson test -C build --print-errorlogs
 }
 
 package() {
-  DESTDIR="$pkgdir" meson install -C build
+  meson install -C build --destdir=${pkgdir}
 }
