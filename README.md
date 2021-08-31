@@ -27,6 +27,7 @@ This repo should be below the core repo, but above every other one. It will **no
 
 ```
 [fcgu]
+Server = https://gnome.holmie.xyz/$repo
 Server = https://$repo.fabis.cafe/$repo
 #Server = <looking for new mirrors>
 ```
@@ -46,6 +47,7 @@ Here a preview how it should look:
 Include = /etc/pacman.d/mirrorlist
 
 [fcgu]
+Server = https://gnome.holmie.xyz/$repo
 Server = https://$repo.fabis.cafe/$repo
 #Server = <looking for new mirrors>
 
@@ -70,6 +72,7 @@ The repo needs to be removed from */etc/pacman.conf*
 
 ```
 [fcgu]
+Server = https://gnome.holmie.xyz/$repo
 Server = https://$repo.fabis.cafe/$repo
 #Server = <looking for new mirrors>
 ```
