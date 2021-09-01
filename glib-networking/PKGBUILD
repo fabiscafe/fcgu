@@ -4,7 +4,7 @@ options=(debug !strip)
 
 pkgname=glib-networking
 pkgver=2.70.beta
-pkgrel=1
+pkgrel=2
 epoch=1
 pkgdesc="Network extensions for GLib"
 url="https://gitlab.gnome.org/GNOME/glib-networking"
@@ -24,6 +24,10 @@ pkgver() {
 
 prepare() {
   cd $pkgname
+  # gnutls: fix use of non-default GTlsDatabases
+  # https://gitlab.gnome.org/GNOME/glib-networking/-/issues/169
+  git cherry-pick -n d53e3a610f0b3eb57492d8dc24f1d2d1e7a2ec30
+
 }
 
 build() {
