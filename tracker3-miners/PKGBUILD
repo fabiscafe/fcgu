@@ -1,0 +1,49 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+options=(debug !strip)
+
+pkgname=tracker3-miners
+pkgver=3.2.0beta
+pkgrel=1
+pkgdesc="Collection of data extractors for Tracker/Nepomuk"
+url="https://wiki.gnome.org/Projects/Tracker"
+arch=(x86_64)
+license=(GPL)
+depends=(tracker3 gst-plugins-base-libs exempi libexif libcue libgrss libgsf
+         libgxps libiptcdata libosinfo poppler-glib totem-plparser giflib
+         libgexiv2 gupnp-dlna upower libseccomp libnm)
+makedepends=(git meson vala asciidoc)
+checkdepends=(python-gobject python-tappy gst-plugins-good gst-plugins-base
+              gst-libav)
+groups=(gnome)
+_commit=f68939a244b66d992b37f9c5a70a043436072fce  # tags/3.2.0.beta^0
+source=("git+https://gitlab.gnome.org/GNOME/tracker-miners.git#commit=$_commit"
+        fix-rpath.diff)
+sha256sums=('SKIP'
+            'd23ee61df2a8eabb1b4faf7efeedeca228baee549097d5db11e513fcedf7e464')
+
+pkgver() {
+  cd tracker-miners
+  git describe --tags | sed 's/_/./g;s/-/+/g;s/0.alpha/0alpha/g;s/0.beta/0beta/g;s/0.rc/0rc/g'
+}
+
+prepare() {
+  cd tracker-miners
+  git apply -3 ../fix-rpath.diff
+}
+
+build() {
+  arch-meson tracker-miners build -D tests_tap_protocol=true
+  meson compile -C build
+}
+
+check() {
+  # Intermittent test failures: https://gitlab.gnome.org/GNOME/tracker-miners/-/issues/79
+  dbus-run-session meson test -C build --print-errorlogs -t 3 || :
+}
+
+package() {
+  depends+=(libtracker-sparql-3.0.so)
+
+  meson install -C build --destdir "$pkgdir"
+}
