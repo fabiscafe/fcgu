@@ -1,5 +1,5 @@
 callaudiod 0.1.0
-calls 41.beta
+calls 41.rc
 eog 41.beta
 epiphany 41.rc
 evince 41.alpha
