@@ -3,7 +3,7 @@ calls 41.rc
 eog 41.beta
 epiphany 41.rc
 evince 41.alpha
-evolution 3.41.2
+evolution 3.41.3
 evolution-data-server 3.41.3
 feedbackd 0.0.0+git20210426
 gdm 41.alpha
