@@ -4,7 +4,7 @@
 options=(debug !strip)
 
 pkgname=evolution-data-server
-pkgver=3.41.2
+pkgver=3.41.3
 pkgrel=1
 pkgdesc="Centralized access to appointments and contacts"
 url="https://wiki.gnome.org/Apps/Evolution"
@@ -15,7 +15,7 @@ provides=(libcamel-1.2.so libebackend-1.2.so libebook-1.2.so libebook-contacts-1
           libecal-2.0.so libedata-book-1.2.so libedata-cal-2.0.so libedataserver-1.2.so
           libedataserverui-1.2.so)
 license=(GPL)
-_commit=dae31ee2326c479f0d0a729cb7a10ed468d9892b  # tags/3.41.2^0
+_commit=3b3e567c89d0d3d828ab428216c53e352ac8794f  # tags/3.41.3^0
 source=("git+https://gitlab.gnome.org/GNOME/evolution-data-server.git#commit=$_commit")
 sha256sums=('SKIP')
 
