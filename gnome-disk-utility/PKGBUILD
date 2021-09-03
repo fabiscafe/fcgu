@@ -5,7 +5,7 @@
 options=(debug !strip)
 
 pkgname=gnome-disk-utility
-pkgver=41.beta
+pkgver=41.rc
 pkgrel=1
 pkgdesc="Disk Management Utility for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-disk-utility"
@@ -15,7 +15,7 @@ groups=(gnome)
 depends=(udisks2 gtk3 libsecret libpwquality libcanberra libdvdread libnotify
          parted systemd libhandy)
 makedepends=(git meson docbook-xsl)
-_commit=d4b88657cb170bd2b5caf56762ace217ea6938e0  # tags/41.beta^0
+_commit=95510c60bb36e33cbfb49017242194b24ade659c  # tags/41.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-disk-utility.git#commit=$_commit")
 sha256sums=('SKIP')
 

@@ -17,7 +17,7 @@ gnome-calendar 41.beta
 gnome-connections 41.rc
 gnome-control-center 41.beta
 gnome-desktop 41.beta
-gnome-disk-utility 41.beta
+gnome-disk-utility 41.rc
 gnome-initial-setup 41.beta
 gnome-maps v41.beta
 gnome-music 41.beta
