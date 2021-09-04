@@ -51,4 +51,5 @@ yelp-xsl 41.beta
 
 # Exclude
 folks
+vala
 
