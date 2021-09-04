@@ -12,7 +12,7 @@ gjs 1.69.2
 glib2 2.69.2
 glib-networking 2.70.beta
 gnome-boxes 41.rc
-gnome-calculator 41.alpha
+gnome-calculator 41.rc
 gnome-calendar 41.beta
 gnome-connections 41.rc
 gnome-contacts 41.beta
