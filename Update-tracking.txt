@@ -27,6 +27,7 @@ gnome-shell 41.beta
 gnome-shell-extensions 41.beta
 gnome-settings-daemon 41.rc
 gnome-software 41.beta
+gnome-system-monitor 41.rc
 gnome-terminal 3.41.90
 gnome-text-editor 41.0
 gsettings-desktop-schemas 41.rc
