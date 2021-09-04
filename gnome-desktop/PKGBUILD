@@ -4,7 +4,7 @@
 options=(debug !strip)
 
 pkgname=gnome-desktop
-pkgver=41.beta
+pkgver=41.rc.1
 pkgrel=1
 epoch=1
 pkgdesc="Library with common API for various GNOME modules"
@@ -16,7 +16,7 @@ depends=(gsettings-desktop-schemas gtk3 xkeyboard-config iso-codes libseccomp
 makedepends=(gobject-introspection git meson gtk-doc yelp-tools)
 checkdepends=(xorg-server-xvfb)
 provides=(libgnome-desktop-3.so)
-_commit=527f4752dc6cda58c68def029ed8bdfe9094e55c  # tags/41.beta^0
+_commit=0f92b5e5e966cc491c5b8314f71291861a6932e9  # tags/41.rc.1^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-desktop.git#commit=$_commit")
 sha256sums=('SKIP')
 
