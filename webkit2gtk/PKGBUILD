@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=webkit2gtk
-pkgver=2.33.3
-pkgrel=3
+pkgver=2.33.90
+pkgrel=1
 pkgdesc="Web content engine for GTK"
 url="https://webkitgtk.org"
 arch=(x86_64)
@@ -16,26 +16,20 @@ depends=(cairo fontconfig freetype2 libgcrypt glib2 gtk3 harfbuzz harfbuzz-icu
          enchant libx11 libxext libice libxt wayland libnotify hyphen openjpeg2
          woff2 libsystemd bubblewrap libseccomp xdg-dbus-proxy gstreamer
          gst-plugins-base-libs libmanette)
-makedepends=(git cmake ccache ninja gtk-doc python ruby gobject-introspection
+makedepends=(git cmake ninja gtk-doc python ruby gobject-introspection
              wayland-protocols systemd gst-plugins-bad gperf)
 optdepends=('geoclue: Geolocation support'
             'gst-plugins-good: media decoding'
             'gst-plugins-bad: media decoding'
             'gst-libav: nonfree media decoding')
-source=($url/releases/webkitgtk-$pkgver.tar.xz{,.asc}
-        0001-fix_gtkdoc_build.diff
-        0002-fix_Crash-in-JSC-FTL-saveAllRegisters.diff)
-sha256sums=('b43b9995ded6888362c3583bc0b7d8e2ba439df889c375d8b41396ddedc6ef00'
-            'SKIP'
-            'e3b57d864a3feb96fc7331cbd4e5e3fd43b55f22a5ce91378324878df38b7042'
-            '6892b7e2e7810cc0f0f7dbdf77f3a3cff311a895f2149ce5e3370bffce0ecfb0')
+source=($url/releases/webkitgtk-$pkgver.tar.xz{,.asc})
+sha256sums=('3575452129593b070e248f59617f35eed75d2b6c75bbb64ea0fcbc9eaafdf19c'
+            'SKIP')
 validpgpkeys=('D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos <cgarcia@igalia.com>
               '5AA3BC334FD7E3369E7C77B291C559DBE4C9123B') # Adrián Pérez de Castro <aperez@igalia.com>
 
 prepare() {
   cd webkitgtk-$pkgver
-  patch -up1 -i ../0001-fix_gtkdoc_build.diff  # https://bugs.webkit.org/show_bug.cgi?id=229152#c18
-  patch -up1 -i ../0002-fix_Crash-in-JSC-FTL-saveAllRegisters.diff  # https://bugs.webkit.org/show_bug.cgi?id=229235#c37
 }
 
 build() {
@@ -47,7 +41,6 @@ build() {
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -DCMAKE_SKIP_RPATH=ON \
     -DENABLE_GTKDOC=ON \
-    -DENABLE_MINIBROWSER=ON \
     -DUSE_SOUP2=ON
   cmake --build build
 }

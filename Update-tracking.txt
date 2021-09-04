@@ -40,7 +40,7 @@ sofia-sip 1.13.4
 tracker3 3.2.0beta
 tracker3-miners 3.2.0beta
 vte3 0.65.91
-webkit2gtk 2.33.3
+webkit2gtk 2.33.90
 yelp 41.beta2
 yelp-tools 41.beta
 yelp-xsl 41.beta
