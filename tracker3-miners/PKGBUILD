@@ -3,7 +3,7 @@
 options=(debug !strip)
 
 pkgname=tracker3-miners
-pkgver=3.2.0beta
+pkgver=3.2.0rc
 pkgrel=1
 pkgdesc="Collection of data extractors for Tracker/Nepomuk"
 url="https://wiki.gnome.org/Projects/Tracker"
@@ -16,7 +16,7 @@ makedepends=(git meson vala asciidoc)
 checkdepends=(python-gobject python-tappy gst-plugins-good gst-plugins-base
               gst-libav)
 groups=(gnome)
-_commit=f68939a244b66d992b37f9c5a70a043436072fce  # tags/3.2.0.beta^0
+_commit=8d5b51cc9c5087c3452c5808ec4ebffe1d89175d  # tags/3.2.0.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/tracker-miners.git#commit=$_commit"
         fix-rpath.diff)
 sha256sums=('SKIP'
@@ -44,6 +44,5 @@ check() {
 
 package() {
   depends+=(libtracker-sparql-3.0.so)
-
   meson install -C build --destdir "$pkgdir"
 }
