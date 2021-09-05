@@ -34,7 +34,7 @@ gsettings-desktop-schemas 41.rc
 gtksourceview5 5.2.0
 librsvg 2.51.4
 libsoup3 2.99.9
-mutter 41.beta
+mutter 41.rc
 nautilus 41.rc
 orca ORCA_41_RC
 power-profiles-daemon 0.9.0

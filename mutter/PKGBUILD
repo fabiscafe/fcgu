@@ -5,8 +5,8 @@
 options=(debug !strip)
 
 pkgname=mutter
-pkgver=41.beta
-pkgrel=2
+pkgver=41.rc
+pkgrel=1
 pkgdesc="A window manager for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
 arch=(x86_64)
@@ -16,11 +16,11 @@ depends=("glib2>=2.69.0" dconf gobject-introspection-runtime gsettings-desktop-s
          libxkbcommon-x11 gnome-settings-daemon libgudev libinput pipewire
          xorg-xwayland graphene libxkbfile)
 makedepends=(gobject-introspection git egl-wayland meson xorg-server)
-checkdepends=(xorg-server-xvfb pipewire-media-session)
+checkdepends=(xorg-server-xvfb pipewire-media-session python-dbusmock)
 provides=(libmutter-9.so)
 groups=(gnome)
 install=mutter.install
-_commit=12c46e64a85964ab14f8e5917138592f07d27d7a  # tags/41.beta^0
+_commit=c085e1f6be5846f94c2e79e1a2cf957ebad04d87  # tags/41.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit")
 sha256sums=('SKIP')
 
