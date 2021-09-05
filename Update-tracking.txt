@@ -23,7 +23,7 @@ gnome-initial-setup 41.beta
 gnome-maps v41.rc
 gnome-music 41.beta
 gnome-podcasts 0.5.0beta
-gnome-shell 41.beta
+gnome-shell 41.rc
 gnome-shell-extensions 41.beta
 gnome-settings-daemon 41.rc
 gnome-software 41.beta
