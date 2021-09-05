@@ -19,7 +19,7 @@ gnome-contacts 41.beta
 gnome-control-center 41.beta
 gnome-desktop 41.rc.1
 gnome-disk-utility 41.rc
-gnome-initial-setup 41.beta
+gnome-initial-setup 41.rc
 gnome-maps v41.rc
 gnome-music 41.beta
 gnome-podcasts 0.5.0beta
