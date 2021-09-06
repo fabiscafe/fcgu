@@ -1,0 +1,40 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+options=(debug !strip)
+
+pkgname=gnome-user-docs
+pkgver=41.rc
+pkgrel=1
+pkgdesc="User documentation for GNOME"
+url="https://gitlab.gnome.org/GNOME/gnome-user-docs"
+arch=(any)
+license=(FDL)
+depends=(yelp)
+makedepends=(yelp-tools git)
+groups=(gnome)
+_commit=9f5792b11e40164b4bd598b0990e397cf2904f3e  # tags/41.rc^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-user-docs.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+  NOCONFIGURE=1 ./autogen.sh
+}
+  
+
+build() {
+  cd $pkgname
+  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+  make
+}
+
+package() {
+  cd $pkgname
+  make DESTDIR="$pkgdir" install
+}
