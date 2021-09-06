@@ -13,7 +13,7 @@ glib2 2.69.2
 glib-networking 2.70.rc
 gnome-boxes 41.rc
 gnome-calculator 41.rc
-gnome-calendar 41.beta
+gnome-calendar 41.rc1
 gnome-connections 41.rc
 gnome-contacts 41.beta
 gnome-control-center 41.beta
