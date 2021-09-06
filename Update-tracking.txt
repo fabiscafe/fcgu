@@ -10,7 +10,7 @@ gdm 41.alpha
 gedit 41.alpha
 gjs 1.69.2
 glib2 2.69.2
-glib-networking 2.70.beta
+glib-networking 2.70.rc
 gnome-boxes 41.rc
 gnome-calculator 41.rc
 gnome-calendar 41.beta
