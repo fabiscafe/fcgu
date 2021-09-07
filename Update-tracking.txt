@@ -8,7 +8,7 @@ evolution-data-server 3.41.3
 feedbackd 0.0.0+git20210426
 gdm 41.rc
 gedit 41.alpha
-gjs 1.69.2
+gjs 1.69.90
 glib2 2.69.2
 glib-networking 2.70.rc
 gnome-boxes 41.rc
