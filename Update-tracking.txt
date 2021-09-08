@@ -12,6 +12,7 @@ gjs 1.69.90
 glib2 2.69.3
 glib-networking 2.70.rc
 gnome-boxes 41.rc
+gnome-builder 41.0
 gnome-calculator 41.rc
 gnome-calendar 41.rc1
 gnome-connections 41.rc
