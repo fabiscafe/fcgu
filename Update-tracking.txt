@@ -27,7 +27,7 @@ gnome-podcasts 0.5.0beta
 gnome-shell 41.rc.1
 gnome-shell-extensions 41.rc.1
 gnome-settings-daemon 41.rc
-gnome-software 41.beta
+gnome-software 41.rc
 gnome-system-monitor 41.rc
 gnome-terminal 3.41.90
 gnome-text-editor 41.0
