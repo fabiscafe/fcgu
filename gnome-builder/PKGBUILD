@@ -4,7 +4,7 @@ options=(debug !strip)
 
 pkgname=gnome-builder
 pkgver=41.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
 arch=(x86_64)
@@ -20,8 +20,11 @@ optdepends=('gnome-code-assistance: Legacy assistance services'
             'clang: C/C++ code assistance')
 groups=(gnome-extra)
 _commit=426838bea03ec94d7e658c681ed9155e4a9a41a7 # tags/41.0^0
-source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
-sha256sums=('SKIP')
+source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit"
+        # https://gitlab.gnome.org/GNOME/gnome-builder/-/issues/1528
+        "0001-fix_mismatched_gslice_usage.patch::https://gitlab.gnome.org/GNOME/gnome-builder/-/commit/6b60a5cefe8b2a3782a2e11ffb5d59005f9a73e3.patch")
+sha256sums=('SKIP'
+            'ee978f41b23b7071691747f00c04c3a780b5912ba3506390e97bfcb612818c5c')
 
 pkgver() {
   cd $pkgname
@@ -30,6 +33,7 @@ pkgver() {
 
 prepare() {
   cd $pkgname
+  git apply -3 ../0001-fix_mismatched_gslice_usage.patch
 }
 
 build() {
