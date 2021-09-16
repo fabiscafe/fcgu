@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=epiphany
-pkgver=41.rc
-pkgrel=1
+pkgver=41.0
+pkgrel=0.1
 pkgdesc="A GNOME web browser based on the WebKit rendering engine"
 url="https://wiki.gnome.org/Apps/Web"
 arch=(x86_64)
@@ -15,7 +15,7 @@ makedepends=(docbook-xml startup-notification lsb-release gobject-introspection
              yelp-tools git meson)
 checkdepends=(xorg-server-xvfb aspell hspell hunspell nuspell libvoikko)
 groups=(gnome)
-_commit=087091f7b87bc26da6268ebe48b04686d9d63fcc  # tags/41.rc^0
+_commit=d8163fa7ea74b2be14da9d4217e9d3e0c41cdb2a  # tags/41.0^0
 source=("git+https://gitlab.gnome.org/GNOME/epiphany.git#commit=$_commit")
 sha256sums=('SKIP')
 

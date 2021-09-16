@@ -1,7 +1,7 @@
 callaudiod 0.1.1
 calls 41.rc
 eog 41.rc
-epiphany 41.rc
+epiphany 41.0
 evince 41.alpha
 evolution 3.41.3
 evolution-data-server 3.41.3
