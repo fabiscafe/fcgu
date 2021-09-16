@@ -5,8 +5,8 @@
 options=(debug !strip)
 
 pkgname=orca
-pkgver=41.rc
-pkgrel=1
+pkgver=41.0
+pkgrel=0.1
 pkgdesc="Screen reader for individuals who are blind or visually impaired"
 url="https://wiki.gnome.org/Projects/Orca"
 arch=(any)
@@ -18,7 +18,7 @@ depends=(gtk3 at-spi2-atk python-atspi python-dbus python-xdg speech-dispatcher 
 )
 makedepends=(itstool intltool git yelp-tools)
 groups=(gnome)
-_commit=3faad822b0a48fedb27c015ea3e2f11aae1e162b  # tags/ORCA_41_RC^0
+_commit=493956a8707307c38a5aaf9e314caa9c3f988caa  # tags/ORCA_41_0^0
 source=("git+https://gitlab.gnome.org/GNOME/orca.git#commit=$_commit")
 sha256sums=('SKIP')
 
