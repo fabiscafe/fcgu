@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=gnome-boxes
-pkgver=41.rc
-pkgrel=1
+pkgver=41.0
+pkgrel=0.1
 pkgdesc="Simple GNOME application to access remote or virtual systems"
 arch=(x86_64)
 url="https://wiki.gnome.org/Apps/Boxes"
@@ -15,7 +15,7 @@ depends=('cdrtools' 'edk2-ovmf' 'gtksourceview4' 'gtk-vnc' 'libarchive' 'libgude
          'libosinfo' 'libsecret' 'libvirt-glib' 'mtools' 'qemu' 'spice-gtk' 'tracker3'
          'webkit2gtk')
 makedepends=('git' 'gobject-introspection' 'itstool' 'meson' 'spice-protocol' 'vala')
-_commit=3dac1017e6f58ff4183589dfdbb032f3f7478d3e  # tags/41.rc^0
+_commit=2d96758597b6985d0dbb0e2a557410cf5f17de7e  # tags/41.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-boxes.git#commit=$_commit"
         "git+https://gitlab.gnome.org/felipeborges/libovf-glib.git")
 sha256sums=('SKIP'
