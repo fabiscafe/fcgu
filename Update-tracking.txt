@@ -15,7 +15,7 @@ gnome-boxes 41.rc
 gnome-builder 41.0
 gnome-calculator 41.rc
 gnome-calendar 41.rc1
-gnome-connections 41.rc
+gnome-connections 41.0
 gnome-contacts 41.beta
 gnome-control-center 41.rc1
 gnome-desktop 41.rc.1
