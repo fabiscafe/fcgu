@@ -38,7 +38,7 @@ libhandy 1.4.0
 librsvg 2.52.0
 libsoup3 2.99.9
 mutter 41.rc
-nautilus 41.rc
+nautilus 41.0
 orca ORCA_41_0
 power-profiles-daemon 0.9.0
 sofia-sip 1.13.4
