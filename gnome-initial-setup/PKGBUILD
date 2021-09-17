@@ -3,15 +3,15 @@
 options=(debug !strip)
 
 pkgname=gnome-initial-setup
-pkgver=41.rc
-pkgrel=1
+pkgver=41.0
+pkgrel=0.1
 pkgdesc='Simple, easy, and safe way to prepare a new system'
 arch=('x86_64')
 url='https://gitlab.gnome.org/GNOME/gnome-initial-setup'
 license=('GPL')
 depends=('cheese' 'gdm' 'gnome-online-accounts' 'libgnomekbd' 'malcontent')
 makedepends=('git' 'meson')
-_commit=874ade5a7a0fe809c667a5874fdb533829536cd2  # tags/41.rc^0
+_commit=07ef5bf7489d150403b40a9faade267b60e0220d  # tags/41.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-initial-setup.git#commit=$_commit")
 sha256sums=('SKIP')
 
