@@ -6,15 +6,15 @@
 options=(debug !strip)
 
 pkgname=gsettings-desktop-schemas
-pkgver=41.rc
-pkgrel=1
+pkgver=41.0
+pkgrel=0.1
 pkgdesc="Shared GSettings schemas for the desktop"
 arch=(any)
 url="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas"
 license=(GPL)
 depends=(glib2 dconf cantarell-fonts adobe-source-code-pro-fonts)
 makedepends=(gobject-introspection git meson)
-_commit=9fa07d19af0950d0448e6d847666aa82b72664a6  # tags/41.rc^0
+_commit=a5c0c7d363bcca5b0f3b6283b0a3e05ddc1c83ac  # tags/41.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas.git#commit=$_commit")
 sha256sums=('SKIP')
 
