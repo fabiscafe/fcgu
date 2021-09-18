@@ -48,7 +48,7 @@ vte3 0.65.91
 webkit2gtk 2.33.91
 yelp 41.beta2
 yelp-tools 41.beta
-yelp-xsl 41.beta
+yelp-xsl 41.0
 
 # Wontbuild
 

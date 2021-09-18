@@ -3,14 +3,14 @@
 options=(debug !strip)
 
 pkgname=yelp-xsl
-pkgver=41.beta
-pkgrel=1
+pkgver=41.0
+pkgrel=0.1
 pkgdesc="Document transformations from Yelp"
 url="https://gitlab.gnome.org/GNOME/yelp-xsl"
 arch=(any)
 license=(GPL)
 makedepends=(itstool git)
-_commit=e02663e94b67d6eb9ea55c92cf15d0976ce9f97c  # tags/41.beta^0
+_commit=eb83ce4f0f282b3998e21798b4156536b25752b8  # tags/41.0^0
 source=("git+https://gitlab.gnome.org/GNOME/yelp-xsl.git#commit=$_commit")
 sha256sums=('SKIP')
 
