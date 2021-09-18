@@ -1,7 +1,7 @@
 # In repo
 - callaudiod 0.1.1
 - calls 41.0
-- eog 41.rc
+- eog 41.0
 - epiphany 41.0
 - evince 41.alpha
 - evolution 3.42.0
