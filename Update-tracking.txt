@@ -36,7 +36,7 @@ gsettings-desktop-schemas 41.0
 gtksourceview5 5.2.0
 libhandy 1.4.0
 librsvg 2.52.0
-libsoup3 2.99.9
+libsoup3 3.0.0
 mutter 41.rc
 nautilus 41.0
 orca ORCA_41_0

@@ -4,18 +4,18 @@
 options=(debug !strip)
 
 pkgname=libsoup3
-pkgver=2.99.9
-pkgrel=2
+pkgver=3.0.0
+pkgrel=0.1
 pkgdesc="HTTP client/server library for GNOME"
 url="https://wiki.gnome.org/Projects/libsoup"
 arch=(x86_64)
 license=(LGPL)
-depends=("glib2>=2.69.0" libxml2 "glib-networking>=2.70.beta" sqlite krb5 libnghttp2 libpsl brotli)
+depends=("glib2>=2.70.0" "glib-networking>=2.70.0" sqlite krb5 libnghttp2 libpsl brotli)
 makedepends=(gobject-introspection python python-quart vala git gtk-doc meson samba)
 checkdepends=(apache php-apache)
 optdepends=('samba: Windows Domain SSO')
 provides=(libsoup-3.0.so libsoup-gnome-3.0.so)
-_commit=dc9b33385e8766a3d1f7012dec0144f32c87d26f  # tags/2.99.9^0
+_commit=63f778a9f0df634b627b7683e737b89cb73f943d  # tags/3.0.0^0
 source=("git+https://gitlab.gnome.org/GNOME/libsoup.git#commit=$_commit")
 sha256sums=('SKIP')
 
