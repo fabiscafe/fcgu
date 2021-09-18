@@ -42,7 +42,7 @@ nautilus 41.0
 orca ORCA_41_0
 power-profiles-daemon 0.9.0
 sofia-sip 1.13.4
-tracker3 3.2.0rc
+tracker3 3.2.0
 tracker3-miners 3.2.0rc
 vte3 0.65.91
 webkit2gtk 2.33.91
