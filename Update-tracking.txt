@@ -21,7 +21,7 @@ gnome-control-center 41.rc1
 gnome-desktop 41.rc.1
 gnome-disk-utility 41.0
 gnome-initial-setup 41.0
-gnome-maps v41.rc
+gnome-maps v41.0
 gnome-music 41.rc
 gnome-podcasts 0.5.0beta
 gnome-shell 41.rc.1
