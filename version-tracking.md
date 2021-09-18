@@ -1,0 +1,55 @@
+# In repo
+- callaudiod 0.1.1
+- calls 41.0
+- eog 41.rc
+- epiphany 41.0
+- evince 41.alpha
+- evolution 3.42.0
+- evolution-data-server 3.42.0
+- feedbackd 0.0.0+git20210426
+- gdm 41.rc
+- gedit 41.alpha
+- gjs 1.70.0
+- glib2 2.70.0
+- glib-networking 2.70.0
+- gnome-boxes 41.1
+- gnome-builder 41.0
+- gnome-calculator 41.0
+- gnome-calendar 41.0
+- gnome-connections 41.0
+- gnome-contacts 41.beta
+- gnome-control-center 41.0
+- gnome-desktop 41.rc.1
+- gnome-disk-utility 41.0
+- gnome-initial-setup 41.0
+- gnome-maps v41.0
+- gnome-music 41.rc
+- gnome-podcasts 0.5.0beta
+- gnome-shell 41.rc.1
+- gnome-shell-extensions 41.rc.1
+- gnome-settings-daemon 41.0
+- gnome-software 41.0
+- gnome-system-monitor 41.0
+- gnome-terminal 3.41.90
+- gnome-text-editor 41.0
+- gnome-user-docs 41.rc
+- gsettings-desktop-schemas 41.0
+- gtksourceview5 5.2.0
+- libsoup3 3.0.0
+- mutter 41.rc
+- nautilus 41.0
+- orca ORCA_41_0
+- sofia-sip 1.13.4
+- tracker3 3.2.0
+- tracker3-miners 3.2.0
+- vte3 0.65.91
+- webkit2gtk 2.33.91
+- yelp 41.beta2
+- yelp-tools 41.0
+- yelp-xsl 41.0
+
+# Wontbuild
+
+# Exclude
+- folks
+- vala
