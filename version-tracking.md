@@ -38,7 +38,7 @@
 - gsettings-desktop-schemas 41.0
 - gtksourceview5 5.2.0
 - libsoup3 3.0.0
-- mutter 41.rc
+- mutter 41.0
 - nautilus 41.0
 - orca ORCA_41_0
 - sofia-sip 1.13.4
