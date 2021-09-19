@@ -3,8 +3,8 @@
 options=(debug !strip)
 
 pkgname=gnome-shell-extensions
-pkgver=41.rc.1
-pkgrel=1
+pkgver=41.0
+pkgrel=0.1
 pkgdesc="Extensions for GNOME shell, including classic mode"
 url="https://wiki.gnome.org/Projects/GnomeShell/Extensions"
 arch=(any)
@@ -12,7 +12,7 @@ license=(GPL)
 makedepends=(meson git sassc)
 optdepends=('gnome-menus: applications menu extension')
 groups=(gnome)
-_commit=74121fce78fb9146263d2edee663342b56353d58  # tags/41.rc.1^0
+_commit=4ccf12e9889c7947c9a04f3ef5a78834dc42833a  # tags/41.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-shell-extensions.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/gnome-shell-sass.git")
 sha256sums=('SKIP'
