@@ -23,7 +23,7 @@
 - gnome-disk-utility 41.0
 - gnome-initial-setup 41.0
 - gnome-maps v41.0
-- gnome-music 41.rc
+- gnome-music 41.0
 - gnome-podcasts 0.5.0beta
 - gnome-shell 41.rc.1
 - gnome-shell-extensions 41.rc.1
