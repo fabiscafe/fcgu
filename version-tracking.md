@@ -43,6 +43,7 @@
 - sofia-sip 1.13.4
 - tracker3 3.2.0
 - tracker3-miners 3.2.0
+- vala 0.54.0
 - vte3 0.65.91
 - webkit2gtk 2.33.91
 - yelp 41.0
@@ -53,4 +54,3 @@
 
 # Exclude
 - folks
-- vala
