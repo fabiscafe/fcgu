@@ -1,4 +1,5 @@
 # In repo
+- at-spi2-core 2.42.0
 - callaudiod 0.1.1
 - calls 41.0
 - eog 41.0
