@@ -44,7 +44,7 @@
 - tracker3-miners 3.2.0
 - vte3 0.65.91
 - webkit2gtk 2.33.91
-- yelp 41.beta2
+- yelp 41.0
 - yelp-tools 41.0
 - yelp-xsl 41.0
 
