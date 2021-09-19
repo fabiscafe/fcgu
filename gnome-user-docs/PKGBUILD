@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=gnome-user-docs
-pkgver=41.rc
-pkgrel=1
+pkgver=41.0
+pkgrel=0.1
 pkgdesc="User documentation for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-user-docs"
 arch=(any)
@@ -13,7 +13,7 @@ license=(FDL)
 depends=(yelp)
 makedepends=(yelp-tools git)
 groups=(gnome)
-_commit=9f5792b11e40164b4bd598b0990e397cf2904f3e  # tags/41.rc^0
+_commit=eb493cf91ff07bb7f53b97b35ca0389c66f94ab6  # tags/41.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-user-docs.git#commit=$_commit")
 sha256sums=('SKIP')
 
