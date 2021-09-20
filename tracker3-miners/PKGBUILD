@@ -4,7 +4,7 @@ options=(debug !strip)
 
 pkgname=tracker3-miners
 pkgver=3.2.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="Collection of data extractors for Tracker/Nepomuk"
 url="https://wiki.gnome.org/Projects/Tracker"
 arch=(x86_64)
@@ -18,8 +18,10 @@ checkdepends=(python-gobject python-tappy gst-plugins-good gst-plugins-base
 groups=(gnome)
 _commit=77bc279b320ef449541784c9df48690afad0f83a  # tags/3.2.0^0
 source=("git+https://gitlab.gnome.org/GNOME/tracker-miners.git#commit=$_commit"
+        "0001-Use_separate_GFileInfo_for_dest_file_in_move_operations.patch::https://gitlab.gnome.org/GNOME/tracker-miners/-/commit/fffef27729fa439e3695d421fdb026a50eb65197.patch"
         fix-rpath.diff)
 sha256sums=('SKIP'
+            '377619c4a21f2403c7078e855a0b09a56da0b3bb668aab1a3c7545a27b251af5'
             'd23ee61df2a8eabb1b4faf7efeedeca228baee549097d5db11e513fcedf7e464')
 
 pkgver() {
@@ -30,6 +32,8 @@ pkgver() {
 prepare() {
   cd tracker-miners
   git apply -3 ../fix-rpath.diff
+  # https://gitlab.gnome.org/GNOME/tracker-miners/-/merge_requests/354
+  git apply -3 ../0001-Use_separate_GFileInfo_for_dest_file_in_move_operations.patch
 }
 
 build() {
