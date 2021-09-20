@@ -1,7 +1,6 @@
 # In repo
 - at-spi2-core 2.42.0
 - callaudiod 0.1.1
-- calls 41.0
 - eog 41.0
 - epiphany 41.0
 - evince 41.alpha
@@ -17,6 +16,7 @@
 - gnome-builder 41.0
 - gnome-calculator 41.0
 - gnome-calendar 41.0
+- gnome-calls 41.0
 - gnome-connections 41.0
 - gnome-contacts 41.beta
 - gnome-control-center 41.0

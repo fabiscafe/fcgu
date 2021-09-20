@@ -1,13 +1,16 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 options=(debug !strip)
 
-pkgname=calls
+pkgname=gnome-calls
 pkgver=41.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="A Phone dialer and call handler."
 arch=(x86_64)
 url="https://gitlab.gnome.org/GNOME/calls"
 license=(GPL3)
+replaces=("calls")
+conflicts=("calls")
+provides=("calls")
 depends=(callaudiod feedbackd folks gom
 	 libhandy libpeas modemmanager sofia-sip)
 makedepends=(git gobject-introspection meson vala)
@@ -17,12 +20,12 @@ source=("git+https://gitlab.gnome.org/GNOME/calls.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
-  cd $pkgname
+  cd ${pkgname//gnome-/}
   git describe --tags | sed 's/-/+/g;s/^v//g;s/_/./g'
 }
 
 build() {
-  arch-meson $pkgname build \
+  arch-meson ${pkgname//gnome-/} build \
     -D gtk_doc=true \
     -D tests=false
   meson compile -C build
