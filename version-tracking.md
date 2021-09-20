@@ -20,7 +20,7 @@
 - gnome-connections 41.0
 - gnome-contacts 41.beta
 - gnome-control-center 41.0
-- gnome-desktop 41.rc.1
+- gnome-desktop 41.0
 - gnome-disk-utility 41.0
 - gnome-initial-setup 41.0
 - gnome-maps v41.0
