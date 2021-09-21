@@ -7,7 +7,7 @@
 - evolution 3.42.0
 - evolution-data-server 3.42.0
 - feedbackd 0.0.0+git20210426
-- gdm 41.rc
+- gdm 41.0
 - gedit 41.alpha
 - gjs 1.70.0
 - glib2 2.70.0
