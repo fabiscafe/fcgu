@@ -11,7 +11,6 @@
 - gdm 41.0
 - gedit 41.alpha
 - gjs 1.70.0
-- glib2 2.70.0
 - glib-networking 2.70.0
 - gnome-boxes 41.1
 - gnome-builder 41.0
