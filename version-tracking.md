@@ -45,7 +45,6 @@
 - nautilus 41.0
 - orca ORCA_41_0
 - sofia-sip 1.13.4
-- tracker3-miners 3.2.0
 - vala 0.54.1
 - vte3 0.65.91
 - webkit2gtk 2.33.91
