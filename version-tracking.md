@@ -35,6 +35,7 @@
 - gnome-terminal 3.41.90
 - gnome-text-editor 41.0
 - gnome-user-docs 41.0
+- gnome-weather 41.0
 - gobject-introspection 1.70.0
 - gsettings-desktop-schemas 41.0
 - gtksourceview5 5.2.0
