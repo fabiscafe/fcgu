@@ -47,7 +47,7 @@
 - sofia-sip 1.13.4
 - sysprof 3.42.0
 - vala 0.54.1
-- vte3 0.65.91
+- vte3 0.66.0
 - webkit2gtk 2.33.91
 - yelp 41.0
 - yelp-tools 41.0
