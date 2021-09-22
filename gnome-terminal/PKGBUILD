@@ -4,16 +4,16 @@
 options=(debug !strip)
 
 pkgname=gnome-terminal
-pkgver=3.41.90
-pkgrel=1
+pkgver=3.42.0
+pkgrel=0.1
 pkgdesc="The GNOME Terminal Emulator"
 url="https://wiki.gnome.org/Apps/Terminal"
 arch=(x86_64)
 license=(GPL)
-depends=('vte3>=0.64.0' gsettings-desktop-schemas)
+depends=('vte3>=0.66.0' gsettings-desktop-schemas)
 makedepends=(docbook-xsl libnautilus-extension gnome-shell meson yelp-tools git)
 groups=(gnome)
-_commit=2dbe778a93c8678c17feffbbd84422087262a7c4  # tags/3.41.90^0
+_commit=4fb4b39d7281016ec676f1a7d8f7bd4da424d68c  # tags/3.42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-terminal.git#commit=$_commit")
 sha256sums=('SKIP')
 
