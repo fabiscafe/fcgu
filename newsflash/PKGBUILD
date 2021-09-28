@@ -1,0 +1,45 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Balló György <ballogyor+arch at gmail dot com>
+# Contributor: Felix Bühler <account at buehler dot rocks>
+options=(debug !strip)
+
+pkgname=newsflash
+_pkgname=news_flash_gtk
+pkgver=1.4.3
+_pkgver=v.$pkgver
+pkgrel=0.1
+pkgdesc='Desktop application designed to complement an already existing web-based RSS reader account'
+arch=('x86_64')
+url='https://gitlab.com/news-flash/news_flash_gtk'
+license=('GPL3')
+depends=('libhandy' 'webkit2gtk')
+makedepends=('appstream-glib' 'meson' 'rust')
+source=("https://gitlab.com/news-flash/$_pkgname/-/archive/$_pkgver/$_pkgname-$_pkgver.tar.gz")
+sha256sums=('389d8cd331bbfdc298dce58e80b3beb9b787666559115e88a45e71853b05ff5c')
+
+prepare() {
+  cd $_pkgname-$_pkgver
+  # Update open to avoid xdg-utils dependency
+  sed -i 's/open = "1.4.0"/open = "1.7.0"/' Cargo.toml
+}
+
+build() {
+  export FEEDLY_CLIENT_ID="boutroue"
+  export FEEDLY_CLIENT_SECRET="FE012EGICU4ZOBDRBEOVAJA1JZYH"
+  export PASSWORD_CRYPT_KEY="ypsSXCLhJngks9qGUAqShd8JjRaZ824wT3e"
+  export MERCURY_PARSER_USER="newsflash"
+  export MERCURY_PARSER_KEY="R4qcKEHpr9RTq6YuRAPkm9kMhjp4GuxiWG44VDk3Na4ZsN7F"
+  export RUSTC_BOOTSTRAP=1
+	
+  arch-meson $_pkgname-$_pkgver build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  DESTDIR="$pkgdir" meson install -C build
+  ln -s com.gitlab.newsflash "$pkgdir/usr/bin/$pkgname"
+}
