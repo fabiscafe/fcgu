@@ -30,7 +30,7 @@ build() {
   export MERCURY_PARSER_USER="newsflash"
   export MERCURY_PARSER_KEY="R4qcKEHpr9RTq6YuRAPkm9kMhjp4GuxiWG44VDk3Na4ZsN7F"
   export RUSTC_BOOTSTRAP=1
-	
+
   arch-meson $_pkgname-$_pkgver build
   meson compile -C build
 }
