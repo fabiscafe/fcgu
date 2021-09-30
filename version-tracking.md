@@ -19,7 +19,7 @@
 - gnome-calls 41.0
 - gnome-characters 41.0
 - gnome-connections 41.0
-- gnome-contacts 41.beta
+- gnome-contacts 41.0
 - gnome-control-center 41.0
 - gnome-desktop 41.0
 - gnome-disk-utility 41.0
