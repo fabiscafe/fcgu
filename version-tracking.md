@@ -50,7 +50,6 @@
 - vte3 0.66.0
 - webkit2gtk 2.34.0
 - yelp 41.1
-- yelp-tools 41.0
 
 # Wontbuild
 
