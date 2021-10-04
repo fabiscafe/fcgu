@@ -47,7 +47,6 @@
 - orca ORCA_41_0
 - sofia-sip 1.13.4
 - sysprof 3.42.0
-- vte3 0.66.0
 - webkit2gtk 2.34.0
 - yelp 41.1
 
