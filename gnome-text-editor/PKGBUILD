@@ -2,16 +2,16 @@
 options=(debug !strip)
 
 pkgname=gnome-text-editor
-pkgver=41.0
+pkgver=41.1
 pkgrel=0.1
 pkgdesc="A simple text editor"
 url="https://gitlab.gnome.org/GNOME/gnome-text-editor"
 arch=(x86_64)
 license=(GPL)
-depends=(enchant gtksourceview5 "glib2>=2.69.0" libadwaita)
-makedepends=(appstream-glib git meson)
+depends=(enchant gtksourceview5 glib2 libadwaita)
+makedepends=(appstream-glib git meson itstool)
 checkdepends=(xorg-server-xvfb)
-_commit=23ae917be4e20e0e420c49ffdbc028be6ad9556b  # tags/41.0^0
+_commit=9cdf63946736be22bd855c2f410079b7fa237443  # tags/41.1^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-text-editor.git#commit=$_commit")
 sha256sums=('SKIP')
 

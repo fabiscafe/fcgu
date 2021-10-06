@@ -35,7 +35,7 @@
 - gnome-software 41.0
 - gnome-system-monitor 41.0
 - gnome-terminal 3.42.0
-- gnome-text-editor 41.0
+- gnome-text-editor 41.1
 - gnome-user-docs 41.0
 - gnome-weather 41.0
 - gobject-introspection 1.70.0
