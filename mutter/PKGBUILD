@@ -6,7 +6,7 @@ options=(debug !strip)
 
 pkgname=mutter
 pkgver=41.0
-pkgrel=0.2
+pkgrel=0.3
 pkgdesc="A window manager for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
 arch=(x86_64)
@@ -22,9 +22,9 @@ groups=(gnome)
 install=mutter.install
 _commit=f5daf0f1b93fedd7fce5ac34c77162dfba3ba7c3  # tags/41.0^0
 source=("git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit"
-        "0001-schedule_stage_update_when_an_actor_is_visible.patch::https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/2034.patch")
+        "0001-restore_stage_update_for_unmapped_actors.patch::https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/2034.patch")
 sha256sums=('SKIP'
-            '0e17c6e5b501723ad69903e4f6c817d43c676585e5b5348f54ce62576739690f')
+            '12c2b6f84351ea2f5fd5d6a33753e25f1225159f42bbf00bc5d8987d2ab12bd0')
 
 pkgver() {
   cd $pkgname
@@ -34,7 +34,7 @@ pkgver() {
 prepare() {
   cd $pkgname
   # https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/2034
-  git apply -3 ../0001-schedule_stage_update_when_an_actor_is_visible.patch
+  git apply -3 ../0001-restore_stage_update_for_unmapped_actors.patch
 }
 
 build() {
