@@ -3,11 +3,11 @@ or short "FCGU" is a GNOME Unstable repository for [**Arch Linux**](https://arch
 
 <img src="https://img.shields.io/liberapay/receives/Fabiscafe.svg?logo=liberapay">
 
-
 ## Looking For New Mirrors
 FCGU is a free community project. That's why we need your help. If you own a server that could become a mirror of the project, please let us know.
 
 [![Matrix](https://img.shields.io/matrix/fcgu:matrix.org?style=for-the-badge)](https://app.element.io/#/room/#fcgu:matrix.org)
+
 ![preview](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/fcgu.png)
 
 ## Installation
