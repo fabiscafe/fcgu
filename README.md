@@ -8,10 +8,7 @@ or short "FCGU" is a GNOME Unstable repository for [**Arch Linux**](https://arch
 FCGU is a free community project. That's why we need your help. If you own a server that could become a mirror of the project, please let us know.
 
 [![Matrix](https://img.shields.io/matrix/fcgu:matrix.org?style=for-the-badge)](https://app.element.io/#/room/#fcgu:matrix.org)
-
-<p align="center">
-[![FCGU](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/fcgu.png)](https://app.element.io/#/room/#fcgu:matrix.org)
-</p>
+![preview](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/fcgu.png)
 
 ## Installation
 ### Keyring
@@ -23,7 +20,7 @@ pacman-key --lsign-key 6E58E886A8E07538A2485FAED6A4F386B4881229
 ```
 
 ### Add the repo
-This repo should be below the core repo, but above every other one. It will **not** install **side-by-side**. To work as overlay the repo needs to be above the **[core]** section in */etc/pacman.conf*.
+This repo should be below the **[core]** repo, but above every other one in */etc/pacman.conf*.
 
 ```
 [fcgu]
@@ -62,9 +59,6 @@ Include = /etc/pacman.d/mirrorlist
 ```
 
 If that's done, a full system update is required (`pacman -Syu`)
-<p align="center">
-![preview](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/video.gif)
-</p>
 
 ## How to change back to Arch' default GNOME?
 The repo needs to be removed from */etc/pacman.conf*
@@ -76,10 +70,13 @@ Server = https://$repo.fabis.cafe/$repo
 Server = https://vmi394248.contaboserver.net/$repo
 #Server = <looking for new mirrors>
 ```
-When thats done a `pacman -Syuu` will downgrade all packages to the Arch-repo versions.
+When that's done a `pacman -Syuu` will downgrade all packages to the Arch-repo versions.
 
 ## Frequently Asked Questions - FAQ
-### What happens after the stable release is shipped?
+### Will you do the stable releases?
+Yes, FCGU will also package stable releases until they arrive in Arch Linux directly.
+
+### What happens after the stable release is shipped in Arch Linux?
 Once the stable version of GNOME arrives Arch Linux official repository, fcgu will remove its packages, so pacman will switch to the official repository again.
 
 ### Will this kill my setup?
@@ -95,3 +92,6 @@ We only give support for up-to-date Arch Linux. Older package bases will create 
 
 #### Manjaro
 Manjaro uses an own repository and **is not** compatible to Arch Linux. Based on experiences this repository will not work for Manjaro or will break your desktop at any point.
+
+### Will you push the PKGBUILDs to the AUR?
+In order to do this, the PKGBUILDs would need a lot of extra work and testing, just for the packaging part. Because time is a very limited resource that's not possible to do right now (and not planned for the future).
