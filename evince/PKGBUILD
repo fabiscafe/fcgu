@@ -4,8 +4,8 @@
 options=(debug !strip)
 
 pkgname=evince
-pkgver=41.alpha
-pkgrel=1
+pkgver=41.1
+pkgrel=0.1
 pkgdesc="Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)"
 url="https://wiki.gnome.org/Apps/Evince"
 arch=(x86_64)
@@ -18,7 +18,7 @@ makedepends=(libnautilus-extension texlive-bin gobject-introspection docbook-xsl
 optdepends=('texlive-bin: DVI support')
 provides=(libev{document,view}3.so)
 groups=(gnome)
-_commit=ce77b2389a8dd173f06a7d0d3b05db3a7cc31b43  # tags/41.alpha^0
+_commit=22396dc363973cc8e848f8ffa45952f8293a49e4  # tags/41.1^0
 source=("git+https://gitlab.gnome.org/GNOME/evince.git#commit=$_commit")
 sha256sums=('SKIP')
 
