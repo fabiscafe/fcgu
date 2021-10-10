@@ -5,7 +5,7 @@
 - callaudiod 0.1.1
 - eog 41.0
 - epiphany 41.0
-- evince 41.1
+- evince 41.2
 - evolution 3.42.0
 - evolution-data-server 3.42.0
 - feedbackd 0.0.0+git20210426
