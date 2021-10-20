@@ -6,7 +6,7 @@
 options=(debug !strip)
 
 pkgname=sofia-sip
-pkgver=1.13.4
+pkgver=1.13.6
 pkgrel=1
 pkgdesc="An open-source SIP User-Agent library"
 arch=('x86_64' 'i686')
@@ -14,7 +14,7 @@ url="http://sofia-sip.sourceforge.net"
 license=('LGPL')
 depends=('glib2' 'openssl' 'gawk')
 source=($pkgname-$pkgver.tar.gz::https://github.com/freeswitch/$pkgname/archive/refs/tags/v$pkgver.tar.gz)
-md5sums=('5d8395454ff35a7bc42be8815617bfbf')
+md5sums=('301ed5148d067c13ef3f6811420a467b')
 
 prepare() {
   cd $pkgname-$pkgver

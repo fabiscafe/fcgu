@@ -46,7 +46,7 @@
 - newsflash 1.4.3
 - orca ORCA_41_0
 - polari 41.0
-- sofia-sip 1.13.4
+- sofia-sip 1.13.6
 - sysprof 3.42.0
 - webkit2gtk 2.34.0
 - yelp 41.1
