@@ -33,7 +33,7 @@
 - gnome-shell 41.0
 - gnome-shell-extensions 41.0
 - gnome-settings-daemon 41.0
-- gnome-software 41.0
+- gnome-software 41.1
 - gnome-system-monitor 41.0
 - gnome-terminal 3.42.0
 - gnome-text-editor 41.1
