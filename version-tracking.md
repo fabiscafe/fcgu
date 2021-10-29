@@ -21,7 +21,7 @@
 - gnome-clocks 41.0
 - gnome-connections 41.1
 - gnome-contacts 41.0
-- gnome-control-center 41.0
+- gnome-control-center 41.1
 - gnome-desktop 41.0
 - gnome-disk-utility 41.0
 - gnome-documents 3.34.0+34+g678141fa

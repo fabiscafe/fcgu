@@ -4,7 +4,7 @@
 options=(debug !strip)
 
 pkgname=gnome-control-center
-pkgver=41.0
+pkgver=41.1
 pkgrel=0.1
 pkgdesc="GNOME's main interface to configure various aspects of the desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-control-center"
@@ -15,7 +15,9 @@ depends=(accountsservice cups-pk-helper gnome-bluetooth gnome-desktop
          libgtop nm-connection-editor sound-theme-freedesktop upower libpwquality
          gnome-color-manager smbclient libmm-glib libgnomekbd libibus
          cheese libgudev bolt udisks2 libhandy gsound colord-gtk)
-makedepends=(docbook-xsl modemmanager git python meson)
+# "meson<=0.59.3": https://github.com/mesonbuild/meson/issues/9441
+# https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/1503
+makedepends=(docbook-xsl modemmanager git python "meson<=0.59.3")
 checkdepends=(python-dbusmock python-gobject xorg-server-xvfb)
 optdepends=('system-config-printer: Printer settings'
             'gnome-user-share: WebDAV file sharing'
@@ -24,7 +26,7 @@ optdepends=('system-config-printer: Printer settings'
             'openssh: remote login'
             'power-profiles-daemon: power-profile integration')
 groups=(gnome)
-_commit=7e95c34f686197775db680ef17450d66cc13eb73  # tags/41.0^0
+_commit=eb053617651d251d29128525eb18592a2283d0cf  # tags/41.1^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-control-center.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
