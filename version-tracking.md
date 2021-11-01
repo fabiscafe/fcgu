@@ -3,7 +3,6 @@
 - at-spi2-core 2.42.0
 - baobab 41.0
 - callaudiod 0.1.1
-- eog 41.0
 - epiphany 41.0
 - evince 41.2
 - evolution 3.42.1
