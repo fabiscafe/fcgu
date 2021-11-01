@@ -35,7 +35,7 @@
 - gnome-settings-daemon 41.0
 - gnome-software 41.1
 - gnome-system-monitor 41.0
-- gnome-terminal 3.42.0
+- gnome-terminal 3.42.1
 - gnome-text-editor 41.1
 - gnome-user-docs 41.0
 - gnome-weather 41.0
