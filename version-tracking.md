@@ -7,7 +7,7 @@
 - epiphany 41.0
 - evince 41.2
 - evolution 3.42.0
-- evolution-data-server 3.42.0
+- evolution-data-server 3.42.1
 - feedbackd 0.0.0+git20211018
 - gdm 41.0
 - gedit 41.alpha

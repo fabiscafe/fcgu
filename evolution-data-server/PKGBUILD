@@ -4,7 +4,7 @@
 options=(debug !strip)
 
 pkgname=evolution-data-server
-pkgver=3.42.0
+pkgver=3.42.1
 pkgrel=0.1
 pkgdesc="Centralized access to appointments and contacts"
 url="https://wiki.gnome.org/Apps/Evolution"
@@ -15,7 +15,7 @@ provides=(libcamel-1.2.so libebackend-1.2.so libebook-1.2.so libebook-contacts-1
           libecal-2.0.so libedata-book-1.2.so libedata-cal-2.0.so libedataserver-1.2.so
           libedataserverui-1.2.so)
 license=(GPL)
-_commit=35c810b2472bb6f77b6b96de4dfe562cba7af795  # tags/3.42.0^0
+_commit=ae2a829a1e869050217709cb929268d413e406ae  # tags/3.42.1^0
 source=("git+https://gitlab.gnome.org/GNOME/evolution-data-server.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -37,9 +37,7 @@ build() {
 }
 
 check() {
-  # libedata-book tests fail because they try to
-  # mkdir /usr/lib/evolution-data-server/camel-providers
-  cmake --build build --target test || :
+  cmake --build build --target test
 }
 
 package() {
