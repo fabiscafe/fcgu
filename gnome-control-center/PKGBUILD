@@ -5,7 +5,7 @@ options=(debug !strip)
 
 pkgname=gnome-control-center
 pkgver=41.1
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="GNOME's main interface to configure various aspects of the desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-control-center"
 license=(GPL2)
@@ -15,9 +15,7 @@ depends=(accountsservice cups-pk-helper gnome-bluetooth gnome-desktop
          libgtop nm-connection-editor sound-theme-freedesktop upower libpwquality
          gnome-color-manager smbclient libmm-glib libgnomekbd libibus
          cheese libgudev bolt udisks2 libhandy gsound colord-gtk)
-# "meson<=0.59.3": https://github.com/mesonbuild/meson/issues/9441
-# https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/1503
-makedepends=(docbook-xsl modemmanager git python "meson<=0.59.3")
+makedepends=(docbook-xsl modemmanager git python meson)
 checkdepends=(python-dbusmock python-gobject xorg-server-xvfb)
 optdepends=('system-config-printer: Printer settings'
             'gnome-user-share: WebDAV file sharing'
