@@ -42,7 +42,7 @@
 - gsettings-desktop-schemas 41.0
 - gtksourceview5 5.2.0
 - mutter 41.0
-- nautilus 41.0
+- nautilus 41.1
 - newsflash 1.4.3
 - orca ORCA_41_0
 - polari 41.0
