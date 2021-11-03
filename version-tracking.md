@@ -23,7 +23,6 @@
 - gnome-contacts 41.0
 - gnome-control-center 41.1
 - gnome-desktop 41.0
-- gnome-disk-utility 41.0
 - gnome-documents 3.34.0+34+g678141fa
 - gnome-font-viewer 41.0
 - gnome-initial-setup 41.0
