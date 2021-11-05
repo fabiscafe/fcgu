@@ -29,7 +29,7 @@
 - gnome-maps v41.1
 - gnome-music 41.0
 - gnome-podcasts 0.5.0beta
-- gnome-shell 41.0
+- gnome-shell 41.1
 - gnome-shell-extensions 41.0
 - gnome-settings-daemon 41.0
 - gnome-software 41.1
