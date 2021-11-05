@@ -27,6 +27,7 @@ This repo should be below the **[core]** repo, but above every other one in */et
 Server = https://gnome.holmie.xyz/$repo
 Server = https://$repo.fabis.cafe/$repo
 Server = https://vmi394248.contaboserver.net/$repo
+Server = http://185.238.129.156/$repo
 #Server = <looking for new mirrors>
 ```
 
@@ -48,6 +49,7 @@ Include = /etc/pacman.d/mirrorlist
 Server = https://gnome.holmie.xyz/$repo
 Server = https://$repo.fabis.cafe/$repo
 Server = https://vmi394248.contaboserver.net/$repo
+Server = http://185.238.129.156/$repo
 #Server = <looking for new mirrors>
 
 [extra]
@@ -68,6 +70,7 @@ The repo needs to be removed from */etc/pacman.conf*
 Server = https://gnome.holmie.xyz/$repo
 Server = https://$repo.fabis.cafe/$repo
 Server = https://vmi394248.contaboserver.net/$repo
+Server = http://185.238.129.156/$repo
 #Server = <looking for new mirrors>
 ```
 When that's done a `pacman -Syuu` will downgrade all packages to the Arch-repo versions.
