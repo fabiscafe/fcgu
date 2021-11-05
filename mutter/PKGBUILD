@@ -5,8 +5,8 @@
 options=(debug !strip)
 
 pkgname=mutter
-pkgver=41.0
-pkgrel=0.3
+pkgver=41.1
+pkgrel=0.1
 pkgdesc="A window manager for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
 arch=(x86_64)
@@ -20,11 +20,9 @@ checkdepends=(xorg-server-xvfb pipewire-media-session python-dbusmock)
 provides=(libmutter-9.so)
 groups=(gnome)
 install=mutter.install
-_commit=f5daf0f1b93fedd7fce5ac34c77162dfba3ba7c3  # tags/41.0^0
-source=("git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit"
-        "0001-restore_stage_update_for_unmapped_actors.patch::https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/2034.patch")
-sha256sums=('SKIP'
-            '12c2b6f84351ea2f5fd5d6a33753e25f1225159f42bbf00bc5d8987d2ab12bd0')
+_commit=8de96d3d7c40e6b5289fd707fdd5e6d604f33e8f  # tags/41.1^0
+source=("git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit")
+sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
@@ -33,8 +31,6 @@ pkgver() {
 
 prepare() {
   cd $pkgname
-  # https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/2034
-  git apply -3 ../0001-restore_stage_update_for_unmapped_actors.patch
 }
 
 build() {
