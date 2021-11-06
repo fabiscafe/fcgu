@@ -15,7 +15,7 @@
 - gnome-backgrounds 41.0
 - gnome-boxes 41.1
 - gnome-calculator 41.0
-- gnome-calendar 41.0
+- gnome-calendar 41.1
 - gnome-calls 41.1
 - gnome-characters 41.0
 - gnome-clocks 41.0
