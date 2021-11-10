@@ -12,7 +12,6 @@
 - gtksourceview5 5.2.0
 - newsflash 1.4.3
 - sofia-sip 1.13.6
-- sysprof 3.42.1
 - webkit2gtk 2.34.1
 - yelp 41.1
 
