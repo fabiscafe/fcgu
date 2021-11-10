@@ -4,7 +4,6 @@
 - gedit 41.alpha
 - gnome-backgrounds 41.0
 - gnome-calls 41.1
-- gnome-characters 41.0
 - gnome-clocks 41.0
 - gnome-connections 41.1
 - gnome-contacts 41.0
