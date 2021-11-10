@@ -8,7 +8,6 @@
 - gnome-documents 3.34.0+34+g678141fa
 - gnome-initial-setup 41.0
 - gnome-podcasts 0.5.0beta
-- gnome-software 41.1
 - gnome-system-monitor 41.0
 - gnome-terminal 3.42.1
 - gnome-text-editor 41.1
