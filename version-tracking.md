@@ -1,6 +1,5 @@
 # In repo
 - callaudiod 0.1.1
-- cheese 41.0
 - epiphany 41.0
 - evince 41.2
 - evolution 3.42.1
