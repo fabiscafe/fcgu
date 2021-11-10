@@ -5,7 +5,6 @@
 - gnome-backgrounds 41.0
 - gnome-calls 41.1
 - gnome-connections 41.1
-- gnome-contacts 41.0
 - gnome-control-center 41.1
 - gnome-desktop 41.1
 - gnome-documents 3.34.0+34+g678141fa
