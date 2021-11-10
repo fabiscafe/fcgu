@@ -9,7 +9,6 @@
 - gnome-initial-setup 41.0
 - gnome-podcasts 0.5.0beta
 - gnome-text-editor 41.1
-- gsettings-desktop-schemas 41.0
 - gtksourceview5 5.2.0
 - mutter 41.1
 - nautilus 41.1
