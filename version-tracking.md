@@ -1,6 +1,5 @@
 # In repo
 - callaudiod 0.1.1
-- evince 41.2
 - evolution 3.42.1
 - evolution-data-server 3.42.1
 - feedbackd 0.0.0+git20211018
