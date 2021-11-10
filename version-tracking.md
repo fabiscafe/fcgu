@@ -1,7 +1,6 @@
 # In repo
 - callaudiod 0.1.1
 - feedbackd 0.0.0+git20211018
-- gdm 41.0
 - gedit 41.alpha
 - gjs 1.70.0
 - gnome-backgrounds 41.0
