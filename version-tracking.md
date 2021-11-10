@@ -2,7 +2,6 @@
 - callaudiod 0.1.1
 - feedbackd 0.0.0+git20211018
 - gedit 41.alpha
-- gjs 1.70.0
 - gnome-backgrounds 41.0
 - gnome-boxes 41.1
 - gnome-calculator 41.0
