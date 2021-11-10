@@ -1,5 +1,4 @@
 # In repo
-- baobab 41.0
 - callaudiod 0.1.1
 - cheese 41.0
 - epiphany 41.0
