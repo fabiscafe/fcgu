@@ -10,7 +10,6 @@
 - gnome-podcasts 0.5.0beta
 - gnome-text-editor 41.1
 - gtksourceview5 5.2.0
-- mutter 41.1
 - nautilus 41.1
 - newsflash 1.4.3
 - orca ORCA_41_0
