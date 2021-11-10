@@ -11,7 +11,6 @@
 - gnome-text-editor 41.1
 - gtksourceview5 5.2.0
 - newsflash 1.4.3
-- polari 41.0
 - sofia-sip 1.13.6
 - sysprof 3.42.1
 - webkit2gtk 2.34.1
