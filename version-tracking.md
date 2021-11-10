@@ -7,7 +7,6 @@
 - gnome-connections 41.1
 - gnome-documents 3.34.0+34+g678141fa
 - gnome-initial-setup 41.0
-- gnome-maps v41.1
 - gnome-music 41.0
 - gnome-podcasts 0.5.0beta
 - gnome-shell 41.1
