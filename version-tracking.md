@@ -2,7 +2,6 @@
 - callaudiod 0.1.1
 - feedbackd 0.0.0+git20211018
 - gedit 41.alpha
-- gnome-backgrounds 41.0
 - gnome-calls 41.1
 - gnome-connections 41.1
 - gnome-documents 3.34.0+34+g678141fa
