@@ -3,7 +3,6 @@
 - feedbackd 0.0.0+git20211018
 - gedit 41.alpha
 - gnome-calls 41.1
-- gnome-connections 41.1
 - gnome-documents 3.34.0+34+g678141fa
 - gnome-initial-setup 41.0
 - gnome-podcasts 0.5.0beta
