@@ -3,7 +3,7 @@ options=(debug !strip)
 
 pkgname=gnome-text-editor
 pkgver=41.1
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="A simple text editor"
 url="https://gitlab.gnome.org/GNOME/gnome-text-editor"
 arch=(x86_64)
@@ -21,8 +21,7 @@ pkgver() {
 }
 
 build() {
-  arch-meson $pkgname build \
-    -D gtk_doc=true
+  arch-meson $pkgname build
   meson compile -C build
 }
 
