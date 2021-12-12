@@ -7,7 +7,7 @@
 - gnome-podcasts 0.5.0
 - gnome-text-editor 41.1
 - gtksourceview5 5.2.0
-- newsflash 1.4.3
+- newsflash 1.5.1
 - sofia-sip 1.13.6
 
 # Wontbuild
