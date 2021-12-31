@@ -1,0 +1,39 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+options=(debug)
+
+pkgname=clapper
+pkgver=0.4.1
+pkgrel=1
+pkgdesc="GNOME media player built using GJS with GTK4 toolkit and powered by GStreamer with OpenGL rendering."
+url="https://github.com/Rafostar/clapper"
+arch=(x86_64)
+license=(GPL3)
+depends=(gjs glib2 gst-plugins-bad gst-plugins-base gst-plugins-good
+        gstreamer gtk4 hicolor-icon-theme libadwaita wayland-protocols)
+optdepends=(
+  "gst-libav: Extra media codecs"
+  "gst-plugins-ugly: Extra media codecs"
+  "gstreamer-vaapi: Intel/AMD video acceleration"
+  )
+makedepends=(appstream-glib git gobject-introspection meson)
+_commit=7a508fef392964e1c33e1795b0e1300ef48c0352  # tags/0.4.1^0
+source=("git+https://github.com/Rafostar/clapper.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd ${pkgname}
+  git describe --tags | sed 's/-/+/g'
+}
+
+build() {
+  arch-meson ${pkgname} build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir="${pkgdir}"
+}

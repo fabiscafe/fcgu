@@ -1,5 +1,6 @@
 # In repo
 - callaudiod 0.1.1
+- clapper 0.4.1
 - feedbackd 0.0.0+git20211018
 - gedit 41.alpha
 - gnome-calls 41.1
