@@ -4,7 +4,7 @@
 options=(debug !strip)
 
 pkgname=gedit
-pkgver=41.alpha
+pkgver=41.alpha+54+g4054287a3
 pkgrel=1
 pkgdesc="GNOME Text Editor"
 url="https://wiki.gnome.org/Apps/Gedit"
@@ -17,7 +17,7 @@ makedepends=(yelp-tools vala gobject-introspection git gtk-doc meson
 optdepends=('gedit-plugins: Additional features')
 conflicts=('gedit-code-assistance<=3.16.0+4+gd19b879-1')
 groups=(gnome)
-_commit=e2ab1dd6871a47d731c5df29f7fcc8d8f851897e  # tags/41.alpha^0
+_commit=4054287a325823179caceffc70ae6cd65c2b3810  # master^0
 source=("git+https://gitlab.gnome.org/GNOME/gedit.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgd.git")
 sha256sums=('SKIP'
@@ -47,5 +47,5 @@ check() {
 }
 
 package() {
-  DESTDIR="$pkgdir" meson install -C build
+  meson install -C build --destdir "${pkgdir}"
 }
