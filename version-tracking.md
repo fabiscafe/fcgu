@@ -5,7 +5,7 @@
 - gedit 41.alpha+54+g4054287a3
 - gnome-calls 41.1
 - gnome-documents 3.34.0+34+g678141fa
-- gnome-podcasts-gtk4 0.5.0+beta+82+g80d79ab
+- gnome-podcasts-gtk4 0.5.0+beta+84+gf31ad03
 - gnome-text-editor 41.1
 - gtksourceview5 5.2.0
 - newsflash 1.5.1
