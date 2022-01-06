@@ -1,5 +1,5 @@
 # In repo
-- callaudiod 0.1.2
+- callaudiod 0.1.3
 - clapper 0.4.1
 - feedbackd 0.0.0+git20211018
 - gedit 41.alpha+54+g4054287a3
