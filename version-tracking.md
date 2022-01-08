@@ -6,7 +6,7 @@
 - gnome-calls 41.1
 - gnome-documents 3.34.0+34+g678141fa
 - gnome-podcasts-gtk4 0.5.0+beta+84+gf31ad03
-- gnome-secrets 6.0beta (gnome-passwordsafe)
+- gnome-secrets 6.0beta.2 (gnome-passwordsafe)
 - gnome-text-editor 41.1
 - gtksourceview5 5.2.0
 - newsflash 1.5.1
