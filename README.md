@@ -1,12 +1,10 @@
 # FabisCafe Gnome Unstable <a href="https://liberapay.com/Fabiscafe/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
-or short "FCGU" is a GNOME Unstable repository for [**Arch Linux**](https://archlinux.org). That contains *alpha*, *beta* and *rc* releases of GNOME for testing and bugreporting purposes.
+or short "FCGU" is a GNOME Unstable repository for [**Arch Linux**](https://archlinux.org). That contains *beta* and *rc* releases of GNOME for testing and bugreporting purposes.
 
-<img src="https://img.shields.io/liberapay/receives/Fabiscafe.svg?logo=liberapay">
+![Matrix](https://img.shields.io/matrix/fcgu:matrix.org?style=for-the-badge) ![Liberapay receiving](https://img.shields.io/liberapay/receives/fabiscafe?style=for-the-badge) ![Liberapay patrons](https://img.shields.io/liberapay/patrons/fabiscafe?style=for-the-badge)
 
 ## Looking For New Mirrors
 FCGU is a free community project. That's why we need your help. If you own a server that could become a mirror of the project, please let us know.
-
-[![Matrix](https://img.shields.io/matrix/fcgu:matrix.org?style=for-the-badge)](https://app.element.io/#/room/#fcgu:matrix.org)
 
 ![preview](https://gitlab.com/fabis_cafe/gnome-unstable/-/raw/main/assets/fcgu.png)
 
@@ -24,7 +22,7 @@ This repo should be below the **[core]** repo, but above every other one in */et
 
 ```
 [fcgu]
-Server = https://$repo.fabis.cafe/$repo
+Server = https://$repo.fabis.cafe/$repo #EOL: 2022-02-08
 Server = https://vmi394248.contaboserver.net/$repo
 Server = https://stream.itmotr-radio.com/$repo
 #Server = <looking for new mirrors>
@@ -73,6 +71,9 @@ Server = https://stream.itmotr-radio.com/$repo
 When that's done a `pacman -Syuu` will downgrade all packages to the Arch-repo versions.
 
 ## Frequently Asked Questions - FAQ
+## Will you do alpha releases?
+This depends. Alpha releases often contain broken builds and might come with dependencies on pre-alpha development snapshots of other software. This isn't ideal to providing packages. It's recommended to get the alpha releases from the development snapshots on the AUR.
+
 ### Will you do the stable releases?
 Yes, FCGU will also package stable releases until they arrive in Arch Linux directly.
 
