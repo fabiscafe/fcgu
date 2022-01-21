@@ -1,0 +1,40 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+options=(debug)
+
+pkgname=libgweather4
+pkgver=3.91.0
+pkgrel=1
+pkgdesc="Location and timezone database and weather-lookup library"
+url="https://wiki.gnome.org/Projects/LibGWeather"
+arch=(x86_64)
+license=(LGPL)
+depends=(geocode-glib libsoup gtk4 dconf)
+makedepends=(gobject-introspection gi-docgen git meson python-gobject python-pylint vala)
+provides=(libgweather-4.so)
+_commit=2215d6de0213c29b4a1220f1cc1e1129f87bbbde  # tags/3.91.0^0
+source=("git+https://gitlab.gnome.org/GNOME/libgweather.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd ${pkgname//[[:digit:]]/}
+  git describe --tags | sed 's/-/+/g'
+}
+
+prepare() {
+  cd ${pkgname//[[:digit:]]/}
+}
+
+build() {
+  arch-meson ${pkgname//[[:digit:]]/} build -D gtk_doc=true
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}

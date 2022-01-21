@@ -21,7 +21,7 @@ sha256sums=('SKIP')
 
 pkgver() {
   cd ${pkgname//gnome-/}
-  git describe --tags | sed 's/-/+/g;s/^v//g;s/_/./g'
+  git describe --tags | sed 's/-/+/g'
 }
 
 build() {

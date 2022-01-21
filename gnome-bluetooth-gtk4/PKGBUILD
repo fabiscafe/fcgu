@@ -1,0 +1,49 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+# Contributor: Roman Kyrylych <roman@archlinux.org>
+options=(debug)
+
+pkgname=gnome-bluetooth-gtk4
+pkgver=42.alpha.2
+pkgrel=1
+pkgdesc="The GNOME Bluetooth Subsystem"
+url="https://wiki.gnome.org/Projects/GnomeBluetooth"
+arch=(x86_64)
+license=(GPL LGPL)
+depends=(gtk4 bluez gsound libadwaita libnotify pulseaudio-bluetooth systemd)
+makedepends=(docbook-xsl git gobject-introspection gtk-doc meson)
+checkdepends=(python-dbusmock xorg-server-xvfb)
+provides=(libgnome-bluetooth-3.0.so)
+_commit=a9a7ce368582f1032469f42da6b1b8da2cd61855  # tags/42.alpha.2^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-bluetooth.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd gnome-bluetooth
+  git describe --tags | sed 's/-/+/g'
+}
+
+prepare() {
+  cd gnome-bluetooth
+}
+
+build() {
+  arch-meson gnome-bluetooth build \
+    -D gtk_doc=true \
+    -D icon_update=false \
+    -D sendto=false
+  meson compile -C build
+}
+
+check() {
+  dbus-run-session xvfb-run \
+    -s '-screen 0 1920x1080x24 -nolisten local' \
+    meson test -C build --print-errorlogs ||:
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
+
+# vim:set sw=2 et:

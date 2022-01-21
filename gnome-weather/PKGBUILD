@@ -1,0 +1,39 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+options=(debug)
+
+pkgname=gnome-weather
+pkgver=42.alpha+r2+g4be7152
+pkgrel=1
+pkgdesc="Access current weather conditions and forecasts"
+url="https://wiki.gnome.org/Apps/Weather"
+arch=(any)
+license=(GPL)
+depends=(gtk3 gjs libgweather geoclue2 gnome-desktop libhandy)
+makedepends=(gobject-introspection appstream-glib git meson)
+groups=(gnome)
+_commit=4be71525f07189e97720688472172604879d49a5  # tags/42.alpha^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-weather.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}

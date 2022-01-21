@@ -1,0 +1,36 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+options=(debug)
+
+pkgname=gnome-calculator
+pkgver=42.alpha
+pkgrel=1
+pkgdesc="GNOME Scientific calculator"
+url="https://wiki.gnome.org/Apps/Calculator"
+arch=(x86_64)
+license=(GPL)
+depends=(gtk4 dconf gtksourceview5 mpfr libadwaita libsoup libmpc libgee) 
+makedepends=(yelp-tools vala git meson gobject-introspection)
+groups=(gnome)
+_commit=d1204a333e7ec19a59376ce32dbbee6a7581e5f5  # tags/42.alpha^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-calculator.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}

@@ -1,0 +1,85 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+options=(debug)
+
+pkgbase=nautilus
+pkgname=(nautilus41 libnautilus41-extension)
+pkgver=41.2
+pkgrel=1.1
+pkgdesc="Default file manager for GNOME"
+url="https://wiki.gnome.org/Apps/Files"
+arch=(x86_64)
+license=(GPL)
+depends=(libgexiv2 gnome-desktop gvfs dconf tracker3 tracker3-miners
+         gnome-autoar gst-plugins-base-libs libhandy libportal-gtk3)
+makedepends=(gobject-introspection git gtk-doc meson appstream-glib)
+checkdepends=(python-gobject)
+_commit=1394dfc4588348cf6c9ae3d1cf373120f65eefb5  # tags/41.2^0
+source=("git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit"
+        "git+https://gitlab.gnome.org/GNOME/libgd.git")
+sha256sums=('SKIP'
+            'SKIP')
+
+pkgver() {
+  cd $pkgbase
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgbase
+
+  # libportal 0.5
+  git cherry-pick -n ae752ea07895b918683f664fe78950255f7faab0
+
+  git submodule init
+  git submodule set-url subprojects/libgd "$srcdir/libgd"
+  git submodule update
+}
+
+build() {
+  arch-meson $pkgbase build \
+    -D docs=true \
+    -D packagekit=false
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+_pick() {
+  local p="$1" f d; shift
+  for f; do
+    d="$srcdir/$p/${f#$pkgdir/}"
+    mkdir -p "$(dirname "$d")"
+    mv "$f" "$d"
+    rmdir -p --ignore-fail-on-non-empty "$(dirname "$f")"
+  done
+}
+
+package_nautilus41() {
+  depends+=(libnautilus-extension.so)
+  provides=(nautilus)
+  conflicts=(nautilus libnautilus-extension)
+  optdepends=('nautilus-sendto: Send files via mail extension')
+  groups=(gnome)
+
+  meson install -C build --destdir "$pkgdir"
+
+  cd "$pkgdir"
+
+  _pick libne usr/include
+  _pick libne usr/lib/{girepository-1.0,libnautilus-extension*,pkgconfig}
+  _pick libne usr/share/{gir-1.0,gtk-doc}
+}
+
+package_libnautilus41-extension() {
+  pkgdesc="Library for extending the $pkgdesc"
+  depends=(gtk3)
+  provides=(libnautilus-extension.so)
+  conflicts=(libnautilus-extension)
+  mv libne/* "$pkgdir"
+}
+
+# vim:set sw=2 et:

@@ -3,7 +3,7 @@
 options=(debug)
 
 pkgname=gnome-secrets
-pkgver=6.0
+pkgver=6.1
 pkgrel=0.1
 pkgdesc="Secrets is a password manager which makes use of the KeePass v.4 format."
 arch=(any)
@@ -14,7 +14,7 @@ replaces=("gnome-passwordsafe")
 conflicts=("gnome-passwordsafe")
 depends=(libadwaita libpwquality python-pykeepass python-pyotp)
 makedepends=(git gobject-introspection meson)
-_commit=3bd864d0fb61ff5461e89e14834faa61955dfcaf
+_commit=1ea43e1fac43ffddc82696c4363082dbc5ba69cb #tags/6.1^0
 source=("git+https://gitlab.gnome.org/World/secrets.git/#commit=$_commit")
 sha256sums=('SKIP')
 
