@@ -1,7 +1,6 @@
 # Maintainer: Brian Bidulock <bidulock@openss7.org>
 # Contributor: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 # Contributor: Ionut Biru <ibiru@archlinux.org>
-# Contributor: Ionut Biru <ibiru@archlinux.org>
 # Contributor: Bjorn Lindeijer <bjorn lindeijer nl>
 options=(debug !strip)
 

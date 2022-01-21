@@ -2,16 +2,15 @@
 options=(debug !strip)
 
 pkgname=gnome-text-editor
-pkgver=41.1
-pkgrel=0.2
+pkgver=42.alpha2
+pkgrel=1
 pkgdesc="A simple text editor"
 url="https://gitlab.gnome.org/GNOME/gnome-text-editor"
 arch=(x86_64)
 license=(GPL)
 depends=(enchant gtksourceview5 glib2 libadwaita)
 makedepends=(appstream-glib git meson itstool)
-checkdepends=(xorg-server-xvfb)
-_commit=9cdf63946736be22bd855c2f410079b7fa237443  # tags/41.1^0
+_commit=77817966266c006a5c3cc31b3fd6542946c8eb40  # tags/42.alpha2^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-text-editor.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -26,11 +25,9 @@ build() {
 }
 
 check() {
-  dbus-run-session xvfb-run \
-    -s '-screen 0 1920x1080x24 -nolisten local' \
-    meson test -C build --print-errorlogs || true
+  meson test -C build --print-errorlogs
 }
 
 package() {
-  meson install -C build --destdir="${pkgdir}"
+  meson install -C build --destdir "${pkgdir}"
 }

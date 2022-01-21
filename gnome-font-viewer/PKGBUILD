@@ -1,0 +1,35 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+options=(debug)
+
+pkgname=gnome-font-viewer
+pkgver=42.alpha
+pkgrel=1
+pkgdesc="A font viewer utility for GNOME"
+url="https://gitlab.gnome.org/GNOME/gnome-font-viewer"
+arch=(x86_64)
+license=(GPL)
+depends=(gtk3 gnome-desktop libhandy)
+makedepends=(git meson)
+groups=(gnome)
+_commit=214eefea3917bda3b9b81293e2d7575472e4ba73  # tags/41.0^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-font-viewer.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/-/+/g'
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
