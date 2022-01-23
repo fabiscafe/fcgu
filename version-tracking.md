@@ -6,7 +6,7 @@
 - eog 42.alpha
 - epiphany 42.alpha
 - feedbackd 0.0.0+git20211018
-- gedit master(2022-01-15)
+- gedit master(2022-01-23)
 - gnome-bluetooth 42.alpha.2
 - gnome-calculator 42.alpha
 - gnome-calls 41.1
