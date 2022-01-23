@@ -33,7 +33,7 @@
 - libgweather 3.91.0
 - libhandy 1.5.0
 - libnma 1.8.34
-- mutter 42.alpha
+- mutter main(2022-01-21)
 - nautilus41 41.2
 - nautilus 42.alpha
 - newsflash 1.5.1
