@@ -19,7 +19,7 @@
 - gnome-font-viewer 42.alpha
 - gnome-initial-setup 42.alpha.1
 - gnome-maps 42.alpha
-- gnome-podcasts-gtk4 0.5.0+beta+84+gf31ad03
+- gnome-podcasts-gtk4 msandova/gtk4(2022-01-03)
 - gnome-shell main(2022-01-22)
 - gnome-shell-extensions 42.alpha
 - gnome-secrets 6.1 (gnome-passwordsafe)
