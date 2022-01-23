@@ -20,7 +20,7 @@
 - gnome-initial-setup 42.alpha.1
 - gnome-maps 42.alpha
 - gnome-podcasts-gtk4 0.5.0+beta+84+gf31ad03
-- gnome-shell 42.alpha
+- gnome-shell main(2022-01-22)
 - gnome-shell-extensions 42.alpha
 - gnome-secrets 6.1 (gnome-passwordsafe)
 - gnome-settings-daemon 42.alpha
