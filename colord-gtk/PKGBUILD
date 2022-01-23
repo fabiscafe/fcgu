@@ -28,7 +28,8 @@ prepare() {
 }
 
 build() {
-  arch-meson $pkgname build -D vapi=true
+  arch-meson $pkgname build \
+    -D vapi=true
   ninja -C build
 }
 
