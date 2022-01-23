@@ -12,7 +12,7 @@
 - gnome-calls 41.1
 - gnome-characters 42.alpha
 - gnome-clocks 42.alpha
-- gnome-control-center master(2022-01-21)
+- gnome-control-center master(2022-01-23)
 - gnome-desktop 42.alpha.1
 - gnome-disk-utility 42.alpha
 - gnome-documents 3.34.0+34+g678141fa
