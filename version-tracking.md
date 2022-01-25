@@ -9,7 +9,7 @@
 - gedit master(2022-01-23)
 - gnome-bluetooth 42.alpha.2
 - gnome-calculator 42.alpha
-- gnome-calls 41.1
+- gnome-calls 42.beta.0
 - gnome-characters 42.alpha
 - gnome-clocks 42.alpha
 - gnome-control-center master(2022-01-23)
