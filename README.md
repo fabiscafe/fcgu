@@ -22,7 +22,7 @@ This repo should be below the **[core]** repo, but above every other one in */et
 
 ```
 [fcgu]
-Server = https://$repo.fabis.cafe/$repo #EOL: 2022-02-08
+Server = https://$repo.fabis.cafe/$repo #EOL: 2022-02-28
 Server = https://vmi394248.contaboserver.net/$repo
 Server = https://stream.itmotr-radio.com/$repo
 #Server = <looking for new mirrors>
