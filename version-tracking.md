@@ -37,7 +37,7 @@
 - nautilus41 41.2
 - nautilus 42.alpha
 - newsflash 1.5.1
-- sofia-sip 1.13.6
+- sofia-sip 1.13.7
 - tracker3 3.3.0.alpha
 - tracker3-miners 3.3.0.alpha
 - vala 0.55.1
