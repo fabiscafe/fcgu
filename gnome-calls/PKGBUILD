@@ -2,7 +2,7 @@
 options=(debug !strip)
 
 pkgname=gnome-calls
-pkgver=42.beta.0
+pkgver=42.beta.1
 pkgrel=1
 pkgdesc="A Phone dialer and call handler."
 arch=(x86_64)
@@ -15,7 +15,7 @@ depends=(callaudiod feedbackd folks gom
 	 libhandy libpeas modemmanager sofia-sip)
 makedepends=(git gobject-introspection meson vala)
 checkdepends=(xorg-server-xvfb)
-_commit=1c253c060423415b5c37de110fb89a8770019f2a  # tags/42.beta.0^0
+_commit=14930ba82fb7bfd573f9474af8fcf9a1cb03dae9  # tags/42.beta.1^0
 source=("git+https://gitlab.gnome.org/GNOME/calls.git#commit=$_commit")
 sha256sums=('SKIP')
 
