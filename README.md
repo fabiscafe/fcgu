@@ -25,6 +25,7 @@ This repo should be below the **[core]** repo, but above every other one in */et
 Server = https://$repo.fabis.cafe/$repo #EOL: 2022-02-28
 Server = https://vmi394248.contaboserver.net/$repo
 Server = https://stream.itmotr-radio.com/$repo
+Server = https://warehouse.inetol.net/$repo #EOL: 2023-01-26
 #Server = <looking for new mirrors>
 ```
 
@@ -46,6 +47,7 @@ Include = /etc/pacman.d/mirrorlist
 Server = https://$repo.fabis.cafe/$repo
 Server = https://vmi394248.contaboserver.net/$repo
 Server = https://stream.itmotr-radio.com/$repo
+Server = https://warehouse.inetol.net/$repo
 #Server = <looking for new mirrors>
 
 [extra]
@@ -66,6 +68,7 @@ The repo needs to be removed from */etc/pacman.conf*
 Server = https://$repo.fabis.cafe/$repo
 Server = https://vmi394248.contaboserver.net/$repo
 Server = https://stream.itmotr-radio.com/$repo
+Server = https://warehouse.inetol.net/$repo
 #Server = <looking for new mirrors>
 ```
 When that's done a `pacman -Syuu` will downgrade all packages to the Arch-repo versions.
