@@ -86,10 +86,8 @@ Once the stable version of GNOME arrives Arch Linux official repository, fcgu wi
 ### Will this kill my setup?
 This repository provides most of the time unstable software (development snapshots). It's not reliable in any way, and should only be used for testing purpose.
 
-### Why are the packages so huge?
-All packages are build with debugging symbols. This requires a lot more space but is necessary to create useful bug reports.
-
-On that topic please also read the [blog post by Michael Catanzaro](https://blogs.gnome.org/mcatanzaro/2021/09/18/creating-quality-backtraces-for-crash-report)
+### How the get debugging symbols?
+All packages are build with debugging symbols. Most of them require the user to install the packages debugging packages. For example there is `nautilus` and `nautilus-debug`. For everything that is not in the repo, you need to build the packages yourself, see: [Debugging/Getting_traces](https://wiki.archlinux.org/title/Debugging/Getting_traces)
 
 ### Compatiblity to Arch-Based-Distros
 We only give support for up-to-date Arch Linux. Older package bases will create issues down the line, because we need a certain version and will not build them on our side if they are available in Arch. So as long as your distro provides the same versions as Arch itself it should work.
