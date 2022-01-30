@@ -5,12 +5,12 @@ options=(debug)
 
 pkgname=gnome-clocks
 pkgver=42.alpha
-pkgrel=2
+pkgrel=3
 pkgdesc="Clocks applications for GNOME"
 url="https://wiki.gnome.org/Apps/Clocks"
 arch=(x86_64)
 license=(GPL)
-depends=(gtk4 libgweather4 gnome-desktop geoclue2 geocode-glib gsound libadwaita)
+depends=(gtk4 libgweather-gtk4 gnome-desktop geoclue2 geocode-glib gsound libadwaita)
 makedepends=(vala gobject-introspection yelp-tools git meson)
 groups=(gnome)
 _commit=9695d418b4129880772ddf19fb053def3d2d9d66  # tags/42.alpha^0
