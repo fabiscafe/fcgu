@@ -7,6 +7,7 @@
 - epiphany 42.alpha
 - feedbackd 0.0.0+git20211018
 - gedit master(2022-01-26)
+- gjs master(2022-01-25)
 - gnome-bluetooth 42.alpha.2
 - gnome-calculator 42.alpha
 - gnome-calls 42.beta.1
