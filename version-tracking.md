@@ -27,7 +27,7 @@
 - gnome-system-monitor 42.alpha
 - gnome-text-editor 42.alpha2
 - gnome-weather 42.alpha+r2+g4be7152
-- gsettings-desktop-schemas 42.alpha
+- gsettings-desktop-schemas master(2022-01-28)
 - gtksourceview5 5.3.2
 - libgweather 3.91.0
 - libhandy 1.5.0
