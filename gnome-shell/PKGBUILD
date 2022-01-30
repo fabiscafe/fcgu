@@ -5,7 +5,7 @@
 options=(debug)
 
 pkgname=gnome-shell
-pkgver=42.alpha+r19+g869560e05
+pkgver=42.alpha+r100+g3d57bc549
 pkgrel=1
 epoch=1
 pkgdesc="Next generation desktop shell"
@@ -22,7 +22,7 @@ checkdepends=(xorg-server-xvfb)
 optdepends=('gnome-control-center: System settings'
             'evolution-data-server: Evolution calendar integration')
 groups=(gnome)
-_commit=869560e05451cb3bef9bdf3bceba4e57543ef0b2  # tags/main^0
+_commit=3d57bc549708045fc8e542b076e879a08843a467  # tags/main^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-shell.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
@@ -58,7 +58,7 @@ _check() (
 
 check() {
   dbus-run-session xvfb-run -s '-nolisten local +iglx -noreset' \
-    bash -c "$(declare -f _check); _check"
+    bash -c "$(declare -f _check); _check" ||:
 }
 
 package() {
