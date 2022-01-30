@@ -15,7 +15,6 @@
 - gnome-control-center master(2022-01-29)
 - gnome-desktop 42.alpha.1
 - gnome-disk-utility 42.alpha
-- gnome-documents 3.34.0+34+g678141fa
 - gnome-font-viewer 42.alpha
 - gnome-initial-setup 42.alpha.1
 - gnome-maps 42.alpha
