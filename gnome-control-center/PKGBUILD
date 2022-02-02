@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=gnome-control-center
-pkgver=41.2+r373+ge12d215a3
+pkgver=41.2+r398+g5855b661f
 pkgrel=1
 pkgdesc="GNOME's main interface to configure various aspects of the desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-control-center"
@@ -24,7 +24,7 @@ optdepends=('system-config-printer: Printer settings'
             'openssh: remote login'
             'power-profiles-daemon: Power profiles support')
 groups=(gnome)
-_commit=e12d215a323a9a82c81f39784c8e82617aab3f13  # tags/master^0
+_commit=5855b661fe9b6b77f900dd9aeeeda7b109fb8c8c  # tags/master^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-control-center.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
