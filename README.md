@@ -83,6 +83,12 @@ Yes, FCGU will also package stable releases until they arrive in Arch Linux dire
 ### What happens after the stable release is shipped in Arch Linux?
 Once the stable version of GNOME arrives Arch Linux official repository, fcgu will remove its packages, so pacman will switch to the official repository again.
 
+### Why do I get downgrade warnings?
+```
+warning: $package: downgrading from version 1:2.34.5+678+g91011d12-1 to version 1:2.34.5+r678+g91011d12-1
+```
+Sometimes this repo needs to revert versions or change the version numbers scheme. Please use `pacman -Syuu` in these cases.
+
 ### Will this kill my setup?
 This repository provides most of the time unstable software (development snapshots). It's not reliable in any way, and should only be used for testing purpose.
 
