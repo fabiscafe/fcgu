@@ -31,6 +31,7 @@
 - gnome-weather master(2022-01-26)
 - gsettings-desktop-schemas master(2022-01-28)
 - gtksourceview5 5.3.2
+- libadwaita main(2022-02-02)
 - libgweather 3.91.0
 - libhandy 1.5.0
 - libnma 1.8.34
