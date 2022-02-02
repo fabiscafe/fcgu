@@ -10,6 +10,7 @@
 - gedit master(2022-01-30)
 - gjs master(2022-02-01)
 - gnome-bluetooth 42.alpha.2
+- gnome-builder 42.alpha1
 - gnome-calculator 42.alpha
 - gnome-calls 42.beta.1
 - gnome-characters 42.alpha
