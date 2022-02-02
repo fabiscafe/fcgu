@@ -21,7 +21,7 @@
 - gnome-initial-setup 42.alpha.1
 - gnome-maps 42.alpha
 - gnome-podcasts-gtk4 msandova/gtk4(2022-01-03)
-- gnome-shell main(2022-01-29)
+- gnome-shell main(2022-02-01)
 - gnome-shell-extensions 42.alpha
 - gnome-secrets 6.1 (gnome-passwordsafe)
 - gnome-settings-daemon 42.alpha
