@@ -4,7 +4,7 @@ options=(debug)
 
 pkgname=gnome-shell-extensions
 pkgver=42.alpha
-pkgrel=1
+pkgrel=2
 pkgdesc="Extensions for GNOME shell, including classic mode"
 url="https://wiki.gnome.org/Projects/GnomeShell/Extensions"
 arch=(any)
@@ -15,10 +15,10 @@ groups=(gnome)
 _commit=fac3d8b8c4800236362651a0c1f5abb955a64b7d  # tags/42.alpha^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-shell-extensions.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/gnome-shell-sass.git"
-        "remove_incorrect_args_i18n.merge.patch")
+        "remove_incorrect_args_i18n.merge.patch::https://gitlab.gnome.org/GNOME/gnome-shell-extensions/-/merge_requests/210.patch")
 sha256sums=('SKIP'
             'SKIP'
-            '07ad30686312da1adda6cac31e71face68e3a29ec51c522077e2401dcd542418')
+            '379ac11dd532d704c28eee72884bcf75fffad998816ab4ac95ff572787611d40')
 
 pkgver() {
   cd $pkgname
@@ -32,7 +32,7 @@ prepare() {
   git submodule set-url data/gnome-shell-sass "$srcdir/gnome-shell-sass"
   git submodule update
   
-  # https://gitlab.gnome.org/GNOME/gnome-shell-extensions/-/issues/374
+  # https://gitlab.gnome.org/GNOME/gnome-shell-extensions/-/merge_requests/210
   git apply -3 ../remove_incorrect_args_i18n.merge.patch
 }
 
