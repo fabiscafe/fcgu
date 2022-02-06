@@ -33,7 +33,7 @@
 - gsettings-desktop-schemas master(2022-01-31)
 - gtksourceview5 5.3.2
 - jsonrpc-glib 3.41.0
-- libadwaita main(2022-02-02)
+- libadwaita main(2022-02-05)
 - libgweather 3.91.0
 - libhandy 1.5.0
 - libnma 1.8.34
