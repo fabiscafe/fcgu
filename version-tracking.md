@@ -30,7 +30,7 @@
 - gnome-system-monitor 42.alpha
 - gnome-text-editor 42.alpha2
 - gnome-weather master(2022-02-01)
-- gsettings-desktop-schemas master(2022-01-28)
+- gsettings-desktop-schemas master(2022-01-31)
 - gtksourceview5 5.3.2
 - jsonrpc-glib 3.41.0
 - libadwaita main(2022-02-02)
