@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=gjs
-pkgver=1.70.0+r169+gcf94e871
+pkgver=1.70.1+r178+gccbfa21e
 pkgrel=1
 epoch=2
 pkgdesc="Javascript Bindings for GNOME"
@@ -16,17 +16,22 @@ depends=(cairo gobject-introspection-runtime js91 dconf readline
 makedepends=(gobject-introspection git meson dbus)
 checkdepends=(valgrind xorg-server-xvfb gtk3 gtk4)
 provides=(libgjs.so)
-_commit=cf94e871d7768b64d6b55362d55e30ca720d7070  # tags/master^0
-source=("git+https://gitlab.gnome.org/GNOME/gjs.git#commit=$_commit")
-sha256sums=('SKIP')
+_commit=ccbfa21e2be3ebe700050f85e93bfcbc18cc676d  # tags/master^0
+source=("git+https://gitlab.gnome.org/GNOME/gjs.git#commit=$_commit"
+        "core-gettext-Parse_numbers_before_use.patch::https://gitlab.gnome.org/tasali/gjs/-/commit/7b4f5ca6a32ac500b87d2ec67328ae6853618828.patch")
+sha256sums=('SKIP'
+            '60ebd516242c329ee2931a856a2cf47163c50ad8301be3adb4023bbd11f74289')
 
 pkgver() {
   cd gjs
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/70.0/70.1/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
   cd gjs
+  # https://gitlab.gnome.org/GNOME/gjs/-/issues/459
+  # Gnome Shell calendar crash - patch
+  git apply -3 ../core-gettext-Parse_numbers_before_use.patch
 }
 
 build() {

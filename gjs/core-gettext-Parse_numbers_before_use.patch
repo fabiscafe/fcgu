@@ -1,0 +1,29 @@
+From 7b4f5ca6a32ac500b87d2ec67328ae6853618828 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Veli=20Tasal=C4=B1?= <veli.tasali@gmail.com>
+Date: Tue, 8 Feb 2022 08:52:14 +0000
+Subject: [PATCH] core: gettext: Parse numbers before use
+
+---
+ modules/core/_gettext.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/modules/core/_gettext.js b/modules/core/_gettext.js
+index 376ad93f..b80c01ec 100644
+--- a/modules/core/_gettext.js
++++ b/modules/core/_gettext.js
+@@ -45,10 +45,10 @@ function dcgettext(dom, msgid, category) {
+ }
+ 
+ function ngettext(msgid1, msgid2, n) {
+-    return GLib.dngettext(null, msgid1, msgid2, n);
++    return GLib.dngettext(null, msgid1, msgid2, parseInt(n));
+ }
+ function dngettext(dom, msgid1, msgid2, n) {
+-    return GLib.dngettext(dom, msgid1, msgid2, n);
++    return GLib.dngettext(dom, msgid1, msgid2, parseInt(n));
+ }
+ // FIXME: missing dcngettext ?
+ 
+-- 
+GitLab
+
