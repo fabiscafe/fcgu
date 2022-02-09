@@ -2,7 +2,7 @@
 options=(debug !strip)
 
 pkgname=feedbackd
-pkgver=0.0.0+git20211018
+pkgver=0.0.0+git20220208
 pkgrel=0.1
 pkgdesc="A daemon to provide haptic (and later more) feedback on events"
 arch=(x86_64)
@@ -10,7 +10,7 @@ url="https://source.puri.sm/Librem5/feedbackd"
 license=(GPL3)
 depends=(gsound libgudev json-glib)
 makedepends=(git gobject-introspection meson vala)
-_commit=753fff3e7ae1d0bce4f58cef721e45c50c404786  # tags/0.0.0+git20211018^0
+_commit=74b178a363f1e0e4b84309f2a1b1c1c41bf97248  # tags/0.0.0+git20220208^0
 source=("git+https://source.puri.sm/Librem5/feedbackd.git#commit=$_commit")
 sha256sums=('SKIP')
 
