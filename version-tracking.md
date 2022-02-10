@@ -20,7 +20,7 @@
 - gnome-desktop 42.alpha.1
 - gnome-disk-utility 42.alpha
 - gnome-font-viewer 42.alpha
-- gnome-initial-setup 42.alpha.1
+- gnome-initial-setup 42.beta
 - gnome-maps 42.alpha
 - gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
 - gnome-shell main(2022-02-08)
