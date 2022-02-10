@@ -5,7 +5,7 @@ options=(debug)
 
 pkgname=gjs
 pkgver=1.70.1+r178+gccbfa21e
-pkgrel=1
+pkgrel=2
 epoch=2
 pkgdesc="Javascript Bindings for GNOME"
 url="https://wiki.gnome.org/Projects/Gjs"
@@ -18,9 +18,9 @@ checkdepends=(valgrind xorg-server-xvfb gtk3 gtk4)
 provides=(libgjs.so)
 _commit=ccbfa21e2be3ebe700050f85e93bfcbc18cc676d  # tags/master^0
 source=("git+https://gitlab.gnome.org/GNOME/gjs.git#commit=$_commit"
-        "core-gettext-Parse_numbers_before_use.patch::https://gitlab.gnome.org/tasali/gjs/-/commit/7b4f5ca6a32ac500b87d2ec67328ae6853618828.patch")
+        "fix_regression_converting_number_to_64-bit_int.patch::https://gitlab.gnome.org/GNOME/gjs/-/merge_requests/721.patch")
 sha256sums=('SKIP'
-            '60ebd516242c329ee2931a856a2cf47163c50ad8301be3adb4023bbd11f74289')
+            '3aa77d52acf36a8db408dda3fc34f3c54ba578a3a7fb21101d0da10d151d2380')
 
 pkgver() {
   cd gjs
@@ -29,9 +29,9 @@ pkgver() {
 
 prepare() {
   cd gjs
-  # https://gitlab.gnome.org/GNOME/gjs/-/issues/459
-  # Gnome Shell calendar crash - patch
-  git apply -3 ../core-gettext-Parse_numbers_before_use.patch
+  # Bug: https://gitlab.gnome.org/GNOME/gjs/-/issues/459
+  # Fix: https://gitlab.gnome.org/GNOME/gjs/-/merge_requests/721
+  git apply -3 ../fix_regression_converting_number_to_64-bit_int.patch
 }
 
 build() {

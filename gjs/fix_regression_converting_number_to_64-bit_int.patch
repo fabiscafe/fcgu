@@ -1,0 +1,184 @@
+From 62aecb69563fb51fb04284a5cf4140bd00e47639 Mon Sep 17 00:00:00 2001
+From: Philip Chimento <philip.chimento@gmail.com>
+Date: Wed, 9 Feb 2022 21:15:43 -0800
+Subject: [PATCH 1/2] value: Fix regression converting Number to 64-bit int
+
+Since accepting BigInt for introspected 64-bit values, handling
+non-integer Numbers regressed, because non-integers cannot be passed to
+JS::NumberToBigInt.
+
+Truncate all non-integer Numbers to integers before converting them to
+64-bit int, as JS::ToInt64/JS::ToUint64 would.
+
+Closes: #459
+---
+ gi/js-value-inl.h                 |  4 +++-
+ installed-tests/js/testRegress.js | 13 +++++++++++--
+ 2 files changed, 14 insertions(+), 3 deletions(-)
+
+diff --git a/gi/js-value-inl.h b/gi/js-value-inl.h
+index ff2358d25..fe5be3c0f 100644
+--- a/gi/js-value-inl.h
++++ b/gi/js-value-inl.h
+@@ -247,7 +247,9 @@ GJS_JSAPI_RETURN_CONVENTION inline bool js_value_to_c_checked(
+             if (value.isBigInt()) {
+                 bi = value.toBigInt();
+             } else if (value.isNumber()) {
+-                bi = JS::NumberToBigInt(cx, value.toNumber());
++                double number = value.toNumber();
++                number = std::trunc(number);
++                bi = JS::NumberToBigInt(cx, number);
+                 if (!bi)
+                     return false;
+             }
+diff --git a/installed-tests/js/testRegress.js b/installed-tests/js/testRegress.js
+index 91eff3544..f5935300a 100644
+--- a/installed-tests/js/testRegress.js
++++ b/installed-tests/js/testRegress.js
+@@ -46,6 +46,8 @@ describe('Life, the Universe and Everything', function () {
+             expect(Regress[method](42)).toBe(42);
+             expect(Regress[method](-42)).toBe(-42);
+             expect(Regress[method](undefined)).toBe(0);
++            expect(Regress[method](42.42)).toBe(42);
++            expect(Regress[method](-42.42)).toBe(-42);
+ 
+             if (bits >= 64) {
+                 expect(Regress[method](42n)).toBe(42);
+@@ -60,6 +62,7 @@ describe('Life, the Universe and Everything', function () {
+             const method = `test_uint${bits}`;
+             expect(Regress[method](42)).toBe(42);
+             expect(Regress[method](undefined)).toBe(0);
++            expect(Regress[method](42.42)).toBe(42);
+ 
+             if (bits >= 64)
+                 expect(Regress[method](42n)).toEqual(42);
+@@ -74,10 +77,15 @@ describe('Life, the Universe and Everything', function () {
+             expect(Regress[method](42)).toBe(42);
+             expect(Regress[method](-42)).toBe(-42);
+ 
+-            if (['float', 'double'].includes(type))
++            if (['float', 'double'].includes(type)) {
+                 expect(Number.isNaN(Regress[method](undefined))).toBeTruthy();
+-            else
++                expect(Regress[method](42.42)).toBeCloseTo(42.42);
++                expect(Regress[method](-42.42)).toBeCloseTo(-42.42);
++            } else {
+                 expect(Regress[method](undefined)).toBe(0);
++                expect(Regress[method](42.42)).toBe(42);
++                expect(Regress[method](-42.42)).toBe(-42);
++            }
+ 
+             if (bit64Types.includes(type)) {
+                 expect(Regress[method](42n)).toBe(42);
+@@ -94,6 +102,7 @@ describe('Life, the Universe and Everything', function () {
+             const method = `test_${type}`;
+             expect(Regress[method](42)).toBe(42);
+             expect(Regress[method](undefined)).toBe(0);
++            expect(Regress[method](42.42)).toBe(42);
+ 
+             if (bit64Types.includes(type))
+                 expect(Regress[method](42n)).toBe(42);
+-- 
+GitLab
+
+
+From 4d8e71c6a651f484fa07857852aa41eeb4131c80 Mon Sep 17 00:00:00 2001
+From: Philip Chimento <philip.chimento@gmail.com>
+Date: Wed, 9 Feb 2022 22:15:14 -0800
+Subject: [PATCH 2/2] value: Fix regression converting Infinity and NaN to C
+ integers
+
+This regression has been around somewhat longer, but JS::ToInt32,
+JS::ToInt64, and friends all treat Infinity and NaN as 0 when converting
+to APIs that expect an integer. GJS used to do this as well. Add tests so
+it doesn't regress again.
+
+Additionally add tests for float and double, to make sure that Infinity
+and NaN are preserved when converting to C float and double.
+---
+ gi/js-value-inl.h                 | 17 ++++++++++++++++-
+ installed-tests/js/testRegress.js | 25 +++++++++++++++++++++++++
+ 2 files changed, 41 insertions(+), 1 deletion(-)
+
+diff --git a/gi/js-value-inl.h b/gi/js-value-inl.h
+index fe5be3c0f..debfe1527 100644
+--- a/gi/js-value-inl.h
++++ b/gi/js-value-inl.h
+@@ -248,6 +248,10 @@ GJS_JSAPI_RETURN_CONVENTION inline bool js_value_to_c_checked(
+                 bi = value.toBigInt();
+             } else if (value.isNumber()) {
+                 double number = value.toNumber();
++                if (!std::isfinite(number)) {
++                    *out = 0;
++                    return true;
++                }
+                 number = std::trunc(number);
+                 bi = JS::NumberToBigInt(cx, number);
+                 if (!bi)
+@@ -264,8 +268,10 @@ GJS_JSAPI_RETURN_CONVENTION inline bool js_value_to_c_checked(
+     if constexpr (std::is_same_v<WantedType, T>)
+         return js_value_to_c(cx, value, out);
+ 
++    // JS::ToIntNN() converts undefined, NaN, infinity to 0
+     if constexpr (std::is_integral_v<WantedType>) {
+-        if (value.isUndefined()) {
++        if (value.isUndefined() ||
++            (value.isDouble() && !std::isfinite(value.toDouble()))) {
+             *out = 0;
+             return true;
+         }
+@@ -274,6 +280,15 @@ GJS_JSAPI_RETURN_CONVENTION inline bool js_value_to_c_checked(
+     if constexpr (std::is_arithmetic_v<T>) {
+         bool ret = js_value_to_c(cx, value, out);
+         if (out_of_range) {
++            // Infinity and NaN preserved between floating point types
++            if constexpr (std::is_floating_point_v<WantedType> &&
++                          std::is_floating_point_v<T>) {
++                if (!std::isfinite(*out)) {
++                    *out_of_range = false;
++                    return ret;
++                }
++            }
++
+             *out_of_range =
+                 (*out >
+                      static_cast<T>(std::numeric_limits<WantedType>::max()) ||
+diff --git a/installed-tests/js/testRegress.js b/installed-tests/js/testRegress.js
+index f5935300a..36d062b28 100644
+--- a/installed-tests/js/testRegress.js
++++ b/installed-tests/js/testRegress.js
+@@ -124,6 +124,31 @@ describe('Life, the Universe and Everything', function () {
+         });
+     });
+ 
++    describe('Infinity and NaN', function () {
++        ['int8', 'int16', 'int32', 'int64', 'short', 'int', 'long', 'ssize'].forEach(type => {
++            it(`converts to 0 for ${type}`, function () {
++                expect(Regress[`test_${type}`](Infinity)).toBe(0);
++                expect(Regress[`test_${type}`](-Infinity)).toBe(0);
++                expect(Regress[`test_${type}`](NaN)).toBe(0);
++            });
++        });
++
++        ['uint8', 'uint16', 'uint32', 'uint64', 'ushort', 'uint', 'ulong', 'size'].forEach(type => {
++            it(`converts to 0 for ${type}`, function () {
++                expect(Regress[`test_${type}`](Infinity)).toBe(0);
++                expect(Regress[`test_${type}`](NaN)).toBe(0);
++            });
++        });
++
++        ['float', 'double'].forEach(type => {
++            it(`not for ${type}`, function () {
++                expect(Regress[`test_${type}`](Infinity)).toBe(Infinity);
++                expect(Regress[`test_${type}`](-Infinity)).toBe(-Infinity);
++                expect(Regress[`test_${type}`](NaN)).toBeNaN();
++            });
++        });
++    });
++
+     describe('(u)int64 numeric values', function () {
+         const minInt64 = -(2n ** 63n);
+         const maxInt64 = 2n ** 63n - 1n;
+-- 
+GitLab
+
