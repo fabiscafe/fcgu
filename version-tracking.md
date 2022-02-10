@@ -27,7 +27,7 @@
 - gnome-shell-extensions 42.alpha
 - gnome-secrets 6.1 (gnome-passwordsafe)
 - gnome-settings-daemon 42.alpha
-- gnome-software 42.alpha
+- gnome-software 42.beta
 - gnome-system-monitor 42.alpha
 - gnome-text-editor 42.alpha2
 - gnome-weather master(2022-02-01)

@@ -6,7 +6,7 @@ options=(debug)
 
 pkgbase=gnome-software
 pkgname=(gnome-software gnome-software-packagekit-plugin)
-pkgver=42.alpha
+pkgver=42.beta.0
 pkgrel=1
 pkgdesc="GNOME Software Tools"
 url="https://wiki.gnome.org/Apps/Software/"
@@ -15,13 +15,13 @@ license=(GPL2)
 makedepends=(appstream docbook-xsl flatpak fwupd git gnome-online-accounts gobject-introspection
             gsettings-desktop-schemas gspell gtk-doc libadwaita libpackagekit-glib
             libsysprof-capture libxmlb malcontent meson valgrind)
-_commit=99b2e1b24d77d36e11140dc79aea2fa930fad1e5  # tags/42.alpha^0
+_commit=065b6815f22dfb08bfaf57c151afeacf871c702e  # tags/42.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-software.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgbase
-  git describe --tags | sed 's/-/+/g'
+  git describe --tags | sed 's/beta/beta.0/;s/-/+/g'
 }
 
 prepare() {
@@ -39,8 +39,7 @@ build() {
 }
 
 check() {
-  # build container troubles
-  meson test -C build --print-errorlogs || :
+  meson test -C build --print-errorlogs
 }
 
 _pick() {
