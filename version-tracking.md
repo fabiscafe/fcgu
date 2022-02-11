@@ -24,7 +24,7 @@
 - gnome-clocks 42.alpha
 - gnome-control-center master(2022-02-09)
 - gnome-desktop 42.alpha.1
-- gnome-disk-utility 42.alpha
+- gnome-disk-utility 42.beta
 - gnome-font-viewer 42.alpha
 - gnome-initial-setup 42.beta
 - gnome-maps 42.alpha
