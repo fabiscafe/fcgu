@@ -6,6 +6,7 @@
 - colord-gtk master(2021-12-29)
 - eog 42.alpha
 - epiphany 42.alpha
+- evolution-data-server 3.43.2
 - feedbackd 0.0.0+git20220208
 - gedit master(2022-01-30)
 - gjs master(2022-02-08)
