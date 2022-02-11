@@ -36,7 +36,7 @@
 - jsonrpc-glib 3.41.0
 - libadwaita main(2022-02-09)
 - libgweather 3.91.0
-- libhandy 1.5.0
+- libhandy 1.5.90
 - libnma 1.8.34
 - mutter main(2022-02-09)
 - nautilus41 41.2
