@@ -1,3 +1,7 @@
+# Naming
+* X.beta -> X.beta.0
+* X.beta1 -> X.beta.1
+
 # Done
 - adwaita-icon-theme master(2022-02-08)
 - baobab 42.alpha
