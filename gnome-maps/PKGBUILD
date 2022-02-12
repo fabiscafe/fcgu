@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=gnome-maps
-pkgver=42.alpha
+pkgver=42.beta.0
 pkgrel=1
 pkgdesc="A simple GNOME 3 maps application"
 url="https://wiki.gnome.org/Apps/Maps"
@@ -13,22 +13,17 @@ license=(GPL)
 depends=(geocode-glib geoclue gjs libchamplain libgee folks gfbgraph libhandy)
 makedepends=(gobject-introspection git meson yelp-tools)
 groups=(gnome)
-_commit=e7f845852150067027fbe46e6d09e05ac72ee6eb  # tags/v42.alpha^0
-source=("git+https://gitlab.gnome.org/GNOME/gnome-maps.git#commit=$_commit"
-        "remove_incorrect_args_i18n.merge.patch")
-sha256sums=('SKIP'
-            '4d4cc0cf020dbeebab48b64d17e527a884604c24fc0e7a2f18b2cdaa0e3b7bb7')
+_commit=b926a3eb1ea7490b97d5b774170dd98fa73d3e93  # tags/v42.beta^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-maps.git#commit=$_commit")
+sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/^v//;s/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
   cd $pkgname
-  
-  # https://gitlab.gnome.org/GNOME/gnome-maps/-/issues/418
-  git apply -3 ../remove_incorrect_args_i18n.merge.patch
 }
 
 build() {
