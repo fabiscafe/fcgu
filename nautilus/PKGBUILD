@@ -5,17 +5,17 @@ options=(debug)
 
 pkgbase=nautilus
 pkgname=(nautilus libnautilus-extension)
-pkgver=42.alpha
+pkgver=42.beta.0
 pkgrel=1
 pkgdesc="Default file manager for GNOME"
 url="https://wiki.gnome.org/Apps/Files"
 arch=(x86_64)
 license=(GPL)
 depends=(libgexiv2 gnome-desktop gvfs dconf tracker3 tracker3-miners
-         gnome-autoar gst-plugins-base-libs libadwaita libportal-gtk4)
+         gnome-autoar gst-plugins-base-libs libhandy libportal-gtk3)
 makedepends=(gobject-introspection git gtk-doc meson appstream-glib)
 checkdepends=(python-gobject)
-_commit=90f7d4dcd28082b58f160b01057ce69a93dc49d3  # tags/42.alpha^0
+_commit=5b4084deca7d117012a42fda2b2560434e95299f  # tags/42.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgd.git")
 sha256sums=('SKIP'
@@ -23,7 +23,7 @@ sha256sums=('SKIP'
 
 pkgver() {
   cd $pkgbase
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
@@ -57,6 +57,9 @@ _pick() {
 
 package_nautilus() {
   depends+=(libnautilus-extension.so)
+  provides=(nautilus41)
+  replaces=(nautilus41)
+  conflicts=(nautilus41)
   optdepends=('nautilus-sendto: Send files via mail extension')
   groups=(gnome)
 
@@ -71,8 +74,10 @@ package_nautilus() {
 
 package_libnautilus-extension() {
   pkgdesc="Library for extending the $pkgdesc"
-  depends=(gtk4)
-  provides=(libnautilus-extension.so)
+  depends=(gtk3)
+  provides=(libnautilus-extension.so libnautilus41-extension)
+  replaces=(libnautilus41-extension)
+  conflicts=(libnautilus41-extension)
   mv libne/* "$pkgdir"
 }
 
