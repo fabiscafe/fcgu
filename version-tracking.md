@@ -25,7 +25,7 @@
 - gnome-control-center master(2022-02-09)
 - gnome-desktop 42.alpha.1
 - gnome-disk-utility 42.beta
-- gnome-font-viewer 42.alpha
+- gnome-font-viewer 42.beta
 - gnome-initial-setup 42.beta
 - gnome-maps 42.beta
 - gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
