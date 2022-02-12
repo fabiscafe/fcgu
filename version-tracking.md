@@ -47,7 +47,6 @@
 - libhandy 1.5.90
 - libnma 1.8.34
 - mutter main(2022-02-09)
-- nautilus41 41.2
 - nautilus 42.beta
 - newsflash 1.5.1
 - sofia-sip 1.13.7
