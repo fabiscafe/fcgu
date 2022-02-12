@@ -4,19 +4,19 @@ options=(debug)
 
 pkgname=libgnome-games-support-gtk4
 pkgver=2.0.beta.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Code shared between GNOME games"
 url="https://gitlab.gnome.org/GNOME/libgnome-games-support"
 arch=(x86_64)
 license=(GPL3 LGPL3)
 depends=(gtk4 libgee)
 makedepends=(git meson vala)
-# https://gitlab.gnome.org/GNOME/libgnome-games-support/-/issues/21
-conflicts=(libgnome-games-support)
 provides=("libgnome-games-support-${pkgver%%.*}.so")
 _commit=b2579249db9516e74330e864cf021fdb1d10c0c7  # tags/2.0.beta^0
-source=("git+https://gitlab.gnome.org/GNOME/libgnome-games-support.git#commit=$_commit")
-sha256sums=('SKIP')
+source=("git+https://gitlab.gnome.org/GNOME/libgnome-games-support.git#commit=$_commit"
+        "fix-parallel-installation-with-1.8-series.patch")
+sha256sums=('SKIP'
+            '29a2a482200217f1bd1c14d40ed927692e9d80a60802abde8f9f1c7a1e57cf25')
 
 pkgver() {
   cd ${pkgname/-gtk4//}
@@ -25,6 +25,8 @@ pkgver() {
 
 prepare() {
   cd ${pkgname/-gtk4//}
+  # Bug: https://gitlab.gnome.org/GNOME/libgnome-games-support/-/issues/21
+  git apply -3 ../fix-parallel-installation-with-1.8-series.patch
 }
 
 build() {
