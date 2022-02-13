@@ -4,7 +4,7 @@
 options=(debug !strip)
 
 pkgname=gedit
-pkgver=41.alpha+r61+g22205ecb5
+pkgver=41.alpha+r62+g64e14e13a
 pkgrel=1
 pkgdesc="GNOME Text Editor"
 url="https://wiki.gnome.org/Apps/Gedit"
@@ -17,7 +17,7 @@ makedepends=(yelp-tools vala gobject-introspection git gtk-doc meson
 optdepends=('gedit-plugins: Additional features')
 conflicts=('gedit-code-assistance<=3.16.0+4+gd19b879-1')
 groups=(gnome)
-_commit=22205ecb53061f4fd633b05af21da24fec2ea36a  # master^0
+_commit=64e14e13a5d4a4b43c2a3ad2a521f8447bc560e0  # master^0
 source=("git+https://gitlab.gnome.org/GNOME/gedit.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgd.git"
         "remove_incorrect_args_i18n.merge.patch::https://gitlab.gnome.org/GNOME/gedit/-/merge_requests/124.patch")

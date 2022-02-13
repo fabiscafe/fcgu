@@ -13,7 +13,7 @@
 - evolution 3.43.2
 - evolution-data-server 3.43.2
 - feedbackd 0.0.0+git20220208
-- gedit master(2022-01-30)
+- gedit master(2022-02-13)
 - gjs master(2022-02-08)
 - gnome-backgrounds main(2022-02-08)
 - gnome-bluetooth 42.alpha.2
