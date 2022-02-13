@@ -38,7 +38,7 @@
 - gnome-terminal 3.43.90
 - gnome-text-editor 42.alpha2
 - gnome-weather master(2022-02-01)
-- gsettings-desktop-schemas master(2022-02-09)
+- gsettings-desktop-schemas master(2022-02-13)
 - gtksourceview5 5.3.2
 - gvfs 1.49.90
 - jsonrpc-glib 3.41.0
