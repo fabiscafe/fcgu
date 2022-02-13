@@ -18,7 +18,7 @@
 - gnome-backgrounds main(2022-02-08)
 - gnome-bluetooth 42.alpha.2
 - gnome-builder 42.alpha1
-- gnome-calculator 42.alpha
+- gnome-calculator 42.beta
 - gnome-calls 42.beta.1
 - gnome-characters 42.alpha
 - gnome-clocks 42.alpha
