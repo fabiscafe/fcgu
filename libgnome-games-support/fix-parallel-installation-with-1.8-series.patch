@@ -1,8 +1,0 @@
-diff --git a/po/meson.build b/po/meson.build
-index e9b77d7..829fbe8 100644
---- a/po/meson.build
-+++ b/po/meson.build
-@@ -1 +1 @@
--i18n.gettext(meson.project_name(), preset: 'glib')
-+i18n.gettext('libgnome-games-support-2', preset: 'glib')
-
