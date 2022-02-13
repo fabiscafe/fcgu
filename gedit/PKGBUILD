@@ -4,7 +4,7 @@
 options=(debug !strip)
 
 pkgname=gedit
-pkgver=41.alpha+r62+g64e14e13a
+pkgver=41.alpha+r65+gb12398de4
 pkgrel=1
 pkgdesc="GNOME Text Editor"
 url="https://wiki.gnome.org/Apps/Gedit"
@@ -17,13 +17,11 @@ makedepends=(yelp-tools vala gobject-introspection git gtk-doc meson
 optdepends=('gedit-plugins: Additional features')
 conflicts=('gedit-code-assistance<=3.16.0+4+gd19b879-1')
 groups=(gnome)
-_commit=64e14e13a5d4a4b43c2a3ad2a521f8447bc560e0  # master^0
+_commit=b12398de45d9312c793eb4888c66eeea0a790d7b  # master^0
 source=("git+https://gitlab.gnome.org/GNOME/gedit.git#commit=$_commit"
-        "git+https://gitlab.gnome.org/GNOME/libgd.git"
-        "remove_incorrect_args_i18n.merge.patch::https://gitlab.gnome.org/GNOME/gedit/-/merge_requests/124.patch")
+        "git+https://gitlab.gnome.org/GNOME/libgd.git")
 sha256sums=('SKIP'
-            'SKIP'
-            '4ecfe56b4c2f784b7d3a3291a48596981eb10db43e64a2eb478c86b8a4ab4818')
+            'SKIP')
 
 pkgver() {
   cd $pkgname
@@ -35,9 +33,6 @@ prepare() {
   git submodule init
   git submodule set-url subprojects/libgd "$srcdir/libgd"
   git submodule update
-
-  # https://gitlab.gnome.org/GNOME/gedit/-/merge_requests/124
-  git apply -3 ../remove_incorrect_args_i18n.merge.patch
 }
 
 build() {
