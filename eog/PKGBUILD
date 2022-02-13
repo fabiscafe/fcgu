@@ -4,27 +4,29 @@
 options=(debug)
 
 pkgname=eog
-pkgver=42.alpha
+pkgver=42.beta.0
 pkgrel=1
 pkgdesc="Eye of Gnome: An image viewing and cataloging program"
 url="https://wiki.gnome.org/Apps/EyeOfGnome"
 arch=(x86_64)
 license=(GPL)
-depends=(gnome-desktop libexif lcms2 exempi libpeas librsvg dconf)
-makedepends=(gobject-introspection gtk-doc git meson yelp-tools systemd)
+depends=(dconf exempi gnome-desktop lcms2 libexif libhandy librsvg libpeas)
+makedepends=(gi-docgen git gobject-introspection itstool meson )
 optdepends=('eog-plugins: Additional features')
 groups=(gnome)
-_commit=9ad3c64293459e88ea9059a48c0f1504ef1805fa  # tags/42.alpha^0
+_commit=8e6049b2d581c56806388ec8b50d05effa907530  # tags/42.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/eog.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 build() {
-  arch-meson $pkgname build -D gtk_doc=true -D libportal=false
+  arch-meson $pkgname build \
+    -D gtk_doc=true \
+    -D libportal=false
   meson compile -C build
 }
 
