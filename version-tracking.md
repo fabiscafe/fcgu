@@ -42,7 +42,7 @@
 - gtksourceview5 5.3.2
 - gvfs 1.49.90
 - jsonrpc-glib 3.41.0
-- libadwaita main(2022-02-09)
+- libadwaita main(2022-02-13)
 - libgnome-games-support-gtk4 2.0.beta.2
 - libgweather 3.91.0
 - libhandy 1.5.90
