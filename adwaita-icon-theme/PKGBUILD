@@ -5,7 +5,7 @@
 options=(debug)
 
 pkgname=adwaita-icon-theme
-pkgver=41.0+r160+gac378cd37
+pkgver=41.0+r173+ge4350233f
 pkgrel=1
 pkgdesc="GNOME standard icons"
 url="https://gitlab.gnome.org/GNOME/adwaita-icon-theme"
@@ -13,7 +13,7 @@ arch=(any)
 license=(LGPL3 CCPL:by-sa)
 depends=(hicolor-icon-theme gtk-update-icon-cache librsvg)
 makedepends=(git gtk3)
-_commit=ac378cd374a2e244e777e7b12943af28623c03f0  # tags/master^0
+_commit=e4350233fafc8c7996a8676600d7b87990db8c28  # tags/master^0
 source=("git+https://gitlab.gnome.org/GNOME/adwaita-icon-theme.git#commit=$_commit")
 sha256sums=('SKIP')
 
