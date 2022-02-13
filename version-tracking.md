@@ -53,6 +53,7 @@
 - tracker3 3.3.0.alpha
 - tracker3-miners 3.3.0.alpha
 - vala 0.55.3
+- yelp-tools 42.beta
 
 # Wontbuild
 
