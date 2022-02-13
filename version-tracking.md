@@ -35,6 +35,7 @@
 - gnome-settings-daemon 42.alpha
 - gnome-software 42.beta
 - gnome-system-monitor 42.alpha
+- gnome-terminal 3.43.90
 - gnome-text-editor 42.alpha2
 - gnome-weather master(2022-02-01)
 - gsettings-desktop-schemas master(2022-02-09)
