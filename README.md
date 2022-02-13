@@ -32,6 +32,7 @@ Server = https://warehouse.inetol.net/$repo #EOL: 2023-01-26
 Here a preview how it should look:
 
 ```
+
 ...
 # The testing repositories are disabled by default. To enable, uncomment the
 # repo name header and Include lines. You can add preferred servers immediately
@@ -71,7 +72,8 @@ Server = https://stream.itmotr-radio.com/$repo
 Server = https://warehouse.inetol.net/$repo
 #Server = <looking for new mirrors>
 ```
-When that's done a `pacman -Syuu` will downgrade all packages to the Arch-repo versions.
+
+When that's done a `pacman -Syuu` will downgrade all packages to the Arch-repo versions. After thats done, you need to check for additional packages who where not removed but can conflict with your installation. Check with `pacman -Qm` and remove them.
 
 ## Frequently Asked Questions - FAQ
 ## Will you do alpha releases?
@@ -84,9 +86,11 @@ Yes, FCGU will also package stable releases until they arrive in Arch Linux dire
 Once the stable version of GNOME arrives Arch Linux official repository, fcgu will remove its packages, so pacman will switch to the official repository again.
 
 ### Why do I get downgrade warnings?
+
 ```
 warning: $package: downgrading from version 1:2.34.5+678+g91011d12-1 to version 1:2.34.5+r678+g91011d12-1
 ```
+
 Sometimes this repo needs to revert versions or change the version numbers scheme. Please use `pacman -Syuu` in these cases.
 
 ### Will this kill my setup?
