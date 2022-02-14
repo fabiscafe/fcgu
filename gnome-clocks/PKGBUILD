@@ -4,8 +4,8 @@ options=(debug)
 
 
 pkgname=gnome-clocks
-pkgver=42.alpha
-pkgrel=3
+pkgver=42.beta.0
+pkgrel=1
 pkgdesc="Clocks applications for GNOME"
 url="https://wiki.gnome.org/Apps/Clocks"
 arch=(x86_64)
@@ -13,13 +13,13 @@ license=(GPL)
 depends=(gtk4 libgweather-gtk4 gnome-desktop geoclue2 geocode-glib gsound libadwaita)
 makedepends=(vala gobject-introspection yelp-tools git meson)
 groups=(gnome)
-_commit=9695d418b4129880772ddf19fb053def3d2d9d66  # tags/42.alpha^0
+_commit=04250e0abebcdeb93048424cdd7d1e4b2c875726  # tags/42.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-clocks.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/-/+/g'
+  git describe --tags | sed 's/beta/beta.0/;s/-/+/g'
 }
 
 prepare() {
