@@ -4,7 +4,7 @@
 options=(debug !strip)
 
 pkgname=gedit
-pkgver=41.alpha+r65+gb12398de4
+pkgver=41.0
 pkgrel=1
 pkgdesc="GNOME Text Editor"
 url="https://wiki.gnome.org/Apps/Gedit"
@@ -17,7 +17,7 @@ makedepends=(yelp-tools vala gobject-introspection git gtk-doc meson
 optdepends=('gedit-plugins: Additional features')
 conflicts=('gedit-code-assistance<=3.16.0+4+gd19b879-1')
 groups=(gnome)
-_commit=b12398de45d9312c793eb4888c66eeea0a790d7b  # master^0
+_commit=71aedf66799123fab9289157014ff954add61ac5  # tags/41.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gedit.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgd.git")
 sha256sums=('SKIP'
