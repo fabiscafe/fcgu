@@ -20,7 +20,7 @@
 - gnome-builder 42.alpha1
 - gnome-calculator 42.beta
 - gnome-calls 42.beta.1
-- gnome-characters 42.alpha
+- gnome-characters 42.beta
 - gnome-clocks 42.alpha
 - gnome-control-center master(2022-02-13)
 - gnome-desktop 42.alpha.1
