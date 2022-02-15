@@ -13,7 +13,6 @@
 - evolution 3.43.2
 - evolution-data-server 3.43.2
 - feedbackd 0.0.0+git20220208
-- gedit 41.0
 - gjs 1.71.1
 - glibc-tools main(2022-01-26)
 - gnome-backgrounds main(2022-02-08)
