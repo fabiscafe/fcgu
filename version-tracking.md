@@ -24,7 +24,7 @@
 - gnome-calls 42.beta.1
 - gnome-characters 42.beta
 - gnome-clocks 42.beta
-- gnome-control-center master(2022-02-13)
+- gnome-control-center 42.beta1
 - gnome-desktop 42.alpha.1
 - gnome-disk-utility 42.beta
 - gnome-font-viewer 42.beta
