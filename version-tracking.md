@@ -17,7 +17,7 @@
 - gjs 1.71.1
 - glibc-tools main(2022-01-26)
 - gnome-backgrounds main(2022-02-08)
-- gnome-bluetooth 42.alpha.2
+- gnome-bluetooth 42.beta
 - gnome-builder 42.alpha1
 - gnome-calculator 42.beta
 - gnome-calls 42.beta.1
