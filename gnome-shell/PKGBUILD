@@ -5,7 +5,7 @@
 options=(debug)
 
 pkgname=gnome-shell
-pkgver=42.alpha+r242+g93f9080a5
+pkgver=42.beta.0
 pkgrel=1
 epoch=1
 pkgdesc="Next generation desktop shell"
@@ -22,7 +22,7 @@ checkdepends=(xorg-server-xvfb)
 optdepends=('gnome-control-center: System settings'
             'evolution-data-server: Evolution calendar integration')
 groups=(gnome)
-_commit=93f9080a59775bb28920f3d96bf7e3bb59bc4d52  # tags/main^0
+_commit=7dab3667a7e178dddb7b6885e75e81211be449c0  # tags/42.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-shell.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
@@ -30,7 +30,7 @@ sha256sums=('SKIP'
 
 pkgver() {
   cd gnome-shell
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
