@@ -32,7 +32,7 @@
 - gnome-shell main(2022-02-13)
 - gnome-shell-extensions 42.alpha
 - gnome-secrets 6.1 (gnome-passwordsafe)
-- gnome-settings-daemon 42.alpha
+- gnome-settings-daemon 42.beta
 - gnome-software 42.beta
 - gnome-system-monitor 42.alpha
 - gnome-terminal 3.43.90

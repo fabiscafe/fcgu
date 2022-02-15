@@ -3,21 +3,21 @@
 options=(debug)
 
 pkgname=gnome-settings-daemon
-pkgver=42.alpha
-pkgrel=3
+pkgver=42.beta.0
+pkgrel=1
 pkgdesc="GNOME Settings Daemon"
 url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
 arch=(x86_64)
 license=(GPL)
 depends=(dconf gnome-desktop gsettings-desktop-schemas libcanberra-pulse libnotify systemd libwacom
-         pulseaudio pulseaudio-alsa upower librsvg libgweather geocode-glib geoclue nss libgudev
+         pulseaudio pulseaudio-alsa upower librsvg libgweather-gtk4 geocode-glib geoclue nss libgudev
          gtk3 libnm gcr)
 makedepends=(xf86-input-wacom libxslt docbook-xsl python git meson usbguard)
 checkdepends=(python-gobject python-dbusmock)
 optdepends=('usbguard: USB protection support')
 groups=(gnome)
 backup=(etc/xdg/Xwayland-session.d/00-xrdb)
-_commit=62325b51b56da15a6da7c8145e550ae047d361ea  # tags/42.alpha^0
+_commit=3240f5a51be338119cffa8c6f52e60f9f21781ea  # tags/42.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-settings-daemon.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git"
         "remove_incorrect_args_i18n.merge.patch")
@@ -27,7 +27,7 @@ sha256sums=('SKIP'
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
