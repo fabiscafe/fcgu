@@ -5,7 +5,7 @@
 options=(debug)
 
 pkgname=tracker3
-pkgver=3.3.0.alpha
+pkgver=3.3.0.beta.0
 pkgrel=1
 pkgdesc="Desktop-neutral user information store, search tool and indexer"
 url="https://wiki.gnome.org/Projects/Tracker"
@@ -13,22 +13,25 @@ arch=(x86_64)
 license=(GPL)
 depends=(sqlite icu glib2 libffi util-linux libstemmer libseccomp libsoup libsoup3
          json-glib)
-makedepends=(gobject-introspection hotdoc vala git gtk-doc bash-completion meson
-             asciidoc systemd)
+makedepends=(asciidoc gobject-introspection hotdoc vala git gtk-doc bash-completion meson systemd)
 checkdepends=(python-gobject python-dbus python-tappy)
 provides=(libtracker-sparql-3.0.so)
 groups=(gnome)
-_commit=a906bd434e72ac550f883c4394fe61c9bbf15457  # tags/3.3.0.alpha^0
-source=("git+https://gitlab.gnome.org/GNOME/tracker.git#commit=$_commit")
-sha256sums=('SKIP')
+_commit=26064a9e7c523443939b0ff386ff10dcc0bc069b  # tags/3.3.0.beta^0
+source=("git+https://gitlab.gnome.org/GNOME/tracker.git#commit=$_commit"
+        "fix_path_manpage.xsl.patch")
+sha256sums=('SKIP'
+            '42836ecf7a8d700125668494626c3c9482817d76cbbb6383c6b6ccba54a68425')
 
 pkgver() {
   cd tracker
-  git describe --tags | sed 's/-/+/g'
+  git describe --tags | sed 's/beta/beta.0/;s/-/+/g'
 }
 
 prepare() {
   cd tracker
+  # Bug: https://gitlab.gnome.org/GNOME/tracker/-/issues/347
+  git apply -3 ../fix_path_manpage.xsl.patch
 }
 
 build() {

@@ -51,7 +51,7 @@
 - nautilus 42.beta
 - newsflash 1.5.1
 - sofia-sip 1.13.7
-- tracker3 3.3.0.alpha
+- tracker3 3.3.0.beta
 - tracker3-miners 3.3.0.alpha
 - vala 0.55.3
 - vte3 0.67.90
