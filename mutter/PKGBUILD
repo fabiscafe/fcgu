@@ -5,13 +5,13 @@
 options=(debug)
 
 pkgname=mutter
-pkgver=42.alpha+r209+g11121523b
+pkgver=42.beta.0
 pkgrel=1
 pkgdesc="A window manager for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
 arch=(x86_64)
 license=(GPL)
-depends=(dconf gobject-introspection-runtime gsettings-desktop-schemas
+depends=("glibc>=2.35" dconf gobject-introspection-runtime gsettings-desktop-schemas
          libcanberra startup-notification zenity libsm gnome-desktop upower
          libxkbcommon-x11 gnome-settings-daemon libgudev libinput pipewire
          xorg-xwayland graphene libxkbfile libsysprof-capture)
@@ -20,17 +20,24 @@ makedepends=(gobject-introspection git egl-wayland meson xorg-server
 checkdepends=(xorg-server-xvfb pipewire-media-session python-dbusmock)
 provides=(libmutter-10.so)
 groups=(gnome)
-_commit=11121523b4ee8aec444a98af41df5d0cbd071af8  # tags/main^0
+_commit=11a2cb2705074832610039e90e0d2bbb8fcfbd90  # tags/42.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd mutter
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
   cd mutter
+  # Dirty workaround to remove the check for catchsegv as this
+  # seemingly was remove in glibc 2.35
+  # https://marc.info/?l=glibc-alpha&m=164009697001007
+  # If you can come up with a better solution, please let me know
+  # or upstream it.
+  # https://gitlab.gnome.org/GNOME/mutter/-/issues/2120
+  sed -i "/find_program('catchsegv'),/d" meson.build
 }
 
 build() {
