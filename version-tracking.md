@@ -3,7 +3,7 @@
 * X.beta1 -> X.beta.1
 
 # Done
-- adwaita-icon-theme master(2022-02-09)
+- adwaita-icon-theme master(2022-02-15)
 - baobab 42.alpha
 - callaudiod 0.1.3
 - clapper 0.4.1
