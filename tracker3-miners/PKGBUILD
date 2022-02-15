@@ -3,7 +3,7 @@
 options=(debug)
 
 pkgname=tracker3-miners
-pkgver=3.3.0.alpha
+pkgver=3.3.0.beta.0
 pkgrel=1
 pkgdesc="Collection of data extractors for Tracker/Nepomuk"
 url="https://wiki.gnome.org/Projects/Tracker"
@@ -16,20 +16,23 @@ makedepends=(git meson vala asciidoc)
 checkdepends=(python-gobject python-tappy gst-plugins-good gst-plugins-base
               gst-libav)
 groups=(gnome)
-_commit=9c0703898520d0e88169f80d4a053ca9d44a882a  # tags/3.3.0.alpha^0
+_commit=e5ac9c6ddd63410c50cf6a535c8fe653069df2b7  # tags/3.3.0.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/tracker-miners.git#commit=$_commit"
-        fix-rpath.diff)
+        "fix-rpath.diff"
+        "fix_path_manpage.xsl.patch")
 sha256sums=('SKIP'
-            'd23ee61df2a8eabb1b4faf7efeedeca228baee549097d5db11e513fcedf7e464')
+            'd23ee61df2a8eabb1b4faf7efeedeca228baee549097d5db11e513fcedf7e464'
+            '9bc184870a3d8fe2337247084e81e3983ed5e7ad4d28f29f895923e5ffbabca0')
 
 pkgver() {
   cd tracker-miners
-  git describe --tags | sed 's/-/+/g'
+  git describe --tags | sed 's/beta/beta.0/;s/-/+/g'
 }
 
 prepare() {
   cd tracker-miners
   git apply -3 ../fix-rpath.diff
+  git apply -3 ../fix_path_manpage.xsl.patch
 }
 
 build() {
