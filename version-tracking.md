@@ -31,7 +31,7 @@
 - gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
 - gnome-shell main(2022-02-13)
 - gnome-shell-extensions 42.alpha
-- gnome-secrets 6.1 (gnome-passwordsafe)
+- gnome-secrets 6.2 (gnome-passwordsafe)
 - gnome-settings-daemon 42.beta
 - gnome-software 42.beta
 - gnome-system-monitor 42.alpha
