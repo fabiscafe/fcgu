@@ -51,6 +51,7 @@
 - mutter 42.beta
 - nautilus 42.beta
 - newsflash 1.5.1
+- orca 42.beta
 - sofia-sip 1.13.7
 - tracker3 3.3.0.beta
 - tracker3-miners 3.3.0.beta
