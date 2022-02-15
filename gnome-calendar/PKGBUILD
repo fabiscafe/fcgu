@@ -1,0 +1,44 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+options=(debug)
+
+pkgname=gnome-calendar
+pkgver=42.beta.0
+pkgrel=1
+pkgdesc="Simple and beautiful calendar application designed to perfectly fit the GNOME desktop"
+url="https://wiki.gnome.org/Apps/Calendar"
+arch=(x86_64)
+license=(GPL)
+depends=(evolution-data-server gsettings-desktop-schemas gnome-control-center
+         libadwaita libdazzle)
+makedepends=(git meson)
+groups=(gnome)
+_commit=b46c0c4051759af7364752b51508203743fec1ca  # tags/42.beta
+source=("git+https://gitlab.gnome.org/GNOME/gnome-calendar.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
+
+# vim:set sw=2 et:
+

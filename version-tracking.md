@@ -20,6 +20,7 @@
 - gnome-bluetooth 42.beta
 - gnome-builder 42.alpha1
 - gnome-calculator 42.beta
+- gnome-calendar 42.beta
 - gnome-calls 42.beta.1
 - gnome-characters 42.beta
 - gnome-clocks 42.beta
