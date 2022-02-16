@@ -5,7 +5,7 @@
 options=(debug)
 
 pkgname=tracker3
-pkgver=3.3.0.beta.0
+pkgver=3.3.0.beta.0+2+g061faeff4
 pkgrel=1
 pkgdesc="Desktop-neutral user information store, search tool and indexer"
 url="https://wiki.gnome.org/Projects/Tracker"
@@ -17,11 +17,9 @@ makedepends=(asciidoc gobject-introspection hotdoc vala git gtk-doc bash-complet
 checkdepends=(python-gobject python-dbus python-tappy)
 provides=(libtracker-sparql-3.0.so)
 groups=(gnome)
-_commit=26064a9e7c523443939b0ff386ff10dcc0bc069b  # tags/3.3.0.beta^0
-source=("git+https://gitlab.gnome.org/GNOME/tracker.git#commit=$_commit"
-        "fix_path_manpage.xsl.patch")
-sha256sums=('SKIP'
-            '42836ecf7a8d700125668494626c3c9482817d76cbbb6383c6b6ccba54a68425')
+_commit=061faeff4d6c888aa6f712fcbf8b87d9af8cd21d  # master^0
+source=("git+https://gitlab.gnome.org/GNOME/tracker.git#commit=$_commit")
+sha256sums=('SKIP')
 
 pkgver() {
   cd tracker
@@ -30,12 +28,11 @@ pkgver() {
 
 prepare() {
   cd tracker
-  # Bug: https://gitlab.gnome.org/GNOME/tracker/-/issues/347
-  git apply -3 ../fix_path_manpage.xsl.patch
 }
 
 build() {
-  arch-meson tracker build -D tests_tap_protocol=true
+  arch-meson tracker build \
+    -D tests_tap_protocol=true
   meson compile -C build
 }
 
