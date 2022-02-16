@@ -30,6 +30,7 @@
 - gnome-initial-setup 42.beta
 - gnome-maps 42.beta
 - gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
+- gnome-remote-desktop 42.beta
 - gnome-shell 42.beta
 - gnome-shell-extensions 42.beta
 - gnome-secrets 6.2 (gnome-passwordsafe)
