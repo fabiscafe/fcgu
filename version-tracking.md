@@ -54,7 +54,7 @@
 - orca 42.beta
 - sofia-sip 1.13.7
 - tracker3 master(2022-02-16)
-- tracker3-miners 3.3.0.beta
+- tracker3-miners master(2022-02-16)
 - vala 0.55.3
 - vte3 0.67.90
 - yelp 42.beta
