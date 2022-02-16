@@ -4,8 +4,8 @@
 options=(debug)
 
 pkgname=colord-gtk
-pkgver=0.2.0+r8+gc6fd5ab
-pkgrel=1
+pkgver=0.3.0
+pkgrel=0.1
 pkgdesc="Additional GTK support code for colord"
 arch=(x86_64)
 url="https://www.freedesktop.org/software/colord/"
@@ -13,14 +13,14 @@ license=(GPL2)
 depends=(lcms2 gtk3 gtk4 colord)
 makedepends=(gobject-introspection vala gtk-doc git docbook-utils docbook-xsl
              meson)
-_commit=c6fd5ab9bde0a23158f236a808722bacc661b57c  # tags/master^0
+_commit=9a2c7f7cb168cd46cb1e163df35e734c7beb3b70  # tags/0.3.0^0
 source=("git+https://github.com/hughsie/colord-gtk#commit=$_commit")
 sha1sums=('SKIP')
 validpgpkeys=('163EB50119225DB3DF8F49EA17ACBA8DFA970E17')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/^COLORD_GTK_//;s/_/./g;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {

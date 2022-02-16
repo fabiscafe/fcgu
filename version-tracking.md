@@ -7,7 +7,7 @@
 - baobab 42.beta
 - callaudiod 0.1.3
 - clapper 0.4.1
-- colord-gtk master(2021-12-29)
+- colord-gtk 0.3.0
 - eog 42.beta
 - epiphany 42.beta-really
 - evolution 3.43.2
