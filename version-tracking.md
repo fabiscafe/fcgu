@@ -4,7 +4,7 @@
 
 # Done
 - adwaita-icon-theme 42.beta
-- baobab 42.alpha
+- baobab 42.beta
 - callaudiod 0.1.3
 - clapper 0.4.1
 - colord-gtk master(2021-12-29)
