@@ -38,7 +38,7 @@
 - gnome-system-monitor 42.alpha
 - gnome-terminal 3.43.90
 - gnome-text-editor 42.alpha2
-- gnome-weather master(2022-02-01)
+- gnome-weather 42.beta
 - gsettings-desktop-schemas 42.beta
 - gtksourceview5 5.3.2
 - gvfs 1.49.90

@@ -3,22 +3,22 @@
 options=(debug)
 
 pkgname=gnome-weather
-pkgver=42.alpha+r11+g1c55dd0
+pkgver=42.beta.0
 pkgrel=1
 pkgdesc="Access current weather conditions and forecasts"
 url="https://wiki.gnome.org/Apps/Weather"
 arch=(any)
 license=(GPL)
-depends=(gtk3 gjs libgweather geoclue2 gnome-desktop libhandy)
+depends=(gjs geoclue2 gnome-desktop libadwaita libgweather-gtk4)
 makedepends=(gobject-introspection appstream-glib git meson)
 groups=(gnome)
-_commit=1c55dd09078db89184dbd16aab9591e8321351e2  # tags/master^0
+_commit=6b76ba4667287043bbb74af391642044e7bd78e4  # tags/42.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-weather.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
 }
 
 prepare() {
