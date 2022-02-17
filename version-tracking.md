@@ -41,6 +41,7 @@
 - gnome-terminal 3.43.90
 - gnome-text-editor 42.alpha2
 - gnome-weather 42.beta
+- gobject-introspection 1.71.0
 - gsettings-desktop-schemas 42.beta
 - gtksourceview5 5.3.2
 - gvfs 1.49.90
