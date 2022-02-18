@@ -23,6 +23,7 @@
 - gnome-calls 42.beta.1
 - gnome-characters 42.beta
 - gnome-clocks 42.beta
+- gnome-console 42.beta
 - gnome-control-center 42.beta1
 - gnome-desktop 42.alpha.1
 - gnome-disk-utility 42.beta
