@@ -25,7 +25,7 @@
 - gnome-clocks 42.beta
 - gnome-console 42.beta
 - gnome-control-center 42.beta1
-- gnome-desktop 42.alpha.1
+- gnome-desktop 42.beta
 - gnome-disk-utility 42.beta
 - gnome-font-viewer 42.beta
 - gnome-initial-setup 42.beta
