@@ -6,7 +6,7 @@ options=(debug)
 
 pkgbase=gnome-software
 pkgname=(gnome-software gnome-software-packagekit-plugin)
-pkgver=42.beta.0
+pkgver=42.beta.0+50+g5a8b3467b
 pkgrel=1
 pkgdesc="GNOME Software Tools"
 url="https://wiki.gnome.org/Apps/Software/"
@@ -15,7 +15,7 @@ license=(GPL2)
 makedepends=(appstream docbook-xsl flatpak fwupd git gnome-online-accounts gobject-introspection
             gsettings-desktop-schemas gspell gtk-doc libadwaita libpackagekit-glib
             libsysprof-capture libxmlb malcontent meson valgrind)
-_commit=065b6815f22dfb08bfaf57c151afeacf871c702e  # tags/42.beta^0
+_commit=5a8b3467b3b73e384ec652aa0e139e89a0cc74c2  # branch:main^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-software.git#commit=$_commit")
 sha256sums=('SKIP')
 
