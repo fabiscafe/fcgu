@@ -5,7 +5,7 @@ options=(debug)
 
 pkgname=gnome-control-center
 pkgver=42.beta.0
-pkgrel=2
+pkgrel=3
 pkgdesc="GNOME's main interface to configure various aspects of the desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-control-center"
 license=(GPL2)
@@ -13,7 +13,7 @@ arch=(x86_64)
 depends=(accountsservice cups-pk-helper gnome-bluetooth-gtk4 gnome-desktop
          gnome-online-accounts gnome-settings-daemon gsettings-desktop-schemas
          libgtop nm-connection-editor sound-theme-freedesktop upower libpwquality
-         gnome-color-manager smbclient libnma libmm-glib libgnomekbd libibus libcheese
+         gnome-color-manager smbclient libnma-gtk4.so libmm-glib libgnomekbd libibus libcheese
          libgudev bolt udisks2 libadwaita gsound colord-gtk colord-gtk4)
 makedepends=(docbook-xsl modemmanager git python meson)
 checkdepends=(python-dbusmock python-gobject xorg-server-xvfb)
