@@ -2,16 +2,16 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 options=(debug)
 
-pkgname=libnma
+pkgbase=libnma
+pkgname=(libnma-common libnma libnma-gtk4)
 pkgver=1.8.34
-pkgrel=1.1
+pkgrel=1.2
 pkgdesc="NetworkManager GUI client library"
 url="https://gitlab.gnome.org/GNOME/libnma"
 arch=(x86_64)
 license=(GPL LGPL)
-depends=(libnm gcr gtk3 gtk4 iso-codes mobile-broadband-provider-info)
-makedepends=(gobject-introspection git gtk-doc meson vala)
-provides=(libnma.so libnma-gtk4.so)
+makedepends=(libnm gcr gtk3 gtk4 iso-codes mobile-broadband-provider-info
+             gobject-introspection git gtk-doc meson vala)
 _commit=98d55a765d6aff0243d26d1ef5e655ebb6f78fa8  # tags/1.8.34^0
 source=("git+https://gitlab.gnome.org/GNOME/libnma.git#commit=$_commit")
 sha256sums=('SKIP')
@@ -31,10 +31,48 @@ build() {
   meson compile -C build
 }
 
+_pick() {
+  local p="$1" f d; shift
+  for f; do
+    d="$srcdir/$p/${f#$pkgdir/}"
+    mkdir -p "$(dirname "$d")"
+    mv "$f" "$d"
+    rmdir -p --ignore-fail-on-non-empty "$(dirname "$f")"
+  done
+}
+
 check() {
   meson test -C build --print-errorlogs
 }
 
-package() {
+package_libnma-common() {
+  pkgdesc+=" (common files)"
+  depends=(libnm gcr iso-codes mobile-broadband-provider-info)
+  arch=(any)
+
   meson install -C build --destdir "$pkgdir"
+
+  cd "$pkgdir"
+
+  _pick gtk3 usr/lib/libnma.so*
+  _pick gtk3 usr/lib/pkgconfig/libnma.pc
+
+  _pick gtk4 usr/lib/libnma-gtk4.so*
+  _pick gtk4 usr/lib/pkgconfig/libnma-gtk4.pc
+}
+
+package_libnma() {
+  pkgdesc="${pkgdesc/GUI/GTK3 GUI}"
+  depends=(libnma-common="$pkgver-$pkgrel" gtk3)
+  provides=(libnma.so)
+
+  mv gtk3/* "$pkgdir"
+}
+
+package_libnma-gtk4() {
+  pkgdesc="${pkgdesc/GUI/GTK4 GUI}"
+  depends=(libnma-common="$pkgver-$pkgrel" gtk4)
+  provides=(libnma-gtk4.so)
+
+  mv gtk4/* "$pkgdir"
 }
