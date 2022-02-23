@@ -4,15 +4,16 @@ options=(debug)
 
 pkgname=gnome-contacts
 pkgver=41.0+r78+g549ab803
-pkgrel=1
+pkgrel=3
 pkgdesc="Contacts Manager for GNOME"
 url="https://wiki.gnome.org/Apps/Contacts"
 arch=(x86_64)
 license=(GPL2)
-depends=(dconf folks gtk4 gnome-desktop gnome-online-accounts libadwaita libgee libcheese
-        libportal)
+depends=(dconf folks gtk4 gnome-desktop gnome-online-accounts libadwaita libgee libportal)
 makedepends=(vala gobject-introspection git meson appstream-glib)
 groups=(gnome)
+# https://gitlab.gnome.org/GNOME/gnome-contacts/-/issues/222
+conflicts=(evolution-ews)
 _commit=549ab803774159323e49cfc9fe17290b6d9e5dfd  # branch:main^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-contacts.git#commit=$_commit")
 sha256sums=('SKIP')
