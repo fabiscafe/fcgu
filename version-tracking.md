@@ -39,7 +39,7 @@
 - gnome-software main(2022-02-21)
 - gnome-system-monitor 42.alpha
 - gnome-terminal 3.43.90
-- gnome-text-editor 42.alpha2
+- gnome-text-editor 42.beta1
 - gnome-weather 42.beta
 - gobject-introspection 1.71.0
 - gsettings-desktop-schemas 42.beta
