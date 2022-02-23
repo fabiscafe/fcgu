@@ -1,0 +1,40 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+options=(debug)
+
+pkgname=gnome-contacts
+pkgver=41.0+r78+g549ab803
+pkgrel=1
+pkgdesc="Contacts Manager for GNOME"
+url="https://wiki.gnome.org/Apps/Contacts"
+arch=(x86_64)
+license=(GPL2)
+depends=(dconf folks gtk4 gnome-desktop gnome-online-accounts libadwaita libgee libcheese
+        libportal)
+makedepends=(vala gobject-introspection git meson appstream-glib)
+groups=(gnome)
+_commit=549ab803774159323e49cfc9fe17290b6d9e5dfd  # branch:main^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-contacts.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
