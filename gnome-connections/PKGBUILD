@@ -1,0 +1,39 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Balló György <ballogyor+arch at gmail dot com>
+options=('!emptydirs' 'debug')
+
+pkgname=gnome-connections
+pkgver=42.beta.0
+pkgrel=1
+pkgdesc='Remote desktop client for the GNOME desktop environment'
+arch=('x86_64')
+url='https://gitlab.gnome.org/GNOME/connections'
+license=('GPL3')
+depends=('freerdp' 'gtk-vnc' 'libhandy' 'libsecret')
+makedepends=('appstream-glib' 'git' 'gobject-introspection' 'itstool' 'meson' 'vala')
+groups=('gnome-extra')
+_commit=98d9c135c1d4b1e0ea13d4302ed1d05b3617f732  # tags/42.beta^0
+source=("git+https://gitlab.gnome.org/GNOME/connections.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd ${pkgname/gnome-/}
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+}
+
+prepare() {
+  cd ${pkgname/gnome-/}
+}
+
+build() {
+  arch-meson ${pkgname/gnome-/} build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}

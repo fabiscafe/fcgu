@@ -22,6 +22,7 @@
 - gnome-calls 42.beta.1
 - gnome-characters 42.beta
 - gnome-clocks 42.beta
+- gnome-connections 42.beta
 - gnome-console 42.beta
 - gnome-contacts main(2022-02-21)
 - gnome-control-center 42.beta1
