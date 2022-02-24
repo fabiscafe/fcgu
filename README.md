@@ -22,7 +22,6 @@ This repo should be below the **[core]** repo, but above every other one in */et
 
 ```
 [fcgu]
-Server = https://$repo.fabis.cafe/$repo #EOL: 2022-02-28
 Server = https://vmi394248.contaboserver.net/$repo
 Server = https://stream.itmotr-radio.com/$repo
 Server = https://warehouse.inetol.net/$repo #EOL: 2023-01-26
@@ -45,7 +44,6 @@ Here a preview how it should look:
 Include = /etc/pacman.d/mirrorlist
 
 [fcgu]
-Server = https://$repo.fabis.cafe/$repo
 Server = https://vmi394248.contaboserver.net/$repo
 Server = https://stream.itmotr-radio.com/$repo
 Server = https://warehouse.inetol.net/$repo
@@ -66,7 +64,6 @@ The repo needs to be removed from */etc/pacman.conf*
 
 ```
 [fcgu]
-Server = https://$repo.fabis.cafe/$repo
 Server = https://vmi394248.contaboserver.net/$repo
 Server = https://stream.itmotr-radio.com/$repo
 Server = https://warehouse.inetol.net/$repo
