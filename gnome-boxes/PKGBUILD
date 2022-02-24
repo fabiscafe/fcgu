@@ -1,0 +1,42 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Balló György <ballogyor+arch at gmail dot com>
+# Contributor: Stefano Facchini <stefano.facchini@gmail.com>
+options=('debug')
+
+pkgname=gnome-boxes
+pkgver=42.beta.0
+pkgrel=1
+pkgdesc='Simple GNOME application to access virtual systems'
+arch=('x86_64')
+url='https://wiki.gnome.org/Apps/Boxes'
+license=('LGPL')
+groups=('gnome')
+depends=('cdrtools' 'edk2-ovmf' 'gtksourceview4' 'gtk-vnc' 'libarchive' 'libgudev' 'libhandy'
+         'libosinfo' 'libsecret' 'libvirt-glib' 'mtools' 'qemu' 'spice-gtk' 'tracker3'
+         'webkit2gtk')
+makedepends=('appstream-glib' 'git' 'gobject-introspection' 'itstool' 'meson' 'spice-protocol' 'vala')
+_commit=2dbdedb37a6463a946b8bd705312c0d4970bf0cf  # tags/42.beta^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-boxes.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
