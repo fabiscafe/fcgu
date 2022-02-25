@@ -20,7 +20,7 @@
 - gnome-builder 42.beta1
 - gnome-calculator 42.beta
 - gnome-calendar 42.beta
-- gnome-calls 42.beta.1
+- gnome-calls 42.rc.0
 - gnome-characters 42.beta
 - gnome-clocks 42.beta
 - gnome-connections 42.beta
