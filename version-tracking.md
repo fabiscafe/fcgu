@@ -61,7 +61,7 @@
 - sofia-sip 1.13.7
 - tracker3 master(2022-02-20)
 - tracker3-miners master(2022-02-16)
-- vala 0.55.3
+- vala 0.55.90
 - vte3 0.67.90
 - yelp 42.beta
 - yelp-tools 42.beta
