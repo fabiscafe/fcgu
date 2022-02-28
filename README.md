@@ -25,6 +25,7 @@ This repo should be below the **[core]** repo, but above every other one in */et
 Server = https://vmi394248.contaboserver.net/$repo
 Server = https://stream.itmotr-radio.com/$repo
 Server = https://warehouse.inetol.net/$repo #EOL: 2023-01-26
+Server = https://mirror.amikhalev.com/$repo #EOL: 2023-02-28
 #Server = <looking for new mirrors>
 ```
 
@@ -47,6 +48,7 @@ Include = /etc/pacman.d/mirrorlist
 Server = https://vmi394248.contaboserver.net/$repo
 Server = https://stream.itmotr-radio.com/$repo
 Server = https://warehouse.inetol.net/$repo
+Server = https://mirror.amikhalev.com/$repo
 #Server = <looking for new mirrors>
 
 [extra]
@@ -67,6 +69,7 @@ The repo needs to be removed from */etc/pacman.conf*
 Server = https://vmi394248.contaboserver.net/$repo
 Server = https://stream.itmotr-radio.com/$repo
 Server = https://warehouse.inetol.net/$repo
+Server = https://mirror.amikhalev.com/$repo
 #Server = <looking for new mirrors>
 ```
 
