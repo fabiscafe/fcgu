@@ -4,7 +4,7 @@ options=(debug)
 
 pkgname=gnome-settings-daemon
 pkgver=42.beta.0
-pkgrel=1
+pkgrel=2
 pkgdesc="GNOME Settings Daemon"
 url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
 arch=(x86_64)
@@ -19,11 +19,9 @@ groups=(gnome)
 backup=(etc/xdg/Xwayland-session.d/00-xrdb)
 _commit=3240f5a51be338119cffa8c6f52e60f9f21781ea  # tags/42.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-settings-daemon.git#commit=$_commit"
-        "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git"
-        "remove_incorrect_args_i18n.merge.patch")
+        "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
-            'SKIP'
-            '65f03ed84aab5b5bf53aa1b7ab47012dea1f579c26adeb735063b963b2d8e93d')
+            'SKIP')
 
 pkgver() {
   cd $pkgname
@@ -36,9 +34,6 @@ prepare() {
   git submodule init
   git submodule set-url subprojects/gvc "$srcdir/libgnome-volume-control"
   git submodule update
-  
-  # https://gitlab.gnome.org/GNOME/gnome-settings-daemon/-/issues/654
-  git apply -3 ../remove_incorrect_args_i18n.merge.patch
 }
 
 build() {
