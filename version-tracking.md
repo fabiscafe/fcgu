@@ -23,7 +23,7 @@
 - gnome-calls 42.rc.0
 - gnome-characters main(2022-03-02)
 - gnome-clocks master(2022-03-02)
-- gnome-connections 42.beta
+- gnome-connections master(2022-03-02)
 - gnome-console 42.beta
 - gnome-contacts main(2022-02-24)
 - gnome-control-center 42.beta1

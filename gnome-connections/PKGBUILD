@@ -3,7 +3,7 @@
 options=('!emptydirs' 'debug')
 
 pkgname=gnome-connections
-pkgver=42.beta.0
+pkgver=42.beta.0+r4+g8b874ea
 pkgrel=1
 pkgdesc='Remote desktop client for the GNOME desktop environment'
 arch=('x86_64')
@@ -12,7 +12,7 @@ license=('GPL3')
 depends=('freerdp' 'gtk-vnc' 'libhandy' 'libsecret')
 makedepends=('appstream-glib' 'git' 'gobject-introspection' 'itstool' 'meson' 'vala')
 groups=('gnome-extra')
-_commit=98d9c135c1d4b1e0ea13d4302ed1d05b3617f732  # tags/42.beta^0
+_commit=8b874ead6d912a56c01cfcb4d85aaf01db059217  # branch:master^0
 source=("git+https://gitlab.gnome.org/GNOME/connections.git#commit=$_commit")
 sha256sums=('SKIP')
 
