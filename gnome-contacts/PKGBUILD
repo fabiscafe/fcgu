@@ -3,7 +3,7 @@
 options=(debug)
 
 pkgname=gnome-contacts
-pkgver=41.0+r79+ge9320ac8
+pkgver=41.0+r82+g7b95a317
 pkgrel=1
 pkgdesc="Contacts Manager for GNOME"
 url="https://wiki.gnome.org/Apps/Contacts"
@@ -14,7 +14,7 @@ makedepends=(vala gobject-introspection git meson appstream-glib)
 groups=(gnome)
 # https://gitlab.gnome.org/GNOME/gnome-contacts/-/issues/222
 conflicts=(evolution-ews)
-_commit=e9320ac89674d4b0bdd06d4477245a4b1f26d5fe  # branch:main^0
+_commit=7b95a3176206936bc0e65da182701600dd1b7cd2  # branch:main^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-contacts.git#commit=$_commit")
 sha256sums=('SKIP')
 
