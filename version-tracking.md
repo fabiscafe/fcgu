@@ -62,7 +62,7 @@
 - tracker3 master(2022-02-23)
 - tracker3-miners master(2022-02-16)
 - vala 0.55.90
-- vte3 0.67.90
+- vte3 master(2022-03-01)
 - yelp 42.beta
 - yelp-tools 42.beta
 - yelp-xsl 42.beta
