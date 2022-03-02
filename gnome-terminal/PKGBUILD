@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=gnome-terminal
-pkgver=3.43.90
+pkgver=3.41.90+r56+g74f2a633
 pkgrel=1
 pkgdesc="The GNOME Terminal Emulator"
 url="https://wiki.gnome.org/Apps/Terminal"
@@ -13,13 +13,13 @@ license=(GPL)
 depends=(vte3 gsettings-desktop-schemas)
 makedepends=(docbook-xsl git gnome-shell itstool libnautilus-extension meson)
 groups=(gnome)
-_commit=d533f7704815e079ba667799dba9f4104f2775df  # tags/3.43.90^0
+_commit=74f2a633decdeaa4fbdec63176d9fcafb6f933e2  # branch:master^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-terminal.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
