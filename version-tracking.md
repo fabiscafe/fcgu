@@ -40,7 +40,7 @@
 - gnome-shell-extensions main(2022-02-28)
 - gnome-secrets 6.2 (gnome-passwordsafe)
 - gnome-software main(2022-03-02)
-- gnome-system-monitor 42.alpha
+- gnome-system-monitor master(2022-02-27)
 - gnome-terminal 3.43.90
 - gnome-text-editor 42.beta1
 - gnome-weather 42.beta
