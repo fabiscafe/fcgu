@@ -8,7 +8,7 @@
 - callaudiod 0.1.3
 - clapper 0.4.1
 - eog master(2022-03-02)
-- epiphany 42.beta-really
+- epiphany master(2022-03-02)
 - evolution 3.43.2
 - evolution-data-server 3.43.2
 - feedbackd 0.0.0+git20220208
