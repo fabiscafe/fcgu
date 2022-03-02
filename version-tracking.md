@@ -29,7 +29,7 @@
 - gnome-control-center master(2022-03-02)
 - gnome-desktop master(2022-03-01)
 - gnome-disk-utility master(2022-03-01)
-- gnome-font-viewer 42.beta
+- gnome-font-viewer main(2022-03-02)
 - gnome-initial-setup 42.beta
 - gnome-maps 42.beta
 - gnome-music 42.beta
