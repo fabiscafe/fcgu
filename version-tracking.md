@@ -4,7 +4,7 @@
 
 # Done
 - adwaita-icon-theme master(2022-03-02)
-- baobab 42.beta
+- baobab main(2022-03-02)
 - callaudiod 0.1.3
 - clapper 0.4.1
 - eog 42.beta
