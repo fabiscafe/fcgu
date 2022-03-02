@@ -5,7 +5,7 @@
 options=(debug)
 
 pkgname=gnome-bluetooth-gtk4
-pkgver=42.beta.2
+pkgver=42.beta.2+r9+g38e33244
 pkgrel=1
 pkgdesc="The GNOME Bluetooth Subsystem (GTK4 edition)"
 url="https://wiki.gnome.org/Projects/GnomeBluetooth"
@@ -15,13 +15,13 @@ depends=(gtk4 bluez gsound libadwaita libnotify pulseaudio-bluetooth systemd upo
 makedepends=(docbook-xsl git gobject-introspection gtk-doc meson)
 checkdepends=(python-dbusmock xorg-server-xvfb)
 provides=(libgnome-bluetooth-3.0.so)
-_commit=afb4c87ddd8b528612d10499683e468f794db6c8  # tags/42.beta.2^0
+_commit=38e332449c44ebdf3c9398064601c0952de4bf41  # branch:master^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-bluetooth.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd gnome-bluetooth
-  git describe --tags | sed 's/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
