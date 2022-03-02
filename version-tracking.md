@@ -19,9 +19,9 @@
 - gnome-boxes master(2022-03-02)
 - gnome-builder main(2022-03-01)
 - gnome-calculator master(2022-03-02)
-- gnome-calendar 42.beta
+- gnome-calendar master(2022-03-02)
 - gnome-calls 42.rc.0
-- gnome-characters 42.beta
+- gnome-characters main(2022-03-02)
 - gnome-clocks 42.beta
 - gnome-connections 42.beta
 - gnome-console 42.beta
