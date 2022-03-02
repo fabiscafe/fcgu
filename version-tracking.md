@@ -52,7 +52,7 @@
 - libadwaita main(2022-03-02)
 - libgnome-games-support-gtk4 master(2022-02-17)
 - libgweather main(2022-03-02)
-- libhandy 1.5.90
+- libhandy main(2022-02-23)
 - libnma 1.8.34
 - mutter 42.beta
 - nautilus 42.beta
