@@ -16,7 +16,7 @@
 - glibc-tools main(2022-01-26)
 - gnome-backgrounds 42.beta
 - gnome-bluetooth master(2022-03-02)
-- gnome-boxes 42.beta
+- gnome-boxes master(2022-03-02)
 - gnome-builder 42.beta1
 - gnome-calculator 42.beta
 - gnome-calendar 42.beta

@@ -4,7 +4,7 @@
 options=('debug')
 
 pkgname=gnome-boxes
-pkgver=42.beta.0
+pkgver=42.beta.0+r9+g96a6945f
 pkgrel=1
 pkgdesc='Simple GNOME application to access virtual systems'
 arch=('x86_64')
@@ -15,7 +15,7 @@ depends=('cdrtools' 'edk2-ovmf' 'gtksourceview4' 'gtk-vnc' 'libarchive' 'libgude
          'libosinfo' 'libsecret' 'libvirt-glib' 'mtools' 'qemu' 'spice-gtk' 'tracker3'
          'webkit2gtk')
 makedepends=('appstream-glib' 'git' 'gobject-introspection' 'itstool' 'meson' 'spice-protocol' 'vala')
-_commit=2dbdedb37a6463a946b8bd705312c0d4970bf0cf  # tags/42.beta^0
+_commit=96a6945f83618ee0a012ff28a7c5b6134e08ea5a  # branch:master^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-boxes.git#commit=$_commit")
 sha256sums=('SKIP')
 
