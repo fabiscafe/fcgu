@@ -2,7 +2,7 @@
 options=(debug !strip)
 
 pkgname=gtksourceview5
-pkgver=5.3.2+107+gcc9b01f4
+pkgver=5.3.2+r107+gcc9b01f4
 pkgrel=1
 pkgdesc="A text widget adding syntax highlighting and more to GNOME"
 url='https://gitlab.gnome.org/GNOME/gtksourceview'
@@ -18,7 +18,7 @@ sha256sums=('SKIP')
 
 pkgver() {
   cd gtksourceview
-  git describe --tags | sed 's/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 build() {
