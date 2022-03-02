@@ -54,7 +54,7 @@
 - libgweather main(2022-03-02)
 - libhandy main(2022-02-23)
 - libnma 1.8.34
-- mutter 42.beta
+- mutter main(2022-03-02)
 - nautilus 42.beta
 - newsflash 1.5.1
 - orca 42.beta
