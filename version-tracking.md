@@ -51,7 +51,7 @@
 - jsonrpc-glib 3.41.0
 - libadwaita main(2022-03-02)
 - libgnome-games-support-gtk4 2.0.beta.2
-- libgweather 3.91.0
+- libgweather main(2022-03-02)
 - libhandy 1.5.90
 - libnma 1.8.34
 - mutter 42.beta
