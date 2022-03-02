@@ -46,7 +46,7 @@
 - gnome-weather main(2022-03-02)
 - gobject-introspection 1.71.0
 - gsettings-desktop-schemas master(2022-03-02)
-- gtksourceview5 5.3.2
+- gtksourceview5 master(2022-03-02)
 - gvfs 1.49.90
 - jsonrpc-glib 3.41.0
 - libadwaita 1.1.beta
