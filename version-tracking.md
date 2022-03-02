@@ -18,7 +18,7 @@
 - gnome-bluetooth master(2022-03-02)
 - gnome-boxes master(2022-03-02)
 - gnome-builder main(2022-03-01)
-- gnome-calculator 42.beta
+- gnome-calculator master(2022-03-02)
 - gnome-calendar 42.beta
 - gnome-calls 42.rc.0
 - gnome-characters 42.beta
