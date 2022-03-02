@@ -37,7 +37,7 @@
 - gnome-remote-desktop 42.beta
 - gnome-settings-daemon 42.beta
 - gnome-shell main(2022-03-02)
-- gnome-shell-extensions 42.beta
+- gnome-shell-extensions main(2022-02-28)
 - gnome-secrets 6.2 (gnome-passwordsafe)
 - gnome-software main(2022-03-02)
 - gnome-system-monitor 42.alpha
