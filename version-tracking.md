@@ -45,7 +45,7 @@
 - gnome-text-editor main(2022-03-02)
 - gnome-weather main(2022-03-02)
 - gobject-introspection 1.71.0
-- gsettings-desktop-schemas 42.beta
+- gsettings-desktop-schemas master(2022-03-02)
 - gtksourceview5 5.3.2
 - gvfs 1.49.90
 - jsonrpc-glib 3.41.0

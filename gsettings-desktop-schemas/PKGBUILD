@@ -6,7 +6,7 @@
 options=(debug)
 
 pkgname=gsettings-desktop-schemas
-pkgver=42.beta.0
+pkgver=42.beta.0+r5+gb689dce
 pkgrel=1
 pkgdesc="Shared GSettings schemas for the desktop"
 arch=(any)
@@ -14,13 +14,13 @@ url="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas"
 license=(GPL)
 depends=(glib2 dconf cantarell-fonts adobe-source-code-pro-fonts)
 makedepends=(gobject-introspection git meson)
-_commit=adf0e83697df7c94e61418d0a1608cc898a91a48  # tags/42.beta^0
+_commit=b689dced2522487a788cbe385a6f049667e64811  # branch:master^0
 source=("git+https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/beta/beta.0/;s/-/+/g'
+  git describe --tags | sed 's/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
