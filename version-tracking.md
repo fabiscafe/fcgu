@@ -42,7 +42,7 @@
 - gnome-software main(2022-03-02)
 - gnome-system-monitor master(2022-02-27)
 - gnome-terminal master(2022-02-23)
-- gnome-text-editor 42.beta1
+- gnome-text-editor main(2022-03-02)
 - gnome-weather 42.beta
 - gobject-introspection 1.71.0
 - gsettings-desktop-schemas 42.beta
