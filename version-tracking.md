@@ -28,7 +28,7 @@
 - gnome-contacts main(2022-02-24)
 - gnome-control-center master(2022-03-02)
 - gnome-desktop master(2022-03-01)
-- gnome-disk-utility 42.beta
+- gnome-disk-utility master(2022-03-01)
 - gnome-font-viewer 42.beta
 - gnome-initial-setup 42.beta
 - gnome-maps 42.beta
