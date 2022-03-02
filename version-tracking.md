@@ -10,7 +10,7 @@
 - eog master(2022-03-02)
 - epiphany master(2022-03-02)
 - evolution 3.43.2
-- evolution-data-server 3.43.2
+- evolution-data-server master(2022-02-22)
 - feedbackd 0.0.0+git20220208
 - gjs master(2022-02-26)
 - glibc-tools main(2022-01-26)
