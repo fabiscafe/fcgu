@@ -7,7 +7,7 @@
 - baobab main(2022-03-02)
 - callaudiod 0.1.3
 - clapper 0.4.1
-- eog 42.beta
+- eog master(2022-03-02)
 - epiphany 42.beta-really
 - evolution 3.43.2
 - evolution-data-server 3.43.2
