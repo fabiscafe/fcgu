@@ -1,0 +1,45 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+options=(debug !strip)
+
+pkgname=evince
+pkgver=42.beta.0
+pkgrel=1
+pkgdesc="Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)"
+url="https://wiki.gnome.org/Apps/Evince"
+arch=(x86_64)
+license=(GPL)
+depends=(gtk3 libgxps libspectre gsfonts poppler-glib djvulibre t1lib dconf libsecret libsynctex
+         gsettings-desktop-schemas gnome-desktop libarchive gst-plugins-base-libs gspell libhandy
+         gvfs)
+makedepends=(libnautilus-extension texlive-bin gi-docgen gobject-introspection itstool
+             python git meson appstream-glib)
+optdepends=('texlive-bin: DVI support')
+provides=(libev{document,view}3.so)
+groups=(gnome)
+_commit=278dd0aff95e29d1f5536a4e0a39c1862912a6bf  # tags/42.beta^0
+source=("git+https://gitlab.gnome.org/GNOME/evince.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+}
+
+prepare() {
+  cd $pkgname
+}
+  
+build() {
+  arch-meson $pkgname build -D ps=enabled
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}

@@ -9,6 +9,7 @@
 - clapper 0.4.1
 - eog master(2022-03-02)
 - epiphany master(2022-03-02)
+- evince 42.beta
 - evolution master(2022-03-02)
 - evolution-data-server master(2022-02-22)
 - feedbackd 0.0.0+git20220208
