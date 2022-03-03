@@ -35,7 +35,7 @@
 - gnome-maps master(2022-02-28)
 - gnome-music master(2022-03-02)
 - gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
-- gnome-remote-desktop 42.beta
+- gnome-remote-desktop master(2022-03-03)
 - gnome-settings-daemon 42.beta
 - gnome-shell main(2022-03-02)
 - gnome-shell-extensions main(2022-02-28)
