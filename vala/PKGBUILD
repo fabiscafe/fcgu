@@ -6,7 +6,7 @@
 options=(debug)
 
 pkgname=vala
-pkgver=0.55.90
+pkgver=0.55.91
 pkgrel=1
 pkgdesc='Compiler for the GObject type system'
 url='https://wiki.gnome.org/Projects/Vala'
@@ -18,7 +18,7 @@ checkdepends=(dbus libx11 gobject-introspection)
 provides=(valadoc libvala-0.56.so libvaladoc-0.56.so)
 conflicts=(valadoc)
 replaces=(valadoc)
-_commit=0d43276632ea0449ae8ffb768dda1859e8224df6  # tags/0.55.90^0
+_commit=e8f9d7859922d3f56c2f8b75b5de7563bf6a4e78  # tags/0.55.91^0
 source=("git+https://gitlab.gnome.org/GNOME/vala.git#commit=$_commit")
 sha256sums=('SKIP')
 
