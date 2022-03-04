@@ -10,7 +10,7 @@
 - eog master(2022-03-02)
 - epiphany master(2022-03-02)
 - evince 42.beta
-- evolution master(2022-03-02)
+- evolution 3.43.3
 - evolution-data-server 3.43.3
 - feedbackd 0.0.0+git20220208
 - gjs master(2022-02-26)
