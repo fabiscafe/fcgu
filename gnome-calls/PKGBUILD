@@ -13,7 +13,7 @@ conflicts=("calls")
 provides=("calls")
 depends=(callaudiod feedbackd folks gom
 	 libhandy libpeas modemmanager sofia-sip)
-makedepends=(git gobject-introspection meson vala)
+makedepends=(appstream git gobject-introspection meson vala)
 checkdepends=(xorg-server-xvfb)
 _commit=c0a23f5ddc23cb8993266baa1ea568faeaaa0f2e  # tags/42.rc.0^0
 source=("git+https://gitlab.gnome.org/GNOME/calls.git#commit=$_commit"
