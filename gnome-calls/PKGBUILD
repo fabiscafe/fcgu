@@ -3,7 +3,7 @@ options=(debug !strip)
 
 pkgname=gnome-calls
 pkgver=42.rc.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A Phone dialer and call handler."
 arch=(x86_64)
 url="https://gitlab.gnome.org/GNOME/calls"
@@ -16,12 +16,22 @@ depends=(callaudiod feedbackd folks gom
 makedepends=(git gobject-introspection meson vala)
 checkdepends=(xorg-server-xvfb)
 _commit=c0a23f5ddc23cb8993266baa1ea568faeaaa0f2e  # tags/42.rc.0^0
-source=("git+https://gitlab.gnome.org/GNOME/calls.git#commit=$_commit")
-sha256sums=('SKIP')
+source=("git+https://gitlab.gnome.org/GNOME/calls.git#commit=$_commit"
+"git+https://gitlab.gnome.org/World/Phosh/libcall-ui.git")
+sha256sums=('SKIP'
+            'SKIP')
 
 pkgver() {
   cd calls
   git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd calls
+  
+  git submodule init
+  git submodule set-url subprojects/libcall-ui "$srcdir/libcall-ui"
+  git submodule update
 }
 
 build() {
