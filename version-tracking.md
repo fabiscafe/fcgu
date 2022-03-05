@@ -30,7 +30,7 @@
 - gnome-contacts main(2022-02-24)
 - gnome-control-center master(2022-03-02)
 - gnome-desktop master(2022-03-01)
-- gnome-disk-utility master(2022-03-01)
+- gnome-disk-utility 42.rc
 - gnome-font-viewer main(2022-03-02)
 - gnome-initial-setup master(2022-03-02)
 - gnome-maps v42.rc
