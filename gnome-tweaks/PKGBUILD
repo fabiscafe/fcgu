@@ -1,0 +1,39 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+options=(debug)
+
+pkgname=gnome-tweaks
+pkgver=42.beta.0
+pkgrel=1
+pkgdesc="Graphical interface for advanced GNOME 3 settings (Tweak Tool)"
+url="https://wiki.gnome.org/Apps/Tweaks"
+arch=(any)
+license=(GPL)
+depends=(gnome-settings-daemon python-gobject libhandy)
+makedepends=(git meson)
+groups=(gnome-extra)
+provides=("gnome-tweak-tool=$pkgver")
+conflicts=(gnome-tweak-tool)
+replaces=(gnome-tweak-tool)
+_commit=23395c214d249216c4d2a651525752333ce4ab14  # tags/42.beta^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-tweaks.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g'
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  DESTDIR="$pkgdir" meson install -C build
+}
