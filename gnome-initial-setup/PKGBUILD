@@ -3,7 +3,7 @@
 options=(debug)
 
 pkgname=gnome-initial-setup
-pkgver=42.beta.0+r17+g141736d
+pkgver=42.rc.0
 pkgrel=1
 pkgdesc='Simple, easy, and safe way to prepare a new system'
 arch=('x86_64')
@@ -11,13 +11,13 @@ url='https://gitlab.gnome.org/GNOME/gnome-initial-setup'
 license=('GPL')
 depends=('cheese' 'gdm' 'gnome-online-accounts' 'libgnomekbd' 'libgweather-gtk4' 'malcontent')
 makedepends=('git' 'meson')
-_commit=141736d52d14dcfbe4d13806cfeff1c8c99c5650  # branch:master^0
+_commit=c22e22c426b582411c6f36d6f3da28b0eaed582e  # tag/42.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-initial-setup.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/rc/rc.0/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
