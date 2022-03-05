@@ -4,7 +4,7 @@
 options=(debug !strip)
 
 pkgname=evince
-pkgver=42.beta.0
+pkgver=42.rc.0
 pkgrel=1
 pkgdesc="Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)"
 url="https://wiki.gnome.org/Apps/Evince"
@@ -18,13 +18,13 @@ makedepends=(libnautilus-extension texlive-bin gi-docgen gobject-introspection i
 optdepends=('texlive-bin: DVI support')
 provides=(libev{document,view}3.so)
 groups=(gnome)
-_commit=278dd0aff95e29d1f5536a4e0a39c1862912a6bf  # tags/42.beta^0
+_commit=9884caf0a6d629426590a6a084e38f4bf3f06714  # tags/42.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/evince.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/rc/rc.0/'
 }
 
 prepare() {
