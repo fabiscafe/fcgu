@@ -33,7 +33,7 @@
 - gnome-disk-utility master(2022-03-01)
 - gnome-font-viewer main(2022-03-02)
 - gnome-initial-setup master(2022-03-02)
-- gnome-maps master(2022-02-28)
+- gnome-maps v42.rc
 - gnome-music master(2022-03-02)
 - gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
 - gnome-remote-desktop master(2022-03-03)
