@@ -38,7 +38,7 @@
 - gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
 - gnome-remote-desktop master(2022-03-03)
 - gnome-settings-daemon 42.beta
-- gnome-shell main(2022-03-02)
+- gnome-shell main(2022-03-05)
 - gnome-shell-extensions main(2022-02-28)
 - gnome-secrets 6.2 (gnome-passwordsafe)
 - gnome-software 42.rc
