@@ -59,7 +59,7 @@
 - libhandy main(2022-02-23)
 - libnma 1.8.34
 - mutter main(2022-03-05)
-- nautilus gnome-42(2022-03-02)
+- nautilus 42.rc
 - newsflash 1.5.1
 - orca master(2022-03-01)
 - sofia-sip 1.13.7
