@@ -3,6 +3,9 @@ or short "FCGU" is a GNOME Unstable repository for [**Arch Linux**](https://arch
 
 ![Matrix](https://img.shields.io/matrix/fcgu:matrix.org?style=for-the-badge) ![Liberapay receiving](https://img.shields.io/liberapay/receives/fabiscafe?style=for-the-badge) ![Liberapay patrons](https://img.shields.io/liberapay/patrons/fabiscafe?style=for-the-badge)
 
+### Chat / Matrix
+Feel free to [join us at our matrix group](https://matrix.to/#/#fcgu:matrix.org) or [ping me](https://matrix.to/#/@fabiscafe:matrix.org) directly.
+
 ## Looking For New Mirrors
 FCGU is a free community project. That's why we need your help. If you own a server that could become a mirror of the project, please let us know.
 
