@@ -16,7 +16,6 @@
 - feedbackd 0.0.0+git20220208
 - gjs master(2022-02-26)
 - glib2 2.71.3
-- glibc-tools main(2022-01-26)
 - gnome-backgrounds 42.beta
 - gnome-bluetooth master(2022-03-02)
 - gnome-boxes master(2022-03-02)
