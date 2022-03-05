@@ -42,6 +42,7 @@
 - gnome-shell-extensions main(2022-02-28)
 - gnome-secrets 6.2 (gnome-passwordsafe)
 - gnome-software 42.rc
+- gnome-sound-recorder 42.beta
 - gnome-system-monitor master(2022-02-27)
 - gnome-terminal master(2022-02-23)
 - gnome-text-editor main(2022-03-02)
