@@ -8,7 +8,7 @@
 - baobab main(2022-03-02)
 - callaudiod 0.1.3
 - clapper 0.4.1
-- eog master(2022-03-02)
+- eog 42.rc
 - epiphany master(2022-03-02)
 - evince 42.rc
 - evolution 3.43.3
@@ -44,7 +44,7 @@
 - gnome-software 42.rc
 - gnome-sound-recorder 42.beta
 - gnome-system-monitor master(2022-02-27)
-- gnome-terminal master(2022-02-23)
+- gnome-terminal 3.43.90
 - gnome-text-editor main(2022-03-02)
 - gnome-tweaks 42.beta
 - gnome-weather main(2022-03-02)
