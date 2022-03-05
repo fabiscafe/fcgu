@@ -5,7 +5,7 @@ options=(debug)
 
 pkgname=gnome-tweaks
 pkgver=42.beta.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Graphical interface for advanced GNOME 3 settings (Tweak Tool)"
 url="https://wiki.gnome.org/Apps/Tweaks"
 arch=(any)
@@ -35,5 +35,5 @@ check() {
 }
 
 package() {
-  DESTDIR="$pkgdir" meson install -C build
+  meson install -C build --destdir "$pkgdir"
 }
