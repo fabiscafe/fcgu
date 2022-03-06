@@ -49,7 +49,7 @@
 - gnome-tweaks 42.beta
 - gnome-weather main(2022-03-02)
 - gobject-introspection 1.71.0
-- gsettings-desktop-schemas master(2022-03-02)
+- gsettings-desktop-schemas 42.rc
 - gtksourceview5 master(2022-03-02)
 - gvfs 1.49.90
 - jsonrpc-glib 3.41.0
