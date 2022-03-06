@@ -63,7 +63,7 @@
 - newsflash 1.5.1
 - orca master(2022-03-01)
 - sofia-sip 1.13.7
-- tracker3 master(2022-02-23)
+- tracker3 3.3.0.rc
 - tracker3-miners master(2022-02-16)
 - vala 0.55.91
 - vte3 0.67.90
