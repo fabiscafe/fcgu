@@ -43,7 +43,7 @@
 - gnome-secrets 6.2 (gnome-passwordsafe)
 - gnome-software 42.rc
 - gnome-sound-recorder 42.beta
-- gnome-system-monitor master(2022-02-27)
+- gnome-system-monitor 42.rc
 - gnome-terminal 3.43.90
 - gnome-text-editor main(2022-03-02)
 - gnome-tweaks 42.beta

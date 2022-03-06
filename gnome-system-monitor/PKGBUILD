@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=gnome-system-monitor
-pkgver=42.alpha+r20+gd9b89f6e
+pkgver=42.rc.0
 pkgrel=1
 pkgdesc="View current processes and monitor system state"
 url="https://wiki.gnome.org/Apps/SystemMonitor"
@@ -13,13 +13,13 @@ license=(GPL)
 depends=(libgtop gtkmm3 librsvg systemd libhandy polkit)
 makedepends=(meson yelp-tools git appstream-glib)
 groups=(gnome)
-_commit=d9b89f6e71782e27795023baf74d15706484ae72  # branch:master^0
+_commit=4dd99d809a5ad17b4f822ecc18bebc028562bfbb  # tag/42.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-system-monitor.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/rc/rc.0/'
 }
 
 prepare() {
