@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=gnome-calculator
-pkgver=42.beta.0+r15+gc43d5468
+pkgver=42.rc.0
 pkgrel=1
 pkgdesc="GNOME Scientific calculator"
 url="https://wiki.gnome.org/Apps/Calculator"
@@ -13,13 +13,13 @@ license=(GPL)
 depends=(gtk4 dconf gtksourceview5 mpfr libadwaita libsoup libmpc libgee) 
 makedepends=(yelp-tools vala git meson gobject-introspection)
 groups=(gnome)
-_commit=c43d546842d7d73098bc98053ce318f3b05e6456  # branch:master^0
+_commit=68e442824f4a8db8f1e1dc357f76fe89e0651745  # tag/42.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-calculator.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/rc/rc.0/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 build() {

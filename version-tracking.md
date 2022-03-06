@@ -20,7 +20,7 @@
 - gnome-bluetooth master(2022-03-02)
 - gnome-boxes master(2022-03-02)
 - gnome-builder main(2022-03-01)
-- gnome-calculator master(2022-03-02)
+- gnome-calculator 42.rc
 - gnome-calendar master(2022-03-02)
 - gnome-calls 42.rc.1
 - gnome-characters main(2022-03-02)
