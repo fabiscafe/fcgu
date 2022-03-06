@@ -22,7 +22,7 @@
 - gnome-builder main(2022-03-01)
 - gnome-calculator master(2022-03-02)
 - gnome-calendar master(2022-03-02)
-- gnome-calls 42.rc.0
+- gnome-calls 42.rc.1
 - gnome-characters main(2022-03-02)
 - gnome-clocks master(2022-03-02)
 - gnome-connections master(2022-03-02)
