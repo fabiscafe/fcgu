@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=gjs
-pkgver=1.71.1+r19+gdce9f364
+pkgver=1.71.90
 pkgrel=1
 epoch=2
 pkgdesc="Javascript Bindings for GNOME"
@@ -16,7 +16,7 @@ depends=(cairo gobject-introspection-runtime js91 dconf readline
 makedepends=(gobject-introspection git meson dbus)
 checkdepends=(valgrind xorg-server-xvfb gtk3 gtk4)
 provides=(libgjs.so)
-_commit=dce9f364632c9e2c80e79b988ff930e662b7afc4  # branch:master^0
+_commit=05383311ce76489a960a558d7f39c01f3ed08421  # tag/1.71.90^0
 source=("git+https://gitlab.gnome.org/GNOME/gjs.git#commit=$_commit")
 sha256sums=('SKIP')
 
