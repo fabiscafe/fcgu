@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=gnome-calendar
-pkgver=42.beta.0+r21+g289e23ad
+pkgver=42.rc.0
 pkgrel=1
 pkgdesc="Simple and beautiful calendar application designed to perfectly fit the GNOME desktop"
 url="https://wiki.gnome.org/Apps/Calendar"
@@ -14,13 +14,13 @@ depends=(evolution-data-server gsettings-desktop-schemas gnome-control-center
          libadwaita libdazzle)
 makedepends=(git meson)
 groups=(gnome)
-_commit=289e23ad53c50afb320ef2b07dbec395c4756d51  # branch:master
+_commit=8d8ff9dc50aec12a3cc4956c210bfe0d19814bd8  # tag/42.rc
 source=("git+https://gitlab.gnome.org/GNOME/gnome-calendar.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/rc/rc.0/'
 }
 
 prepare() {
