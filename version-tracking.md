@@ -58,7 +58,7 @@
 - libgweather 3.99.0
 - libhandy 1.5.91
 - libnma 1.8.34
-- mutter main(2022-03-05)
+- mutter 42.rc
 - nautilus 42.rc
 - newsflash 1.5.1
 - orca master(2022-03-01)
