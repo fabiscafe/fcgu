@@ -39,7 +39,7 @@
 - gnome-remote-desktop master(2022-03-03)
 - gnome-settings-daemon 42.rc
 - gnome-shell 42.rc
-- gnome-shell-extensions main(2022-02-28)
+- gnome-shell-extensions 42.rc
 - gnome-secrets 6.2 (gnome-passwordsafe)
 - gnome-software 42.rc
 - gnome-sound-recorder 42.beta
