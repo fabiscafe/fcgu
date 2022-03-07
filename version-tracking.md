@@ -18,7 +18,7 @@
 - glib2 2.71.3
 - gnome-backgrounds 42.beta
 - gnome-bluetooth master(2022-03-02)
-- gnome-boxes master(2022-03-02)
+- gnome-boxes 42.rc
 - gnome-builder main(2022-03-01)
 - gnome-calculator 42.rc
 - gnome-calendar master(2022-03-02)
