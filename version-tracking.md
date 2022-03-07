@@ -67,6 +67,7 @@
 - tracker3-miners 3.3.0.rc
 - vala 0.55.91
 - vte3 0.67.90
+- xdg-desktop-portal-gnome 42.rc
 - yelp 42.beta
 - yelp-tools 42.beta
 - yelp-xsl 42.beta

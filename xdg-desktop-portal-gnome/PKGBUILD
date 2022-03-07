@@ -1,0 +1,41 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+options=(debug)
+
+pkgname=xdg-desktop-portal-gnome
+pkgver=42.rc.0
+pkgrel=1
+pkgdesc="A backend implementation for xdg-desktop-portal for the GNOME desktop environment"
+url="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome"
+arch=(x86_64)
+license=(LGPL)
+depends=('xdg-desktop-portal-gtk>=1.10.0-2' gnome-keyring evince libadwaita)
+makedepends=(xdg-desktop-portal meson git)
+provides=(xdg-desktop-portal-impl)
+conflicts=('xdg-desktop-portal-gtk<1.10.0-2')
+replaces=('xdg-desktop-portal-gtk<1.10.0-2')
+_commit=c98dc807d55d7da6cf7bab9ef67fea3dd1d4d18d  # tags/42.rc^0
+source=("git+https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/^v//;s/-/+/g;s/rc/rc.0/'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
