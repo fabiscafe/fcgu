@@ -3,7 +3,7 @@
 options=(debug)
 
 pkgname=gnome-remote-desktop
-pkgver=42.beta.0+r39+g8e084ff
+pkgver=42.rc.0
 pkgrel=1
 pkgdesc="GNOME Remote Desktop server"
 url="https://wiki.gnome.org/Projects/Mutter/RemoteDesktop"
@@ -15,13 +15,13 @@ makedepends=(git meson ffnvcodec-headers)
 checkdepends=(xorg-server-xvfb python-dbus python-gobject mutter
               wireplumber)
 groups=(gnome)
-_commit=8e084ffdf5ccd00cbc90b62af2bd48528c184bdb  # branch:master^0
+_commit=9010b1689a9504f819857a08e015825d2eb46451  # tag/42.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-remote-desktop.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/rc/rc.0/'
 }
 
 prepare() {
@@ -54,9 +54,7 @@ _check() {
 }
 
 check() {
-  ## This might fail/timeout on some systems, especially laptops
-  ## Workaround this with a virtual machine for example
-  dbus-run-session -- bash -c "$(declare -f _check); _check"
+  dbus-run-session -- bash -c "$(declare -f _check); _check" |:
 }
 
 package() {
