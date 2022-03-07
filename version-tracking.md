@@ -56,7 +56,7 @@
 - libadwaita 42.rc
 - libgnome-games-support-gtk4 master(2022-02-17)
 - libgweather 3.99.0
-- libhandy main(2022-02-23)
+- libhandy 1.5.91
 - libnma 1.8.34
 - mutter main(2022-03-05)
 - nautilus 42.rc
