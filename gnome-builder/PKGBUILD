@@ -4,7 +4,7 @@ options=(debug)
 
 pkgbase=gnome-builder
 pkgname=(gnome-builder gnome-builder-libide-docs)
-pkgver=42.beta.1+r19+geb87f66c7
+pkgver=42.rc.1
 pkgrel=1
 pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
@@ -18,13 +18,13 @@ makedepends=(llvm gobject-introspection gi-docgen yelp-tools appstream-glib git
              mm-common python-sphinx_rtd_theme clang jedi-language-server
              flatpak-builder)
 checkdepends=(xorg-server-xvfb)
-_commit=eb87f66c704b2e163e60dc376e9542f92debb5d9  # branch:main^0
+_commit=894e20f81adb269db24f78506eef83327de392d1  # tag/42.rc1^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgbase
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta\([0-9]\+\)/beta.\1/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/rc\([0-9]\+\)/rc.\1/'
 }
 
 prepare() {

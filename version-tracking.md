@@ -19,7 +19,7 @@
 - gnome-backgrounds 42.beta
 - gnome-bluetooth master(2022-03-02)
 - gnome-boxes 42.rc
-- gnome-builder main(2022-03-01)
+- gnome-builder 42.rc1
 - gnome-calculator 42.rc
 - gnome-calendar 42.rc
 - gnome-calls 42.rc.1
