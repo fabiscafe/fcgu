@@ -45,7 +45,7 @@
 - gnome-sound-recorder 42.beta
 - gnome-system-monitor 42.rc
 - gnome-terminal 3.43.90
-- gnome-text-editor main(2022-03-02)
+- gnome-text-editor 42.rc1
 - gnome-tweaks 42.beta
 - gnome-weather main(2022-03-02)
 - gobject-introspection 1.71.0
