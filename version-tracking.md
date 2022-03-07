@@ -28,7 +28,7 @@
 - gnome-connections master(2022-03-02)
 - gnome-console main(2022-03-02)
 - gnome-contacts main(2022-02-24)
-- gnome-control-center master(2022-03-02)
+- gnome-control-center 42.rc
 - gnome-desktop master(2022-03-01)
 - gnome-disk-utility 42.rc
 - gnome-font-viewer main(2022-03-02)
