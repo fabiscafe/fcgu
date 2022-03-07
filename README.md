@@ -110,3 +110,12 @@ Manjaro uses an own repository and **is not** compatible to Arch Linux. Based on
 
 ### Will you push the PKGBUILDs to the AUR?
 In order to do this, the PKGBUILDs would need a lot of extra work and testing, just for the packaging part. Because time is a very limited resource that's not possible to do right now (and not planned for the future).
+
+## Troubleshooting
+### error: GPGME error: No data
+You might have hit a broken mirrorserver. Please [report this](https://gitlab.com/fabiscafe/gnome-unstable/-/issues).
+Feel free to switch to another mirror. In case you still can't sync (`-Syu`) you have to delete */var/lib/pacman/sync/fcgu.db* manually.
+
+```
+rm "/var/lib/pacman/sync/fcgu.db"
+```
