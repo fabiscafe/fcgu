@@ -47,7 +47,7 @@
 - gnome-terminal 3.43.90
 - gnome-text-editor 42.rc1
 - gnome-tweaks 42.beta
-- gnome-weather main(2022-03-02)
+- gnome-weather 42.rc
 - gobject-introspection 1.71.0
 - gsettings-desktop-schemas 42.rc
 - gtksourceview5 master(2022-03-02)
