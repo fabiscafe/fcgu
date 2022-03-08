@@ -31,7 +31,7 @@
 - gnome-control-center 42.rc
 - gnome-desktop master(2022-03-01)
 - gnome-disk-utility 42.rc
-- gnome-font-viewer main(2022-03-02)
+- gnome-font-viewer 42.rc
 - gnome-initial-setup 42.rc
 - gnome-maps v42.rc
 - gnome-music master(2022-03-02)
