@@ -5,7 +5,7 @@
 # Done
 - adwaita-icon-theme master(2022-03-02)
 - at-spi2-core AT_SPI2_CORE_2_43_92
-- baobab main(2022-03-02)
+- baobab 42.rc
 - callaudiod 0.1.3
 - clapper 0.4.1
 - eog 42.rc

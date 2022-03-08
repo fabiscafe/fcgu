@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=baobab
-pkgver=42.beta.0+12+g34b67fc
+pkgver=42.rc.0
 pkgrel=1
 pkgdesc="A graphical directory tree analyzer"
 url="https://wiki.gnome.org/Apps/DiskUsageAnalyzer"
@@ -13,7 +13,7 @@ license=(GPL2)
 depends=(dconf gtk4 gsettings-desktop-schemas libadwaita librsvg)
 makedepends=(vala gobject-introspection yelp-tools appstream-glib git meson)
 groups=(gnome)
-_commit=34b67fc39bb12dfafaa04149bcc09b4d13316388  # braunch:main^0
+_commit=e7ca2fdbc54206081d077b832cc8a93511f2d5a3  # tag/42.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/baobab.git#commit=$_commit"
         no-mimetype.diff)
 sha256sums=('SKIP'
@@ -21,7 +21,7 @@ sha256sums=('SKIP'
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/-/+/g;s/beta/beta.0/'
+  git describe --tags | sed 's/-/+/g;s/rc/rc.0/'
 }
 
 prepare() {
