@@ -34,7 +34,7 @@
 - gnome-font-viewer 42.rc
 - gnome-initial-setup 42.rc
 - gnome-maps v42.rc
-- gnome-music master(2022-03-02)
+- gnome-music master(2022-03-08)
 - gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
 - gnome-remote-desktop 42.rc
 - gnome-settings-daemon 42.rc

@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=gnome-music
-pkgver=42.beta.0+r46+gaa6c9c9d
+pkgver=42.beta.0+r48+g24dcc064
 pkgrel=1
 epoch=1
 pkgdesc="Music player and management application"
@@ -20,12 +20,10 @@ optdepends=('gst-plugins-good: Extra media codecs'
             'gst-plugins-bad: Extra media codecs'
             'gst-libav: Extra media codecs')
 groups=(gnome)
-_commit=aa6c9c9d37dc4d3ede35c1210ba44b62a634554d  # branch:master^0
+_commit=24dcc064181a602020835d8c7ab3905acb5fcc65  # branch:master^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-music.git#commit=$_commit"
-        "git+https://gitlab.gnome.org/GNOME/libgd.git"
         "git+https://gitlab.gnome.org/mschraal/gfm.git")
 sha256sums=('SKIP'
-            'SKIP'
             'SKIP')
 
 pkgver() {
@@ -37,7 +35,6 @@ prepare() {
   cd $pkgname
 
   git submodule init
-  git submodule set-url subprojects/libgd "$srcdir/libgd"
   git submodule set-url subprojects/gfm "$srcdir/gfm"
   git submodule update
 }
