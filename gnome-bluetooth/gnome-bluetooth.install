@@ -1,0 +1,4 @@
+post_upgrade() {
+  printf "If you need bluetooth active on GDM, set AutoEnable=true in /etc/bluetooth/main.conf\n"
+  printf "see: https://wiki.archlinux.org/title/Bluetooth#Auto_power-on_after_boot/resume\n"
+}
