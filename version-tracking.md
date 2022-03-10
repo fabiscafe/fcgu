@@ -17,7 +17,7 @@
 - gjs 1.71.90
 - glib2 2.71.3
 - gnome-backgrounds 42.beta
-- gnome-bluetooth master(2022-03-02)
+- gnome-bluetooth 42.rc
 - gnome-boxes 42.rc
 - gnome-builder 42.rc1
 - gnome-calculator 42.rc
