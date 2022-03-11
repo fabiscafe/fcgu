@@ -61,7 +61,7 @@
 - mutter 42.rc
 - nautilus 42.rc
 - newsflash 1.5.1
-- orca master(2022-03-01)
+- orca ORCA_42_RC
 - sofia-sip 1.13.7
 - sysprof 3.43.90
 - tracker3 3.3.0.rc
