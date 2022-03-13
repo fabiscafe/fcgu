@@ -37,7 +37,7 @@ pkgver: 1 -> 0.1
 - gnome-console main(2022-03-02)
 - gnome-contacts 42.alpha
 - gnome-control-center 42.rc
-- gnome-desktop master(2022-03-01)
+- gnome-desktop 42.rc
 - gnome-disk-utility 42.rc
 - gnome-font-viewer 42.rc
 - gnome-initial-setup 42.rc

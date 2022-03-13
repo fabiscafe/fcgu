@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=gnome-desktop
-pkgver=42.beta.0+r2+g8bfcbe2c
+pkgver=42.rc.0
 pkgrel=1
 epoch=1
 pkgdesc="Library with common API for various GNOME modules"
@@ -15,13 +15,13 @@ depends=(gsettings-desktop-schemas gtk3 gtk4 xkeyboard-config iso-codes libsecco
          bubblewrap systemd libxkbcommon)
 makedepends=(gobject-introspection git meson gtk-doc yelp-tools)
 provides=(libgnome-desktop-3.so libgnome-desktop-4.so)
-_commit=8bfcbe2c232bb539c51132649069965a4489f017  # branch:master^0
+_commit=ecc01407e7759428beedae49262cc8d790c9f410  # tag/42.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-desktop.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/rc/rc.0/'
 }
 
 prepare() {
