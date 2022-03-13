@@ -5,8 +5,8 @@
 options=(debug)
 
 pkgname=mutter
-pkgver=42.rc.0
-pkgrel=1
+pkgver=42.0
+pkgrel=0.1
 pkgdesc="A window manager for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
 arch=(x86_64)
@@ -20,13 +20,13 @@ makedepends=(git gobject-introspection egl-wayland meson
 checkdepends=(xorg-server-xvfb pipewire-media-session python-dbusmock)
 provides=(libmutter-10.so)
 groups=(gnome)
-_commit=6effaae7a796fe143f01311ec6f101e1f2cdd5b5  # tag/42.rc^0
+_commit=9249aba72a5c4454894c08735a4963ca1665e34d  # tag/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd mutter
-  git describe --tags | sed 's/rc/rc.0/;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
