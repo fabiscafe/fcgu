@@ -1,6 +1,14 @@
 # Naming
+## Git snapshots
+* tag+r60+g3f9dba93c
+  * `s/[^-]*-g/r&/;s/-/+/g;`
+## Dev releases
 * X.beta -> X.beta.0
+  * `s/beta/beta.0/`
 * X.beta1 -> X.beta.1
+  * `s/beta\([0-9]\+\)/beta.\1/`
+## Stable releases
+pkgver: 1 -> 0.1
 
 # Done
 - adwaita-icon-theme master(2022-03-02)
