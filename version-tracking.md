@@ -39,7 +39,7 @@
 - gnome-remote-desktop 42.rc
 - gnome-settings-daemon 42.rc
 - gnome-shell 42.0
-- gnome-shell-extensions 42.rc
+- gnome-shell-extensions 42.0
 - gnome-secrets 6.2 (gnome-passwordsafe)
 - gnome-software 42.rc
 - gnome-sound-recorder 42.beta
