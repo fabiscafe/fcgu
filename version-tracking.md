@@ -58,6 +58,7 @@ pkgver: 1 -> 0.1
 - gnome-weather 42.rc
 - gobject-introspection 1.71.0
 - gsettings-desktop-schemas 42.rc
+- gtk4 4.6.1
 - gtksourceview5 master(2022-03-02)
 - gvfs 1.49.90
 - jsonrpc-glib 3.41.0
