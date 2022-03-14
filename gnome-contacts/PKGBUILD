@@ -3,7 +3,7 @@
 options=(debug)
 
 pkgname=gnome-contacts
-pkgver=42.alpha.0
+pkgver=42.beta.0
 pkgrel=1
 pkgdesc="Contacts Manager for GNOME"
 url="https://wiki.gnome.org/Apps/Contacts"
@@ -14,13 +14,13 @@ makedepends=(vala gobject-introspection git meson appstream-glib)
 groups=(gnome)
 # https://gitlab.gnome.org/GNOME/gnome-contacts/-/issues/222
 conflicts=(evolution-ews)
-_commit=603f6ee5acaf76a86b1fc6598029363098a64c9f  # tag/42.alpha^0
+_commit=8c128d92492737f07f62a84e332fbdb68aba4e6d  # tag/42.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-contacts.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/alpha/alpha.0/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
 }
 
 prepare() {
