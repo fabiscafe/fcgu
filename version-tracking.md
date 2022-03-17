@@ -23,7 +23,7 @@ pkgver: 1 -> 0.1
 - evolution-data-server 3.43.3
 - feedbackd 0.0.0+git20220208
 - gjs 1.71.90
-- glib2 2.71.3
+- glib2 2.72.0
 - gnome-backgrounds 42.beta
 - gnome-bluetooth 42.rc
 - gnome-boxes 42.rc
