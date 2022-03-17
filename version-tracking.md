@@ -75,7 +75,7 @@ pkgver: 1 -> 0.1
 - sysprof 3.43.90
 - tracker3 3.3.0.rc
 - tracker3-miners 3.3.0.rc
-- vala 0.55.91
+- vala 0.56.0
 - vte3 0.67.90
 - xdg-desktop-portal-gnome 42.rc
 - yelp 42.beta
