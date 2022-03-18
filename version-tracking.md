@@ -61,7 +61,7 @@ pkgver: 1 -> 0.1
 - gsettings-desktop-schemas 42.rc
 - gtk4 4.6.1
 - gtksourceview5 master(2022-03-02)
-- gvfs 1.49.90
+- gvfs 1.50.0
 - jsonrpc-glib 3.41.0
 - libadwaita 42.rc
 - libgnome-games-support-gtk4 2.0.0
