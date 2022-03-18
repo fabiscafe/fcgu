@@ -18,7 +18,7 @@ pkgver: 1 -> 0.1
 - clapper 0.4.1
 - eog 42.rc
 - epiphany 42.0
-- evince 42.rc
+- evince 42.0
 - evolution 3.44.0
 - evolution-data-server 3.44.0
 - feedbackd 0.0.0+git20220208
