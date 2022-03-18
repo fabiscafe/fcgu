@@ -30,7 +30,7 @@ pkgver: 1 -> 0.1
 - gnome-boxes 42.0.1
 - gnome-builder 42.rc1
 - gnome-calculator 42.rc
-- gnome-calendar 42.rc
+- gnome-calendar 42.0
 - gnome-calls 42.rc.1
 - gnome-characters 42.rc
 - gnome-clocks master(2022-03-02)
