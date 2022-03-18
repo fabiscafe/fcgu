@@ -68,6 +68,7 @@ pkgver: 1 -> 0.1
 - libgweather 4.0.0
 - libhandy 1.6.0
 - libnma 1.8.34
+- libsoup3 3.0.5
 - mutter 42.0
 - nautilus 42.rc
 - newsflash 1.5.1
