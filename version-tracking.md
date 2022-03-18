@@ -20,7 +20,7 @@ pkgver: 1 -> 0.1
 - epiphany 42.0
 - evince 42.rc
 - evolution 3.43.3
-- evolution-data-server 3.43.3
+- evolution-data-server 3.44.0
 - feedbackd 0.0.0+git20220208
 - gjs 1.71.90
 - glib2 2.72.0
