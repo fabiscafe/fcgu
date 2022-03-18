@@ -62,6 +62,7 @@ pkgver: 1 -> 0.1
 - gtk4 4.6.1
 - gtksourceview5 master(2022-03-02)
 - gvfs 1.50.0
+- ibus 1.5.26
 - jsonrpc-glib 3.41.0
 - libadwaita 1.1.0
 - libgnome-games-support-gtk4 2.0.0
