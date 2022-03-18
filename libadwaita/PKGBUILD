@@ -4,8 +4,8 @@ options=(debug)
 
 pkgbase=libadwaita
 pkgname=(libadwaita libadwaita-docs libadwaita-demos)
-pkgver=1.1.rc.0
-pkgrel=1
+pkgver=1.1.0
+pkgrel=0.1
 epoch=1
 pkgdesc="Building blocks for modern adaptive GNOME applications"
 url="https://gnome.pages.gitlab.gnome.org/libadwaita/"
@@ -14,13 +14,13 @@ license=(LGPL)
 depends=(gtk4)
 makedepends=(appstream-glib git meson gi-docgen sassc gobject-introspection vala)
 checkdepends=(weston)
-_commit=ccc621a5d315e5bf9f80f239f2622bbe631366a4 # tag/42.rc^0
+_commit=0e57660217829b3f905f20e1c53aaf42c2302882 # tag/1.1.0^0
 source=("git+https://gitlab.gnome.org/GNOME/libadwaita.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed -r 's/rc/rc.0/;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed -r 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {

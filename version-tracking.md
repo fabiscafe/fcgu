@@ -63,7 +63,7 @@ pkgver: 1 -> 0.1
 - gtksourceview5 master(2022-03-02)
 - gvfs 1.50.0
 - jsonrpc-glib 3.41.0
-- libadwaita 42.rc
+- libadwaita 1.1.0
 - libgnome-games-support-gtk4 2.0.0
 - libgweather 4.0.0
 - libhandy 1.6.0
