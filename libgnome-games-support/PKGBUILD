@@ -3,8 +3,8 @@
 options=(debug)
 
 pkgname=libgnome-games-support-gtk4
-pkgver=2.0.beta.2+r1+gaaf1613
-pkgrel=1
+pkgver=2.0.0
+pkgrel=0.1
 pkgdesc="Code shared between GNOME games"
 url="https://gitlab.gnome.org/GNOME/libgnome-games-support"
 arch=(x86_64)
@@ -12,7 +12,7 @@ license=(GPL3 LGPL3)
 depends=(gtk4 libgee)
 makedepends=(git meson vala)
 provides=("libgnome-games-support-${pkgver%%.*}.so")
-_commit=aaf16135beb690515070c199dafa91008741794a  # branch:master^0
+_commit=75ed95f923d77705d5cb5eea14625a655a3225c8  # tag/2.0.0^0
 source=("git+https://gitlab.gnome.org/GNOME/libgnome-games-support.git#commit=$_commit")
 sha256sums=('SKIP')
 

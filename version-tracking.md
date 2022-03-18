@@ -63,7 +63,7 @@ pkgver: 1 -> 0.1
 - gvfs 1.49.90
 - jsonrpc-glib 3.41.0
 - libadwaita 42.rc
-- libgnome-games-support-gtk4 master(2022-02-17)
+- libgnome-games-support-gtk4 2.0.0
 - libgweather 3.99.0
 - libhandy 1.5.91
 - libnma 1.8.34
