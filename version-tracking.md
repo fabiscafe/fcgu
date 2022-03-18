@@ -24,6 +24,7 @@ pkgver: 1 -> 0.1
 - feedbackd 0.0.0+git20220208
 - gjs 1.71.90
 - glib2 2.72.0
+- glib-networking 2.72.beta
 - gnome-backgrounds 42.beta
 - gnome-bluetooth 42.rc
 - gnome-boxes 42.rc
