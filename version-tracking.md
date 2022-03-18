@@ -65,7 +65,7 @@ pkgver: 1 -> 0.1
 - jsonrpc-glib 3.41.0
 - libadwaita 42.rc
 - libgnome-games-support-gtk4 2.0.0
-- libgweather 3.99.0
+- libgweather 4.0.0
 - libhandy 1.5.91
 - libnma 1.8.34
 - mutter 42.0
