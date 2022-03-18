@@ -26,7 +26,7 @@ pkgver: 1 -> 0.1
 - glib2 2.72.0
 - glib-networking 2.72.beta
 - gnome-backgrounds 42.beta
-- gnome-bluetooth 42.rc
+- gnome-bluetooth 42.0
 - gnome-boxes 42.0.1
 - gnome-builder 42.rc1
 - gnome-calculator 42.rc

@@ -5,8 +5,8 @@
 options=(debug)
 
 pkgname=gnome-bluetooth
-pkgver=42.rc.0
-pkgrel=2
+pkgver=42.0
+pkgrel=0.1
 pkgdesc="The GNOME Bluetooth Subsystem"
 url="https://wiki.gnome.org/Projects/GnomeBluetooth"
 arch=(x86_64)
@@ -18,13 +18,13 @@ checkdepends=(python-dbusmock xorg-server-xvfb)
 provides=(libgnome-bluetooth-3.0.so gnome-bluetooth-gtk4)
 conflicts=(gnome-bluetooth-gtk4)
 replaces=(gnome-bluetooth-gtk4)
-_commit=f6125d5a07a392572b04cdfac67c7e874272907f  # tag/42.rc^0
+_commit=fc488724cc543af991fb0c2c5677c58207369aaa  # tag/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-bluetooth.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/rc/rc.0/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
