@@ -17,7 +17,7 @@ pkgver: 1 -> 0.1
 - callaudiod 0.1.3
 - clapper 0.4.1
 - eog 42.rc
-- epiphany master(2022-03-02)
+- epiphany 42.0
 - evince 42.rc
 - evolution 3.43.3
 - evolution-data-server 3.43.3

@@ -4,24 +4,24 @@
 options=(debug)
 
 pkgname=epiphany
-pkgver=42.beta.0+r60+g3f9dba93c
-pkgrel=1
+pkgver=42.0
+pkgrel=0.1
 pkgdesc="A GNOME web browser based on the WebKit rendering engine"
 url="https://wiki.gnome.org/Apps/Web"
 arch=(x86_64)
 license=(GPL)
-depends=(webkit2gtk-4.1 gcr icu libdazzle libhandy libarchive)
-makedepends=(docbook-xml startup-notification lsb-release gobject-introspection
-             yelp-tools git meson)
-checkdepends=(xorg-server-xvfb aspell hspell hunspell nuspell libvoikko)
+depends=(gcr icu libarchive libdazzle libhandy libportal-gtk3 webkit2gtk-4.1)
+makedepends=(docbook-xml git gobject-introspection lsb-release meson
+             startup-notification yelp-tools)
+checkdepends=(aspell hspell hunspell nuspell libvoikko xorg-server-xvfb)
 groups=(gnome)
-_commit=3f9dba93c4b2a96a5096a42a5f34daae881dee81  # branch:master^0
+_commit=80217e512db2bd375c8b5b959660099aeeee9ed9  # tag/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/epiphany.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/-really/.0/;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
@@ -30,8 +30,7 @@ prepare() {
 
 build() {
   arch-meson $pkgname build \
-    -D soup2=disabled \
-    -D libportal=disabled
+    -D soup2=disabled
   meson compile -C build
 }
 
