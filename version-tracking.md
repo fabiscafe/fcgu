@@ -37,7 +37,7 @@ pkgver: 1 -> 0.1
 - gnome-connections master(2022-03-02)
 - gnome-console main(2022-03-02)
 - gnome-contacts 42.beta
-- gnome-control-center 42.rc
+- gnome-control-center 42.0
 - gnome-desktop 42.rc
 - gnome-disk-utility 42.rc
 - gnome-font-viewer 42.rc
