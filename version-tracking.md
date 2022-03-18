@@ -41,7 +41,7 @@ pkgver: 1 -> 0.1
 - gnome-desktop 42.rc
 - gnome-disk-utility 42.rc
 - gnome-font-viewer 42.rc
-- gnome-initial-setup 42.rc
+- gnome-initial-setup 42.0
 - gnome-maps v42.rc
 - gnome-music master(2022-03-08)
 - gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
