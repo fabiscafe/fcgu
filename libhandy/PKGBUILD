@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=libhandy
-pkgver=1.6.0
+pkgver=1.6.1
 pkgrel=0.1
 pkgdesc="Library full of GTK+ widgets for mobile phones"
 url="https://gitlab.gnome.org/GNOME/libhandy"
@@ -14,7 +14,7 @@ depends=(glib2 gtk3)
 makedepends=(git gi-docgen gobject-introspection meson vala glade)
 checkdepends=(xorg-server-xvfb)
 provides=(libhandy-1.so)
-_commit=4bb04997e5021e9f12cd83bd086c1f73795513a4  # tag/1.6.0^0
+_commit=4186dae5570cf8e73cf8a145236240eec3a237b5  # tag/1.6.1^0
 source=("git+https://gitlab.gnome.org/GNOME/libhandy.git#commit=$_commit")
 sha256sums=('SKIP')
 
