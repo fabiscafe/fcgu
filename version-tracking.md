@@ -75,7 +75,7 @@ pkgver: 1 -> 0.1
 - newsflash 1.5.1
 - orca ORCA_42_RC
 - sofia-sip 1.13.7
-- sysprof 3.43.90
+- sysprof 3.44.0
 - tracker3 3.3.0.rc
 - tracker3-miners 3.3.0.rc
 - vala 0.56.0

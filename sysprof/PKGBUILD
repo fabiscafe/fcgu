@@ -9,21 +9,21 @@ options=(debug)
 
 pkgbase=sysprof
 pkgname=(sysprof libsysprof-capture)
-pkgver=3.43.90
-pkgrel=1
+pkgver=3.44.0
+pkgrel=0.1
 pkgdesc="Kernel based performance profiler"
 url="https://wiki.gnome.org/Apps/Sysprof"
 license=(GPL)
 arch=(x86_64)
 depends=(gtk3 polkit libdazzle)
 makedepends=(yelp-tools git meson)
-_commit=c6dfe76810c451928947d6453bca5f5708aebc88  # tags/3.43.90^0
+_commit=7d44e2db75941e5eef0c67fae3c0ce0cbd176dc6  # tags/3.44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/sysprof.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd sysprof
-  git describe --tags | sed 's/^sysprof-//;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
