@@ -4,8 +4,8 @@ options=(debug)
 
 pkgbase=gnome-builder
 pkgname=(gnome-builder gnome-builder-libide-docs)
-pkgver=42.rc.1
-pkgrel=1
+pkgver=42.0
+pkgrel=0.1
 pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
 arch=(x86_64)
@@ -18,7 +18,7 @@ makedepends=(llvm gobject-introspection gi-docgen yelp-tools appstream-glib git
              mm-common python-sphinx_rtd_theme clang jedi-language-server
              flatpak-builder)
 checkdepends=(xorg-server-xvfb)
-_commit=894e20f81adb269db24f78506eef83327de392d1  # tag/42.rc1^0
+_commit=a44cbf96b1259fe270f26e89c26f6c8d790b7664  # tag/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -28,7 +28,8 @@ pkgver() {
 }
 
 prepare() {
-  cd $pkgbase
+  # appdata: fix appstream validation
+  sed -i '/42.rc1/d;/42.beta1/d;/42.alpha1/d' $pkgbase/data/appdata/org.gnome.Builder.appdata.xml.in
 }
 
 build() {
