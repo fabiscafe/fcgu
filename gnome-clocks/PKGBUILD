@@ -2,10 +2,9 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 options=(debug)
 
-
 pkgname=gnome-clocks
-pkgver=42.beta.0+r10+ga1346f3
-pkgrel=1
+pkgver=42.0
+pkgrel=0.1
 pkgdesc="Clocks applications for GNOME"
 url="https://wiki.gnome.org/Apps/Clocks"
 arch=(x86_64)
@@ -13,13 +12,13 @@ license=(GPL)
 depends=(gtk4 libgweather-gtk4 gnome-desktop geoclue2 geocode-glib gsound libadwaita)
 makedepends=(vala gobject-introspection yelp-tools git meson)
 groups=(gnome)
-_commit=a1346f3ef8bd703de87537b5a1b86cc35122bbeb  # branch:master^0
+_commit=53779868cc89b6347a2090025e81af6e70d7c14d  # tag/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-clocks.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g;'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;'
 }
 
 prepare() {
