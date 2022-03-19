@@ -72,7 +72,7 @@ pkgver: 1 -> 0.1
 - libnma 1.8.34
 - libsoup3 3.0.5
 - mutter 42.0
-- nautilus 42.rc
+- nautilus 42.0
 - newsflash 1.5.1
 - orca ORCA_42_RC
 - sofia-sip 1.13.7
