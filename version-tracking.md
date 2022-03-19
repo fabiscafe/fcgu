@@ -51,7 +51,7 @@ pkgver: 1 -> 0.1
 - gnome-shell-extensions 42.0
 - gnome-secrets 6.2 (gnome-passwordsafe)
 - gnome-software 42.0
-- gnome-sound-recorder 42.beta
+- gnome-sound-recorder 42.0
 - gnome-system-monitor 42.rc
 - gnome-terminal 3.43.90
 - gnome-text-editor 42.0

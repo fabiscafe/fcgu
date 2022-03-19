@@ -4,8 +4,8 @@
 options=(debug)
 
 pkgname=gnome-sound-recorder
-pkgver=42.beta.0
-pkgrel=1
+pkgver=42.0
+pkgrel=0.1
 pkgdesc="A utility to make simple audio recording from your GNOME desktop"
 url="https://wiki.gnome.org/Apps/SoundRecorder"
 arch=(any)
@@ -14,13 +14,13 @@ depends=(gjs gst-plugins-good gst-plugins-base gst-plugins-bad-libs
          libadwaita)
 makedepends=(gobject-introspection git meson)
 groups=(gnome-extra)
-_commit=19070eac398920ce79921bd70d788624d4aff586  # tags/42.beta^0
+_commit=0fabec18319c0baf0c627131c023f7c191af65d9  # tags/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-sound-recorder.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/beta/beta.0/;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
