@@ -32,7 +32,7 @@ pkgver: 1 -> 0.1
 - gnome-calculator 42.rc
 - gnome-calendar 42.0
 - gnome-calls 42.rc.1
-- gnome-characters 42.rc
+- gnome-characters 42.0
 - gnome-clocks master(2022-03-02)
 - gnome-connections master(2022-03-02)
 - gnome-console main(2022-03-02)
