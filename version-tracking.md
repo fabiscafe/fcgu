@@ -84,7 +84,7 @@ pkgver: 1 -> 0.1
 - xdg-desktop-portal-gnome 42.0.1
 - yelp 42.beta
 - yelp-tools 42.beta
-- yelp-xsl 42.beta
+- yelp-xsl 42.0
 
 # Wontbuild
 
