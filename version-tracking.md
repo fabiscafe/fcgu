@@ -54,7 +54,7 @@ pkgver: 1 -> 0.1
 - gnome-sound-recorder 42.beta
 - gnome-system-monitor 42.rc
 - gnome-terminal 3.43.90
-- gnome-text-editor 42.rc1
+- gnome-text-editor 42.0
 - gnome-tweaks 42.beta
 - gnome-weather 42.rc
 - gobject-introspection 1.72.0

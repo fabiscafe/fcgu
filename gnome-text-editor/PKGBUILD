@@ -2,21 +2,27 @@
 options=(debug !strip)
 
 pkgname=gnome-text-editor
-pkgver=42.rc.1
-pkgrel=1
+pkgver=42.0
+pkgrel=0.1
 pkgdesc="A simple text editor"
 url="https://gitlab.gnome.org/GNOME/gnome-text-editor"
 arch=(x86_64)
 license=(GPL)
 depends=(enchant gtksourceview5 glib2 libadwaita)
 makedepends=(appstream-glib git meson itstool)
-_commit=61f0bbbae758aed686adf972d5a7d2b12fa4372b  # tag/42.rc1^0
+_commit=dc8bc74d0a47ffdf0d02fdb8b135ce6028c6c505  # tag/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-text-editor.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/rc\([0-9]\+\)/rc.\1/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+  # appdata: fix appstream validation
+  git cherry-pick -n 985c8dd411a27ad067fe9ac8951d644bad57324a
 }
 
 build() {
