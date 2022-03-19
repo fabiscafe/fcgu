@@ -60,7 +60,7 @@ pkgver: 1 -> 0.1
 - gobject-introspection 1.72.0
 - gsettings-desktop-schemas 42.rc
 - gtk4 4.6.1
-- gtksourceview5 master(2022-03-02)
+- gtksourceview5 5.4.0
 - gvfs 1.50.0
 - ibus 1.5.26
 - jsonrpc-glib 3.41.0
