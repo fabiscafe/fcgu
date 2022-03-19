@@ -56,6 +56,7 @@ pkgver: 1 -> 0.1
 - gnome-terminal 3.43.90
 - gnome-text-editor 42.0
 - gnome-tweaks 42.beta
+- gnome-user-docs 42.0
 - gnome-weather 42.rc
 - gobject-introspection 1.72.0
 - gsettings-desktop-schemas 42.rc
