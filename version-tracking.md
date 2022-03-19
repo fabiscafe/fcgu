@@ -16,7 +16,7 @@ pkgver: 1 -> 0.1
 - baobab 42.rc
 - callaudiod 0.1.3
 - clapper 0.4.1
-- eog 42.rc
+- eog 42.0
 - epiphany 42.0
 - evince 42.1
 - evolution 3.44.0
