@@ -78,7 +78,7 @@ pkgver: 1 -> 0.1
 - sofia-sip 1.13.7
 - sysprof 3.44.0
 - tracker3 3.3.0
-- tracker3-miners 3.3.0.rc
+- tracker3-miners 3.3.0
 - vala 0.56.0
 - vte3 0.67.90
 - xdg-desktop-portal-gnome 42.0.1
