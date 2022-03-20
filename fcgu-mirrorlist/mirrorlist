@@ -11,7 +11,7 @@ Server = https://br-mirror.amanoteam.com/$repo
 ## Maintainer: @oscillate:matrix.org
 ## EOL: 2023-01-23; Sync: *.10.00
 Server = https://vmi394248.contaboserver.net/$repo
-## Maintainer: <not allowed>
+## Maintainer: Inetol <contact@inetol.net>
 ## EOL: 2023-01-26; Sync: *.35.00
 Server = https://warehouse.inetol.net/$repo
 
