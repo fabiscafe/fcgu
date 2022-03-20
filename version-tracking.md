@@ -31,7 +31,7 @@ pkgver: 1 -> 0.1
 - gnome-builder 42.0
 - gnome-calculator 42.0
 - gnome-calendar 42.0
-- gnome-calls 42.rc.1
+- gnome-calls 42.0
 - gnome-characters 42.0
 - gnome-clocks 42.0
 - gnome-connections master(2022-03-02)
