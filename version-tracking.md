@@ -46,7 +46,7 @@ pkgver: 1 -> 0.1
 - gnome-music master(2022-03-08)
 - gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
 - gnome-remote-desktop 42.rc
-- gnome-settings-daemon 42.rc
+- gnome-settings-daemon 42.1
 - gnome-shell 42.0
 - gnome-shell-extensions 42.0
 - gnome-secrets 6.2 (gnome-passwordsafe)
