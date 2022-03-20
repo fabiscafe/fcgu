@@ -43,7 +43,7 @@ pkgver: 1 -> 0.1
 - gnome-font-viewer 42.rc
 - gnome-initial-setup 42.0
 - gnome-maps v42.0
-- gnome-music master(2022-03-08)
+- gnome-music 42.0
 - gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
 - gnome-remote-desktop 42.rc
 - gnome-settings-daemon 42.1

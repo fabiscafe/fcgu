@@ -4,8 +4,8 @@
 options=(debug)
 
 pkgname=gnome-music
-pkgver=42.beta.0+r48+g24dcc064
-pkgrel=1
+pkgver=42.0
+pkgrel=0.1
 epoch=1
 pkgdesc="Music player and management application"
 url="https://wiki.gnome.org/Apps/Music"
@@ -20,7 +20,7 @@ optdepends=('gst-plugins-good: Extra media codecs'
             'gst-plugins-bad: Extra media codecs'
             'gst-libav: Extra media codecs')
 groups=(gnome)
-_commit=24dcc064181a602020835d8c7ab3905acb5fcc65  # branch:master^0
+_commit=52a43cca73b7bd5ed4facedf0994daeee1fb3b89  # tag/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-music.git#commit=$_commit"
         "git+https://gitlab.gnome.org/mschraal/gfm.git")
 sha256sums=('SKIP'
@@ -28,7 +28,7 @@ sha256sums=('SKIP'
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
