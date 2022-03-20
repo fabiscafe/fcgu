@@ -59,7 +59,7 @@ pkgver: 1 -> 0.1
 - gnome-user-docs 42.0
 - gnome-weather 42.rc
 - gobject-introspection 1.72.0
-- gsettings-desktop-schemas 42.rc
+- gsettings-desktop-schemas 42.0
 - gtk4 4.6.2
 - gtksourceview5 5.4.0
 - gvfs 1.50.0
