@@ -29,7 +29,7 @@ pkgver: 1 -> 0.1
 - gnome-bluetooth 42.0
 - gnome-boxes 42.0.1
 - gnome-builder 42.0
-- gnome-calculator 42.rc
+- gnome-calculator 42.0
 - gnome-calendar 42.0
 - gnome-calls 42.rc.1
 - gnome-characters 42.0
