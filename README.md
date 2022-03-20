@@ -13,26 +13,28 @@ FCGU is a free community project. That's why we need your help. If you own a ser
 
 ## Installation
 ### Keyring
-All of our packages are signed, to be able to install trustworthy packages necessary to install and trust the signing-key first.
+All of our packages are signed. To be able to install trustworthy packages it's necessary to install and trust the signing-key first.
 
 ```
-pacman-key --keyserver hkps://keys.openpgp.org --recv-keys 6E58E886A8E07538A2485FAED6A4F386B4881229
-pacman-key --lsign-key 6E58E886A8E07538A2485FAED6A4F386B4881229
+# pacman-key --keyserver hkps://keys.openpgp.org --recv-keys 6E58E886A8E07538A2485FAED6A4F386B4881229
+# pacman-key --lsign-key 6E58E886A8E07538A2485FAED6A4F386B4881229
 ```
 
-### Add the repo
-This repo should be below the **[core]** repo, but above every other one in */etc/pacman.conf*.
+### Mirror-List
+[fcgu-mirrorlist](https://gitlab.com/fabiscafe/gnome-unstable/-/tree/main/fcgu-mirrorlist) is an own package that should be available from all mirror servers. You need to install.
+```
+# pacman -U https://vmi394248.contaboserver.net/fcgu/fcgu-mirrorlist-0-1-any.pkg.tar.zst
+```
+
+### Repository
+This repository entry should be *below* the **[core]** repo, but *above* every other one in */etc/pacman.conf*.
 
 ```
 [fcgu]
-Server = https://vmi394248.contaboserver.net/$repo
-Server = https://stream.itmotr-radio.com/$repo
-Server = https://warehouse.inetol.net/$repo #EOL: 2023-01-26
-Server = https://mirror.amikhalev.com/$repo #EOL: 2023-02-28
-#Server = <looking for new mirrors>
+Include = /etc/pacman.d/fcgu-mirrorlist
 ```
 
-Here a preview how it should look:
+Here is a preview how it should look:
 
 ```
 
@@ -48,11 +50,7 @@ Here a preview how it should look:
 Include = /etc/pacman.d/mirrorlist
 
 [fcgu]
-Server = https://vmi394248.contaboserver.net/$repo
-Server = https://stream.itmotr-radio.com/$repo
-Server = https://warehouse.inetol.net/$repo
-Server = https://mirror.amikhalev.com/$repo
-#Server = <looking for new mirrors>
+Include = /etc/pacman.d/fcgu-mirrorlist
 
 [extra]
 Include = /etc/pacman.d/mirrorlist
@@ -69,11 +67,7 @@ The repo needs to be removed from */etc/pacman.conf*
 
 ```
 [fcgu]
-Server = https://vmi394248.contaboserver.net/$repo
-Server = https://stream.itmotr-radio.com/$repo
-Server = https://warehouse.inetol.net/$repo
-Server = https://mirror.amikhalev.com/$repo
-#Server = <looking for new mirrors>
+Include = /etc/pacman.d/fcgu-mirrorlist
 ```
 
 When that's done a `pacman -Syuu` will downgrade all packages to the Arch-repo versions. After thats done, you need to check for additional packages who where not removed but can conflict with your installation. Check with `pacman -Qm` and remove them.
@@ -110,6 +104,9 @@ Manjaro uses an own repository and **is not** compatible to Arch Linux. Based on
 
 ### Will you push the PKGBUILDs to the AUR?
 In order to do this, the PKGBUILDs would need a lot of extra work and testing, just for the packaging part. Because time is a very limited resource that's not possible to do right now (and not planned for the future).
+
+### I want to provide a mirror.
+If you want to have your own mirror, please do a [MR](https://gitlab.com/fabiscafe/gnome-unstable/-/merge_requests) and add your mirror to the [fcgu-mirrorlist](https://gitlab.com/fabiscafe/gnome-unstable/-/tree/main/fcgu-mirrorlist/fcgu-mirrorlist). If that's done. [Join us on matrix](https://gitlab.com/fabiscafe/gnome-unstable#chat-matrix), as we also need your servers IP6/4 addresses to allow the sync. Alternatively you can also ask one of the current mirror providers in order to mirror a mirror.
 
 ## Troubleshooting
 ### error: GPGME error: No data

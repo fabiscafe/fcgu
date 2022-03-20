@@ -1,0 +1,26 @@
+# FCGU mirrorlist
+# https://gitlab.com/fabiscafe/gnome-unstable
+# If you can provide another mirror server, please let us know.
+
+# Brazil
+## Maintainer: @alissonlauffer:matrix.org
+## EOL: 2023-03-14; Sync: *.15.00
+Server = https://br-mirror.amanoteam.com/$repo
+
+# Germany
+## Maintainer: @oscillate:matrix.org
+## EOL: 2023-01-23; Sync: *.10.00
+Server = https://vmi394248.contaboserver.net/$repo
+## Maintainer: <not allowed>
+## EOL: 2023-01-26; Sync: *.35.00
+Server = https://warehouse.inetol.net/$repo
+
+# Netherlands
+## Maintainer: <not allowed>
+## EOL: 2023-01-23; Sync: *.30.00
+Server = https://stream.itmotr-radio.com/$repo
+
+# United States
+## Maintainer: <not allowed>
+## EOL: 2023-02-28; Sync: *.25.00
+Server = https://mirror.amikhalev.com/$repo
