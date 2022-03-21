@@ -44,7 +44,7 @@ pkgver: 1 -> 0.1
 - gnome-initial-setup 42.0
 - gnome-maps v42.0
 - gnome-music 42.0
-- gnome-podcasts-gtk4 (msandova/podcasts) gtk4(2022-02-07)
+- gnome-podcasts master(2022-03-21) +MR199
 - gnome-remote-desktop 42.0
 - gnome-settings-daemon 42.1
 - gnome-shell 42.0
