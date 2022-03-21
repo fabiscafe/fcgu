@@ -4,21 +4,21 @@
 options=(debug)
 
 pkgname=gnome-backgrounds
-pkgver=42.beta.0
-pkgrel=1
+pkgver=42.0
+pkgrel=0.1
 pkgdesc="Background images and data for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-backgrounds"
 arch=(any)
 makedepends=(glib2 meson git)
 license=(GPL)
 groups=(gnome)
-_commit=26aaaea877eceea60b1066bd1fedbd3732d0153c # tags/42.beta^0
+_commit=03bb89abe5e2fd43de7ce1d0b72a5c381c72fa35 # tags/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-backgrounds.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed -r 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+  git describe --tags | sed -r 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 build() {
