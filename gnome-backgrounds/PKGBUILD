@@ -5,12 +5,12 @@ options=(debug)
 
 pkgname=gnome-backgrounds
 pkgver=42.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="Background images and data for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-backgrounds"
 arch=(any)
 makedepends=(glib2 meson git)
-license=(GPL)
+license=("CCPL: BY-SA 3.0")
 groups=(gnome)
 _commit=03bb89abe5e2fd43de7ce1d0b72a5c381c72fa35 # tags/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-backgrounds.git#commit=$_commit")
