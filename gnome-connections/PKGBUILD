@@ -3,8 +3,8 @@
 options=('!emptydirs' 'debug')
 
 pkgname=gnome-connections
-pkgver=42.beta.0+r4+g8b874ea
-pkgrel=1
+pkgver=42.0
+pkgrel=0.1
 pkgdesc='Remote desktop client for the GNOME desktop environment'
 arch=('x86_64')
 url='https://gitlab.gnome.org/GNOME/connections'
@@ -12,13 +12,13 @@ license=('GPL3')
 depends=('freerdp' 'gtk-vnc' 'libhandy' 'libsecret')
 makedepends=('appstream-glib' 'git' 'gobject-introspection' 'itstool' 'meson' 'vala')
 groups=('gnome-extra')
-_commit=8b874ead6d912a56c01cfcb4d85aaf01db059217  # branch:master^0
+_commit=27541cbe59d836480b16ef37700be26fb2c1edad  # tag/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/connections.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd ${pkgname/gnome-/}
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {

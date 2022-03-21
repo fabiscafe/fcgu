@@ -34,7 +34,7 @@ pkgver: 1 -> 0.1
 - gnome-calls 42.0
 - gnome-characters 42.0
 - gnome-clocks 42.0
-- gnome-connections master(2022-03-02)
+- gnome-connections 42.0
 - gnome-console main(2022-03-02)
 - gnome-contacts 42.beta
 - gnome-control-center 42.0
