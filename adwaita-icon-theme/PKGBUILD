@@ -5,21 +5,21 @@
 options=(debug)
 
 pkgname=adwaita-icon-theme
-pkgver=42.beta.0+r4+g192ba44fa
-pkgrel=1
+pkgver=42.0
+pkgrel=0.1
 pkgdesc="GNOME standard icons"
 url="https://gitlab.gnome.org/GNOME/adwaita-icon-theme"
 arch=(any)
 license=(LGPL3 CCPL:by-sa)
 depends=(hicolor-icon-theme gtk-update-icon-cache librsvg)
 makedepends=(git gtk3)
-_commit=192ba44fab1331313e82ad7b90c450486b004469  # branch:master^0
+_commit=1095485b06702dd0d2b232c5896e3e0d7340ad51  # tag/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/adwaita-icon-theme.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
