@@ -56,7 +56,6 @@ pkgver: 1 -> 0.1
 - gnome-tweaks 42.beta
 - gnome-user-docs 42.0
 - gnome-weather 42.0
-- gobject-introspection 1.72.0
 - gsettings-desktop-schemas 42.0
 - gtk4 4.6.2
 - gtksourceview5 5.4.0
