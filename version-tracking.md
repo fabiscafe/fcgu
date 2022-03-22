@@ -67,7 +67,6 @@ pkgver: 1 -> 0.1
 - orca ORCA_42_RC
 - sofia-sip 1.13.7
 - sysprof 3.44.0
-- tracker3 3.3.0
 - tracker3-miners 3.3.0
 - vala 0.56.0
 - vte3 0.67.90
