@@ -35,7 +35,7 @@ pkgver: 1 -> 0.1
 - gnome-clocks 42.0
 - gnome-connections 42.0
 - gnome-console main(2022-03-02)
-- gnome-contacts 42.beta
+- gnome-contacts 42.0
 - gnome-control-center 42.0
 - gnome-desktop 42.0
 - gnome-disk-utility 42.0
