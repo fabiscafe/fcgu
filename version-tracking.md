@@ -64,7 +64,7 @@ pkgver: 1 -> 0.1
 - libnma 1.8.34
 - mutter 42.0
 - nautilus 42.0
-- orca ORCA_42_RC
+- orca ORCA_42_0
 - sofia-sip 1.13.7
 - sysprof 3.44.0
 - vte3 0.67.90
