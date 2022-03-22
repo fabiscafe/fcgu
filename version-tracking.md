@@ -12,7 +12,6 @@ pkgver: 1 -> 0.1
 
 # Done
 - adwaita-icon-theme 42.0
-- at-spi2-core AT_SPI2_CORE_2_44_0
 - baobab 42.0
 - callaudiod 0.1.3
 - clapper 0.4.1
