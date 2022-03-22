@@ -61,7 +61,6 @@ pkgver: 1 -> 0.1
 - ibus 1.5.26
 - libgnome-games-support-gtk4 2.0.0
 - libgweather 4.0.0
-- libhandy 1.6.1
 - libnma 1.8.34
 - libsoup3 3.0.5
 - mutter 42.0
