@@ -59,7 +59,6 @@ pkgver: 1 -> 0.1
 - gsettings-desktop-schemas 42.0
 - gtksourceview5 5.4.0
 - ibus 1.5.26
-- jsonrpc-glib 3.42.0
 - libadwaita 1.1.0
 - libgnome-games-support-gtk4 2.0.0
 - libgweather 4.0.0
