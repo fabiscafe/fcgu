@@ -1,8 +1,8 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=fcgu-mirrorlist
-pkgver=0
-pkgrel=2
+pkgver=1
+pkgrel=1
 pkgdesc="The fcgu mirror list file"
 url="https://gitlab.com/fabiscafe/gnome-unstable"
 arch=(any)
@@ -12,7 +12,7 @@ depends=(pacman-contrib)
 source=("LICENSE"
         "mirrorlist")
 sha256sums=('1a224f60d744f26bdfd9047d45d45608761d54ee5f43394c78f09f58a54c2aae'
-            '2289e45873970369b0258db0660087dfd64b14ae8c958f2cdcecb20a3359e72c')
+            '772bc37cc6ff3a1814c34282df23bc308b9a6aa59e667c58c5a1b7e1b01723c2')
 
 package() {
   /usr/bin/install -D -m644 "${srcdir}/mirrorlist" \

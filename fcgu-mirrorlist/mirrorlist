@@ -13,7 +13,7 @@ Server = https://br-mirror.amanoteam.com/$repo
 Server = https://vmi394248.contaboserver.net/$repo
 ## Maintainer: Inetol <contact@inetol.net>
 ## EOL: 2023-01-26; Sync: *.35.00
-Server = https://warehouse.inetol.net/$repo
+Server = https://vault.inetol.net/$repo
 
 # Netherlands
 ## Maintainer: <not allowed>
