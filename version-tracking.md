@@ -64,7 +64,6 @@ pkgver: 1 -> 0.1
 - libnma 1.8.34
 - mutter 42.0
 - nautilus 42.0
-- newsflash 1.5.1
 - orca ORCA_42_RC
 - sofia-sip 1.13.7
 - sysprof 3.44.0
