@@ -22,6 +22,7 @@ pkgver: 1 -> 0.1
 - evolution 3.44.0
 - evolution-data-server 3.44.0
 - feedbackd 0.0.0+git20220208
+- gdm 42.0
 - gjs 1.72.0
 - glib2 2.72.0
 - glib-networking 2.72.beta
