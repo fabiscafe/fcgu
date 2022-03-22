@@ -23,7 +23,7 @@ All of our packages are signed. To be able to install trustworthy packages it's 
 ### Mirror-List
 [fcgu-mirrorlist](https://gitlab.com/fabiscafe/gnome-unstable/-/tree/main/fcgu-mirrorlist) is an own package that should be available from all mirror servers. You need to install.
 ```
-# pacman -U https://vmi394248.contaboserver.net/fcgu/fcgu-mirrorlist-0-1-any.pkg.tar.zst
+# pacman -U https://vmi394248.contaboserver.net/fcgu/fcgu-mirrorlist-0-2-any.pkg.tar.zst
 ```
 
 ### Repository

@@ -8,5 +8,11 @@ post_upgrade() {
 }
 
 pre_remove() {
-  /usr/bin/rm "/etc/pacman.d/fcgu-mirrorlist"
+  if [ -f /etc/pacman.d/fcgu-mirrorlist ]; then
+    /usr/bin/rm "/etc/pacman.d/fcgu-mirrorlist"
+  fi
+}
+
+post_remove() {
+  printf 'Remove the "[fcgu]" entry from /etc/pacman.conf\n'
 }
