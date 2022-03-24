@@ -56,6 +56,7 @@
 - mutter 42.0
 - nautilus 42.0
 - orca ORCA_42_0
+- simple-scan 42.0
 - sofia-sip 1.13.7
 - sysprof 3.44.0
 - totem 42.0
