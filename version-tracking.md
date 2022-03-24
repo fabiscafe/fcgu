@@ -28,7 +28,7 @@
 - gnome-desktop 42.0
 - gnome-disk-utility 42.0
 - gnome-font-viewer 42.0
-- gnome-initial-setup 42.0
+- gnome-initial-setup 42.0.1
 - gnome-maps v42.0
 - gnome-music 42.0
 - gnome-photos 42.0
