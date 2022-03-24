@@ -43,6 +43,7 @@
 - gnome-system-monitor 42.0
 - gnome-terminal 3.43.90
 - gnome-text-editor 42.0
+- gnome-tour 42.0
 - gnome-tweaks 42.beta
 - gnome-user-docs 42.0
 - gnome-weather 42.0
