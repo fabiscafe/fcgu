@@ -6,13 +6,13 @@ options=(debug)
 
 pkgname=gnome-disk-utility
 pkgver=42.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="Disk Management Utility for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-disk-utility"
 arch=(x86_64)
 license=(GPL)
 groups=(gnome)
-depends=(udisks2 gtk3 libsecret libpwquality libcanberra libdvdread libnotify
+depends=(udisks2 libsecret libpwquality libcanberra libdvdread libnotify
          parted systemd libhandy)
 makedepends=(git meson docbook-xsl)
 _commit=5f6488fc9660de73048d247da4fd0eecdd0a21a6  # tag/42.0^0
