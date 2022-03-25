@@ -7,13 +7,13 @@ options=(debug)
 
 pkgname=simple-scan
 pkgver=42.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="Simple scanning utility"
 url="https://gitlab.gnome.org/GNOME/simple-scan"
 arch=(x86_64)
 license=(GPL3)
 groups=(gnome)
-depends=(sane dconf gtk3 colord-sane libgusb libhandy)
+depends=(sane dconf colord-sane libgusb libhandy)
 makedepends=(yelp-tools meson vala git)
 _commit=5cd2f6a14027e05984ef5e3ef953235dbbfb88ea  # tags/42.0^0
 source=("git+https://gitlab.gnome.org/GNOME/simple-scan.git#commit=$_commit")
