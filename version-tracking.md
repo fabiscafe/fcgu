@@ -2,7 +2,7 @@
 ## Done
 - adwaita-icon-theme 42.0
 - baobab 42.0
-- callaudiod 0.1.3
+- callaudiod 0.1.4
 - clapper 0.4.1
 - eog 42.0
 - epiphany 42.0
