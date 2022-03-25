@@ -5,12 +5,12 @@ options=(debug)
 
 pkgname=baobab
 pkgver=42.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="A graphical directory tree analyzer"
 url="https://wiki.gnome.org/Apps/DiskUsageAnalyzer"
 arch=(x86_64)
 license=(GPL2)
-depends=(dconf gtk4 gsettings-desktop-schemas libadwaita librsvg)
+depends=(dconf gsettings-desktop-schemas libadwaita librsvg)
 makedepends=(vala gobject-introspection yelp-tools appstream-glib git meson)
 groups=(gnome)
 _commit=bffc1c040ee75e0cb0675d0bc1a59619ff57366c  # tag/42.0^0
