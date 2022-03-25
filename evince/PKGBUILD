@@ -5,12 +5,12 @@ options=(debug !strip)
 
 pkgname=evince
 pkgver=42.1
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)"
 url="https://wiki.gnome.org/Apps/Evince"
 arch=(x86_64)
 license=(GPL)
-depends=(gtk3 libgxps libspectre gsfonts poppler-glib djvulibre t1lib dconf libsecret libsynctex
+depends=(libgxps libspectre gsfonts poppler-glib djvulibre t1lib dconf libsecret libsynctex
          gsettings-desktop-schemas gnome-desktop libarchive gst-plugins-base-libs gspell libhandy
          gvfs)
 makedepends=(libnautilus-extension texlive-bin gi-docgen gobject-introspection itstool
