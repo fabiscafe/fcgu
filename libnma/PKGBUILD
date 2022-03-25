@@ -3,8 +3,8 @@
 options=(debug)
 
 pkgname=libnma
-pkgver=1.8.34
-pkgrel=1.3
+pkgver=1.8.36
+pkgrel=0.1
 pkgdesc="NetworkManager GUI client library"
 url="https://gitlab.gnome.org/GNOME/libnma"
 arch=(x86_64)
@@ -14,7 +14,7 @@ makedepends=(gobject-introspection git gtk-doc meson vala)
 provides=(libnma.so libnma-gtk4.so libnma-common libnma-gtk4)
 replaces=(libnma-common libnma-gtk4)
 conflicts=(libnma-common libnma-gtk4)
-_commit=98d55a765d6aff0243d26d1ef5e655ebb6f78fa8  # tags/1.8.34^0
+_commit=d3080c86c6cfb71d16514af4d967d36dba976206  # tags/1.8.36^0
 source=("git+https://gitlab.gnome.org/GNOME/libnma.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -30,6 +30,7 @@ prepare() {
 build() {
   arch-meson libnma build \
     -D libnma_gtk4=true
+  # -D gcr_gtk4=true # Waiting for a gcr release
   meson compile -C build
 }
 
