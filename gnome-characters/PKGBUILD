@@ -5,12 +5,12 @@ options=(debug)
 
 pkgname=gnome-characters
 pkgver=42.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="A character map application"
 arch=(x86_64)
 url="https://gitlab.gnome.org/GNOME/gnome-characters"
 license=(GPL2)
-depends=(gjs gtk4 libadwaita libunistring gnome-desktop emoji-font)
+depends=(gjs libadwaita libunistring gnome-desktop emoji-font)
 makedepends=(meson gobject-introspection appstream-glib git gperf)
 groups=(gnome)
 _commit=e0b22aecba4cd63e5936a097c7ba7e645c0e27e5  # tag/42.0^0
