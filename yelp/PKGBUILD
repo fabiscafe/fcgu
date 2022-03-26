@@ -4,7 +4,7 @@
 options=(debug)
 
 pkgname=yelp
-pkgver=42.0
+pkgver=42.1
 pkgrel=0.1
 pkgdesc="Get help with GNOME"
 url="https://wiki.gnome.org/Apps/Yelp"
@@ -13,7 +13,7 @@ arch=(x86_64)
 depends=(bzip2 libhandy libxslt webkit2gtk-4.1 xz yelp-xsl)
 makedepends=(gtk-doc itstool autoconf-archive git appstream-glib)
 groups=(gnome)
-_commit=45cffe678cd32a10885c3a845965accbc0313600  # tags/42.0^0
+_commit=d16114cb46e4de07e6d1c0511ef8d6e1921e023e  # tags/42.1^0
 source=("git+https://gitlab.gnome.org/GNOME/yelp.git#commit=$_commit")
 sha256sums=('SKIP')
 

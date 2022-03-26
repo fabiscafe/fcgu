@@ -62,7 +62,7 @@
 - totem 42.0
 - vte3 0.67.90
 - xdg-desktop-portal-gnome 42.0.1
-- yelp 42.0
+- yelp 42.1
 
 ## Wontbuild
 none
