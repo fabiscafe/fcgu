@@ -4,7 +4,7 @@ options=(debug)
 
 pkgname=libnma
 pkgver=1.8.36
-pkgrel=0.1
+pkgrel=1.1
 pkgdesc="NetworkManager GUI client library"
 url="https://gitlab.gnome.org/GNOME/libnma"
 arch=(x86_64)
