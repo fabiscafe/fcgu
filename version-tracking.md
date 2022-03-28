@@ -32,7 +32,7 @@
 - gnome-maps v42.0
 - gnome-music 42.0
 - gnome-photos 42.0
-- gnome-podcasts master(2022-03-21) +MR199
+- gnome-podcasts master(2022-03-25) +MR199
 - gnome-remote-desktop 42.0
 - gnome-session 42.0
 - gnome-settings-daemon 42.1
