@@ -53,7 +53,6 @@
 - ibus 1.5.26
 - libgnome-games-support-gtk4 2.0.0
 - libgweather 4.0.0
-- libnma 1.8.36
 - mutter 42.0
 - nautilus 42.0
 - orca ORCA_42_0
