@@ -106,7 +106,7 @@ Manjaro uses an own repository and **is not** compatible to Arch Linux. Based on
 In order to do this, the PKGBUILDs would need a lot of extra work and testing, just for the packaging part. Because time is a very limited resource that's not possible to do right now (and not planned for the future).
 
 ### I want to provide a mirror.
-If you want to have your own mirror, please do a [MR](https://gitlab.com/fabiscafe/gnome-unstable/-/merge_requests) and add your mirror to the [fcgu-mirrorlist](https://gitlab.com/fabiscafe/gnome-unstable/-/tree/main/fcgu-mirrorlist/fcgu-mirrorlist). If that's done. [Join us on matrix](https://gitlab.com/fabiscafe/gnome-unstable#chat-matrix), as we also need your servers IP6/4 addresses to allow the sync. Alternatively you can also ask one of the current mirror providers in order to mirror a mirror.
+If you want to have your own mirror, please do a [MR](https://gitlab.com/fabiscafe/gnome-unstable/-/merge_requests) and add your mirror to the [fcgu-mirrorlist](https://gitlab.com/fabiscafe/gnome-unstable/-/blob/main/fcgu-mirrorlist/mirrorlist). If that's done. [Join us on matrix](https://gitlab.com/fabiscafe/gnome-unstable#chat-matrix), as we also need your servers IP6/4 addresses to allow the sync. Alternatively you can also ask one of the current mirror providers in order to mirror a mirror.
 
 ## Troubleshooting
 ### error: GPGME error: No data
