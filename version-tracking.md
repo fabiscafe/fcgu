@@ -59,7 +59,6 @@
 - simple-scan 42.0
 - sofia-sip 1.13.7
 - totem 42.0
-- vte3 0.68.0
 - xdg-desktop-portal-gnome 42.0.1
 - yelp 42.1
 
