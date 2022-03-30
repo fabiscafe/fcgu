@@ -14,7 +14,6 @@
 - gjs 1.72.0
 - gnome-backgrounds 42.0
 - gnome-bluetooth 42.0
-- gnome-boxes 42.0.1
 - gnome-builder 42.0
 - gnome-calculator 42.0
 - gnome-calendar 42.0
