@@ -5,11 +5,11 @@ options=(debug)
 
 pkgname=evolution-data-server
 pkgver=3.44.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="Centralized access to appointments and contacts"
 url="https://wiki.gnome.org/Apps/Evolution"
 arch=(x86_64)
-depends=(gnome-online-accounts nss krb5 libcanberra libgweather libgweather-gtk4 libical db libgdata libphonenumber)
+depends=(gnome-online-accounts nss krb5 libcanberra libgweather libgweather-4 libical db libgdata libphonenumber)
 makedepends=(intltool gperf gobject-introspection vala gtk-doc boost git cmake ninja)
 provides=(libcamel-1.2.so libebackend-1.2.so libebook-1.2.so libebook-contacts-1.2.so
           libecal-2.0.so libedata-book-1.2.so libedata-cal-2.0.so libedataserver-1.2.so
