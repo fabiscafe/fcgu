@@ -32,7 +32,6 @@
 - gnome-logs gnome-logs-42.0
 - gnome-maps v42.0
 - gnome-music 42.0
-- gnome-online-accounts 3.44.0
 - gnome-photos 42.0
 - gnome-podcasts master(2022-03-25) +MR199
 - gnome-remote-desktop 42.0
