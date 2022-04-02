@@ -53,7 +53,7 @@
 - gtksourceview5 5.4.0
 - ibus 1.5.26
 - libgnome-games-support-gtk4 2.0.0
-- libgweather 4.0.0
+- libgweather 4.0.0 #Upgrade overlay
 - mutter 42.0
 - nautilus 42.0
 - orca ORCA_42_0
