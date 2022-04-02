@@ -5,19 +5,19 @@ options=(debug)
 
 pkgname=libgweather-gtk4
 pkgver=4.0.0
-pkgrel=0.2
+pkgrel=0.1
 pkgdesc="Location and timezone database and weather-lookup library"
 url="https://wiki.gnome.org/Projects/LibGWeather"
 arch=(x86_64)
 license=(LGPL)
-conflicts=(libgweather-4)
+conflicts=(libgweather4)
+replaces=(libgweather4)
 depends=(geocode-glib libsoup gtk4 dconf)
 makedepends=(clang gobject-introspection gi-docgen git meson python-gobject python-pylint vala)
+provides=(libgweather-4.so)
 _commit=6ac9872a5a06863f6c84f6ac836cede78b401691  # tag/4.0.0^0
-source=("git+https://gitlab.gnome.org/GNOME/libgweather.git#commit=$_commit"
-        "disable-metar-test.diff")
-sha256sums=('SKIP'
-            'df2a049944cde1587e75968c12a216d434744484aed2815df297be285e9ec4fc')
+source=("git+https://gitlab.gnome.org/GNOME/libgweather.git#commit=$_commit")
+sha256sums=('SKIP')
 
 pkgver() {
   cd libgweather
@@ -26,7 +26,6 @@ pkgver() {
 
 prepare() {
   cd libgweather
-  git apply -3 ../disable-metar-test.diff
 }
 
 build() {
