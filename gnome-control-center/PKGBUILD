@@ -5,12 +5,12 @@ options=(debug)
 
 pkgname=gnome-control-center
 pkgver=42.0
-pkgrel=0.3
+pkgrel=0.4
 pkgdesc="GNOME's main interface to configure various aspects of the desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-control-center"
 license=(GPL2)
 arch=(x86_64)
-depends=(accountsservice cups-pk-helper gnome-bluetooth-3.0 gnome-desktop
+depends=(accountsservice cups-pk-helper gnome-bluetooth-3.0 gnome-desktop-4
          gnome-online-accounts gnome-settings-daemon gsettings-desktop-schemas
          libgtop nm-connection-editor sound-theme-freedesktop upower libpwquality
          gnome-color-manager smbclient libnma-gtk4 libnma-gtk4.so libmm-glib libgnomekbd libibus libcheese
