@@ -26,7 +26,6 @@
 - gnome-control-center 42.0
 - gnome-desktop 42.0
 - gnome-disk-utility 42.0
-- gnome-firmware 42.0
 - gnome-font-viewer 42.0
 - gnome-initial-setup 42.0.1
 - gnome-logs gnome-logs-42.0
