@@ -20,7 +20,7 @@
 - gnome-calls 42.0
 - gnome-characters 42.0
 - gnome-clocks 42.0
-- gnome-connections 42.0
+- gnome-connections 42.1
 - gnome-console main(2022-03-25)
 - gnome-contacts 42.0
 - gnome-control-center 42.0
