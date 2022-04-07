@@ -47,7 +47,6 @@
 - sofia-sip 1.13.7
 - totem 42.0
 - xdg-desktop-portal-gnome 42.0.1
-- yelp 42.1
 
 ## Wontbuild
 none
