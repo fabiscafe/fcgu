@@ -9,7 +9,6 @@
 - gdm 42.0
 - gnome-backgrounds 42.0
 - gnome-bluetooth 42.0
-- gnome-builder 42.0
 - gnome-calls 42.0
 - gnome-console main(2022-03-25)
 - gnome-initial-setup 42.1
