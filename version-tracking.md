@@ -2,7 +2,6 @@
 ## Done
 - callaudiod 0.1.4
 - clapper 0.4.1
-- evince 42.1
 - feedbackd 0.0.0+git20220208
 - gnome-calls 42.0
 - gnome-console main(2022-03-25)
