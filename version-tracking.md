@@ -46,7 +46,6 @@
 - orca ORCA_42_0
 - sofia-sip 1.13.7
 - totem 42.0
-- xdg-desktop-portal-gnome 42.0.1
 
 ## Wontbuild
 none
