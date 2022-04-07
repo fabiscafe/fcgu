@@ -32,7 +32,6 @@
 - gnome-shell-extensions 42.0
 - gnome-software 42.0
 - gnome-sound-recorder 42.0
-- gnome-system-monitor 42.0
 - gnome-text-editor 42.0
 - gnome-tour 42.0
 - libgweather 4.0.0 #Upgrade overlay
