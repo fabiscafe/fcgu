@@ -41,7 +41,6 @@
 - gnome-weather 42.0
 - gsettings-desktop-schemas 42.0
 - libgweather 4.0.0 #Upgrade overlay
-- mutter 42.0
 - sofia-sip 1.13.7
 
 ## Wontbuild
