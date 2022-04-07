@@ -45,7 +45,6 @@
 - nautilus 42.0
 - orca ORCA_42_0
 - sofia-sip 1.13.7
-- totem 42.0
 
 ## Wontbuild
 none
