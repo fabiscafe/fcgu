@@ -37,7 +37,6 @@
 - gnome-text-editor 42.0
 - gnome-tour 42.0
 - gnome-tweaks 42.beta
-- gnome-user-docs 42.0
 - libgweather 4.0.0 #Upgrade overlay
 - sofia-sip 1.13.7
 
