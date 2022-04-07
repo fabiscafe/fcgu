@@ -22,7 +22,6 @@
 - gnome-disk-utility 42.0
 - gnome-font-viewer 42.0
 - gnome-initial-setup 42.1
-- gnome-logs gnome-logs-42.0
 - gnome-podcasts master(2022-03-25) +MR199
 - gnome-text-editor 42.0
 - gnome-tour 42.0
