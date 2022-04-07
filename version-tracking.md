@@ -29,7 +29,6 @@
 - gnome-podcasts master(2022-03-25) +MR199
 - gnome-remote-desktop 42.0
 - gnome-shell 42.0
-- gnome-shell-extensions 42.0
 - gnome-text-editor 42.0
 - gnome-tour 42.0
 - libgweather 4.0.0 #Upgrade overlay
