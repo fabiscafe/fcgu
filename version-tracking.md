@@ -19,7 +19,6 @@
 - gnome-console main(2022-03-25)
 - gnome-contacts 42.0
 - gnome-control-center 42.0
-- gnome-desktop 42.0
 - gnome-disk-utility 42.0
 - gnome-font-viewer 42.0
 - gnome-initial-setup 42.1
