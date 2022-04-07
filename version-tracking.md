@@ -13,7 +13,6 @@
 - gnome-calculator 42.0
 - gnome-calendar 42.0
 - gnome-calls 42.0
-- gnome-characters 42.0
 - gnome-console main(2022-03-25)
 - gnome-initial-setup 42.1
 - gnome-podcasts master(2022-03-25) +MR199
