@@ -6,7 +6,6 @@
 - evolution 3.44.0
 - evolution-data-server 3.44.0
 - feedbackd 0.0.0+git20220208
-- gdm 42.0
 - gnome-calls 42.0
 - gnome-console main(2022-03-25)
 - gnome-initial-setup 42.1
