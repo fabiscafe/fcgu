@@ -4,7 +4,7 @@
 - clapper 0.4.1
 - feedbackd 0.0.0+git20220208
 - gnome-calls 42.0
-- gnome-connections 42.1.1
+- gnome-connections 42.1.2
 - gnome-console main(2022-04-01)
 - gnome-initial-setup 42.1
 - gnome-podcasts master(2022-03-25) +MR199
