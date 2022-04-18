@@ -1,13 +1,13 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
-options=(debug !strip)
 
 pkgname=gnome-text-editor
 pkgver=42.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="A simple text editor"
 url="https://gitlab.gnome.org/GNOME/gnome-text-editor"
 arch=(x86_64)
 license=(GPL)
+options=(debug !strip)
 depends=(enchant gtksourceview5 glib2 libadwaita)
 makedepends=(appstream-glib git meson itstool)
 _commit=dc8bc74d0a47ffdf0d02fdb8b135ce6028c6c505  # tag/42.0^0
