@@ -6,7 +6,7 @@
 - gnome-calls 42.0
 - gnome-connections 42.1.2
 - gnome-console main(2022-04-01)
-- gnome-initial-setup 42.1
+- gnome-initial-setup 42.1.1
 - gnome-podcasts master(2022-03-25) +MR199
 - gnome-text-editor 42.0
 - gnome-tour 42.0
