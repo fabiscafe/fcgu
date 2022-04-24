@@ -1,9 +1,16 @@
-# FabisCafe Gnome Unstable <a href="https://liberapay.com/Fabiscafe/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+# FabisCafe Gnome Unstable
 or short "FCGU" is a GNOME Unstable repository for [**Arch Linux**](https://archlinux.org). That contains *beta* and *rc* releases of GNOME for testing and bugreporting purposes.
 
-![Matrix](https://img.shields.io/matrix/fcgu:matrix.org?style=for-the-badge) ![Liberapay receiving](https://img.shields.io/liberapay/receives/fabiscafe?style=for-the-badge) ![Liberapay patrons](https://img.shields.io/liberapay/patrons/fabiscafe?style=for-the-badge)
+### Support
+#### Ko-Fi (Also for Paypal and one-time donations)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R5R4CALOG)
+#### Liberapay
+[![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/Fabiscafe/donate)
+![Liberapay receiving](https://img.shields.io/liberapay/receives/fabiscafe?style=for-the-badge) ![Liberapay patrons](https://img.shields.io/liberapay/patrons/fabiscafe?style=for-the-badge)
 
 ### Chat / Matrix
+![Matrix](https://img.shields.io/matrix/fcgu:matrix.org?style=for-the-badge)
+
 Feel free to [join us at our matrix group](https://matrix.to/#/#fcgu:matrix.org) or [ping me](https://matrix.to/#/@fabiscafe:matrix.org) directly.
 
 ## Looking For New Mirrors
