@@ -3,7 +3,7 @@
 options=(debug)
 
 pkgname=gnome-podcasts-gtk4
-pkgver=0.5.1+r21+ga19dea8+mr199
+pkgver=0.5.1+r24+g7366ab4+mr199
 pkgrel=1
 pkgdesc="Podcast application for GNOME"
 arch=(x86_64)
@@ -15,11 +15,11 @@ optdepends=('gst-plugins-ugly: Extra media codecs'
             'gst-libav: Extra media codecs')
 conflicts=(gnome-podcasts)
 provides=(gnome-podcasts)
-_commit=a19dea8e67fdb96d43ee895b910fc3b7d97aee3c # master+patch^0
+_commit=7366ab431c50ecdd885435161b2eeac36b946f72 # master+patch^0
 source=("git+${url}.git#commit=${_commit}"
-        "mr199_gtk4-port.patch::https://gitlab.gnome.org/World/podcasts/-/merge_requests/199.patch")
+        "mr199_gtk4-port.patch::${url}/-/merge_requests/199.patch")
 sha256sums=('SKIP'
-            'fb2b69ac321d97053f3bfb237d4d391f9de7a8644fc1998392369436b6cb3109')
+            '3837bd7e8d073b06d92aeaadc84b3d907b1724a730e57d64182d2f4a9a637ae3')
 
 pkgver() {
   cd podcasts
