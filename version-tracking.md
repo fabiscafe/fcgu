@@ -11,7 +11,7 @@
 - gnome-text-editor 42.1
 - gnome-tour 42.0
 - libgweather 4.0.0 #Upgrade overlay
-- sofia-sip 1.13.7
+- sofia-sip 1.13.8
 
 ## Wontbuild
 none
