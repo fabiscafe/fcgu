@@ -3,13 +3,13 @@ options=(debug)
 
 pkgname=clapper
 pkgver=0.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc="GNOME media player built using GJS with GTK4 toolkit and powered by GStreamer with OpenGL rendering."
 url="https://github.com/Rafostar/clapper"
 arch=(x86_64)
 license=(GPL3)
 depends=(gjs gst-plugins-bad gst-plugins-base gst-plugins-good
-         hicolor-icon-theme libadwaita libsoup3)
+         hicolor-icon-theme libadwaita)
 optdepends=(
   "gst-libav: Extra media codecs"
   "gst-plugins-ugly: Extra media codecs"
