@@ -2,7 +2,7 @@
 options=(debug)
 
 pkgname=clapper
-pkgver=0.5.0
+pkgver=0.5.1
 pkgrel=1
 pkgdesc="GNOME media player built using GJS with GTK4 toolkit and powered by GStreamer with OpenGL rendering."
 url="https://github.com/Rafostar/clapper"
@@ -17,7 +17,7 @@ optdepends=(
   "gst-plugin-va: Intel/AMD video acceleration (gst-plugins-bad codec support)"
   )
 makedepends=(appstream-glib git gobject-introspection meson)
-_commit=8f22b36045a4431ccf80fe06d9a04f3639474500  # tags/0.5.0^0
+_commit=e5723cd25a6cd0aa0f2c965ef3300bfa19e82278  # tags/0.5.1^0
 source=("git+https://github.com/Rafostar/clapper.git#commit=$_commit")
 sha256sums=('SKIP')
 
