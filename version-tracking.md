@@ -3,7 +3,7 @@
 - callaudiod 0.1.4
 - clapper 0.5.1
 - feedbackd v0.0.0+git20220520
-- gnome-calls 42.0
+- gnome-calls v43.alpha.1
 - gnome-connections 42.1.2
 - gnome-console main(2022-04-01)
 - gnome-initial-setup 42.1.1
