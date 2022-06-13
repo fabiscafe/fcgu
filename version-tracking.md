@@ -6,10 +6,8 @@
 - gnome-calls v43.alpha.1
 - gnome-connections 42.1.2
 - gnome-console main(2022-04-01)
-- gnome-initial-setup 42.1.1
 - gnome-podcasts master(2022-05-25) +MR199
 - gnome-text-editor 42.2
-- gnome-tour 42.0
 - libgweather 4.0.0 #Upgrade overlay
 - sofia-sip 1.13.8
 
