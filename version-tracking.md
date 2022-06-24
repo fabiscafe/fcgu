@@ -1,7 +1,7 @@
 # Packages
 ## Done
 - callaudiod 0.1.4
-- clapper 0.5.1
+- clapper 0.5.2
 - feedbackd v0.0.0+git20220520
 - gnome-calls v43.alpha.1
 - gnome-connections 42.1.2
