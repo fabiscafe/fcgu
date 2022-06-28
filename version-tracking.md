@@ -10,6 +10,7 @@
 - gnome-podcasts master(2022-05-25) +MR199
 - gnome-text-editor 42.2
 - libgweather 4.0.0 #Upgrade overlay
+- pitivi 2022.06
 - sofia-sip 1.13.8
 
 ## Wontbuild
