@@ -2,8 +2,8 @@
 options=(debug !strip)
 
 pkgname=gnome-calls
-pkgver=43_alpha2
-pkgrel=0.1
+pkgver=43.alpha2
+pkgrel=1
 pkgdesc="A Phone dialer and call handler."
 arch=(x86_64)
 url="https://gitlab.gnome.org/GNOME/calls"
@@ -23,7 +23,7 @@ sha256sums=('SKIP'
 
 pkgver() {
   cd calls
-  git describe --tags | sed 's/^v//;s/alpha./alpha/;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/43_/43./;s/^v//;s/alpha./alpha/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
