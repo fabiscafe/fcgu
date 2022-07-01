@@ -8,6 +8,7 @@
 - gnome-console main(2022-04-01)
 - gnome-initial-setup 43.alpha
 - gnome-podcasts master(2022-05-25) +MR199
+- gnome-software 43.alpha
 - gnome-text-editor 42.2
 - libgweather 4.0.0 #Upgrade overlay
 - pitivi 2022.06
