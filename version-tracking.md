@@ -7,6 +7,7 @@
 - gnome-connections 42.1.2
 - gnome-console main(2022-04-01)
 - gnome-initial-setup 43.alpha
+- gnome-maps v43.alpha
 - gnome-podcasts master(2022-05-25) +MR199
 - gnome-software 43.alpha
 - gnome-text-editor 42.2
