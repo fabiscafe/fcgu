@@ -1,5 +1,6 @@
 # Packages
 ## Done
+- at-spi2-core AT_SPI2_CORE_2_45_1
 - callaudiod 0.1.4
 - clapper 0.5.2
 - feedbackd v0.0.0+git20220520
