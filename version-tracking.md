@@ -20,7 +20,8 @@
 ## Wontbuild
 none
 ## Exclude
-none
+- evolution-data-server 3.45.1 #waiting for an gcr-4 release
+- evolution 3.45.1 #waiting for evolution-data-server
 
 # Versioning
 ## Git snapshots
