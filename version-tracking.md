@@ -14,7 +14,6 @@
 - gnome-text-editor 42.2
 - libgweather 4.0.0 #Upgrade overlay
 - orca ORCA_43_ALPHA
-- pitivi 2022.06
 - sofia-sip 1.13.8
 
 ## Wontbuild
