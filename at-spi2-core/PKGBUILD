@@ -4,8 +4,8 @@
 
 pkgname=at-spi2-core
 pkgver=2.45.1
-pkgrel=1
-pkgdesc="Protocol definitions and daemon for D-Bus at-spi"
+pkgrel=2
+pkgdesc="Base DBus XML interfaces for accessibility, the accessibility registry daemon, and atspi library."
 url="https://gitlab.gnome.org/GNOME/at-spi2-core"
 arch=(x86_64)
 license=(GPL2)
@@ -13,6 +13,9 @@ depends=(dbus glib2 libxtst libsystemd)
 makedepends=(gobject-introspection git gtk-doc meson dbus-broker systemd)
 optdepends=('dbus-broker: Alternative bus implementation')
 options=(debug)
+conflicts=(atk at-spi2-atk)
+replaces=(atk at-spi2-atk)
+provides=(atk at-spi2-atk)
 _commit=4d636769923c685db412fecf475c80597e328e25  # tags/AT_SPI2_CORE_2_45_1^0
 source=("git+https://gitlab.gnome.org/GNOME/at-spi2-core.git#commit=$_commit")
 sha256sums=('SKIP')
