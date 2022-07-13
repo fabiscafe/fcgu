@@ -32,6 +32,7 @@
 - libgweather-4 4.0.0
 - libhandy 1.7.0
 - librest 0.9.1
+- mutter 43.alpha
 - orca ORCA_43_ALPHA
 - sofia-sip 1.13.8
 - sysprof 3.45.0
