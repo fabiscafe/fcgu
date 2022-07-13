@@ -36,7 +36,7 @@
 - none
 
 ## Exclude
-- none
+- Geary # Still requires libsoup (2)
 
 # Versioning
 ## Git snapshots
