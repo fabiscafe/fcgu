@@ -2,6 +2,7 @@
 ## Done
 - at-spi2-core 2.45.1
 - evolution-data-server 3.45.1
+- folks 0.15.5
 - gcr-4 3.90.0
 - geocode-glib-2 3.26.3
 - gjs 1.73.1
