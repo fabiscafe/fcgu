@@ -8,6 +8,7 @@
 - gtksourceview5 5.5.0
 - libadwaita 1.2.alpha
 - libhandy 1.7.0
+- librest 0.9.1
 
 
 ## Wontbuild
