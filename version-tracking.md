@@ -16,6 +16,7 @@
 - glib2 2.73.2
 - glib-networking 2.74.alpha
 - gnome-calculator 43.alpha
+- gnome-calendar 43.alpha
 - gnome-calls 43.alpha2
 - gnome-control-center 43.alpha
 - gnome-desktop master(2022-07-12)
