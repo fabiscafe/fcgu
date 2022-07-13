@@ -3,7 +3,7 @@ options=(debug !strip)
 
 pkgname=callaudiod
 pkgver=0.1.4
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="Call audio routing daemon"
 arch=(x86_64)
 url="https://gitlab.com/mobian1/callaudiod"

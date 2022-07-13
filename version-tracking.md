@@ -1,6 +1,7 @@
 # Packages
 ## Done
 - at-spi2-core 2.45.1
+- callaudiod 0.1.4
 - evolution-data-server 3.45.1
 - folks 0.15.5
 - gcr-4 3.90.0
