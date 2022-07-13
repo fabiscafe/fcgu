@@ -20,6 +20,7 @@
 - gnome-calls 43.alpha2
 - gnome-control-center 43.alpha
 - gnome-desktop master(2022-07-12)
+- gnome-initial-setup 43.alpha1
 - gnome-maps 43.alpha
 - gnome-online-accounts 3.45.1
 - gnome-podcasts-gtk4 master(2022-05-25) +mr199
