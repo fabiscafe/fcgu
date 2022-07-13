@@ -4,7 +4,7 @@
 
 pkgname=at-spi2-core
 pkgver=2.45.1
-pkgrel=2
+pkgrel=1
 pkgdesc="Base DBus XML interfaces for accessibility, the accessibility registry daemon, and atspi library."
 url="https://gitlab.gnome.org/GNOME/at-spi2-core"
 arch=(x86_64)

@@ -1,8 +1,10 @@
 # Packages
 ## Done
+- at-spi2-core 2.45.1
 - geocode-glib-2 3.26.3
 - glib2 2.73.2
 - glib-networking 2.74.alpha
+
 
 ## Wontbuild
 - none
