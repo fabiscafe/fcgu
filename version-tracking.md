@@ -4,6 +4,7 @@
 - geocode-glib-2 3.26.3
 - glib2 2.73.2
 - glib-networking 2.74.alpha
+- gnome-desktop master(2022-07-12)
 - gtk4 4.7.1
 - gtksourceview5 5.5.0
 - libadwaita 1.2.alpha
