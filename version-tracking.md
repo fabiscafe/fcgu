@@ -15,6 +15,7 @@
 - gjs 1.73.1
 - glib2 2.73.2
 - glib-networking 2.74.alpha
+- gnome-calculator 43.alpha
 - gnome-calls 43.alpha2
 - gnome-desktop master(2022-07-12)
 - gnome-online-accounts 3.45.1
