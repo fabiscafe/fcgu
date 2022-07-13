@@ -33,6 +33,7 @@
 - gnome-software 43.alpha
 - gnome-text-editor 43.alpha0
 - gobject-introspection 1.73.0
+- gsettings-desktop-schemas 43.alpha
 - gtk4 4.7.1
 - gtksourceview5 5.5.0
 - libadwaita 1.2.alpha
