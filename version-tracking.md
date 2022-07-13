@@ -3,6 +3,7 @@
 - at-spi2-core 2.45.1
 - callaudiod 0.1.4
 - clapper 0.5.2
+- eog 43.alpha
 - evolution-data-server 3.45.1
 - feedbackd 0.0.0+git20220520
 - folks 0.15.5
