@@ -3,7 +3,7 @@ options=(debug !strip)
 
 pkgname=feedbackd
 pkgver=0.0.0+git20220520
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="A daemon to provide haptic (and later more) feedback on events"
 arch=(x86_64)
 url="https://source.puri.sm/Librem5/feedbackd"
