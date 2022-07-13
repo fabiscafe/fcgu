@@ -9,6 +9,7 @@
 - libadwaita 1.2.alpha
 - libhandy 1.7.0
 - librest 0.9.1
+- sysprof 3.45.0
 
 
 ## Wontbuild
