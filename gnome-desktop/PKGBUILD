@@ -4,7 +4,7 @@
 
 pkgbase=gnome-desktop
 pkgname=(gnome-desktop-common gnome-desktop gnome-desktop-4)
-pkgver=42.3+r35+gad502027
+pkgver=43.alpha
 pkgrel=1
 epoch=1
 pkgdesc="Library with common API for various GNOME modules"
@@ -16,13 +16,13 @@ makedepends=(gobject-introspection git meson gtk-doc yelp-tools
              libseccomp bubblewrap systemd libxkbcommon)
 checkdepends=(xorg-server-xvfb)
 options=(debug)
-_commit=ad502027b94c649380efaab678437c4688eb5552  # master^0
+_commit=2c5aae5234b32ec8616e2c93516815440253fd5e  # tags/43.alpha^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-desktop.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgbase
-  git describe --tags | sed 's/42.rc/42.3/;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
