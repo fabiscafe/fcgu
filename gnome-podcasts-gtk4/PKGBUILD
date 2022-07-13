@@ -19,7 +19,7 @@ _commit=c3c77254cceabc0a417d157c5ee5aa55f24007b4 # master+patch^0
 source=("git+${url}.git#commit=${_commit}"
         "mr199_gtk4-port.patch::${url}/-/merge_requests/199.patch")
 sha256sums=('SKIP'
-            '3837bd7e8d073b06d92aeaadc84b3d907b1724a730e57d64182d2f4a9a637ae3')
+            '968e821e8aa1ab14e6fec46879854e88f81e24b73c9b5192bfb5b2a465ca5f9e')
 
 pkgver() {
   cd podcasts
