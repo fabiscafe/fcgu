@@ -6,6 +6,7 @@
 - glib2 2.73.2
 - glib-networking 2.74.alpha
 - gnome-desktop master(2022-07-12)
+- gnome-online-accounts 3.45.1
 - gnome-session 42.0
 - gnome-settings-daemon 42.2
 - gtk4 4.7.1

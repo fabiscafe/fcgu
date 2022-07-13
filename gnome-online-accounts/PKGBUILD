@@ -1,0 +1,52 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+
+pkgname=gnome-online-accounts
+pkgver=3.45.1
+pkgrel=1
+pkgdesc="Single sign-on framework for GNOME"
+url="https://wiki.gnome.org/Projects/GnomeOnlineAccounts"
+arch=(x86_64)
+license=(LGPL)
+depends=(webkit2gtk-4.1 json-glib libnotify librest libsecret krb5 gcr)
+makedepends=(gobject-introspection gtk-doc vala git meson)
+optdepends=('gvfs-goa: Virtual file systems, e.g. OwnCloud'
+            'gvfs-google: Google Drive')
+provides=(libgoa-1.0.so libgoa-backend-1.0.so)
+options=(debug)
+_commit=23665d4bfef28eee727c2f93b8ae025d6d600a19  # tags/3.45.1^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-online-accounts.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+# disable gtk_doc as it wont build with (.1 release)
+
+  local meson_options=(
+    -D media_server=true
+    -D gtk_doc=false
+    -D man=true
+  )
+
+  arch-meson $pkgname build "${meson_options[@]}"     
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
+
+# vim:set sw=2 et:
