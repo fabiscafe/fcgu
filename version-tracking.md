@@ -15,6 +15,7 @@
 - gnome-online-accounts 3.45.1
 - gnome-session 42.0
 - gnome-settings-daemon 42.2
+- gnome-text-editor 43.alpha0
 - gtk4 4.7.1
 - gtksourceview5 5.5.0
 - libadwaita 1.2.alpha
