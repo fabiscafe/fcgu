@@ -6,7 +6,7 @@ options=(debug !strip)
 
 pkgname=sofia-sip
 pkgver=1.13.8
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="An open-source SIP User-Agent library"
 arch=('x86_64' 'i686')
 url="http://sofia-sip.sourceforge.net"
