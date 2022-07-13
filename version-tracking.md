@@ -21,6 +21,7 @@
 - gnome-maps 43.alpha
 - gnome-online-accounts 3.45.1
 - gnome-podcasts-gtk4 master(2022-05-25) +mr199
+- gnome-remote-desktop 43.alpha
 - gnome-session 42.0
 - gnome-settings-daemon 42.2
 - gnome-text-editor 43.alpha0
