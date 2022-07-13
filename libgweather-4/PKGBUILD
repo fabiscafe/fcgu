@@ -4,8 +4,8 @@
 
 pkgbase=libgweather-4
 pkgname=(libgweather-4 libgweather-4-docs)
-pkgver=4.0.0
-pkgrel=1.3
+pkgver=4.1.0
+pkgrel=1
 pkgdesc="Location and timezone database and weather-lookup library"
 url="https://wiki.gnome.org/Projects/LibGWeather"
 arch=(x86_64)
@@ -14,12 +14,10 @@ depends=(libsoup3 geocode-glib-2 dconf)
 makedepends=(gobject-introspection vala git gi-docgen meson python-gobject)
 checkdepends=(python-pylint)
 options=(debug)
-_commit=6ac9872a5a06863f6c84f6ac836cede78b401691  # tags/4.0.0^0
+_commit=3a3b7f05949e91769e57a2cd72ec58aa442c69f6  # tags/4.1.0^0
 source=("git+https://gitlab.gnome.org/GNOME/libgweather.git#commit=$_commit"
-        "geocode-glib-2.patch::https://gitlab.gnome.org/GNOME/libgweather/-/commit/bf6794eb099a3984dd23d578cabaae9c63b9f9d0.patch"
         disable-metar-test.diff)
 sha256sums=('SKIP'
-            '05fc435867101ff59f59b3422b7dea7e0ac53504981803ab8911f2628dba1892'
             'c11eb9ad69f8354e5baeef5581038ef0cd5ce2f032dd48f3df29e34fc900dd5a')
 
 pkgver() {
@@ -32,8 +30,6 @@ prepare() {
 
   # Disable metar test, depends on unstable online service
   git apply -3 ../disable-metar-test.diff
-  # change the dependencies on geocode-glib to make it build
-  git apply -3 ../geocode-glib-2.patch
 }
 
 build() {
