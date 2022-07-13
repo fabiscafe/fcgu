@@ -27,6 +27,7 @@
 - gnome-session 42.0
 - gnome-settings-daemon 42.2
 - gnome-shell 43.alpha
+- gnome-shell-extensions 43.alpha
 - gnome-software 43.alpha
 - gnome-text-editor 43.alpha0
 - gtk4 4.7.1
