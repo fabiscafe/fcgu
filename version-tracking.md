@@ -15,6 +15,7 @@
 - libhandy 1.7.0
 - librest 0.9.1
 - sysprof 3.45.0
+- xdg-desktop-portal-gnome 43.alpha
 
 
 ## Wontbuild
