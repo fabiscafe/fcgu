@@ -1,6 +1,7 @@
 # Packages
 ## Done
 - glib2 2.73.2
+- glib-networking 2.74.alpha
 
 ## Wontbuild
 - none
