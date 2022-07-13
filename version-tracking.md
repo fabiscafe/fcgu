@@ -1,6 +1,6 @@
 # Packages
 ## Done
-- none
+- glib2 2.73.2
 
 ## Wontbuild
 - none
