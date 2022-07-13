@@ -5,6 +5,7 @@
 - glib2 2.73.2
 - glib-networking 2.74.alpha
 - gtk4 4.7.1
+- gtksourceview5 5.5.0
 - libadwaita 1.2.alpha
 - libhandy 1.7.0
 
