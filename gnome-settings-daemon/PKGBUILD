@@ -2,8 +2,8 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-settings-daemon
-pkgver=42.2
-pkgrel=1.1
+pkgver=43.alpha
+pkgrel=1
 pkgdesc="GNOME Settings Daemon"
 url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
 arch=(x86_64)
@@ -17,13 +17,11 @@ optdepends=('usbguard: USB protection support')
 groups=(gnome)
 backup=(etc/xdg/Xwayland-session.d/00-xrdb)
 options=(debug)
-_commit=4bdf8b5ae38a382be4126bbc0ce8d87bac46177e  # tags/42.2^0
+_commit=f24ebdf298b730844a15aef096b7346c7b352776  # tags/43.alpha^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-settings-daemon.git#commit=$_commit"
-        "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git"
-        "0001-depend_on_geocode-glib-2.0.patch::https://gitlab.gnome.org/GNOME/gnome-settings-daemon/-/commit/03739474621e579e10b72577960ff94b4001e7ff.patch")
+        "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
-            'SKIP'
-            '885f142e092363362b5716eb6f3d9690db938a31f95ff38f17828649c4271280')
+            'SKIP')
 
 pkgver() {
   cd $pkgname
@@ -36,10 +34,6 @@ prepare() {
   git submodule init
   git submodule set-url subprojects/gvc "$srcdir/libgnome-volume-control"
   git submodule update
-  
-  # It's looking for geocode-glib 1.0 that is build using libsoup2 and will conflict with libsoup3
-  # This patch changes the dependency
-  git apply -3 ../0001-depend_on_geocode-glib-2.0.patch
 }
 
 build() {
