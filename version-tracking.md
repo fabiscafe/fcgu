@@ -18,6 +18,7 @@
 - gnome-calculator 43.alpha
 - gnome-calendar 43.alpha
 - gnome-calls 43.alpha2
+- gnome-console 42.1
 - gnome-control-center 43.alpha
 - gnome-desktop master(2022-07-12)
 - gnome-initial-setup 43.alpha1
