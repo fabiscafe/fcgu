@@ -5,12 +5,12 @@
 
 pkgname=orca
 pkgver=43.alpha
-pkgrel=1
+pkgrel=2
 pkgdesc="Screen reader for individuals who are blind or visually impaired"
 url="https://wiki.gnome.org/Projects/Orca"
 arch=(any)
 license=(LGPL)
-depends=(gtk3 at-spi2-atk python-atspi python-dbus python-xdg speech-dispatcher liblouis brltty
+depends=(gtk3 at-spi2-core python-atspi python-dbus python-xdg speech-dispatcher liblouis brltty
          xorg-xmodmap gsettings-desktop-schemas
          gst-plugins-base # playbin, audiotestsrc, basic decoders
          gst-plugins-good # pulsesink, more decoders
