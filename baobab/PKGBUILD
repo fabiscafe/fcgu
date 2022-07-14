@@ -1,0 +1,45 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+
+pkgname=baobab
+pkgver=43.alpha
+pkgrel=1
+pkgdesc="A graphical directory tree analyzer"
+url="https://wiki.gnome.org/Apps/DiskUsageAnalyzer"
+arch=(x86_64)
+license=(GPL2)
+depends=(dconf gtk4 gsettings-desktop-schemas librsvg libadwaita)
+makedepends=(vala gobject-introspection yelp-tools appstream-glib git meson)
+groups=(gnome)
+options=(debug)
+_commit=ffc6c28894a3bd00082699c895ef125f542fe7c9  # tags/43.alpha^0
+source=("git+https://gitlab.gnome.org/GNOME/baobab.git#commit=$_commit"
+        no-mimetype.diff)
+sha256sums=('SKIP'
+            '958a85fe3a2001d16ebcf71b51888f260508af87224a0de3410a6bbe685e59d0')
+
+pkgver() {
+  cd baobab
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd baobab
+
+  # https://bugs.archlinux.org/task/31861
+  git apply -3 ../no-mimetype.diff
+}
+
+build() {
+  arch-meson baobab build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
