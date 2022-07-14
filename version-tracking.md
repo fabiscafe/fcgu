@@ -52,6 +52,7 @@
 - sysprof 3.45.0
 - tracker3 3.4.0.alpha
 - tracker3-miners 3.4.0.alpha
+- vte3 0.69.90
 - xdg-desktop-portal-gnome 43.alpha
 
 
