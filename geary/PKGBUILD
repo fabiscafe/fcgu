@@ -1,0 +1,76 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: sebikul <sebikul@gmail.com>
+# Contributor: Massimiliano Torromeo <massimiliano.torromeo@gmail.com>
+
+pkgname=geary
+pkgver=40.0+r92+g10f4b80ef
+pkgrel=1
+epoch=1
+pkgdesc='A lightweight email client for the GNOME desktop'
+arch=(x86_64)
+url=https://wiki.gnome.org/Apps/Geary
+license=(GPL3)
+groups=(gnome-extra)
+depends=(
+  cairo
+  enchant
+  folks
+  gcr
+  gdk-pixbuf2
+  glib2
+  gmime3
+  gnome-online-accounts
+  gsound
+  gspell
+  iso-codes
+  libcanberra
+  libgee
+  libhandy
+  libnotify
+  libpeas
+  libsecret
+  libstemmer
+  libxml2
+  libytnef
+  org.freedesktop.secrets
+  pango
+  sqlite
+  webkit2gtk-4.1
+)
+makedepends=(
+  appstream-glib
+  cmake
+  git
+  gobject-introspection
+  meson
+  vala
+  yelp-tools
+)
+options=(debug)
+_commit=10f4b80ef0adbb4b39e4d8063833d341a040fab8
+source=("git+https://gitlab.gnome.org/GNOME/geary.git?#commit=${_commit}") # main
+validpgpkeys=(3A2EF7F138557A145F2866E99FAB18747A8FC649) # Michael James Gratton <mike@vee.net>
+sha256sums=('SKIP')
+
+prepare() {
+  cd geary
+}
+
+pkgver() {
+  cd geary
+  git describe --tags | sed 's/^gnome-//g;s/[^-]*-g/r&/;s/-/+/g'
+}
+
+build() {
+  arch-meson geary build \
+    -Dprofile=release
+  meson compile -C build
+}
+
+package() {
+  meson install -C build \
+    --destdir "${pkgdir}"
+}
+
+# vim: ts=2 sw=2 et:

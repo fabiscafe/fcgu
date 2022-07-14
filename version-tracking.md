@@ -12,6 +12,7 @@
 - feedbackd 0.0.0+git20220520
 - folks 0.15.5
 - gcr-4 3.90.0
+- geary main(2022-07-13)
 - gedit 43.alpha
 - geocode-glib-2 3.26.3
 - gjs 1.73.1
@@ -62,7 +63,7 @@
 
 
 ## Exclude
-- Geary # Still requires libsoup (2)
+- none
 
 # Versioning
 ## Git snapshots
