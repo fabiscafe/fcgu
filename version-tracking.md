@@ -3,6 +3,7 @@
 - at-spi2-core 2.45.1
 - callaudiod 0.1.4
 - clapper 0.5.2
+- dconf-editor 43.alpha
 - eog 43.alpha
 - epiphany 43.alpha
 - evolution 3.45.1

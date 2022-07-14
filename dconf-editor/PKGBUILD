@@ -1,0 +1,41 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+
+pkgname=dconf-editor
+pkgver=43.alpha
+pkgrel=1
+pkgdesc="dconf Editor"
+arch=(x86_64)
+url="https://wiki.gnome.org/Projects/dconf"
+license=(GPL3)
+groups=(gnome-extra)
+depends=(gtk3 dconf)
+makedepends=(vala meson git)
+options=(debug)
+_commit=5fac961c671b78c2bc001ad609074c55b0843457  # tags/43.alpha^0
+source=("git+https://gitlab.gnome.org/GNOME/dconf-editor.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  DESTDIR="$pkgdir" meson install -C build
+}
+
+# vim:set ts=2 sw=2 et:
