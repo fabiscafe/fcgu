@@ -1,0 +1,66 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+
+pkbase=d-spy
+pkgname=(d-spy libdspy)
+pkgver=1.2.1
+pkgrel=0.1
+pkgdesc="a simple tool to explore D-Bus connections"
+url="https://gitlab.gnome.org/chergert/libpanel"
+arch=(x86_64)
+license=(GPL)
+depends=("glib2>=2.73.0" libadwaita)
+makedepends=(git meson)
+options=(debug)
+_commit=4daf6fbf18017707b415958461ef128b200de859  # tags/1.2.1^0
+source=("git+https://gitlab.gnome.org/GNOME/d-spy.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed -r 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+_pick() {
+  local p="$1" f d; shift
+  for f; do
+    d="$srcdir/$p/${f#$pkgdir/}"
+    mkdir -p "$(dirname "$d")"
+    mv "$f" "$d"
+    rmdir -p --ignore-fail-on-non-empty "$(dirname "$f")"
+  done
+}
+
+package_d-spy() {
+  depends+=(libdspy)
+
+  meson install -C build --destdir "$pkgdir"
+
+  cd "$pkgdir"
+
+  _pick libdspy usr/lib/libdspy-*
+  _pick libdspy usr/lib/pkgconfig/dspy-*.pc
+  _pick libdspy usr/include/dspy-*/dspy*.h
+}
+
+package_libdspy() {
+  pkgdesc+=" - library"
+  provides=(libdspy-1.so)
+
+  mv libdspy/* "$pkgdir"
+}
+
+# vim:set sw=2 et:
+

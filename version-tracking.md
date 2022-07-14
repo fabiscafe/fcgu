@@ -5,6 +5,7 @@
 - callaudiod 0.1.4
 - clapper 0.5.2
 - dconf-editor 43.alpha
+- d-spy 1.2.1
 - eog 43.alpha
 - epiphany 43.alpha
 - evolution 3.45.1
