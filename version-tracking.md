@@ -53,7 +53,9 @@
 
 
 ## Wontbuild
-- none
+- gnome-clocks
+  - `error: Package 'geocode-glib-2.0' not found in specified Vala API directories or GObject-Introspection GIR directories`
+
 
 ## Exclude
 - Geary # Still requires libsoup (2)
