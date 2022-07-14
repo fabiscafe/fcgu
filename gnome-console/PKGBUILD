@@ -3,7 +3,7 @@
 options=(debug)
 
 pkgname=gnome-console
-pkgver=42.1
+pkgver=42.2
 pkgrel=0.1
 pkgdesc="A simple user-friendly terminal emulator for the GNOME desktop"
 arch=('x86_64')
@@ -12,7 +12,7 @@ license=('GPL3')
 depends=(libgtop libhandy vte3)
 makedepends=(appstream-glib git "libnautilus-extension<43" meson sassc)
 optdepends=('libnautilus-extension: Nautilus integration')
-_commit=69ec8276292f294add2acd1a15c2e5a5139d6bcc  # tags/42.1^0
+_commit=e33b965c64418841b13dcf7dd0a336c151e36d1c  # tags/42.2^0
 source=("git+https://gitlab.gnome.org/GNOME/console.git#commit=$_commit")
 sha256sums=('SKIP')
 

@@ -22,7 +22,7 @@
 - gnome-calendar 43.alpha
 - gnome-calls 43.alpha2
 - gnome-characters 43.alpha
-- gnome-console 42.1
+- gnome-console 42.2
 - gnome-control-center 43.alpha
 - gnome-desktop 43.alpha
 - gnome-font-viewer 43.alpha
