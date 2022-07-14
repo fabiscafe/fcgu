@@ -51,6 +51,7 @@
 - sofia-sip 1.13.8
 - sysprof 3.45.0
 - tracker3 3.4.0.alpha
+- tracker3-miners 3.4.0.alpha
 - xdg-desktop-portal-gnome 43.alpha
 
 
