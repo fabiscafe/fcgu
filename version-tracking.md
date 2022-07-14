@@ -45,6 +45,7 @@
 - libadwaita 1.2.alpha
 - libgweather-4 4.1.0
 - libhandy 1.7.0
+- libpanel 1.0alpha
 - librest 0.9.1
 - mutter 43.alpha
 - nautilus 43.alpha
