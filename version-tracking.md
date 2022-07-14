@@ -52,6 +52,7 @@
 - orca ORCA_43_ALPHA
 - sofia-sip 1.13.8
 - sysprof 3.45.0
+- template-glib 3.35.0
 - tracker3 3.4.0.alpha
 - tracker3-miners 3.4.0.alpha
 - vte3 0.69.90
