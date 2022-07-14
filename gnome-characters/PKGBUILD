@@ -1,0 +1,40 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+
+pkgname=gnome-characters
+pkgver=43.alpha
+pkgrel=1
+pkgdesc="A character map application"
+arch=(x86_64)
+url="https://gitlab.gnome.org/GNOME/gnome-characters"
+license=(GPL2)
+depends=(gjs libunistring gnome-desktop-4 emoji-font libadwaita)
+makedepends=(meson gobject-introspection appstream-glib git gperf)
+groups=(gnome)
+options=(debug)
+_commit=151a70702e7ed7799602e5db3cc618efa9a024ec  # tags/43.alpha^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-characters.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
