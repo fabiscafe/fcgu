@@ -87,6 +87,30 @@ cc -Isrc/plugins/git/daemon/gnome-builder-git.p -Isrc/plugins/git/daemon -I../gn
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |          GGIT_STATUS_WORKING_TREE_TYPECHANGE
 ```
+- evince
+
+```
+FAILED: properties/libevince-properties-page.so.p/ev-properties-main.c.o 
+cc -Iproperties/libevince-properties-page.so.p -Iproperties -I../evince/properties -I. -I../evince -Ilibdocument -I../evince/libdocument -I/usr/include/cairo -I/usr/include/lzo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/gio-unix-2.0 -I/usr/include/cloudproviders -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/usr/include/libxml2 -I/usr/include/synctex -I/usr/include/nautilus -I/usr/include/gtk-4.0 -I/usr/include/graphene-1.0 -I/usr/lib/graphene-1.0/include -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O0 -DHAVE_CONFIG_H -Wno-deprecated-declarations -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -g -ffile-prefix-map=/home/zombie/gnome-unstable/evince/src=/usr/src/debug -fPIC -mfpmath=sse -msse -msse2 -pthread -MD -MQ properties/libevince-properties-page.so.p/ev-properties-main.c.o -MF properties/libevince-properties-page.so.p/ev-properties-main.c.o.d -o properties/libevince-properties-page.so.p/ev-properties-main.c.o -c ../evince/properties/ev-properties-main.c
+../evince/properties/ev-properties-main.c:44:10: error: unknown type name ‘NautilusPropertyPageProviderIface’; did you mean ‘NautilusPropertyPageProviderInterface’?
+   44 |         (NautilusPropertyPageProviderIface *iface);
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |          NautilusPropertyPageProviderInterface
+../evince/properties/ev-properties-main.c: In function ‘ev_properties_plugin_register_type’:
+../evince/properties/ev-properties-main.c:63:37: error: ‘property_page_provider_iface_init’ undeclared (first use in this function); did you mean ‘property_page_provider_iface_info’?
+   63 |                 (GInterfaceInitFunc)property_page_provider_iface_init,
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     property_page_provider_iface_info
+../evince/properties/ev-properties-main.c:63:37: note: each undeclared identifier is reported only once for each function it appears in
+../evince/properties/ev-properties-main.c: At top level:
+../evince/properties/ev-properties-main.c:78:36: error: unknown type name ‘NautilusPropertyPageProviderIface’; did you mean ‘NautilusPropertyPageProviderInterface’?
+   78 | property_page_provider_iface_init (NautilusPropertyPageProviderIface *iface)
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                    NautilusPropertyPageProviderInterface
+../evince/properties/ev-properties-main.c:84:1: warning: ‘ev_properties_get_pages’ defined but not used [-Wunused-function]
+   84 | ev_properties_get_pages (NautilusPropertyPageProvider *provider,
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ## Exclude
 - none
