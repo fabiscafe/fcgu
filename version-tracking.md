@@ -19,6 +19,7 @@
 - gjs 1.73.1
 - glib2 2.73.2
 - glib-networking 2.74.alpha
+- gnome-clocks 43.alpha
 - gnome-calculator 43.alpha
 - gnome-calendar 43.alpha
 - gnome-calls 43.alpha2
@@ -81,12 +82,6 @@ cc -Isrc/plugins/git/daemon/gnome-builder-git.p -Isrc/plugins/git/daemon -I../gn
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |          GGIT_STATUS_WORKING_TREE_TYPECHANGE
 ```
-- gnome-clocks
-
-```
-error: Package 'geocode-glib-2.0' not found in specified Vala API directories or GObject-Introspection GIR directories
-```
-
 
 ## Exclude
 - none
