@@ -42,6 +42,7 @@
 - gnome-software 43.alpha
 - gnome-text-editor 43.alpha0
 - gnome-weather 43.alpha
+- gnome-disk-utility 43.alpha
 - gobject-introspection 1.73.0
 - gsettings-desktop-schemas 43.alpha
 - gtk4 4.7.1
