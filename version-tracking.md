@@ -8,6 +8,7 @@
 - d-spy 1.2.1
 - devhelp 43.alpha
 - ghex 43.alpha
+- totem 43.alpha
 - eog 43.alpha
 - epiphany 43.alpha
 - evolution 3.45.1
