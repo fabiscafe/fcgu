@@ -36,6 +36,7 @@
 - gnome-settings-daemon 43.alpha
 - gnome-shell 43.alpha
 - gnome-shell-extensions 43.alpha
+- gnome-shell-extension-appindicator 43.alpha
 - gnome-software 43.alpha
 - gnome-text-editor 43.alpha0
 - gnome-weather 43.alpha
