@@ -1,0 +1,36 @@
+From d580a4748e2763749663eb9671735a7a133420da Mon Sep 17 00:00:00 2001
+From: Ewout van Mansom <ewout@vanmansom.name>
+Date: Fri, 15 Jul 2022 19:18:37 +0200
+Subject: [PATCH] List shell version 43.alpha in metadata.json
+
+---
+ AUTHORS.md    | 1 +
+ metadata.json | 3 ++-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/AUTHORS.md b/AUTHORS.md
+index e7ffa1f..93ecc99 100644
+--- a/AUTHORS.md
++++ b/AUTHORS.md
+@@ -3,6 +3,7 @@ This extension is based on
+ 
+ Authors ordered by first contribution:
+ 
++* Ewout van Mansom <ewout@vanmansom.name>
+ * Jonas Kümmerlin <rgcjonas@gmail.com>
+ * Damián Nohales <damiannohales@gmail.com>
+ * Dincer Kavraal <dkavraal@gmail.com>
+diff --git a/metadata.json b/metadata.json
+index 0980a75..d35b582 100644
+--- a/metadata.json
++++ b/metadata.json
+@@ -6,7 +6,8 @@
+         "3.38",
+         "40",
+         "41",
+-        "42"
++        "42",
++        "43.alpha"
+     ],
+     "gettext-domain": "AppIndicatorExtension",
+     "settings-schema": "org.gnome.shell.extensions.appindicator",

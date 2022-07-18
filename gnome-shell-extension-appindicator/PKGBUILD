@@ -22,7 +22,7 @@ source=(
   "gnome43-comp.patch::https://patch-diff.githubusercontent.com/raw/ubuntu/gnome-shell-extension-appindicator/pull/351.patch"
 )
 sha256sums=('SKIP'
-            '75372059794bb545c3def26da9fa87360bb94157f808b5d033425d5af720b653')
+            '2807e0059dd0a227c8f9cf17efab15e727fba6088b2f1628483d4953e76c2118')
 
 prepare() {
   cd "${pkgname}-${pkgver}"
