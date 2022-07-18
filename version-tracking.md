@@ -26,6 +26,7 @@
 - gnome-console 42.2
 - gnome-control-center 43.alpha
 - gnome-desktop 43.alpha
+- gnome-disk-utility 43.alpha
 - gnome-font-viewer 43.alpha
 - gnome-initial-setup 43.alpha1
 - gnome-maps 43.alpha
