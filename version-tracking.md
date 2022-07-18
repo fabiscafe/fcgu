@@ -3,6 +3,7 @@
 - at-spi2-core 2.45.1
 - baobab 43.alpha
 - callaudiod 0.1.4
+- cheese 43.alpha
 - clapper 0.5.2
 - dconf-editor 43.alpha
 - d-spy 1.2.1
