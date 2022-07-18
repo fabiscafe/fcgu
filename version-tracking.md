@@ -89,7 +89,7 @@ error: Package 'geocode-glib-2.0' not found in specified Vala API directories or
 
 
 ## Exclude
-- none
+- gnome-boxes: mixed, conflicting dependency on libsoup2 and libsoup3
 
 # Versioning
 ## Git snapshots
