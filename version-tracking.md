@@ -58,6 +58,7 @@
 - orca ORCA_43_ALPHA
 - phodav 3.0
 - sofia-sip 1.13.8
+- spice-gtk 0.41
 - sysprof 3.45.0
 - template-glib 3.35.0
 - totem 43.alpha
