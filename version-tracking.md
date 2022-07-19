@@ -55,6 +55,7 @@
 - mutter 43.alpha
 - nautilus 43.alpha
 - orca ORCA_43_ALPHA
+- phodav 3.0
 - sofia-sip 1.13.8
 - sysprof 3.45.0
 - template-glib 3.35.0
