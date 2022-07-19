@@ -21,6 +21,7 @@
 - gjs 1.73.1
 - glib2 2.73.2
 - glib-networking 2.74.alpha
+- gnome-boxes 43.alpha
 - gnome-calculator 43.alpha
 - gnome-calendar 43.alpha
 - gnome-calls 43.alpha2
@@ -97,7 +98,7 @@ error: Package 'geocode-glib-2.0' not found in specified Vala API directories or
 
 
 ## Exclude
-- gnome-boxes: mixed, conflicting dependency on libsoup2 and libsoup3
+- none
 
 # Versioning
 ## Git snapshots
