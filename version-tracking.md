@@ -5,7 +5,7 @@
 - callaudiod 0.1.4
 - cheese 43.alpha
 - clapper 0.5.2
-- dconf-editor 43.alpha
+- dconf-editor 43.beta
 - d-spy 1.2.1
 - eog 43.alpha
 - epiphany 43.alpha
