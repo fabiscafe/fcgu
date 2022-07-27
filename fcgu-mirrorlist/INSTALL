@@ -1,6 +1,16 @@
 post_install() {
-  /usr/bin/rankmirrors -r fcgu '/usr/share/pacman.d/fcgu-mirrorlist/mirrorlist' | /usr/bin/grep -- "^Server\|rankmirror" \
+  set -o pipefail
+
+  printf "Generating fcgu mirrorlist, please wait …\n"
+
+  /usr/bin/rankmirrors -r fcgu '/usr/share/pacman.d/fcgu-mirrorlist/mirrorlist' \
+    | /usr/bin/grep -- "^Server\|rankmirror" \
     > /etc/pacman.d/fcgu-mirrorlist
+
+  # Fallback if the command above failes for some unknown reason
+  if [ $? -ne 0 ]; then
+    /usr/bin/cp /usr/share/pacman.d/fcgu-mirrorlist/mirrorlist /etc/pacman.d/fcgu-mirrorlist
+  fi
 }
 
 post_upgrade() {
