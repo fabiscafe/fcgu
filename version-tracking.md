@@ -21,6 +21,7 @@
 - gjs 1.73.1
 - glib2 2.73.2
 - glib-networking 2.74.alpha
+- gnome-backgrounds 43.beta
 - gnome-boxes 43.alpha
 - gnome-builder 43.alpha0
 - gnome-calculator 43.alpha

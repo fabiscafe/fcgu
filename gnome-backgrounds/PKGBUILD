@@ -1,0 +1,39 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+
+pkgname=gnome-backgrounds
+pkgver=43.beta
+pkgrel=1
+pkgdesc="Background images and data for GNOME"
+url="https://gitlab.gnome.org/GNOME/gnome-backgrounds"
+arch=(any)
+# To show webp backgrounds in gnome-shell
+depends=(webp-pixbuf-loader)
+makedepends=(git glib2 meson)
+license=(GPL)
+groups=(gnome)
+options=(debug)
+_commit=56eb3d84b5ac94f661b27e3154a5edc4efe6962b  # tags/43.beta^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-backgrounds.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
+
+# vim:set sw=2 et:
