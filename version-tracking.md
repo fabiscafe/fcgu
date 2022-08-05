@@ -59,6 +59,7 @@
 - libosinfo 1.10.0
 - libpanel 1.0alpha
 - librest 0.9.1
+- libsoup3 3.1.1
 - mutter 43.alpha
 - nautilus 43.alpha
 - orca ORCA_43_ALPHA
