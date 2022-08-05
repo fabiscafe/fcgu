@@ -10,7 +10,7 @@
 - eog 43.alpha
 - epiphany 43.alpha
 - evince 43.alpha
-- evolution 3.45.1
+- evolution 3.45.2
 - evolution-data-server 3.45.2
 - feedbackd 0.0.0+git20220520
 - folks 0.15.5
