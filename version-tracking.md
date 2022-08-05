@@ -45,7 +45,7 @@
 - gnome-shell 43.alpha
 - gnome-shell-extensions 43.alpha
 - gnome-shell-extension-appindicator 43.alpha
-- gnome-software 43.alpha
+- gnome-software 43.beta
 - gnome-text-editor 43.alpha0
 - gnome-weather 43.alpha
 - gobject-introspection 1.73.0
