@@ -80,7 +80,7 @@
 
 
 ## Exclude
-- none
+- epiphany 43.beta (I dont have the hardware to build webkit right now)
 
 # Versioning
 ## Git snapshots
