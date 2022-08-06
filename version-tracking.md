@@ -55,7 +55,7 @@
 - libadwaita 1.2.beta
 - libgit2-glib 1.1.0
 - libgweather-4 4.1.0
-- libhandy 1.7.0
+- libhandy 1.7.90
 - libosinfo 1.10.0
 - libpanel 1.0alpha
 - librest 0.9.1
