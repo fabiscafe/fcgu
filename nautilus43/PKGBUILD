@@ -4,7 +4,7 @@
 
 pkgbase=nautilus
 pkgname=(nautilus43 libnautilus43-extension-2)
-pkgver=43.alpha
+pkgver=43.alpha+r229+g813f90349
 pkgrel=1
 pkgdesc="Default file manager for GNOME"
 url="https://wiki.gnome.org/Apps/Files"
@@ -12,10 +12,10 @@ arch=(x86_64)
 license=(GPL)
 depends=(libgexiv2 gnome-desktop-4 gvfs dconf tracker3 tracker3-miners
          gnome-autoar gst-plugins-base-libs libadwaita libportal-gtk4)
-makedepends=(gobject-introspection git gtk-doc meson appstream-glib)
+makedepends=(gobject-introspection git gtk-doc meson libcloudproviders appstream-glib)
 checkdepends=(python-gobject)
 options=(debug)
-_commit=3bb9c98d705571749e25ba933311b6237c19fc07  # tags/43.alpha^0
+_commit=813f903495faa459e383bc5df6a89a649464078a  # tags/master^0
 source=("git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgd.git")
 sha256sums=('SKIP'
@@ -56,7 +56,7 @@ _pick() {
 }
 
 package_nautilus43() {
-  depends+=(libnautilus43-extension-2)
+  depends+=(libnautilus43-extension-2 libcloudproviders)
   optdepends=('nautilus-sendto: Send files via mail extension')
   conflicts=(nautilus "libnautilus-extension<=42.6")
   provides=(nautilus)
