@@ -1,9 +1,8 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
-options=(debug !strip)
 
 pkgname=gnome-calls
-pkgver=43.alpha2
-pkgrel=2
+pkgver=43.beta0
+pkgrel=1
 pkgdesc="A Phone dialer and call handler."
 arch=(x86_64)
 url="https://gitlab.gnome.org/GNOME/calls"
@@ -11,11 +10,12 @@ license=(GPL3)
 replaces=("calls")
 conflicts=("calls")
 provides=("calls")
+options=(debug !strip)
 depends=(callaudiod feedbackd folks gom
 	 libhandy libpeas modemmanager sofia-sip)
 makedepends=(appstream git gobject-introspection meson python-docutils vala)
 checkdepends=(xorg-server-xvfb)
-_commit=3d7c671034e01756b685d7b3048b1da01d4307bf  # tags/v43.alpha.2^0
+_commit=3cbe2c781aa5db2d2024020da7c47ff4bc392390  # tags/v43_beta.0^0
 source=("git+https://gitlab.gnome.org/GNOME/calls.git#commit=$_commit"
 "git+https://gitlab.gnome.org/World/Phosh/libcall-ui.git")
 sha256sums=('SKIP'
@@ -23,7 +23,7 @@ sha256sums=('SKIP'
 
 pkgver() {
   cd calls
-  git describe --tags | sed 's/43_/43./;s/^v//;s/alpha./alpha/;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed -r 's/^v//;s/_/./;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
