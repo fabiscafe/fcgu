@@ -1,16 +1,16 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=gnome-text-editor
-pkgver=43.alpha0
+pkgver=43.alpha1
 pkgrel=1
 pkgdesc="A simple text editor"
 url="https://gitlab.gnome.org/GNOME/gnome-text-editor"
 arch=(x86_64)
 license=(GPL)
 options=(debug)
-depends=(enchant gtksourceview5 "glib2>=2.73.0" libadwaita)
+depends=(enchant editorconfig-core-c gtksourceview5 "glib2>=2.73.0" libadwaita)
 makedepends=(appstream-glib git meson itstool)
-_commit=fa2fbc3fef229e1a020902cfbd9d3caba84ab2f6  # tag/43.alpha0^0
+_commit=69666fa7ea0a2c8e980c14be0b5b99ab8bcc4e31  # tag/43.alpha1^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-text-editor.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -25,7 +25,7 @@ prepare() {
 
 build() {
   arch-meson $pkgname build \
-    -D bugreport_url="https://gitlab.com/fabiscafe/gnome-unstable"
+    -D bugreport_url="https://codeberg.org/fabiscafe/gnome-unstable/issues"
   meson compile -C build
 }
 
