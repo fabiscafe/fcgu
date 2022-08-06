@@ -29,6 +29,7 @@
 - gnome-calls 43.alpha2
 - gnome-characters 43.alpha
 - gnome-clocks 43.alpha
+- gnome-connections 43.beta
 - gnome-console 42.2
 - gnome-contacts 43.alpha
 - gnome-control-center 43.alpha
