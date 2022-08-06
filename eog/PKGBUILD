@@ -4,16 +4,17 @@
 
 pkgbase=eog
 pkgname=(eog eog-docs)
-pkgver=43.alpha
+pkgver=43.beta
 pkgrel=1
 pkgdesc="Eye of Gnome: An image viewing and cataloging program"
 url="https://wiki.gnome.org/Apps/EyeOfGnome"
 arch=(x86_64)
 license=(GPL)
-depends=(gnome-desktop libexif lcms2 exempi libpeas librsvg libhandy)
+# 43.beta advertises webp support via MimeType list, add webp-pixbuf-loader as dependency
+depends=(gnome-desktop libexif lcms2 exempi libpeas librsvg libhandy webp-pixbuf-loader)
 makedepends=(gobject-introspection gi-docgen git meson yelp-tools systemd)
 options=(debug)
-_commit=1965a49bc2b11f8557f8ec7ac244db179e911737  # tags/43.alpha^0
+_commit=463d6b7e366c790d5b533e534f777a2afa066915  # tags/43.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/eog.git#commit=$_commit")
 sha256sums=('SKIP')
 

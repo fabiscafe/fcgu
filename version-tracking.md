@@ -7,7 +7,7 @@
 - clapper 0.5.2
 - dconf-editor 43.beta
 - d-spy 1.2.1
-- eog 43.alpha
+- eog 43.beta
 - epiphany 43.alpha
 - evince 43.alpha
 - evolution 3.45.2
