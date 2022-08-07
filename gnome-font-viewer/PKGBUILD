@@ -2,7 +2,7 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-font-viewer
-pkgver=43.alpha
+pkgver=43.beta
 pkgrel=1
 pkgdesc="A font viewer utility for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-font-viewer"
@@ -12,7 +12,7 @@ depends=(gnome-desktop-4 libadwaita)
 makedepends=(git meson)
 groups=(gnome)
 options=(debug)
-_commit=2868c09e42df3fce08ec0a7dbe9fac8859d453b2  # tags/43.alpha^0
+_commit=17e38f30e3a6c6c4964f381825e088c8b9c8d741  # tags/43.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-font-viewer.git#commit=$_commit")
 sha256sums=('SKIP')
 
