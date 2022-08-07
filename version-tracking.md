@@ -28,7 +28,7 @@
 - gnome-calendar 43.alpha
 - gnome-calls v43_beta.0
 - gnome-characters 43.beta
-- gnome-clocks 43.alpha
+- gnome-clocks 43.beta
 - gnome-connections 43.beta
 - gnome-console 42.2
 - gnome-contacts 43.alpha
