@@ -27,7 +27,7 @@
 - gnome-calculator 43.alpha
 - gnome-calendar 43.alpha
 - gnome-calls v43_beta.0
-- gnome-characters 43.alpha
+- gnome-characters 43.beta
 - gnome-clocks 43.alpha
 - gnome-connections 43.beta
 - gnome-console 42.2

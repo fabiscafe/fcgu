@@ -3,7 +3,7 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-characters
-pkgver=43.alpha
+pkgver=43.beta
 pkgrel=1
 pkgdesc="A character map application"
 arch=(x86_64)
@@ -13,7 +13,7 @@ depends=(gjs libunistring gnome-desktop-4 emoji-font libadwaita)
 makedepends=(meson gobject-introspection appstream-glib git gperf)
 groups=(gnome)
 options=(debug)
-_commit=151a70702e7ed7799602e5db3cc618efa9a024ec  # tags/43.alpha^0
+_commit=5c20586614807448c2445aa51c28af0a1d846908  # tags/43.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-characters.git#commit=$_commit")
 sha256sums=('SKIP')
 
