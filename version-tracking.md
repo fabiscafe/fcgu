@@ -50,6 +50,7 @@
 - gnome-software 43.beta
 - gnome-terminal 3.45.90
 - gnome-text-editor 43.alpha1
+- gnome-tour 43.beta
 - gnome-weather 43.alpha
 - gobject-introspection 1.73.0
 - gsettings-desktop-schemas 43.alpha
