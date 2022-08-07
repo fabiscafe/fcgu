@@ -48,6 +48,7 @@
 - gnome-shell-extensions 43.alpha
 - gnome-shell-extension-appindicator 43.alpha
 - gnome-software 43.beta
+- gnome-sound-recorder 43.beta
 - gnome-terminal 3.45.90
 - gnome-text-editor 43.alpha1
 - gnome-tour 43.beta
