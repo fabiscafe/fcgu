@@ -3,7 +3,7 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgbase=nautilus
-pkgname=(nautilus43 libnautilus43-extension-2)
+pkgname=(nautilus libnautilus-extension-2)
 pkgver=43.beta
 pkgrel=1
 pkgdesc="Default file manager for GNOME"
@@ -36,8 +36,7 @@ prepare() {
 
 build() {
   arch-meson $pkgbase build \
-    -D docs=true \
-    -D packagekit=false
+    -D docs=true
   meson compile -C build
 }
 
@@ -55,12 +54,12 @@ _pick() {
   done
 }
 
-package_nautilus43() {
-  depends+=(libnautilus43-extension-2 libcloudproviders)
+package_nautilus() {
+  depends+=(libnautilus-extension-2 libcloudproviders)
   optdepends=('nautilus-sendto: Send files via mail extension')
-  conflicts=(nautilus)
-  provides=(nautilus)
-  replaces=(nautilus)
+  provides=("nautilus43=$pkgver")
+  conflicts=(nautilus43)
+  replaces=(nautilus43)
   groups=(gnome)
 
   meson install -C build --destdir "$pkgdir"
@@ -72,12 +71,12 @@ package_nautilus43() {
   _pick libne usr/share/{gir-1.0,gtk-doc}
 }
 
-package_libnautilus43-extension-2() {
+package_libnautilus-extension-2() {
   pkgdesc="Library for extending the $pkgdesc"
   depends=(gtk4)
-  conflicts=(libnautilus-extension)
-  provides=(libnautilus-extension libnautilus-extension.so)
-  replaces=(libnautilus-extension)
+  provides=(libnautilus43-extension-2 libnautilus-extension libnautilus-extension.so)
+  conflicts=(libnautilus43-extension-2)
+  replaces=(libnautilus43-extension-2)
   mv libne/* "$pkgdir"
 }
 
