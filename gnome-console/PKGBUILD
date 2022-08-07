@@ -1,24 +1,23 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 # Contributor: Igor Dyatlov <dyatlov.igor@gmail.com>
-options=(debug)
 
 pkgname=gnome-console
-pkgver=42.2
-pkgrel=0.1
+pkgver=43.beta
+pkgrel=1
 pkgdesc="A simple user-friendly terminal emulator for the GNOME desktop"
 arch=('x86_64')
 url="https://gitlab.gnome.org/GNOME/console"
 license=('GPL3')
-depends=(libgtop libhandy vte3)
-makedepends=(appstream-glib git "libnautilus-extension<43" meson sassc)
-optdepends=('libnautilus-extension: Nautilus integration')
-_commit=e33b965c64418841b13dcf7dd0a336c151e36d1c  # tags/42.2^0
+options=(debug)
+depends=(libgtop libadwaita vte3)
+makedepends=(appstream-glib git meson)
+_commit=fa93da7aafc22ada0d9b3b53cd017ff8b3ee47b3  # tags/43.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/console.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd console
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/beta/beta.0/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {

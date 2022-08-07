@@ -30,7 +30,7 @@
 - gnome-characters 43.beta
 - gnome-clocks 43.beta
 - gnome-connections 43.beta
-- gnome-console 42.2
+- gnome-console 43.beta
 - gnome-contacts 43.alpha
 - gnome-control-center 43.alpha
 - gnome-desktop 43.alpha
