@@ -2,7 +2,7 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-remote-desktop
-pkgver=43.alpha
+pkgver=43.beta
 pkgrel=1
 pkgdesc="GNOME Remote Desktop server"
 url="https://wiki.gnome.org/Projects/Mutter/RemoteDesktop"
@@ -14,7 +14,7 @@ makedepends=(asciidoc git meson ffnvcodec-headers)
 checkdepends=(xorg-server-xvfb python-dbus python-gobject mutter wireplumber)
 groups=(gnome)
 options=(debug)
-_commit=4996d1b054b3e39cd4d6a89cfc8ff9e6c801a9e8  # tags/43.alpha^0
+_commit=9f72491c8ed14894485ff18e6fea1cdb8eb83c82  # tags/43.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-remote-desktop.git#commit=$_commit")
 sha256sums=('SKIP')
 

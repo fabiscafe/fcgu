@@ -40,7 +40,7 @@
 - gnome-maps 43.alpha
 - gnome-online-accounts 3.45.1
 - gnome-podcasts-gtk4 master(2022-07-29)
-- gnome-remote-desktop 43.alpha
+- gnome-remote-desktop 43.beta
 - gnome-session 42.0
 - gnome-settings-daemon 43.alpha
 - gnome-shell 43.alpha
