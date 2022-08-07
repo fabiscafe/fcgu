@@ -39,6 +39,7 @@
 - gnome-initial-setup 43.alpha1
 - gnome-maps 43.alpha
 - gnome-online-accounts 3.45.1
+- gnome-photos 43.beta
 - gnome-podcasts-gtk4 master(2022-07-29)
 - gnome-remote-desktop 43.beta
 - gnome-session 42.0
