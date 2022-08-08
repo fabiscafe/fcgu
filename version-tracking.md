@@ -1,7 +1,7 @@
 ## Done
 - adwaita-icon-theme 43.beta
 - at-spi2-core 2.45.90
-- baobab 43.alpha
+- baobab 43.beta
 - callaudiod 0.1.4
 - cheese 43.alpha
 - clapper 0.5.2
