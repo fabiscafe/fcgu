@@ -8,7 +8,7 @@
 - dconf-editor 43.beta
 - d-spy 1.2.1
 - eog 43.beta
-- epiphany 43.alpha
+- epiphany 43.beta
 - evince 43.alpha
 - evolution 3.45.2
 - evolution-data-server 3.45.2
@@ -87,7 +87,7 @@
 
 
 ## Exclude
-- epiphany 43.beta (I dont have the hardware to build webkit right now)
+- none
 
 # Versioning
 ## Git snapshots

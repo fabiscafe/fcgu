@@ -3,19 +3,19 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=epiphany
-pkgver=43.alpha
+pkgver=43.beta
 pkgrel=1
 pkgdesc="A GNOME web browser based on the WebKit rendering engine"
 url="https://wiki.gnome.org/Apps/Web"
 arch=(x86_64)
 license=(GPL)
-depends=(webkit2gtk-4.1 gcr icu libdazzle libhandy libarchive libportal-gtk3)
+depends=("webkit2gtk-4.1>=2.37.1" gcr icu libdazzle libhandy libarchive libportal-gtk3)
 makedepends=(docbook-xml startup-notification lsb-release gobject-introspection
              yelp-tools git meson)
 checkdepends=(xorg-server-xvfb aspell hspell hunspell nuspell libvoikko)
 groups=(gnome)
 options=(debug)
-_commit=15c13e1899c8a4edcb05be394d9c90edbd7f24f6  # tags/43.alpha^0
+_commit=f875aad49a2b157ed944925c2f6da604715a1fe5  # tags/43.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/epiphany.git#commit=$_commit")
 sha256sums=('SKIP')
 
