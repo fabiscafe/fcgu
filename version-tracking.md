@@ -31,7 +31,7 @@
 - gnome-clocks 43.beta
 - gnome-connections 43.beta
 - gnome-console 43.beta
-- gnome-contacts 43.alpha
+- gnome-contacts 43.beta
 - gnome-control-center 43.alpha
 - gnome-desktop 43.alpha
 - gnome-disk-utility 43.beta

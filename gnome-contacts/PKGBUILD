@@ -3,7 +3,7 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=gnome-contacts
-pkgver=43.alpha
+pkgver=43.beta
 pkgrel=1
 pkgdesc="Contacts Manager for GNOME"
 url="https://wiki.gnome.org/Apps/Contacts"
@@ -14,7 +14,7 @@ depends=(gtk4 folks gnome-online-accounts libgee libadwaita libportal-gtk4
 makedepends=(vala gobject-introspection git meson appstream-glib)
 groups=(gnome)
 options=(debug)
-_commit=8ad025730df5e7c02b1c3a4ab443c83064e015cd  # tags/43.alpha^0
+_commit=5b405bf6b699596e0c10714997bc0e6f838aca4d  # tags/43.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-contacts.git#commit=$_commit")
 sha256sums=('SKIP')
 
