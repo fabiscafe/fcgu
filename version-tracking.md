@@ -1,5 +1,5 @@
 ## Done
-- adwaita-icon-theme 43.beta
+- adwaita-icon-theme 43.beta.1
 - at-spi2-core 2.45.90
 - baobab 43.beta
 - callaudiod 0.1.4
