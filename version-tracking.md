@@ -82,6 +82,7 @@
 
 ## Wontbuild
 - gnome-builder
+- gnome-initial-setup 43.beta (Waiting for malcontent 0.11 release)
 
 
 ## Exclude
