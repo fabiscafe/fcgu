@@ -34,7 +34,7 @@
 - gnome-contacts 43.alpha
 - gnome-control-center 43.alpha
 - gnome-desktop 43.alpha
-- gnome-disk-utility 43.alpha
+- gnome-disk-utility 43.beta
 - gnome-font-viewer 43.beta
 - gnome-initial-setup 43.alpha1
 - gnome-maps 43.alpha
