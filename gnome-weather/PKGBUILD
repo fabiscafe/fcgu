@@ -2,7 +2,7 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-weather
-pkgver=43.alpha
+pkgver=43.beta
 pkgrel=1
 pkgdesc="Access current weather conditions and forecasts"
 url="https://wiki.gnome.org/Apps/Weather"
@@ -11,7 +11,7 @@ license=(GPL)
 depends=(gjs libgweather-4 geoclue libadwaita)
 makedepends=(gobject-introspection appstream-glib git meson)
 groups=(gnome)
-_commit=464d66dff1e8e37f78a00645471dfe3c1a9a8dc7  # tags/43.alpha^0
+_commit=c6e5cdd7b268174d9178bdc25ec22e0ccbbe0118  # tags/43.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-weather.git#commit=$_commit")
 sha256sums=('SKIP')
 

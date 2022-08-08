@@ -52,7 +52,7 @@
 - gnome-terminal 3.45.90
 - gnome-text-editor 43.alpha1
 - gnome-tour 43.beta
-- gnome-weather 43.alpha
+- gnome-weather 43.beta
 - gobject-introspection 1.73.0
 - gsettings-desktop-schemas 43.alpha
 - gtk4 4.7.1
