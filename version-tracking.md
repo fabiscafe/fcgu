@@ -62,7 +62,7 @@
 - libgweather-4 4.1.0
 - libhandy 1.7.90
 - libosinfo 1.10.0
-- libpanel 1.0alpha
+- libpanel 1.0alpha1
 - librest 0.9.1
 - libsoup3 3.1.1
 - mutter 43.alpha
