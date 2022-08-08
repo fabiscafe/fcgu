@@ -66,7 +66,7 @@
 - librest 0.9.1
 - libsoup3 3.1.1
 - mutter 43.alpha
-- nautilus 43.beta
+- nautilus 43.beta.1
 - orca ORCA_43_ALPHA
 - phodav 3.0
 - sofia-sip 1.13.8

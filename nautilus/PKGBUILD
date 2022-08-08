@@ -4,7 +4,7 @@
 
 pkgbase=nautilus
 pkgname=(nautilus libnautilus-extension-2)
-pkgver=43.beta
+pkgver=43.beta1
 pkgrel=1
 pkgdesc="Default file manager for GNOME"
 url="https://wiki.gnome.org/Apps/Files"
@@ -15,7 +15,7 @@ depends=(libgexiv2 gnome-desktop-4 gvfs dconf tracker3 tracker3-miners
 makedepends=(gobject-introspection git gtk-doc meson libcloudproviders appstream-glib)
 checkdepends=(python-gobject)
 options=(debug)
-_commit=419a411afd9854665cbaf8cb8d8f88004a714ab2  # tags/43.beta^0
+_commit=3b4a1a31bd00c91184e1dc7196fd0d53a8d58022  # tags/43.beta.1^0
 source=("git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgd.git")
 sha256sums=('SKIP'
@@ -23,7 +23,7 @@ sha256sums=('SKIP'
 
 pkgver() {
   cd $pkgbase
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed -r 's/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
