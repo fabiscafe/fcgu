@@ -23,7 +23,7 @@
 - glib-networking 2.74.alpha
 - gnome-backgrounds 43.beta
 - gnome-boxes 43.alpha
-- gnome-builder 43.alpha0
+- gnome-builder 43.alpha1¹
 - gnome-calculator 43.alpha
 - gnome-calendar 43.alpha
 - gnome-calls v43_beta.0
@@ -81,7 +81,7 @@
 
 
 ## Wontbuild
-- gnome-builder
+- gnome-builder 43.alpha1 (gnome-builder-libide-docs, check())
 - gnome-initial-setup 43.beta (Waiting for malcontent 0.11 release)
 
 

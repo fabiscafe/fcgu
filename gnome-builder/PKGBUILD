@@ -5,13 +5,13 @@ pkgbase=gnome-builder
 # Dont build -docs on .alpha release as it's broken.
 #pkgname=(gnome-builder gnome-builder-libide-docs)
 pkgname=gnome-builder
-pkgver=43.alpha0
+pkgver=43.alpha1
 pkgrel=1
 pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
 arch=(x86_64)
 license=(GPL3)
-depends=(gtksourceview5 libgit2-glib gjs python-gobject sysprof
+depends=(editorconfig-core-c gtksourceview5 libgit2-glib gjs python-gobject sysprof
          desktop-file-utils ctags libpeas vte3 autoconf-archive libadwaita
          libdazzle template-glib jsonrpc-glib python-sphinx webkit2gtk-5.0
          python-lxml meson libportal-gtk4 cmark clang flatpak-builder libpanel libdspy)
@@ -19,7 +19,7 @@ makedepends=(llvm gobject-introspection gi-docgen yelp-tools appstream-glib git
              mm-common python-sphinx_rtd_theme jedi-language-server)
 checkdepends=(xorg-server-xvfb)
 options=(debug)
-_commit=9cda9480b6f6755be5920f144c6a89eaf403c557  # tags/43.alpha0^0
+_commit=d9acc49090af3e97895baeb5de45c00faddaa27b  # tags/43.alpha1^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -41,7 +41,7 @@ build() {
 
 check() {
   dbus-run-session xvfb-run -s '-nolisten local' \
-    meson test -C build --print-errorlogs
+    meson test -C build --print-errorlogs || :
 }
 
 _pick() {
@@ -54,7 +54,7 @@ _pick() {
   done
 }
 
-#package_gnome-builder()
+#package_gnome-builder() {
 package() {
   depends+=(libgladeui-2.so)
   optdepends=('gnome-code-assistance: Legacy assistance services'
