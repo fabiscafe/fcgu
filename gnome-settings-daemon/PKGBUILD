@@ -2,7 +2,7 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-settings-daemon
-pkgver=43.alpha
+pkgver=43.beta
 pkgrel=1
 pkgdesc="GNOME Settings Daemon"
 url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
@@ -10,14 +10,14 @@ arch=(x86_64)
 license=(GPL)
 depends=(dconf gnome-desktop gsettings-desktop-schemas libcanberra-pulse
          libnotify systemd libwacom pulseaudio pulseaudio-alsa upower librsvg
-         libgweather-4 geocode-glib-2 geoclue nss libgudev gtk3 libnm gcr)
+         libgweather-4 geocode-glib-2 geoclue nss libgudev gtk3 libnm gcr-4)
 makedepends=(libxslt docbook-xsl python git meson usbguard)
 checkdepends=(python-gobject python-dbusmock)
 optdepends=('usbguard: USB protection support')
 groups=(gnome)
 backup=(etc/xdg/Xwayland-session.d/00-xrdb)
 options=(debug)
-_commit=f24ebdf298b730844a15aef096b7346c7b352776  # tags/43.alpha^0
+_commit=1c61fa79e525df2286273a3e9aa277764a15c242  # tags/43.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-settings-daemon.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'

@@ -44,7 +44,7 @@
 - gnome-podcasts-gtk4 master(2022-07-29)
 - gnome-remote-desktop 43.beta
 - gnome-session 42.0
-- gnome-settings-daemon 43.alpha
+- gnome-settings-daemon 43.beta
 - gnome-shell 43.alpha
 - gnome-shell-extensions 43.alpha
 - gnome-shell-extension-appindicator 43.alpha
