@@ -56,6 +56,7 @@
 - gnome-weather 43.beta
 - gobject-introspection 1.73.0
 - grilo master(2022-07-04)
+- grilo-plugins master(2022-07-31)
 - gsettings-desktop-schemas 43.alpha
 - gtk4 4.7.1
 - gtksourceview5 5.5.1
