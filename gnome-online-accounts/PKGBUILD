@@ -3,7 +3,7 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=gnome-online-accounts
-pkgver=3.45.1
+pkgver=3.45.2
 pkgrel=1
 pkgdesc="Single sign-on framework for GNOME"
 url="https://wiki.gnome.org/Projects/GnomeOnlineAccounts"
@@ -15,7 +15,7 @@ optdepends=('gvfs-goa: Virtual file systems, e.g. OwnCloud'
             'gvfs-google: Google Drive')
 provides=(libgoa-1.0.so libgoa-backend-1.0.so)
 options=(debug)
-_commit=23665d4bfef28eee727c2f93b8ae025d6d600a19  # tags/3.45.1^0
+_commit=a4cbc46db8b9ba900d785519467bd30c43018455  # tags/3.45.2^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-online-accounts.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -29,11 +29,9 @@ prepare() {
 }
 
 build() {
-# disable gtk_doc as it wont build with (.1 release)
-
   local meson_options=(
     -D media_server=true
-    -D gtk_doc=false
+    -D gtk_doc=true
     -D man=true
   )
 
