@@ -76,7 +76,7 @@
 - template-glib 3.35.0
 - totem 43.alpha
 - tracker3 3.4.0.beta
-- tracker3-miners 3.4.0.alpha
+- tracker3-miners 3.4.0.beta
 - vte3 0.69.92
 - webkit2gtk-4.1 2.37.1
 - xdg-desktop-portal-gnome 43.alpha
