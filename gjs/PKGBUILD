@@ -4,13 +4,13 @@
 
 pkgname=gjs
 pkgver=1.73.2
-pkgrel=1
+pkgrel=2
 epoch=2
 pkgdesc="Javascript Bindings for GNOME"
 url="https://wiki.gnome.org/Projects/Gjs"
 arch=(x86_64)
 license=(GPL)
-depends=(cairo gobject-introspection-runtime js91 dconf readline
+depends=(cairo gobject-introspection-runtime js102 dconf readline
          libsysprof-capture)
 makedepends=(gobject-introspection git meson dbus)
 checkdepends=(xorg-server-xvfb gtk3 gtk4)
