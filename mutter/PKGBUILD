@@ -5,7 +5,7 @@
 
 pkgbase=mutter
 pkgname=(mutter mutter-docs)
-pkgver=43.alpha
+pkgver=43.beta
 pkgrel=1
 pkgdesc="A window manager for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
@@ -20,7 +20,7 @@ makedepends=(gobject-introspection git egl-wayland meson xorg-server
 # Zenity was removed as dependency, but is still required for the checks
 checkdepends=(xorg-server-xvfb wireplumber python-dbusmock zenity)
 options=(debug)
-_commit=60e13fde09d1319f6002c83edfcbfecf24adb275  # tags/43.alpha^0
+_commit=2e76280df1254718264fbafb1d6a1b795f36cbe9  # tags/43.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit")
 sha256sums=('SKIP')
 
