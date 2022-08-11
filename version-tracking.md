@@ -45,7 +45,7 @@
 - gnome-remote-desktop 43.beta
 - gnome-session 42.0
 - gnome-settings-daemon 43.beta
-- gnome-shell 43.alpha
+- gnome-shell 43.beta
 - gnome-shell-extensions 43.alpha
 - gnome-shell-extension-appindicator 43.alpha
 - gnome-software 43.beta
