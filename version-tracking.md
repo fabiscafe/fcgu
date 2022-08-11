@@ -18,7 +18,7 @@
 - geary main(2022-07-13)
 - gedit 43.alpha
 - geocode-glib-2 3.26.3
-- gjs 1.73.1
+- gjs 1.73.2
 - glib2 2.73.3
 - glib-networking 2.74.alpha
 - gnome-backgrounds 43.beta
