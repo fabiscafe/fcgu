@@ -104,10 +104,8 @@ This repository provides most of the time unstable software (development snapsho
 All packages are build with debugging symbols. Most of them require the user to install the packages debugging packages. For example there is `nautilus` and `nautilus-debug`. For everything that is not in the repo, you need to build the packages yourself, see: [Debugging/Getting_traces](https://wiki.archlinux.org/title/Debugging/Getting_traces)
 
 ### Compatiblity to Arch-Based-Distros
-We only give support for up-to-date Arch Linux. Older package bases will create issues down the line, because we need a certain version and will not build them on our side if they are available in Arch. So as long as your distro provides the same versions as Arch itself it should work.
-
-#### Manjaro
-Manjaro uses an own repository and **is not** compatible to Arch Linux. Based on experiences this repository will not work for Manjaro or will break your desktop at any point.
+We only support (an up-to-date) Arch Linux.
+Distros who come with older package versions or customization can conflict with what this project provides. Because of this they are not supported. This includes [Arco Linux](https://arcolinux.com), [Artix Linux](https://artixlinux.org), [EndeavourOS](https://endeavouros.com), [Garuda Linux](https://garudalinux.org), [Manjaro](https://manjaro.org), and [all the others](https://wiki.archlinux.org/title/Arch-based_distributions).
 
 ### Will you push the PKGBUILDs to the AUR?
 In order to do this, the PKGBUILDs would need a lot of extra work and testing, just for the packaging part. Because time is a very limited resource that's not possible to do right now (and not planned for the future).
