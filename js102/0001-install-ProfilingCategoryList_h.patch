@@ -1,0 +1,13 @@
+diff --unified --recursive --text a/js/src/build/Makefile.in b/js/src/build/Makefile.in
+--- a/js/src/build/Makefile.in	2022-07-18 20:14:26.000000000 +0200
++++ b/js/src/build/Makefile.in	2022-08-11 16:53:23.000920005 +0200
+@@ -31,6 +31,9 @@
+ install:: ../js-config.h
+ 	$(SYSINSTALL) $^ $(DESTDIR)$(includedir)/$(JS_LIBRARY_NAME)
+ 
++install:: ../../../mozglue/baseprofiler/public/ProfilingCategoryList.h
++	$(SYSINSTALL) $^ $(DESTDIR)$(includedir)/$(JS_LIBRARY_NAME)/js
++
+ ######################################################
+ # BEGIN SpiderMonkey header installation
+ #
