@@ -58,7 +58,7 @@
 - grilo master(2022-07-04)
 - grilo-plugins master(2022-07-31)
 - gsettings-desktop-schemas 43.alpha
-- gtk4 4.7.1
+- gtk4 4.7.2
 - gtksourceview5 5.5.1
 - js102 102.1.0
 - libadwaita 1.2.beta
@@ -84,7 +84,6 @@
 - webkit2gtk-4.1 2.37.1
 - xdg-desktop-portal 1.15.0
 - xdg-desktop-portal-gnome 43.beta
-
 
 ## Wontbuild
 - gnome-builder 43.alpha1 (gnome-builder-libide-docs, check())
