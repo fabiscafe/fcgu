@@ -20,7 +20,7 @@
 - geocode-glib-2 3.26.3
 - gjs 1.73.2
 - glib2 2.73.3
-- glib-networking 2.74.alpha
+- glib-networking 2.74.beta
 - gnome-backgrounds 43.beta
 - gnome-boxes 43.beta
 - gnome-builder 43.alpha1¹
