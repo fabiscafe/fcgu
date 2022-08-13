@@ -89,36 +89,19 @@
 - gnome-builder 43.alpha1 (gnome-builder-libide-docs, check())
 - gnome-initial-setup 43.beta (Waiting for malcontent 0.11 release)
 
-
 ## Exclude
-- gjs 1.73.2 Unable to build "js102" with js/ProfilingCategoryList.h, would be happy about a MR
-```
-FAILED: libgjs-jsapi.a.p/gjs_pch.hh.gch
-c++ -Ilibgjs-jsapi.a.p -I. -I../gjs -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gobject-introspection-1.0 -I/usr/include/cairo -I/usr/include/lzo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -std=c++17 -fno-rtti -O0 -fno-strict-aliasing -Wno-variadic-macros -Wno-missing-field-initializers -fno-semantic-interposition -march=x86-64 -mtune=generic -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -Wp,-D_GLIBCXX_ASSERTIONS -g -ffile-prefix-map=/build/gjs/src=/usr/src/debug -fno-semantic-interposition -fPIC -isystem/usr/include/sysprof-4 -pthread -isystem /usr/include/mozjs-102 -DGJS_COMPILATION '-DGJS_JS_DIR="/usr/share/gjs-1.0"' '-DPKGLIBDIR="/usr/lib/gjs"' '-DG_LOG_DOMAIN="Gjs"' -MD -MQ libgjs-jsapi.a.p/gjs_pch.hh.gch -MF libgjs-jsapi.a.p/gjs_pch.hh.gch.d -o libgjs-jsapi.a.p/gjs_pch.hh.gch -c ../gjs/gjs/gjs_pch.hh
-In file included from /usr/include/mozjs-102/js/ProfilingStack.h:16,
-                 from /usr/include/mozjs-102/js/RootingAPI.h:27,
-                 from /usr/include/mozjs-102/js/Id.h:35,
-                 from ../gjs/gjs/jsapi-util.h:28,
-                 from ../gjs/gjs/gjs_pch.hh:41:
-/usr/include/mozjs-102/js/ProfilingCategory.h:13:10: fatal error: js/ProfilingCategoryList.h: No such file or directory
-   13 | #include "js/ProfilingCategoryList.h"  // MOZ_PROFILING_CATEGORY_LIST
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
-```
+- none
 
 # Versioning
 ## Git snapshots
 * tag+r60+g3f9dba93c
-  * `s/[^-]*-g/r&/;s/-/+/g;`
+  * `sed 's/[^-]*-g/r&/;s/-/+/g'`
+
 ## Dev releases
-* X.beta -> X.beta0
-  * `s/beta/beta0/`
 * X.beta.1 -> X.beta1
-  * `s/beta.\([0-9]\+\)/beta\1/`
-* X.0.beta -> X.0beta0
-  * `s/.beta/beta0/`
+  * `sed -r 's/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'`
 * X.0.beta.1 -> X.0beta1
-  * `s/0.beta.\([0-9]\+\)/beta\1/`
+  * `sed -r 's/\.([a-z])/\1/;s/[^-]*-g/r&/;s/-/+/g'`
 
 ## Stable releases
 * pkgver: 1 -> 0.1
