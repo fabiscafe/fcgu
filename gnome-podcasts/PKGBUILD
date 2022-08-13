@@ -2,7 +2,7 @@
 # Contributor: Balló György <ballogyor+arch at gmail dot com>
 options=(debug)
 
-pkgname=gnome-podcasts-gtk4
+pkgname=gnome-podcasts
 pkgver=0.5.1+r55+g5762124
 pkgrel=1
 pkgdesc="Podcast application for GNOME"
@@ -13,8 +13,9 @@ depends=(gst-plugins-bad gst-plugins-base gst-plugins-good libadwaita)
 makedepends=(appstream-glib git meson rust)
 optdepends=('gst-plugins-ugly: Extra media codecs'
             'gst-libav: Extra media codecs')
-conflicts=(gnome-podcasts)
-provides=(gnome-podcasts)
+conflicts=(gnome-podcasts-gtk4)
+provides=(gnome-podcasts-gtk4)
+replaces=(gnome-podcasts-gtk4)
 _commit=5762124619e3260da104388397ac41279ce92af8 # master^0
 source=("git+${url}.git#commit=${_commit}")
 sha256sums=('SKIP')
