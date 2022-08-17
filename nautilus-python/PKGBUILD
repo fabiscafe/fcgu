@@ -1,0 +1,42 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Balló György <ballogyor+arch at gmail dot com>
+# Contributor: Giorgio Gilestro <giorgio@gilest.ro>
+
+# This pkg should be renamed to nautilus-python. Currently it's nothing but confusing.
+pkgbase=nautilus-python
+pkgname=python-nautilus
+pkgver=4.0alpha
+pkgrel=1
+pkgdesc="Python bindings for the Nautilus Extension API"
+arch=(x86_64)
+url="https://wiki.gnome.org/Projects/NautilusPython"
+license=(GPL2)
+depends=(nautilus python-gobject)
+makedepends=(meson git gtk-doc)
+options=(debug)
+_commit=739405eecb54fbb351e69c4fda93f817ffd08b89  # tags/4.0.alpha^0
+source=("git+https://gitlab.gnome.org/GNOME/nautilus-python.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgbase
+  git describe --tags | sed -r 's/\.([a-z])/\1/;s/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgbase
+}
+
+build() {
+  arch-meson $pkgbase build \
+    -D docs=enabled
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package_python-nautilus() {
+  meson install -C build --destdir "$pkgdir"
+}
