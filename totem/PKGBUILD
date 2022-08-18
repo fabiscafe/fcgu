@@ -3,7 +3,7 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=totem
-pkgver=43.alpha
+pkgver=43.beta
 pkgrel=1
 pkgdesc="Movie player for the GNOME desktop based on GStreamer"
 url="https://wiki.gnome.org/Apps/Videos"
@@ -21,7 +21,7 @@ conflicts=(totem-plugin)
 replaces=(totem-plugin)
 groups=(gnome)
 options=(debug)
-_commit=0061ec01460dfb582a65b83198263d33555fc08b  # tags/43.alpha^0
+_commit=f9101b68a7f10dc339a1eec211b2584815271bb9  # tags/43.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/totem.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgd.git")
 sha256sums=('SKIP'
@@ -50,4 +50,3 @@ package() {
   meson install -C build --destdir "$pkgdir"
   install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 totem/COPYING
 }
-
