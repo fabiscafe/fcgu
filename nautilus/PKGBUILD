@@ -3,9 +3,9 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgbase=nautilus
-pkgname=(nautilus libnautilus-extension-2)
+pkgname=(nautilus libnautilus-extension)
 pkgver=43.beta1
-pkgrel=2
+pkgrel=3
 pkgdesc="Default file manager for GNOME"
 url="https://wiki.gnome.org/Apps/Files"
 arch=(x86_64)
@@ -55,7 +55,7 @@ _pick() {
 }
 
 package_nautilus() {
-  depends+=(libnautilus-extension-2 libcloudproviders)
+  depends+=(libnautilus-extension libcloudproviders)
   optdepends=('nautilus-sendto: Send files via mail extension')
   provides=("nautilus43=$pkgver")
   conflicts=(nautilus43)
@@ -71,12 +71,12 @@ package_nautilus() {
   _pick libne usr/share/{gir-1.0,gtk-doc}
 }
 
-package_libnautilus-extension-2() {
+package_libnautilus-extension() {
   pkgdesc="Library for extending the $pkgdesc"
   depends=(gtk4)
-  provides=(libnautilus43-extension-2 libnautilus-extension libnautilus-extension.so)
-  conflicts=(libnautilus43-extension-2 libnautilus-extension)
-  replaces=(libnautilus43-extension-2 libnautilus-extension)
+  provides=(libnautilus43-extension-2 libnautilus-extension-2 libnautilus-extension.so)
+  conflicts=(libnautilus43-extension-2 libnautilus-extension-2)
+  replaces=(libnautilus43-extension-2 libnautilus-extension-2)
   mv libne/* "$pkgdir"
 }
 
