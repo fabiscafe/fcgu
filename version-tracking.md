@@ -13,6 +13,7 @@
 - evolution 3.45.2
 - evolution-data-server 3.45.2
 - feedbackd 0.0.0+git20220520
+- file-roller 43.alpha
 - folks 0.15.5
 - gcr-4 3.90.0
 - geary main(2022-08-13)
