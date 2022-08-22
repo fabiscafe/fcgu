@@ -90,6 +90,7 @@
 ## Wontbuild
 - gnome-builder 43.alpha1 (gnome-builder-libide-docs, check())
 - gnome-initial-setup 43.beta (Waiting for malcontent 0.11 release)
+- gnome-maps 43.beta (https://gitlab.gnome.org/GNOME/gnome-maps/-/issues/463)
 
 ## Exclude
 - none
