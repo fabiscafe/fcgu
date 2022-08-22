@@ -107,6 +107,13 @@ All packages are build with debugging symbols. Most of them require the user to 
 We only support (an up-to-date) Arch Linux.
 Distros who come with older package versions or customization can conflict with what this project provides. Because of this they are not supported. This includes [Arco Linux](https://arcolinux.com), [Artix Linux](https://artixlinux.org), [EndeavourOS](https://endeavouros.com), [Garuda Linux](https://garudalinux.org), [Manjaro](https://manjaro.org), and [all the others](https://wiki.archlinux.org/title/Arch-based_distributions).
 
+### Pamac conflict / removal
+TLDR: This Repo only supports pacman. The mirrorlist package does provide the line `conflicts=(pamac libpamac)`. **Please remove pamac if you want to use fcgu.**
+
+#### Why?
+fcgu is a pretty unstable, testing repo. It highly depends on the functionality of pacman. Manjaros Pamac does bring in another logic that can conflict in way or another with this repo as well as with the path to move back to distros packages.
+Because of this, pamac was set as conflict. If you still want to use pamac **You still can make it work by manually adding the mirrorlist**
+
 ### Will you push the PKGBUILDs to the AUR?
 In order to do this, the PKGBUILDs would need a lot of extra work and testing, just for the packaging part. Because time is a very limited resource that's not possible to do right now (and not planned for the future).
 
