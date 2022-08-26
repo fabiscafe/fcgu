@@ -16,7 +16,7 @@
 - file-roller 43.alpha
 - folks 0.15.5
 - gcr-4 3.90.0
-- geary main(2022-08-13)
+- geary main(2022-08-26)
 - gedit 43.alpha
 - geocode-glib-2 3.26.4
 - gjs 1.73.2

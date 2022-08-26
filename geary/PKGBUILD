@@ -4,7 +4,7 @@
 # Contributor: Massimiliano Torromeo <massimiliano.torromeo@gmail.com>
 
 pkgname=geary
-pkgver=40.0+r109+g3ff8342b6
+pkgver=40.0+r124+gf583378b7
 pkgrel=1
 epoch=1
 pkgdesc='A lightweight email client for the GNOME desktop'
@@ -48,7 +48,7 @@ makedepends=(
   yelp-tools
 )
 options=(debug)
-_commit=3ff8342b6db568b1511774fdd748b413b4d4f25c #master
+_commit=f583378b7d0ee74dae28e88061578d5b30d168ab #main
 source=("git+https://gitlab.gnome.org/GNOME/geary.git?#commit=${_commit}") # main
 validpgpkeys=(3A2EF7F138557A145F2866E99FAB18747A8FC649) # Michael James Gratton <mike@vee.net>
 sha256sums=('SKIP')
