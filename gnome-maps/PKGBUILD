@@ -3,18 +3,18 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-maps
-pkgver=43.alpha
+pkgver=43.beta+r12+gae86b128
 pkgrel=1
 pkgdesc="A simple GNOME 3 maps application"
 url="https://wiki.gnome.org/Apps/Maps"
 arch=(x86_64)
 license=(GPL)
-depends=(geocode-glib-2 geoclue gjs libchamplain libgee folks gfbgraph libhandy
-         libgweather-4)
+depends=(geoclue geocode-glib-2 libadwaita libshumate appstream-glib gjs
+         libgweather-4 librest)
 makedepends=(gobject-introspection git meson yelp-tools)
 groups=(gnome)
 options=(debug)
-_commit=1cde9224e0976d03e7040e75eaafbf81471c1756  # tags/v43.alpha^0
+_commit=ae86b128ddab13dbb5e54d00279fe64d78992a53  # tags/main^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-maps.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -33,7 +33,7 @@ build() {
 }
 
 check() {
-  meson test -C build --print-errorlogs || :
+  meson test -C build --print-errorlogs
 }
 
 package() {
