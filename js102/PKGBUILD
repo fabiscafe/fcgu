@@ -2,7 +2,7 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=js102
-pkgver=102.1.0
+pkgver=102.2.0
 pkgrel=0.1
 pkgdesc="JavaScript interpreter and libraries - Version 102"
 arch=(x86_64)
@@ -13,11 +13,9 @@ makedepends=(zip autoconf2.13 python-setuptools python-psutil rust llvm clang ll
 checkdepends=(mercurial git)
 options=(!lto debug)
 _relver=${pkgver}esr
-source=(https://archive.mozilla.org/pub/firefox/releases/$_relver/source/firefox-$_relver.source.tar.xz{,.asc}
-        0001-install-ProfilingCategoryList_h.patch)
-sha256sums=('637b6e727d1b815bbc6eb39aeb04c6e144056eeb3c628b298cb16deb3b579460'
-            'SKIP'
-            'd168188924a65e293eed00927d5b509f707d1152338f4923f172c162ce69b9c5')
+source=(https://archive.mozilla.org/pub/firefox/releases/$_relver/source/firefox-$_relver.source.tar.xz{,.asc})
+sha256sums=('014d91d14ab4f53e93728273b45ac6022813d5ade35f842e722bf87b747c97ff'
+            'SKIP')
 validpgpkeys=('14F26682D0916CDD81E37B6D61B7B526D98F0353') # Mozilla Software Releases <release@mozilla.com>
 
 # Make sure the duplication between bin and lib is found
@@ -27,7 +25,13 @@ prepare() {
   mkdir mozbuild
   cd firefox-$pkgver
   
-  patch --forward --strip=1 --input="${srcdir}/0001-install-ProfilingCategoryList_h.patch"
+  # version 0.3.7 of packed_simd is broken
+  # https://github.com/rust-lang/packed_simd/issues/343
+  # change git repo to upstream and set version 0.3.8
+  sed -i 's|hsivonen/packed_simd|rust-lang/packed_simd|;s|c149d0a519bf878567c7630096737669ec2ff15f|e4ec7ce86ba5e6479409c91b9a9a6af25536b047|' ./Cargo.toml
+
+  # pull in the updated packages.
+  cargo vendor third_party/rust
 
   cat >../mozconfig <<END
 ac_add_options --enable-application=js
