@@ -3,12 +3,12 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=at-spi2-core
-pkgver=2.45.90
+pkgver=2.45.91
 pkgrel=1
 pkgdesc="Base DBus XML interfaces for accessibility, the accessibility registry daemon, and atspi library."
 url="https://gitlab.gnome.org/GNOME/at-spi2-core"
 arch=(x86_64)
-license=(GPL2)
+license=(LGPL2.1)
 depends=(dbus glib2 libxtst libsystemd)
 makedepends=(gobject-introspection git gtk-doc meson dbus-broker systemd)
 optdepends=('dbus-broker: Alternative bus implementation')
@@ -16,7 +16,7 @@ options=(debug)
 conflicts=(atk at-spi2-atk)
 replaces=(atk at-spi2-atk)
 provides=(atk at-spi2-atk)
-_commit=591ccfe66aa4c50d6bf8f6050728273f598a79a5  # tags/AT_SPI2_CORE_2_45_90^0
+_commit=7e1cfb26eed0478975fb7ee91914f5f8d1dabde5  # tags/AT_SPI2_CORE_2_45_91^0
 source=("git+https://gitlab.gnome.org/GNOME/at-spi2-core.git#commit=$_commit")
 sha256sums=('SKIP')
 
