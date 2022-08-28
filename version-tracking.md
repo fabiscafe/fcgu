@@ -63,7 +63,6 @@
 - gtksourceview5 5.5.1
 - js102 102.2.0
 - libadwaita 1.2.beta
-- libgit2-glib 1.1.0
 - libgweather-4 4.1.0
 - libhandy 1.7.90
 - libosinfo 1.10.0
