@@ -4,8 +4,8 @@
 # Contributor: William Rea <sillywilly@gmail.com>
 
 pkgname=orca
-pkgver=43.alpha
-pkgrel=2
+pkgver=43.beta
+pkgrel=1
 pkgdesc="Screen reader for individuals who are blind or visually impaired"
 url="https://wiki.gnome.org/Projects/Orca"
 arch=(any)
@@ -18,7 +18,7 @@ depends=(gtk3 at-spi2-core python-atspi python-dbus python-xdg speech-dispatcher
 makedepends=(itstool intltool git yelp-tools)
 options=(debug)
 groups=(gnome)
-_commit=0eb63031cfa887c547f1e356fda6ed05187fa755  # tags/ORCA_43_ALPHA^0
+_commit=755f2a16243d5782bd8f66ebb04a523d244994dd  # tags/ORCA_43_BETA^0
 source=("git+https://gitlab.gnome.org/GNOME/orca.git#commit=$_commit")
 sha256sums=('SKIP')
 

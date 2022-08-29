@@ -73,7 +73,7 @@
 - mutter 43.beta
 - nautilus 43.beta.1
 - python-nautilus 4.0.alpha
-- orca ORCA_43_ALPHA
+- orca ORCA_43_BETA
 - phodav 3.0
 - sofia-sip 1.13.8
 - spice-gtk 0.41
