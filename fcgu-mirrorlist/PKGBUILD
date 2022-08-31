@@ -2,7 +2,7 @@
 
 pkgname=fcgu-mirrorlist
 pkgver=2
-pkgrel=2
+pkgrel=3
 pkgdesc="The fcgu mirror list file"
 url="https://gitlab.com/fabiscafe/gnome-unstable"
 arch=(any)
@@ -14,7 +14,7 @@ conflicts=(pamac libpamac)
 source=("LICENSE"
         "mirrorlist")
 sha256sums=('1a224f60d744f26bdfd9047d45d45608761d54ee5f43394c78f09f58a54c2aae'
-            '64ca80f8ce76ec86f1cb33a0ec677fed78c4fa553a856ec88d24c2854573e265')
+            '68c49507fdd6fcc29ff3e2cb3f0f04738b4a0a8a48abb8fcb54aea7d3ec20702')
 
 package() {
   /usr/bin/install -D -m644 "${srcdir}/mirrorlist" \
