@@ -1,7 +1,7 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=libshumate
-pkgver=1.0.0alpha1+r87+g7808f24
+pkgver=1.0.0beta
 pkgrel=1
 pkgdesc="GTK toolkit providing widgets for embedded maps"
 arch=(x86_64)
@@ -11,7 +11,7 @@ depends=(gtk4 libsoup3 sqlite)
 makedepends=(git gi-docgen gobject-introspection gtk-doc meson vala)
 checkdepends=(xorg-server-xvfb)
 options=(debug)
-_commit=7808f24d14c2bac1f7e6c51b1f1ead7a7aa86e7c  # tags/main^0
+_commit=290359fd6af168b3554c24298ba344eb88a2ed47  # tags/1.0.0.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/libshumate.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -26,8 +26,7 @@ prepare() {
 
 build() {
   arch-meson $pkgname build \
-    -D gtk_doc=true \
-    -D libsoup3=true
+    -D gtk_doc=true
   meson compile -C build
 }
 
