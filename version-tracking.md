@@ -11,7 +11,7 @@
 - epiphany 43.rc
 - evince 43.alpha
 - evolution 3.45.2
-- evolution-data-server 3.45.2
+- evolution-data-server 3.45.3
 - feedbackd 0.0.0+git20220520
 - file-roller 43.alpha
 - folks 0.15.5
