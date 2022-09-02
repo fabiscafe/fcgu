@@ -49,7 +49,7 @@
 - gnome-shell 43.beta
 - gnome-shell-extensions 43.beta
 - gnome-shell-extension-appindicator 43.alpha
-- gnome-software 43.beta
+- gnome-software 43.rc
 - gnome-sound-recorder 43.beta
 - gnome-terminal 3.45.90
 - gnome-text-editor 43.alpha1
