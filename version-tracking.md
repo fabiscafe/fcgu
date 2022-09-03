@@ -54,7 +54,7 @@
 - gnome-terminal 3.45.99
 - gnome-text-editor 43.alpha1
 - gnome-tour 43.beta
-- gnome-weather 43.beta
+- gnome-weather 43.rc
 - gobject-introspection 1.73.1
 - grilo master(2022-07-04)
 - grilo-plugins master(2022-07-31)
