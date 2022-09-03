@@ -2,7 +2,7 @@
 # Contributor: Igor Dyatlov <dyatlov.igor@gmail.com>
 
 pkgname=gnome-console
-pkgver=43.beta
+pkgver=43.rc
 pkgrel=1
 pkgdesc="A simple user-friendly terminal emulator for the GNOME desktop"
 arch=('x86_64')
@@ -11,7 +11,7 @@ license=('GPL3')
 options=(debug)
 depends=(libgtop libadwaita vte3)
 makedepends=(appstream-glib git meson)
-_commit=fa93da7aafc22ada0d9b3b53cd017ff8b3ee47b3  # tags/43.beta^0
+_commit=8cd9e021a92435aaf6ac3a6b681b6e5c39bbd68c  # tags/43.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/console.git#commit=$_commit")
 sha256sums=('SKIP')
 
