@@ -26,7 +26,7 @@
 - gnome-boxes 43.beta
 - gnome-builder 43.alpha1¹
 - gnome-calculator 43.rc
-- gnome-calendar 43.beta
+- gnome-calendar 43.rc
 - gnome-calls v43_beta.0
 - gnome-characters 43.beta
 - gnome-clocks 43.beta
