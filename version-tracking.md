@@ -33,7 +33,7 @@
 - gnome-connections 43.beta
 - gnome-console 43.beta
 - gnome-contacts 43.beta
-- gnome-control-center 43.beta
+- gnome-control-center 43.rc
 - gnome-desktop 43.alpha
 - gnome-disk-utility 43.rc
 - gnome-font-viewer 43.beta
