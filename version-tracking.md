@@ -37,7 +37,7 @@
 - gnome-desktop 43.alpha
 - gnome-disk-utility 43.rc
 - gnome-font-viewer 43.beta
-- gnome-initial-setup 43.alpha1
+- gnome-initial-setup 43.rc
 - gnome-logs 43.beta
 - gnome-maps main(2022-08-29)
 - gnome-online-accounts 3.45.2
