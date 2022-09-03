@@ -89,7 +89,6 @@
 
 ## Wontbuild
 - gnome-builder 43.alpha1 (gnome-builder-libide-docs, check())
-- gnome-initial-setup 43.beta (Waiting for malcontent 0.11 release)
 
 ## Exclude
 - none
