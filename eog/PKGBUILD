@@ -4,17 +4,18 @@
 
 pkgbase=eog
 pkgname=(eog eog-docs)
-pkgver=43.beta
+pkgver=43.rc
 pkgrel=1
 pkgdesc="Eye of Gnome: An image viewing and cataloging program"
 url="https://wiki.gnome.org/Apps/EyeOfGnome"
 arch=(x86_64)
 license=(GPL)
 # 43.beta advertises webp support via MimeType list, add webp-pixbuf-loader as dependency
-depends=(gnome-desktop libexif lcms2 exempi libpeas librsvg libhandy webp-pixbuf-loader)
+depends=(gnome-desktop libexif lcms2 exempi libpeas librsvg libhandy webp-pixbuf-loader
+         libportal libportal-gtk3)
 makedepends=(gobject-introspection gi-docgen git meson yelp-tools systemd)
 options=(debug)
-_commit=463d6b7e366c790d5b533e534f777a2afa066915  # tags/43.beta^0
+_commit=d55f5d89499ab07dbaca4e3643c55ee6eba38ccd  # tags/43.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/eog.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -25,8 +26,7 @@ pkgver() {
 
 build() {
   arch-meson eog build \
-    -D gtk_doc=true \
-    -D libportal=false
+    -D gtk_doc=true
   meson compile -C build
 }
 
@@ -50,4 +50,3 @@ package_eog-docs() {
 
   mv doc/* "$pkgdir"
 }
-
