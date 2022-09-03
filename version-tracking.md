@@ -43,7 +43,7 @@
 - gnome-online-accounts 3.45.2
 - gnome-photos 43.beta
 - gnome-podcasts master(2022-07-29)
-- gnome-remote-desktop 43.beta
+- gnome-remote-desktop 43.rc
 - gnome-session 42.0
 - gnome-settings-daemon 43.beta
 - gnome-shell 43.beta

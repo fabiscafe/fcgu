@@ -2,19 +2,19 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-remote-desktop
-pkgver=43.beta
+pkgver=43.rc
 pkgrel=1
 pkgdesc="GNOME Remote Desktop server"
 url="https://wiki.gnome.org/Projects/Mutter/RemoteDesktop"
 arch=(x86_64)
 license=(GPL2)
-depends=(cairo freerdp "glib2>=2.73.0" pipewire systemd libvncserver libsecret libnotify
+depends=(cairo freerdp "glib2>=2.73.3" pipewire systemd libvncserver libsecret libnotify
          dconf fuse3 libxkbcommon libepoxy)
 makedepends=(asciidoc git meson ffnvcodec-headers)
 checkdepends=(xorg-server-xvfb python-dbus python-gobject mutter wireplumber)
 groups=(gnome)
 options=(debug)
-_commit=9f72491c8ed14894485ff18e6fea1cdb8eb83c82  # tags/43.beta^0
+_commit=1fb501808c51afb09487fc4280c61dd26eb19676  # tags/43.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-remote-desktop.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -53,7 +53,7 @@ _check() (
 )
 
 check() {
-  dbus-run-session bash -c "$(declare -f _check); _check" || :
+  dbus-run-session bash -c "$(declare -f _check); _check" ||:
 }
 
 package() {
