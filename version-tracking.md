@@ -62,7 +62,7 @@
 - gtk4 4.7.2
 - gtksourceview5 5.5.1
 - js102 102.2.0
-- libadwaita 1.2.beta
+- libadwaita 1.2.rc
 - libgweather-4 4.1.0
 - libhandy 1.7.90
 - libosinfo 1.10.0
