@@ -36,7 +36,7 @@
 - gnome-control-center 43.rc
 - gnome-desktop 43.alpha
 - gnome-disk-utility 43.rc
-- gnome-font-viewer 43.beta
+- gnome-font-viewer 43.rc
 - gnome-initial-setup 43.rc
 - gnome-logs 43.beta
 - gnome-maps main(2022-08-29)
