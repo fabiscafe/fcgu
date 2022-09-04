@@ -47,7 +47,7 @@
 - gnome-session 42.0
 - gnome-settings-daemon 43.beta
 - gnome-shell 43.rc
-- gnome-shell-extensions 43.beta
+- gnome-shell-extensions 43.rc
 - gnome-shell-extension-appindicator 43.alpha
 - gnome-software 43.rc
 - gnome-sound-recorder 43.beta
