@@ -69,7 +69,7 @@
 - libpanel 1.0alpha1
 - librest 0.9.1
 - libshumate 1.0.0.beta
-- libsoup3 3.1.1
+- libsoup3 3.1.4
 - malcontent 0.11.0
 - mutter 43.beta
 - nautilus 43.beta.1

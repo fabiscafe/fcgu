@@ -2,8 +2,8 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=libsoup3
-pkgver=3.1.1
-pkgrel=1
+pkgver=3.1.4
+pkgrel=0.1
 pkgdesc="HTTP client/server library for GNOME"
 url="https://wiki.gnome.org/Projects/libsoup"
 arch=(x86_64)
@@ -14,7 +14,7 @@ makedepends=(gi-docgen gobject-introspection python vala git meson samba
              python-quart)
 checkdepends=(apache php-apache)
 optdepends=('samba: Windows Domain SSO')
-_commit=ec9a66fb419b2d13872c9d0f2eb87e63cf9f433f  # tags/3.1.1^0
+_commit=a601ac2bae4d7b4b691b3361386d1808214cf376  # tags/3.1.4^0
 source=("git+https://gitlab.gnome.org/GNOME/libsoup.git#commit=$_commit")
 sha256sums=('SKIP')
 
