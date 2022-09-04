@@ -48,7 +48,7 @@
 - gnome-settings-daemon 43.beta
 - gnome-shell 43.rc
 - gnome-shell-extensions 43.rc
-- gnome-shell-extension-appindicator 43.alpha
+- gnome-shell-extension-appindicator master(2022-08-24)+PR351
 - gnome-software 43.rc
 - gnome-sound-recorder 43.beta
 - gnome-terminal 3.45.99
