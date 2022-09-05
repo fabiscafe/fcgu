@@ -5,18 +5,18 @@
 
 pkgbase=tracker3
 pkgname=(tracker3 tracker3-docs)
-pkgver=3.4.0beta
+pkgver=3.4.0rc
 pkgrel=1
 pkgdesc="Desktop-neutral user information store, search tool and indexer"
 url="https://wiki.gnome.org/Projects/Tracker"
 arch=(x86_64)
 license=(GPL)
-depends=(sqlite icu "glib2>=2.73.0" libffi util-linux libstemmer libseccomp json-glib
-         libsoup3)
+depends=(sqlite icu "glib2>=2.73.3" libffi util-linux libstemmer libseccomp json-glib
+         libsoup3 python-gobject libxml2)
 makedepends=(gobject-introspection vala git hotdoc bash-completion meson
-             asciidoc systemd python-gobject python-dbus python-tappy)
+             asciidoc systemd python-dbus python-tappy)
 options=(debug)
-_commit=e5fa067d8217ff898e003da773ee3ed128fd919b  # tags/3.4.0.beta^0
+_commit=8c76d4d32bdb3167200abd454db1426e7837e790  # tags/3.4.0.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/tracker.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -50,7 +50,6 @@ _pick() {
 }
 
 package_tracker3() {
-  optdepends=('libsoup: Alternative remoting backend')
   provides=(libtracker-sparql-3.0.so)
 
   meson install -C build --destdir "$pkgdir"

@@ -81,7 +81,7 @@
 - sysprof 3.45.1
 - template-glib 3.35.0
 - totem 43.beta
-- tracker3 3.4.0.beta
+- tracker3 3.4.0.rc
 - tracker3-miners 3.4.0.beta
 - vte3 0.69.99
 - webkit2gtk-4.1 2.37.91
