@@ -2,7 +2,7 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=tracker3-miners
-pkgver=3.4.0beta
+pkgver=3.4.0rc
 pkgrel=1
 pkgdesc="Collection of data extractors for Tracker/Nepomuk"
 url="https://wiki.gnome.org/Projects/Tracker"
@@ -16,7 +16,7 @@ checkdepends=(python-gobject python-tappy gst-plugins-good gst-plugins-base
               gst-libav)
 groups=(gnome)
 options=(debug)
-_commit=ef5117845460f658c09b3328fbbdad489f0498ee  # tags/3.4.0.beta^0
+_commit=a397e40afeacb5b0aa3d5681f481b2a24a262321  # tags/3.4.0.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/tracker-miners.git#commit=$_commit")
 sha256sums=('SKIP')
 
