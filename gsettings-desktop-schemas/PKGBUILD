@@ -5,7 +5,7 @@
 # Contributor: Adam Hani Schakaki (krzd) <krzd@krzd.net>
 
 pkgname=gsettings-desktop-schemas
-pkgver=43.rc
+pkgver=43.rc1
 pkgrel=1
 pkgdesc="Shared GSettings schemas for the desktop"
 url="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas"
@@ -14,13 +14,13 @@ license=(GPL)
 depends=("glib2>=2.73.0" dconf cantarell-fonts adobe-source-code-pro-fonts)
 makedepends=(gobject-introspection git meson)
 options=(debug)
-_commit=7f5adaf4d706448d1cc6d7e105ae35f1853dec6b  # tags/43.rc^0
+_commit=ae40735c622397631c12ce6b83a736c59f176953  # tags/43.rc.1^0
 source=("git+https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed -r 's/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
