@@ -1,0 +1,51 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+
+pkgname=gnome-endeavour
+pkgver=42.0
+pkgrel=0.1
+pkgdesc="Personal task manager for GNOME"
+url="https://wiki.gnome.org/Apps/Todo"
+arch=(x86_64)
+license=(GPL)
+depends=(evolution-data-server libpeas python libportal-gtk4 libadwaita)
+makedepends=(gobject-introspection appstream-glib git meson yelp-tools)
+groups=(gnome-extra)
+options=(debug)
+provides=(gnome-todo)
+replaces=(gnome-todo)
+conflicts=(gnome-todo)
+_commit=188ef00f6194c1dd36d39279c2d7a5429a68d3f5  # tags/v42^0
+source=("git+https://gitlab.gnome.org/World/Endeavour.git#commit=$_commit"
+        "0001-Werror_format_security.patch::https://gitlab.gnome.org/World/Endeavour/-/commit/3bad03e90fcc28f6e3f87f2c90df5984dbeb0791.patch")
+sha256sums=('SKIP'
+            'edc3c6ec04e6c6810e31f6811bfa3d546fc52e7da1d62a85fe6ee248a10496a2')
+
+pkgver() {
+  cd Endeavour
+  git describe --tags | sed 's/^v//;s/_/./g;s/[^-]*-g/r&/;s/-/+/g'
+
+}
+
+prepare() {
+  cd Endeavour
+  git apply -3 ../0001-Werror_format_security.patch
+}
+
+build() {
+  arch-meson Endeavour build
+  meson compile -C build
+}
+
+check() (
+  glib-compile-schemas "${GSETTINGS_SCHEMA_DIR:=$PWD/Endeavour/data}"
+  export GSETTINGS_SCHEMA_DIR
+
+  meson test -C build --print-errorlogs
+)
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
+
+# vim:set sw=2 et:

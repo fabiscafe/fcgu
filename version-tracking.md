@@ -36,6 +36,7 @@
 - gnome-control-center 43.rc
 - gnome-desktop 43.alpha
 - gnome-disk-utility 43.rc
+- gnome-endeavour v42.0
 - gnome-font-viewer 43.rc
 - gnome-initial-setup 43.rc
 - gnome-logs 43.beta
