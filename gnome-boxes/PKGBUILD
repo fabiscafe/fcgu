@@ -3,7 +3,7 @@
 # Contributor: Stefano Facchini <stefano.facchini@gmail.com>
 
 pkgname=gnome-boxes
-pkgver=43.beta
+pkgver=43.rc
 pkgrel=1
 pkgdesc='Simple GNOME application to access virtual systems'
 arch=('x86_64')
@@ -15,7 +15,7 @@ depends=('cdrtools' 'edk2-ovmf' 'libarchive' 'libgudev' 'libhandy'
          'webkit2gtk-4.1' 'libsoup3')
 makedepends=('git' 'appstream-glib' 'gobject-introspection' 'itstool' 'meson' 'spice-protocol' 'vala')
 options=('debug')
-_commit=3dbe8a6400ea4d38098a58b33a5573c6d810e730  # tags/43.beta^0
+_commit=c64a6d994fe00c0ccad66f42185da99272a97585  # tags/43.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-boxes.git#commit=$_commit")
 sha256sums=('SKIP')
 
