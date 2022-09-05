@@ -15,7 +15,7 @@
 - feedbackd 0.0.0+git20220520
 - file-roller 43.alpha
 - folks 0.15.5
-- gcr-4 3.90.0
+- gcr-4 3.92.0
 - geary main(2022-08-26)
 - gedit 43.alpha
 - geocode-glib-2 3.26.4
