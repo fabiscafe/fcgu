@@ -3,7 +3,7 @@
 # Contributor: Eric Bélanger <eric@archlinux.org>
 
 pkgname=webkit2gtk-4.1
-pkgver=2.37.90
+pkgver=2.37.91
 pkgrel=1
 pkgdesc="Web content engine for GTK"
 url="https://webkitgtk.org"
@@ -22,14 +22,15 @@ optdepends=('geoclue: Geolocation support'
             'gst-plugins-bad: media decoding'
             'gst-libav: nonfree media decoding')
 options=(debug)
-source=($url/releases/webkitgtk-$pkgver.tar.xz{,.asc})
-sha256sums=('e554724ef527849d36fb754d42b0cdb39ff4a6c711861b54db98740d5de60f91'
-            'SKIP')
+# Using git directly requires to load around 3GiB
+# While the tarball "only" is around 1GiB
+source=("https://github.com/WebKit/WebKit/archive/refs/tags/webkitgtk-${pkgver}.tar.gz")
+sha256sums=('91d618396fbf5665de9c134f8e9620869866b9e3d23b33554a96377f304e5491')
 validpgpkeys=('D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos <cgarcia@igalia.com>
               '5AA3BC334FD7E3369E7C77B291C559DBE4C9123B') # Adrián Pérez de Castro <aperez@igalia.com>
 
 prepare() {
-  cd webkitgtk-$pkgver
+  cd WebKit-webkitgtk-${pkgver}
 }
 
 build() {
@@ -39,7 +40,7 @@ build() {
   CXXFLAGS+=' -g1'
   LDFLAGS+=",-fuse-ld=mold"
 
-  cmake -S webkitgtk-$pkgver -B build -G Ninja \
+  mold --run cmake -S WebKit-webkitgtk-${pkgver} -B build -G Ninja \
     -DPORT=GTK \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
@@ -48,7 +49,7 @@ build() {
     -DCMAKE_SKIP_RPATH=ON \
     -DUSE_SOUP2=OFF \
     -DENABLE_MINIBROWSER=ON
-  cmake --build build
+  mold --run cmake --build build
 }
 
 package() {
@@ -59,7 +60,7 @@ package() {
 
   rm -r "$pkgdir/usr/bin"
 
-  cd webkitgtk-$pkgver
+  cd WebKit-webkitgtk-${pkgver}
   find Source -name 'COPYING*' -or -name 'LICENSE*' -print0 | sort -z |
     while IFS= read -d $'\0' -r _f; do
       echo "### $_f ###"
