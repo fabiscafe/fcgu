@@ -1,8 +1,9 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Mark Wagie <mark dot wagie at tutanota dot com>
 
 pkgname=gnome-settings-daemon
-pkgver=43.beta
+pkgver=43.rc
 pkgrel=1
 pkgdesc="GNOME Settings Daemon"
 url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
@@ -12,12 +13,12 @@ depends=(dconf gnome-desktop gsettings-desktop-schemas libcanberra-pulse
          libnotify systemd libwacom pulseaudio pulseaudio-alsa upower librsvg
          libgweather-4 geocode-glib-2 geoclue nss libgudev gtk3 libnm gcr-4)
 makedepends=(libxslt docbook-xsl python git meson usbguard)
-checkdepends=(python-gobject python-dbusmock)
+checkdepends=(python-gobject python-dbusmock xorg-server-xvfb umockdev gnome-session mutter)
 optdepends=('usbguard: USB protection support')
 groups=(gnome)
 backup=(etc/xdg/Xwayland-session.d/00-xrdb)
 options=(debug)
-_commit=1c61fa79e525df2286273a3e9aa277764a15c242  # tags/43.beta^0
+_commit=fc523ea635fb5d8062fad5873adf51f7d681458c  # tags/43.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-settings-daemon.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
@@ -42,7 +43,8 @@ build() {
 }
 
 check() {
-  meson test -C build --print-errorlogs
+  dbus-run-session xvfb-run -s '-nolisten local' \
+    meson test -C build --print-errorlogs
 }
 
 package() {
