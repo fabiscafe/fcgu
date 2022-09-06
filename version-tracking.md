@@ -60,7 +60,7 @@
 - grilo master(2022-07-04)
 - grilo-plugins master(2022-07-31)
 - gsettings-desktop-schemas 43.rc.1
-- gtk4 4.7.2
+- gtk4 4.8.0
 - gtksourceview5 5.5.1
 - js102 102.2.0
 - libadwaita 1.2.rc
