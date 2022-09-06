@@ -81,7 +81,7 @@
 - spice-gtk 0.41
 - sysprof 3.45.1
 - template-glib 3.35.0
-- totem 43.beta
+- totem 43.rc
 - tracker3 3.4.0.rc
 - tracker3-miners 3.4.0.rc
 - vte3 0.69.99
