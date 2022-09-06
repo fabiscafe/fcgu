@@ -4,7 +4,7 @@
 
 pkgname=totem
 pkgver=43.rc
-pkgrel=1
+pkgrel=2
 pkgdesc="Movie player for the GNOME desktop based on GStreamer"
 url="https://wiki.gnome.org/Apps/Videos"
 arch=(x86_64)
@@ -12,8 +12,8 @@ license=(GPL2 custom)
 depends=(totem-plparser iso-codes libpeas grilo gsettings-desktop-schemas
          python-gobject gnome-desktop gst-plugins-base gst-plugins-good
          gst-plugins-bad gst-plugin-gtk libhandy libportal-gtk3)
-makedepends=(libnautilus-extension itstool docbook-xsl python-pylint
-             gobject-introspection git appstream-glib gtk-doc meson intltool)
+makedepends=(libnautilus-extension itstool docbook-xsl gtk-doc git
+             gobject-introspection appstream-glib meson intltool)
 checkdepends=(xorg-server-xvfb)
 optdepends=('gst-plugins-ugly: Extra media codecs'
             'gst-libav: Extra media codecs'
@@ -48,9 +48,10 @@ build() {
 }
 
 check() {
+  # Skip pylint-pythonconsole test as it fails with pylint>=2.14
   # https://gitlab.gnome.org/GNOME/totem/-/issues/537
   dbus-run-session xvfb-run -s '-nolisten local' \
-    meson test -C build --print-errorlogs ||:
+    meson test -C build --print-errorlogs
 }
 
 package() {
