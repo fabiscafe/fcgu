@@ -4,7 +4,7 @@
 
 pkgname=totem
 pkgver=43.rc
-pkgrel=2
+pkgrel=3
 pkgdesc="Movie player for the GNOME desktop based on GStreamer"
 url="https://wiki.gnome.org/Apps/Videos"
 arch=(x86_64)
@@ -14,7 +14,7 @@ depends=(totem-plparser iso-codes libpeas grilo gsettings-desktop-schemas
          gst-plugins-bad gst-plugin-gtk libhandy libportal-gtk3)
 makedepends=(libnautilus-extension itstool docbook-xsl gtk-doc git
              gobject-introspection appstream-glib meson intltool)
-checkdepends=(xorg-server-xvfb)
+checkdepends=(xorg-server-xvfb python-pylint)
 optdepends=('gst-plugins-ugly: Extra media codecs'
             'gst-libav: Extra media codecs'
             'grilo-plugins: Media discovery')
@@ -24,9 +24,11 @@ groups=(gnome)
 options=(debug)
 _commit=29f555d053d44b55971bcba76821ac436090cbd3  # tags/43.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/totem.git#commit=$_commit"
-        "git+https://gitlab.gnome.org/GNOME/libgd.git")
+        "git+https://gitlab.gnome.org/GNOME/libgd.git"
+        "0001_fix_tests_with_pylint_2.14.5.diff")
 sha256sums=('SKIP'
-            'SKIP')
+            'SKIP'
+            'f575887c48939a0f1574e5189ef7fcc40e282078628817097c7b47497fccdfe0')
 
 pkgver() {
   cd totem
@@ -39,6 +41,8 @@ prepare() {
   git submodule init
   git submodule set-url subprojects/libgd "$srcdir/libgd"
   git submodule update
+
+  git apply -3 ../0001_fix_tests_with_pylint_2.14.5.diff
 }
 
 build() {
