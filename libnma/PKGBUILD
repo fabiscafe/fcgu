@@ -1,0 +1,84 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+
+pkgbase=libnma
+pkgname=(libnma-common libnma libnma-gtk4)
+pkgver=1.10.0
+pkgrel=0.1
+pkgdesc="NetworkManager GUI client library"
+url="https://gitlab.gnome.org/GNOME/libnma"
+arch=(x86_64)
+license=(GPL LGPL)
+makedepends=(gobject-introspection git gtk-doc meson vala libnm gcr gcr-4 gtk3 gtk4
+             iso-codes mobile-broadband-provider-info dconf)
+options=(debug)
+_commit=ee0149e7672f47fae87ab621954d429cdbac5a98  # tags/1.10.0^0
+source=("git+https://gitlab.gnome.org/GNOME/libnma.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd libnma
+  git describe --tags | sed 's/-dev/dev/;s/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd libnma
+}
+
+build() {
+  arch-meson libnma build -D libnma_gtk4=true
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+_pick() {
+  local p="$1" f d; shift
+  for f; do
+    d="$srcdir/$p/${f#$pkgdir/}"
+    mkdir -p "$(dirname "$d")"
+    mv "$f" "$d"
+    rmdir -p --ignore-fail-on-non-empty "$(dirname "$f")"
+  done
+}
+
+package_libnma-common() {
+  pkgdesc+=" (common files)"
+  depends=(libnm iso-codes mobile-broadband-provider-info dconf)
+
+  meson install -C build --destdir "$pkgdir"
+
+  cd "$pkgdir"
+
+  _pick gtk3 usr/lib/libnma.so*
+  _pick gtk3 usr/lib/pkgconfig/libnma.pc
+  _pick gtk3 usr/lib/girepository-1.0/NMA-*
+  _pick gtk3 usr/share/gir-1.0/NMA-*
+  _pick gtk3 usr/share/vala/vapi/libnma.*
+
+  _pick gtk4 usr/lib/libnma-gtk4.so*
+  _pick gtk4 usr/lib/pkgconfig/libnma-gtk4.pc
+  _pick gtk4 usr/lib/girepository-1.0/NMA4-*
+  _pick gtk4 usr/share/gir-1.0/NMA4-*
+  _pick gtk4 usr/share/vala/vapi/libnma-gtk4.*
+}
+
+package_libnma() {
+  pkgdesc+=" (GTK3)"
+  depends=(libnma-common="$pkgver-$pkgrel" gtk3 gcr)
+  provides=(libnma.so)
+
+  mv gtk3/* "$pkgdir"
+}
+
+package_libnma-gtk4() {
+  pkgdesc+=" (GTK4)"
+  depends=(libnma-common="$pkgver-$pkgrel" gtk4 gcr-4)
+  provides=(libnma-gtk4.so)
+
+  mv gtk4/* "$pkgdir"
+}
+
+# vim:set sw=2 et:
