@@ -57,6 +57,7 @@
 - gnome-tour 43.beta
 - gnome-weather 43.rc
 - gobject-introspection 1.73.1
+- grilo master(2022-07-04)
 - grilo-plugins master(2022-07-31)
 - gsettings-desktop-schemas 43.rc.1
 - gtksourceview5 5.5.1
