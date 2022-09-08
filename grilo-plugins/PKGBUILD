@@ -3,14 +3,14 @@
 
 pkgname=grilo-plugins
 pkgver=0.3.15
-pkgrel=1.1
+pkgrel=1.2
 epoch=1
 pkgdesc="A collection of plugins for the Grilo framework"
 url="https://gitlab.gnome.org/GNOME/grilo-plugins"
 arch=(x86_64)
 license=(LGPL)
 options=(debug)
-depends=(grilo lua libmediaart libgdata tracker3 gom libdmapsharing chromaprint
+depends=(grilo lua libmediaart libgdata tracker3 gom chromaprint
          gst-plugins-bad gmime3)
 makedepends=(git meson gperf yelp-tools)
 checkdepends=(gst-plugins-good gst-plugins-base python-gobject tracker3-miners)
@@ -32,7 +32,8 @@ prepare() {
 
 build() {
   arch-meson $pkgname build \
-    -D enable-tracker=no
+    -D enable-tracker=no \
+    -D enable-dmap=no
   meson compile -C build
 }
 
