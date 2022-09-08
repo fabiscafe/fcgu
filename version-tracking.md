@@ -58,7 +58,6 @@
 - gnome-weather 43.rc
 - gobject-introspection 1.73.1
 - gsettings-desktop-schemas 43.rc.1
-- gtk4 4.8.0
 - gtksourceview5 5.5.1
 - js102 102.2.0
 - libadwaita 1.2.rc
