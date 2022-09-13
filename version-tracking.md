@@ -79,6 +79,7 @@
 - phodav 3.0
 - sofia-sip 1.13.8
 - spice-gtk 0.41
+- sushi 43.rc
 - sysprof 3.45.1
 - template-glib 3.35.0
 - totem 43.rc
