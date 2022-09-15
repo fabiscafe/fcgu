@@ -62,7 +62,7 @@
 - gsettings-desktop-schemas 43.rc.1
 - gtksourceview5 5.5.1
 - js102 102.2.0
-- libadwaita 1.2.rc
+- libadwaita 1.2.0
 - libgweather-4 4.1.1
 - libhandy 1.8.0
 - libosinfo 1.10.0
