@@ -87,7 +87,7 @@
 - tracker3-miners 3.4.0.rc
 - vte3 0.69.99
 - webkit2gtk-4.1 2.37.91
-- xdg-desktop-portal-gnome 43.rc
+- xdg-desktop-portal-gnome 43.0
 
 ## Wontbuild
 - gnome-builder 43.alpha1 (gnome-builder-libide-docs, check())
