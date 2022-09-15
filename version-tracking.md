@@ -77,7 +77,7 @@
 - python-nautilus 4.0.alpha
 - orca ORCA_43_BETA
 - phodav 3.0
-- sofia-sip 1.13.8
+- sofia-sip 1.13.9
 - spice-gtk 0.41
 - sushi 43.rc
 - sysprof 3.45.1
