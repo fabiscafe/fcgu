@@ -30,7 +30,7 @@
 - gnome-calls v43_rc.0
 - gnome-characters 43.rc
 - gnome-clocks 43.beta
-- gnome-connections 43.beta
+- gnome-connections 43.0
 - gnome-console 43.rc
 - gnome-contacts 43.rc
 - gnome-control-center 43.rc
