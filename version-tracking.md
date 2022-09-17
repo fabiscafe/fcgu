@@ -23,7 +23,7 @@
 - glib2 2.73.3
 - glib-networking 2.74.0
 - gnome-backgrounds 43.rc
-- gnome-boxes 43.rc
+- gnome-boxes 43.0
 - gnome-builder 43.alpha1¹
 - gnome-calculator 43.rc
 - gnome-calendar 43.rc
