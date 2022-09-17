@@ -33,7 +33,7 @@
 - gnome-connections 43.0
 - gnome-console 43.rc
 - gnome-contacts 43.rc
-- gnome-control-center 43.rc
+- gnome-control-center 43.0
 - gnome-desktop 43.rc
 - gnome-disk-utility 43.rc
 - gnome-endeavour v42.0
