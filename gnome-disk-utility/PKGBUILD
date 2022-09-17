@@ -4,8 +4,8 @@
 # Contributor: Silvio Knizek (killermoehre)
 
 pkgname=gnome-disk-utility
-pkgver=43.rc
-pkgrel=1
+pkgver=43.0
+pkgrel=0.1
 pkgdesc="Disk Management Utility for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-disk-utility"
 arch=(x86_64)
@@ -15,7 +15,7 @@ depends=(udisks2 gtk3 libsecret libpwquality libcanberra libdvdread libnotify
          parted systemd libhandy)
 makedepends=(git meson docbook-xsl)
 options=(debug)
-_commit=9a73e9e4cab85774d42d763c77ca7981f1b72aa9  # tags/43.rc^0
+_commit=26ddd45f309a0592cf8f0b2492498ad2be9a0959  # tags/43.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-disk-utility.git#commit=$_commit")
 sha256sums=('SKIP')
 

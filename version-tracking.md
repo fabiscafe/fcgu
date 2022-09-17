@@ -35,7 +35,7 @@
 - gnome-contacts 43.rc
 - gnome-control-center 43.0
 - gnome-desktop 43.rc
-- gnome-disk-utility 43.rc
+- gnome-disk-utility 43.0
 - gnome-endeavour v42.0
 - gnome-font-viewer 43.rc
 - gnome-initial-setup 43.rc.1
