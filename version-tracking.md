@@ -8,7 +8,7 @@
 - dconf-editor 43.beta
 - d-spy 1.2.1
 - eog 43.rc
-- epiphany 43.rc
+- epiphany 43.0
 - evince 43.alpha
 - evolution 3.46.0
 - evolution-data-server 3.46.0
