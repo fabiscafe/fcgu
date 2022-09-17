@@ -85,7 +85,7 @@
 - totem 43.0
 - tracker3 3.4.0.rc
 - tracker3-miners 3.4.0.rc
-- vte3 0.69.99
+- vte3 0.70.0
 - webkit2gtk-4.1 2.37.91
 - xdg-desktop-portal-gnome 43.0
 
