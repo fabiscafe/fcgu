@@ -3,8 +3,8 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=totem
-pkgver=43.rc
-pkgrel=3
+pkgver=43.0
+pkgrel=0.1
 pkgdesc="Movie player for the GNOME desktop based on GStreamer"
 url="https://wiki.gnome.org/Apps/Videos"
 arch=(x86_64)
@@ -22,7 +22,7 @@ conflicts=(totem-plugin)
 replaces=(totem-plugin)
 groups=(gnome)
 options=(debug)
-_commit=29f555d053d44b55971bcba76821ac436090cbd3  # tags/43.rc^0
+_commit=7bb879e1f6746ca19f99629794e918cdbbd06008  # tags/43.0^0
 source=("git+https://gitlab.gnome.org/GNOME/totem.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgd.git"
         "0001_fix_tests_with_pylint_2.14.5.diff")
@@ -42,6 +42,8 @@ prepare() {
   git submodule set-url subprojects/libgd "$srcdir/libgd"
   git submodule update
 
+  # fix pylint-pythonconsole test with pylint>=2.14
+  # https://gitlab.gnome.org/GNOME/totem/-/issues/537
   git apply -3 ../0001_fix_tests_with_pylint_2.14.5.diff
 }
 
@@ -52,8 +54,6 @@ build() {
 }
 
 check() {
-  # Skip pylint-pythonconsole test as it fails with pylint>=2.14
-  # https://gitlab.gnome.org/GNOME/totem/-/issues/537
   dbus-run-session xvfb-run -s '-nolisten local' \
     meson test -C build --print-errorlogs
 }
