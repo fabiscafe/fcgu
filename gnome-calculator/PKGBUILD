@@ -3,8 +3,8 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-calculator
-pkgver=43.rc
-pkgrel=1
+pkgver=43.0.1
+pkgrel=0.1
 pkgdesc="GNOME Scientific calculator"
 url="https://wiki.gnome.org/Apps/Calculator"
 arch=(x86_64)
@@ -13,7 +13,7 @@ depends=(libadwaita dconf gtksourceview5 mpfr libsoup3 libmpc libgee)
 makedepends=(yelp-tools vala git meson gobject-introspection)
 groups=(gnome)
 options=(debug)
-_commit=17b46a004104f3b7b75c9066774c101bd23c28b5  # tags/43.rc^0
+_commit=debc596cdfaaa3cbfa4300699fcb63362c595507  # tags/43.0.1^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-calculator.git#commit=$_commit")
 sha256sums=('SKIP')
 
