@@ -72,7 +72,7 @@
 - libshumate 1.0.0
 - libsoup3 3.2.0
 - malcontent 0.11.0
-- mutter 43.rc
+- mutter 43.0
 - nautilus 43.0
 - python-nautilus 4.0
 - orca ORCA_43_BETA
