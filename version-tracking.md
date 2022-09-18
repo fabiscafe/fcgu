@@ -38,7 +38,7 @@
 - gnome-disk-utility 43.0
 - gnome-endeavour v42.0
 - gnome-font-viewer 43.rc
-- gnome-initial-setup 43.rc.1
+- gnome-initial-setup 43.0
 - gnome-logs 43.beta
 - gnome-maps v43.rc
 - gnome-online-accounts 3.45.2
