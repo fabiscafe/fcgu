@@ -20,7 +20,7 @@
 - gedit 43.alpha
 - geocode-glib-2 3.26.4
 - gjs 1.73.2
-- glib2 2.73.3
+- glib2 2.74.0
 - glib-networking 2.74.0
 - gnome-backgrounds 43.rc
 - gnome-boxes 43.0
