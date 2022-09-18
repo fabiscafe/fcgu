@@ -3,8 +3,8 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=at-spi2-core
-pkgver=2.45.91
-pkgrel=1
+pkgver=2.46.0
+pkgrel=0.1
 pkgdesc="Base DBus XML interfaces for accessibility, the accessibility registry daemon, and atspi library."
 url="https://gitlab.gnome.org/GNOME/at-spi2-core"
 arch=(x86_64)
@@ -16,7 +16,7 @@ options=(debug)
 conflicts=(atk at-spi2-atk)
 replaces=(atk at-spi2-atk)
 provides=(atk at-spi2-atk)
-_commit=7e1cfb26eed0478975fb7ee91914f5f8d1dabde5  # tags/AT_SPI2_CORE_2_45_91^0
+_commit=97d9ba04e19d0a9edd209d97db81eb6ede5fe4d6  # tags/AT_SPI2_CORE_2_46_0^0
 source=("git+https://gitlab.gnome.org/GNOME/at-spi2-core.git#commit=$_commit")
 sha256sums=('SKIP')
 
