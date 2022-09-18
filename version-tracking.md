@@ -69,7 +69,7 @@
 - libnma 1.10.2
 - libpanel 1.0.0
 - librest 0.9.1
-- libshumate 1.0.0.beta
+- libshumate 1.0.0
 - libsoup3 3.2.0
 - malcontent 0.11.0
 - mutter 43.rc

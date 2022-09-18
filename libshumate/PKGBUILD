@@ -1,8 +1,8 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=libshumate
-pkgver=1.0.0beta
-pkgrel=1
+pkgver=1.0.0
+pkgrel=0.1
 pkgdesc="GTK toolkit providing widgets for embedded maps"
 arch=(x86_64)
 url="https://wiki.gnome.org/Projects/libshumate"
@@ -11,13 +11,13 @@ depends=(gtk4 libsoup3 sqlite)
 makedepends=(git gi-docgen gobject-introspection gtk-doc meson vala)
 checkdepends=(xorg-server-xvfb)
 options=(debug)
-_commit=290359fd6af168b3554c24298ba344eb88a2ed47  # tags/1.0.0.beta^0
+_commit=a79ced2ae9c85368218a706073084275df32728a  # tags/1.0.0^0
 source=("git+https://gitlab.gnome.org/GNOME/libshumate.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed -r 's/([a-z])\./\1/;s/\.([a-z])/\1/;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
