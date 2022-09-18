@@ -5,8 +5,8 @@
 
 pkgbase=gtksourceview5
 pkgname=(gtksourceview5 gtksourceview5-docs)
-pkgver=5.5.1
-pkgrel=1
+pkgver=5.6.0
+pkgrel=0.1
 pkgdesc="A text widget adding syntax highlighting and more to GNOME"
 url="https://wiki.gnome.org/Projects/GtkSourceView"
 arch=(x86_64)
@@ -15,7 +15,7 @@ depends=(gtk4 libxml2 pcre2)
 makedepends=(gobject-introspection vala gi-docgen git meson)
 checkdepends=(xorg-server-xvfb)
 options=(debug)
-_commit=cf79c130ea668ffca50e59af79550fcf6fc12d34  # tags/5.5.1^0
+_commit=4fe70ddf40bfbf9e11c5322577fb5d7d5aec0ba5  # tags/5.6.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gtksourceview.git#commit=$_commit")
 sha256sums=('SKIP')
 
