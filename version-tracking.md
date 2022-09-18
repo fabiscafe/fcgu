@@ -56,7 +56,7 @@
 - gnome-text-editor 43.alpha1
 - gnome-tour 43.beta
 - gnome-weather 43.rc
-- gobject-introspection 1.73.1
+- gobject-introspection 1.74.0
 - grilo grilo-0.3.15
 - grilo-plugins grilo-plugins-0.3.15
 - gsettings-desktop-schemas 43.rc.1
