@@ -3,8 +3,8 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=gnome-online-accounts
-pkgver=3.45.2
-pkgrel=1
+pkgver=3.46.0
+pkgrel=0.1
 pkgdesc="Single sign-on framework for GNOME"
 url="https://wiki.gnome.org/Projects/GnomeOnlineAccounts"
 arch=(x86_64)
@@ -15,7 +15,7 @@ optdepends=('gvfs-goa: Virtual file systems, e.g. OwnCloud'
             'gvfs-google: Google Drive')
 provides=(libgoa-1.0.so libgoa-backend-1.0.so)
 options=(debug)
-_commit=a4cbc46db8b9ba900d785519467bd30c43018455  # tags/3.45.2^0
+_commit=05d9df2822e8d7ce482c46e43cb6fe038e5e488a  # tags/3.46.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-online-accounts.git#commit=$_commit")
 sha256sums=('SKIP')
 

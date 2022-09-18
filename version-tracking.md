@@ -41,7 +41,7 @@
 - gnome-initial-setup 43.0
 - gnome-logs 43.beta
 - gnome-maps v43.rc
-- gnome-online-accounts 3.45.2
+- gnome-online-accounts 3.46.0
 - gnome-photos 43.beta
 - gnome-podcasts master(2022-07-29)
 - gnome-remote-desktop 43.0
