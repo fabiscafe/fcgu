@@ -34,7 +34,7 @@
 - gnome-console 43.rc
 - gnome-contacts 43.rc
 - gnome-control-center 43.0
-- gnome-desktop 43.rc
+- gnome-desktop 43
 - gnome-disk-utility 43.0
 - gnome-endeavour v42.0
 - gnome-font-viewer 43.rc
@@ -108,3 +108,5 @@
 
 ## Stable releases
 * pkgver: 1 -> 0.1
+* X -> X.0
+  * `sed -r '/\.([0-9])/!s/$/\.0/;s/[^-]*-g/r&/;s/-/+/g'`
