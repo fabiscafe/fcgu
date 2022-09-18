@@ -5,8 +5,8 @@
 # This pkg should be renamed to nautilus-python. Currently it's nothing but confusing.
 pkgbase=nautilus-python
 pkgname=python-nautilus
-pkgver=4.0alpha
-pkgrel=1
+pkgver=4.0
+pkgrel=0.1
 pkgdesc="Python bindings for the Nautilus Extension API"
 arch=(x86_64)
 url="https://wiki.gnome.org/Projects/NautilusPython"
@@ -14,7 +14,7 @@ license=(GPL2)
 depends=(nautilus python-gobject)
 makedepends=(meson git gtk-doc)
 options=(debug)
-_commit=739405eecb54fbb351e69c4fda93f817ffd08b89  # tags/4.0.alpha^0
+_commit=cec007e8b159ff2225a23229adaf8b0fee80dca2  # tags/4.0^0
 source=("git+https://gitlab.gnome.org/GNOME/nautilus-python.git#commit=$_commit")
 sha256sums=('SKIP')
 
