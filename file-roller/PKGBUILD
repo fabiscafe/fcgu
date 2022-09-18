@@ -3,8 +3,8 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=file-roller
-pkgver=43.alpha
-pkgrel=1
+pkgver=43.0
+pkgrel=0.1
 pkgdesc="Create and modify archives"
 url="https://wiki.gnome.org/Apps/FileRoller"
 arch=(x86_64)
@@ -18,7 +18,7 @@ optdepends=('p7zip: 7z, arj, exe and encrypted zip files support'
             'squashfs-tools: squashfs image support')
 groups=(gnome)
 options=(debug)
-_commit=29c46cfcc7962aa6010e2bcb58a72eeea640abc7  # tags/43.alpha^0
+_commit=6d57d9962efb976aa3036db965f558b96575289c  # tags/43.0^0
 source=("git+https://gitlab.gnome.org/GNOME/file-roller.git#commit=$_commit")
 sha256sums=('SKIP')
 
