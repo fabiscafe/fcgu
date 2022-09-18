@@ -81,7 +81,7 @@
 - spice-gtk 0.41
 - sushi 43.0
 - sysprof 3.46.0
-- template-glib 3.35.0
+- template-glib 3.36.0
 - totem 43.0
 - tracker3 3.4.0.rc
 - tracker3-miners 3.4.0.rc

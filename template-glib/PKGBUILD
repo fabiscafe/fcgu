@@ -2,8 +2,8 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=template-glib
-pkgver=3.35.0
-pkgrel=1
+pkgver=3.36.0
+pkgrel=0.1
 pkgdesc="A templating library for GLib"
 url="https://gitlab.gnome.org/GNOME/template-glib"
 arch=(x86_64)
@@ -12,7 +12,7 @@ depends=(glib2 gobject-introspection-runtime)
 makedepends=(git meson vala gobject-introspection gtk-doc)
 provides=(libtemplate_glib-1.0.so)
 options=(debug)
-_commit=840e8dd0a9e1c5a388b7c84928aadf239e5c5311  # tags/3.35.0^0
+_commit=a79f0b3e8c09eed250f5fc0ed7b806daf6387c03  # tags/3.36.0^0
 source=("git+https://gitlab.gnome.org/GNOME/template-glib.git#commit=$_commit")
 sha256sums=('SKIP')
 
