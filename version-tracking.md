@@ -59,7 +59,7 @@
 - gobject-introspection 1.74.0
 - grilo grilo-0.3.15
 - grilo-plugins grilo-plugins-0.3.15
-- gsettings-desktop-schemas 43.rc.1
+- gsettings-desktop-schemas 43.0
 - gtksourceview5 5.5.1
 - js102 102.2.0
 - libadwaita 1.2.0
