@@ -4,8 +4,8 @@
 
 pkgbase=nautilus
 pkgname=(nautilus libnautilus-extension)
-pkgver=43.rc
-pkgrel=2
+pkgver=43.0
+pkgrel=0.1
 pkgdesc="Default file manager for GNOME"
 url="https://wiki.gnome.org/Apps/Files"
 arch=(x86_64)
@@ -15,7 +15,7 @@ depends=(libgexiv2 gnome-desktop-4 gvfs dconf tracker3 tracker3-miners
 makedepends=(gobject-introspection git gi-docgen meson libcloudproviders appstream-glib)
 checkdepends=(python-gobject)
 options=(debug)
-_commit=e1f35250571a1388fb67ddc5a710912e2e6e6d8c  # tags/43.rc^0
+_commit=4e4c1e8a729d02d293bf39f6caec61fd72ac1d0a  # tags/43.0^0
 source=("git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgd.git")
 sha256sums=('SKIP'
@@ -58,9 +58,6 @@ package_nautilus() {
   depends+=(libnautilus-extension libcloudproviders)
   optdepends=('nautilus-sendto: Send files via mail extension'
               'nextcloud-client-cloudproviders: Nextcloud integration')
-  provides=("nautilus43=$pkgver")
-  conflicts=(nautilus43)
-  replaces=(nautilus43)
   groups=(gnome)
 
   meson install -C build --destdir "$pkgdir"
@@ -75,9 +72,7 @@ package_nautilus() {
 package_libnautilus-extension() {
   pkgdesc="Library for extending the $pkgdesc"
   depends=(gtk4)
-  provides=(libnautilus43-extension-2 libnautilus-extension-2 libnautilus-extension.so)
-  conflicts=(libnautilus43-extension-2 libnautilus-extension-2)
-  replaces=(libnautilus43-extension-2 libnautilus-extension-2)
+  provides=(libnautilus-extension.so)
   mv libne/* "$pkgdir"
 }
 

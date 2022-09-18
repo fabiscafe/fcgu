@@ -73,7 +73,7 @@
 - libsoup3 3.2.0
 - malcontent 0.11.0
 - mutter 43.rc
-- nautilus 43.rc
+- nautilus 43.0
 - python-nautilus 4.0
 - orca ORCA_43_BETA
 - phodav 3.0
