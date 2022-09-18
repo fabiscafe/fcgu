@@ -1,17 +1,17 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=libpanel
-pkgver=1.0alpha1
-pkgrel=1
+pkgver=1.0.0
+pkgrel=0.1
 pkgdesc="helps to create IDE-like applications using GTK 4 and libadwaita."
 url="https://gitlab.gnome.org/chergert/libpanel"
 arch=(x86_64)
 license=(LGPL)
 depends=(libadwaita)
-makedepends=(git gobject-introspection meson vala)
+makedepends=(git gi-docgen gobject-introspection meson vala)
 provides=(libpanel-1.so)
 options=(debug)
-_commit=6d3cd038f508c91e60b49a824a1c8d3f1cf8b287  # tags/1.0.alpha1^0
+_commit=aaa0a3ade2e0708f2eafc0b963d9e9d7e54fc108  # tags/1.0.0^0
 source=("git+https://gitlab.gnome.org/chergert/libpanel.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -36,6 +36,3 @@ check() {
 package() {
   meson install -C build --destdir "$pkgdir"
 }
-
-# vim:set sw=2 et:
-
