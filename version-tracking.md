@@ -40,7 +40,7 @@
 - gnome-font-viewer 43.rc
 - gnome-initial-setup 43.0
 - gnome-logs 43.beta
-- gnome-maps v43.rc
+- gnome-maps v43.0
 - gnome-online-accounts 3.46.0
 - gnome-photos 43.beta
 - gnome-podcasts master(2022-07-29)
