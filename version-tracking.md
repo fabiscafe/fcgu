@@ -46,7 +46,7 @@
 - gnome-podcasts master(2022-07-29)
 - gnome-remote-desktop 43.0
 - gnome-session 42.0
-- gnome-settings-daemon 43.rc
+- gnome-settings-daemon 43.0
 - gnome-shell 43.0
 - gnome-shell-extensions 43.0
 - gnome-shell-extension-appindicator master(2022-08-24)+PR351

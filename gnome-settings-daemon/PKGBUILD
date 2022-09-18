@@ -3,8 +3,8 @@
 # Contributor: Mark Wagie <mark dot wagie at tutanota dot com>
 
 pkgname=gnome-settings-daemon
-pkgver=43.rc
-pkgrel=1
+pkgver=43.0
+pkgrel=0.1
 pkgdesc="GNOME Settings Daemon"
 url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
 arch=(x86_64)
@@ -18,7 +18,7 @@ optdepends=('usbguard: USB protection support')
 groups=(gnome)
 backup=(etc/xdg/Xwayland-session.d/00-xrdb)
 options=(debug)
-_commit=fc523ea635fb5d8062fad5873adf51f7d681458c  # tags/43.rc^0
+_commit=7bde651053bdf18fe66cbd4ce697cb97a6ea556b  # tags/43.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-settings-daemon.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git")
 sha256sums=('SKIP'
@@ -43,8 +43,7 @@ build() {
 }
 
 check() {
-  dbus-run-session xvfb-run -s '-nolisten local' \
-    meson test -C build --print-errorlogs
+  dbus-run-session meson test -C build --print-errorlogs
 }
 
 package() {
