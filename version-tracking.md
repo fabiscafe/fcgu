@@ -9,7 +9,7 @@
 - d-spy 1.2.1
 - eog 43.0
 - epiphany 43.0
-- evince 43.alpha
+- evince 43.0
 - evolution 3.46.0
 - evolution-data-server 3.46.0
 - feedbackd 0.0.0+git20220520
