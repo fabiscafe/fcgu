@@ -3,8 +3,8 @@
 # Contributor: Eric Bélanger <eric@archlinux.org>
 
 pkgname=webkit2gtk-4.1
-pkgver=2.37.91
-pkgrel=1
+pkgver=2.38.0
+pkgrel=0.1
 pkgdesc="Web content engine for GTK"
 url="https://webkitgtk.org"
 arch=(x86_64)
@@ -25,7 +25,7 @@ options=(debug)
 # Using git directly requires to load around 3GiB
 # While the tarball "only" is around 1GiB
 source=("https://github.com/WebKit/WebKit/archive/refs/tags/webkitgtk-${pkgver}.tar.gz")
-sha256sums=('91d618396fbf5665de9c134f8e9620869866b9e3d23b33554a96377f304e5491')
+sha256sums=('09d1f372328fc4f166f4a90e0587196f71da413c25fa81574fb75f029dbbd202')
 validpgpkeys=('D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos <cgarcia@igalia.com>
               '5AA3BC334FD7E3369E7C77B291C559DBE4C9123B') # Adrián Pérez de Castro <aperez@igalia.com>
 

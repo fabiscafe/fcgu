@@ -86,7 +86,7 @@
 - tracker3 3.4.0
 - tracker3-miners 3.4.0
 - vte3 0.70.0
-- webkit2gtk-4.1 2.37.91
+- webkit2gtk-4.1 2.38.0
 - xdg-desktop-portal-gnome 43.0
 
 ## Wontbuild
