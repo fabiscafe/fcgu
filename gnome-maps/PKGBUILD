@@ -4,7 +4,7 @@
 
 pkgname=gnome-maps
 pkgver=43.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="A simple GNOME 3 maps application"
 url="https://wiki.gnome.org/Apps/Maps"
 arch=(x86_64)
@@ -15,10 +15,8 @@ makedepends=(gobject-introspection git meson yelp-tools)
 groups=(gnome)
 options=(debug)
 _commit=789b6f9b3410d2c980d2274b497844a9e3acabcd  # tags/v43.0^0
-source=("git+https://gitlab.gnome.org/GNOME/gnome-maps.git#commit=$_commit"
-	"0001-shumate1.0.0_build_fix.patch")
-sha256sums=('SKIP'
-            'e0f3d7475f76c97e9209c078a8a2a3c6601b1dff3bfcf49e4584fad506295d13')
+source=("git+https://gitlab.gnome.org/GNOME/gnome-maps.git#commit=$_commit")
+sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
@@ -27,10 +25,6 @@ pkgver() {
 
 prepare() {
   cd $pkgname
-
-  # maps wont build against shumate 1.0.0
-  # https://gitlab.gnome.org/GNOME/gnome-maps/-/issues/482
-  git apply -3 ../0001-shumate1.0.0_build_fix.patch
 }
 
 build() {
