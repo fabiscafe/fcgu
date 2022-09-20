@@ -6,7 +6,7 @@
 - cheese 43.alpha
 - clapper 0.5.2
 - dconf-editor 43.beta
-- d-spy 1.2.1
+- d-spy 1.4.0
 - eog 43.0
 - epiphany 43.0
 - evince 43.0
