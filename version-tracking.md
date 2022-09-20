@@ -27,7 +27,7 @@
 - gnome-builder 43.alpha1¹
 - gnome-calculator 43.0.1
 - gnome-calendar 43.0
-- gnome-calls v43_rc.0
+- gnome-calls v43.0
 - gnome-characters 43.0
 - gnome-clocks 43.beta
 - gnome-connections 43.0
