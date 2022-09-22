@@ -29,7 +29,7 @@
 - gnome-calendar 43.0
 - gnome-calls v43.0
 - gnome-characters 43.0
-- gnome-clocks 43.beta
+- gnome-clocks 43.0
 - gnome-connections 43.0
 - gnome-console 43.rc
 - gnome-contacts 43.rc
