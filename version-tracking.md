@@ -45,7 +45,7 @@
 - gnome-photos 43.0
 - gnome-podcasts master(2022-07-29)
 - gnome-remote-desktop 43.0
-- gnome-session 42.0
+- gnome-session 43.0
 - gnome-settings-daemon 43.0
 - gnome-shell 43.0
 - gnome-shell-extensions 43.0
