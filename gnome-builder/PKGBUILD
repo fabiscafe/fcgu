@@ -6,7 +6,7 @@ pkgbase=gnome-builder
 # https://gitlab.gnome.org/GNOME/gnome-builder/-/issues/1793
 #pkgname=(gnome-builder gnome-builder-libide-docs)
 pkgname=gnome-builder
-pkgver=43.rc
+pkgver=43.0
 pkgrel=0.1
 pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
@@ -20,7 +20,7 @@ makedepends=(llvm gobject-introspection gi-docgen yelp-tools appstream-glib git
              mm-common python-sphinx_rtd_theme jedi-language-server)
 checkdepends=(xorg-server-xvfb)
 options=(debug)
-_commit=36497b713b9023cf65317071df4ac5f96fff71f3  # tags/43.rc^0
+_commit=60782b0dad301e9249b720be514a2f10eb690a93  # tags/43.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
 sha256sums=('SKIP')
 

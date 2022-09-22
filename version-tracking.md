@@ -25,7 +25,7 @@
 - glib-networking 2.74.0
 - gnome-backgrounds 43
 - gnome-boxes 43.0
-- gnome-builder 43.rc¹
+- gnome-builder 43.0¹
 - gnome-calculator 43.0.1
 - gnome-calendar 43.0
 - gnome-calls v43.0
@@ -92,7 +92,7 @@
 - xdg-desktop-portal-gnome 43.0
 
 ## Wontbuild
-- gnome-builder 43.rc (gnome-builder-libide-docs)
+- gnome-builder 43.0 (gnome-builder-libide-docs)
 
 ## Exclude
 - none
