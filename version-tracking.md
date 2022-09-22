@@ -42,7 +42,7 @@
 - gnome-logs 43.beta
 - gnome-maps v43.0
 - gnome-online-accounts 3.46.0
-- gnome-photos 43.beta
+- gnome-photos 43.0
 - gnome-podcasts master(2022-07-29)
 - gnome-remote-desktop 43.0
 - gnome-session 42.0
