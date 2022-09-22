@@ -3,8 +3,8 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-backgrounds
-pkgver=43.rc
-pkgrel=1
+pkgver=43.0
+pkgrel=0.1
 pkgdesc="Background images and data for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-backgrounds"
 arch=(any)
@@ -14,13 +14,13 @@ makedepends=(git glib2 meson)
 license=(GPL)
 groups=(gnome)
 options=(debug)
-_commit=539aa328fda78826b9597c7c391485fb392a6431  # tags/43.rc^0
+_commit=3dc06f83fda4169432a43443cfa1617bbbd4810b  # tags/43^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-backgrounds.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed -r '/\.([0-9])/!s/$/\.0/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 build() {

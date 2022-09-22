@@ -22,7 +22,7 @@
 - gjs 1.73.2
 - glib2 2.74.0
 - glib-networking 2.74.0
-- gnome-backgrounds 43.rc
+- gnome-backgrounds 43
 - gnome-boxes 43.0
 - gnome-builder 43.rc¹
 - gnome-calculator 43.0.1
