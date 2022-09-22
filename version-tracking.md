@@ -55,7 +55,7 @@
 - gnome-sound-recorder 43.beta
 - gnome-terminal 3.46.1
 - gnome-text-editor 43.0
-- gnome-tour 43.beta
+- gnome-tour 43.0
 - gnome-weather 43.0
 - gobject-introspection 1.74.0
 - grilo grilo-0.3.15

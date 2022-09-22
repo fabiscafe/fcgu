@@ -2,15 +2,15 @@
 # Contributor: Balló György <ballogyor+arch at gmail dot com>
 
 pkgname=gnome-tour
-pkgver=43.beta
-pkgrel=1
+pkgver=43.0
+pkgrel=0.1
 pkgdesc='Guided tour and greeter for GNOME'
 arch=('x86_64')
 url='https://gitlab.gnome.org/GNOME/gnome-tour'
 license=('GPL3')
 depends=('libadwaita')
 makedepends=('appstream-glib' 'meson' 'rust' 'git')
-_commit=ed523b73e6fa81efbcb72ca66f0bcc760582cf1d  # tags/43.beta^0
+_commit=61ae394c1d303817735c4e612f84c3397031d30a  # tags/43.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-tour.git#commit=$_commit")
 sha256sums=('SKIP')
 
