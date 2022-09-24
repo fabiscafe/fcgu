@@ -2,8 +2,8 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-logs
-pkgver=43.beta
-pkgrel=1
+pkgver=43.0
+pkgrel=0.1
 pkgdesc="A log viewer for the systemd journal"
 url="https://wiki.gnome.org/Apps/Logs"
 arch=(x86_64)
@@ -12,7 +12,7 @@ depends=(systemd libadwaita gsettings-desktop-schemas)
 makedepends=(appstream-glib git meson yelp-tools)
 groups=(gnome)
 options=(debug)
-_commit=df508569254b8cadbf84621c89462709ccf0225b  # tags/gnome-logs-43.beta^0
+_commit=3fa0b8a7f734e6adf865cc5df673f6a74809b56d  # tags/gnome-logs-43.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-logs.git#commit=$_commit")
 sha256sums=('SKIP')
 

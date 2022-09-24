@@ -40,7 +40,7 @@
 - gnome-endeavour v42.0
 - gnome-font-viewer 43.0
 - gnome-initial-setup 43.0
-- gnome-logs 43.beta
+- gnome-logs gnome-logs-43.0
 - gnome-maps v43.0
 - gnome-online-accounts 3.46.0
 - gnome-photos 43.0
