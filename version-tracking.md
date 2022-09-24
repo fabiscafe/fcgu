@@ -33,7 +33,7 @@
 - gnome-clocks 43.0
 - gnome-connections 43.0
 - gnome-console 43.rc
-- gnome-contacts 43.rc
+- gnome-contacts 43.0
 - gnome-control-center 43.0
 - gnome-desktop 43
 - gnome-disk-utility 43.0
