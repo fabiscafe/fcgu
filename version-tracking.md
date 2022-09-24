@@ -61,7 +61,7 @@
 - grilo grilo-0.3.15
 - grilo-plugins grilo-plugins-0.3.15
 - gsettings-desktop-schemas 43.0
-- gtksourceview5 5.6.0
+- gtksourceview5 5.6.1
 - js102 102.3.0
 - libadwaita 1.2.0
 - libgweather-4 4.2.0
