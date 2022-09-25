@@ -19,6 +19,9 @@ FCGU is a free community project. That's why we need your help. If you own a ser
 ![preview](https://codeberg.org/fabiscafe/gnome-unstable/raw/branch/main/assets/fcgu.png)
 
 ## Installation
+### Disable unsupported repos
+Before you start - disable all 3rd-party-, as well as Arch testing-repos and downgrade/uninstall packages they provide. FCGU is not compatible with them and things might break on you if you keep them enabled. <span style="text-decoration: underline">Do not report any problem with them enabled</span>.
+
 ### Keyring
 All of our packages are signed. To be able to install trustworthy packages it's necessary to install and trust the signing-key first.
 
