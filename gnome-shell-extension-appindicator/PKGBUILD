@@ -4,7 +4,7 @@
 
 pkgname=gnome-shell-extension-appindicator
 pkgver=42+r8+g794c4a7
-pkgrel=1
+pkgrel=0.1
 pkgdesc='AppIndicator/KStatusNotifierItem support for GNOME Shell'
 url='https://github.com/ubuntu/gnome-shell-extension-appindicator'
 arch=('any')
