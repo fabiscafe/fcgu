@@ -1,23 +1,574 @@
-From 4e37f2416d5cfed9d4a14e0d5f583f3b886f0216 Mon Sep 17 00:00:00 2001
-From: Ewout van Mansom <ewout@vanmansom.name>
-Date: Mon, 29 Aug 2022 16:16:52 +0200
-Subject: [PATCH] List shell version 43 in metadata.json
+From 2cbef33e9de84d7f10775e52c28ca22732c8d040 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Marco=20Trevisan=20=28Trevi=C3=B1o=29?= <mail@3v1n0.net>
+Date: Thu, 14 Apr 2022 18:51:15 +0200
+Subject: [PATCH 1/8] appIndicator: Fix indicator IDs on error logs
 
 ---
- metadata.json | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
+ appIndicator.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
 
-diff --git a/metadata.json b/metadata.json
-index 0980a75..a23a078 100644
---- a/metadata.json
-+++ b/metadata.json
-@@ -6,7 +6,8 @@
-         "3.38",
-         "40",
-         "41",
--        "42"
-+        "42",
-+        "43"
-     ],
-     "gettext-domain": "AppIndicatorExtension",
-     "settings-schema": "org.gnome.shell.extensions.appindicator",
+diff --git a/appIndicator.js b/appIndicator.js
+index 07576a3..2a00b36 100644
+--- a/appIndicator.js
++++ b/appIndicator.js
+@@ -373,7 +373,7 @@ var AppIndicator = class AppIndicatorsAppIndicator {
+         // ... and don't seem to have any effect.
+         this._proxy.ActivateRemote(x, y, this._cancellable, (_, e) => {
+             if (e && !e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.CANCELLED))
+-                Util.Logger.critical(`${this._indicator.id}, failed to activate: ${e.message}`);
++                Util.Logger.critical(`${this.id}, failed to activate: ${e.message}`);
+         });
+     }
+ 
+@@ -384,10 +384,10 @@ var AppIndicator = class AppIndicatorsAppIndicator {
+             if (e && e.matches(Gio.DBusError, Gio.DBusError.UNKNOWN_METHOD)) {
+                 this._proxy.SecondaryActivateRemote(x, y, cancellable, (_r, error) => {
+                     if (error && !error.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.CANCELLED))
+-                        Util.Logger.critical(`${this._indicator.id}, failed to secondary activate: ${e.message}`);
++                        Util.Logger.critical(`${this.id}, failed to secondary activate: ${e.message}`);
+                 });
+             } else if (e && !e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.CANCELLED)) {
+-                Util.Logger.critical(`${this._indicator.id}, failed to secondary activate: ${e.message}`);
++                Util.Logger.critical(`${this.id}, failed to secondary activate: ${e.message}`);
+             }
+         });
+     }
+@@ -398,14 +398,14 @@ var AppIndicator = class AppIndicatorsAppIndicator {
+         if (dx !== 0) {
+             this._proxy.ScrollRemote(Math.floor(dx), 'horizontal', cancellable, (_, e) => {
+                 if (e && !e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.CANCELLED))
+-                    Util.Logger.critical(`${this._indicator.id}, failed to scroll horizontally: ${e.message}`);
++                    Util.Logger.critical(`${this.id}, failed to scroll horizontally: ${e.message}`);
+             });
+         }
+ 
+         if (dy !== 0) {
+             this._proxy.ScrollRemote(Math.floor(dy), 'vertical', cancellable, (_, e) => {
+                 if (e && !e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.CANCELLED))
+-                    Util.Logger.critical(`${this._indicator.id}, failed to scroll vertically: ${e.message}`);
++                    Util.Logger.critical(`${this.id}, failed to scroll vertically: ${e.message}`);
+             });
+         }
+     }
+
+From f1f486d1b953821f9f3895d27438387e65f6fc3e Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Marco=20Trevisan=20=28Trevi=C3=B1o=29?= <mail@3v1n0.net>
+Date: Thu, 14 Apr 2022 18:51:47 +0200
+Subject: [PATCH 2/8] appIndicator: Handle promises rejections gracefully
+
+LP: #1968498
+Fixes #334
+---
+ appIndicator.js | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+
+diff --git a/appIndicator.js b/appIndicator.js
+index 2a00b36..6386d8e 100644
+--- a/appIndicator.js
++++ b/appIndicator.js
+@@ -147,11 +147,17 @@ var AppIndicator = class AppIndicatorsAppIndicator {
+         return this.id && this.menuPath;
+     }
+ 
+-    _nameOwnerChanged() {
+-        if (!this.hasNameOwner)
++    async _nameOwnerChanged() {
++        if (!this.hasNameOwner) {
+             this._checkIfReady();
+-        else
+-            this._checkNeededProperties();
++        } else {
++            try {
++                await this._checkNeededProperties();
++            } catch (e) {
++                if (!e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.CANCELLED))
++                    Util.Logger.warn(`${this.uniqueId}, Impossible to get basic properties: ${e}`);
++            }
++        }
+ 
+         this.emit('name-owner-changed');
+     }
+
+From b826ded2e84a932efd26b3977265fcd6b139e14c Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Marco=20Trevisan=20=28Trevi=C3=B1o=29?= <mail@3v1n0.net>
+Date: Thu, 14 Apr 2022 21:05:29 +0200
+Subject: [PATCH 3/8] statusNotifierWatcher: Handle initialization /
+ destruction errors
+
+This also ensures that we're disabling fully the extension
+---
+ statusNotifierWatcher.js | 56 ++++++++++++++++++++++++++++++----------
+ 1 file changed, 42 insertions(+), 14 deletions(-)
+
+diff --git a/statusNotifierWatcher.js b/statusNotifierWatcher.js
+index 04e6aa2..1f32c55 100644
+--- a/statusNotifierWatcher.js
++++ b/statusNotifierWatcher.js
+@@ -44,7 +44,12 @@ var StatusNotifierWatcher = class AppIndicatorsStatusNotifierWatcher {
+     constructor(watchDog) {
+         this._watchDog = watchDog;
+         this._dbusImpl = Gio.DBusExportedObject.wrapJSObject(Interfaces.StatusNotifierWatcher, this);
+-        this._dbusImpl.export(Gio.DBus.session, WATCHER_OBJECT);
++        try {
++            this._dbusImpl.export(Gio.DBus.session, WATCHER_OBJECT);
++        } catch (e) {
++            Util.Logger.warn(`Failed to export ${WATCHER_OBJECT}`);
++            logError(e);
++        }
+         this._cancellable = new Gio.Cancellable();
+         this._everAcquiredName = false;
+         this._ownName = Gio.DBus.session.own_name(WATCHER_BUS_NAME,
+@@ -53,7 +58,12 @@ var StatusNotifierWatcher = class AppIndicatorsStatusNotifierWatcher {
+             this._lostName.bind(this));
+         this._items = new Map();
+ 
+-        this._dbusImpl.emit_signal('StatusNotifierHostRegistered', null);
++        try {
++            this._dbusImpl.emit_signal('StatusNotifierHostRegistered', null);
++        } catch (e) {
++            Util.Logger.warn(`Failed to notify registered host ${WATCHER_OBJECT}`);
++        }
++
+         this._seekStatusNotifierItems().catch(e => {
+             if (!e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.CANCELLED))
+                 logError(e, 'Looking for StatusNotifierItem\'s');
+@@ -205,10 +215,14 @@ var StatusNotifierWatcher = class AppIndicatorsStatusNotifierWatcher {
+         indicator.destroy();
+         this._items.delete(id);
+ 
+-        this._dbusImpl.emit_signal('StatusNotifierItemUnregistered',
+-            GLib.Variant.new('(s)', [uniqueId]));
+-        this._dbusImpl.emit_property_changed('RegisteredStatusNotifierItems',
+-            GLib.Variant.new('as', this.RegisteredStatusNotifierItems));
++        try {
++            this._dbusImpl.emit_signal('StatusNotifierItemUnregistered',
++                GLib.Variant.new('(s)', [uniqueId]));
++            this._dbusImpl.emit_property_changed('RegisteredStatusNotifierItems',
++                GLib.Variant.new('as', this.RegisteredStatusNotifierItems));
++        } catch (e) {
++            Util.Logger.warn(`Failed to emit signals: ${e}`);
++        }
+     }
+ 
+     RegisterStatusNotifierHostAsync(_service, invocation) {
+@@ -235,16 +249,30 @@ var StatusNotifierWatcher = class AppIndicatorsStatusNotifierWatcher {
+     }
+ 
+     destroy() {
+-        if (!this._isDestroyed) {
+-            // this doesn't do any sync operation and doesn't allow us to hook up the event of being finished
+-            // which results in our unholy debounce hack (see extension.js)
+-            Array.from(this._items.keys()).forEach(i => this._remove(i));
++        if (this._isDestroyed)
++            return;
++
++        // this doesn't do any sync operation and doesn't allow us to hook up
++        // the event of being finished which results in our unholy debounce hack
++        // (see extension.js)
++        Array.from(this._items.keys()).forEach(i => this._remove(i));
++        this._cancellable.cancel();
++
++        try {
+             this._dbusImpl.emit_signal('StatusNotifierHostUnregistered', null);
+-            Gio.DBus.session.unown_name(this._ownName);
+-            this._cancellable.cancel();
++        } catch (e) {
++            Util.Logger.warn(`Failed to emit uinregistered signal: ${e}`);
++        }
++
++        Gio.DBus.session.unown_name(this._ownName);
++
++        try {
+             this._dbusImpl.unexport();
+-            delete this._items;
+-            this._isDestroyed = true;
++        } catch (e) {
++            Util.Logger.warn(`Failed to unexport watcher object: ${e}`);
+         }
++
++        delete this._items;
++        this._isDestroyed = true;
+     }
+ };
+
+From e2a62bd7c927c6af90c55188b9d6a2a9ed2295b6 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Marco=20Trevisan=20=28Trevi=C3=B1o=29?= <mail@3v1n0.net>
+Date: Thu, 14 Apr 2022 22:42:15 +0200
+Subject: [PATCH 4/8] extension: Cleanup indicators leftovers on startup
+
+At times some indicators may be left around, so clean them up on startup
+---
+ extension.js           |  1 +
+ indicatorStatusIcon.js |  4 ++--
+ util.js                | 22 +++++++++++++++++++++-
+ 3 files changed, 24 insertions(+), 3 deletions(-)
+
+diff --git a/extension.js b/extension.js
+index 81fbf92..11947a8 100644
+--- a/extension.js
++++ b/extension.js
+@@ -56,6 +56,7 @@ function maybeEnableAfterNameAvailable() {
+ 
+ function enable() {
+     isEnabled = true;
++    Util.tryCleanupOldIndicators();
+     maybeEnableAfterNameAvailable();
+     TrayIconsManager.TrayIconsManager.initialize();
+ }
+diff --git a/indicatorStatusIcon.js b/indicatorStatusIcon.js
+index adfeb2d..a721b2a 100644
+--- a/indicatorStatusIcon.js
++++ b/indicatorStatusIcon.js
+@@ -14,7 +14,7 @@
+ // along with this program; if not, write to the Free Software
+ // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ 
+-/* exported IndicatorStatusIcon, IndicatorStatusTrayIcon */
++/* exported BaseStatusIcon, IndicatorStatusIcon, IndicatorStatusTrayIcon */
+ 
+ const Clutter = imports.gi.Clutter;
+ const GObject = imports.gi.GObject;
+@@ -34,7 +34,7 @@ const Util = Extension.imports.util;
+ const PromiseUtils = Extension.imports.promiseUtils;
+ const SettingsManager = Extension.imports.settingsManager;
+ 
+-const BaseStatusIcon = GObject.registerClass(
++var BaseStatusIcon = GObject.registerClass(
+ class AppIndicatorsIndicatorBaseStatusIcon extends PanelMenu.Button {
+     _init(menuAlignment, nameText, iconActor, dontCreateMenu) {
+         super._init(menuAlignment, nameText, dontCreateMenu);
+diff --git a/util.js b/util.js
+index 0a61b8c..4dff496 100644
+--- a/util.js
++++ b/util.js
+@@ -16,7 +16,8 @@
+ 
+ /* exported refreshPropertyOnProxy, getUniqueBusName, getBusNames,
+    introspectBusObject, dbusNodeImplementsInterfaces, waitForStartupCompletion,
+-   connectSmart, versionCheck, getDefaultTheme, BUS_ADDRESS_REGEX */
++   connectSmart, versionCheck, getDefaultTheme, tryCleanupOldIndicators,
++   BUS_ADDRESS_REGEX */
+ 
+ const Gio = imports.gi.Gio;
+ const GLib = imports.gi.GLib;
+@@ -30,6 +31,7 @@ const St = imports.gi.St;
+ const Config = imports.misc.config;
+ const ExtensionUtils = imports.misc.extensionUtils;
+ const Extension = ExtensionUtils.getCurrentExtension();
++const IndicatorStatusIcon = Extension.imports.indicatorStatusIcon;
+ const Params = imports.misc.params;
+ const PromiseUtils = Extension.imports.promiseUtils;
+ const Signals = imports.signals;
+@@ -380,3 +382,21 @@ function versionCheck(required) {
+     }
+     return false;
+ }
++
++function tryCleanupOldIndicators() {
++    const indicatorType = IndicatorStatusIcon.BaseStatusIcon;
++    const indicators = Object.values(Main.panel.statusArea).filter(i => i instanceof indicatorType);
++
++    try {
++        const panelBoxes = [
++            Main.panel._leftBox, Main.panel._centerBox, Main.panel._rightBox,
++        ];
++
++        panelBoxes.forEach(box =>
++            indicators.push(...box.get_children().filter(i => i instanceof indicatorType)));
++    } catch (e) {
++        logError(e);
++    }
++
++    new Set(indicators).forEach(i => i.destroy());
++}
+
+From 7ea52eb4e803acd7081f096acff8b8b91722ff18 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Marco=20Trevisan=20=28Trevi=C3=B1o=29?= <mail@3v1n0.net>
+Date: Sat, 24 Sep 2022 10:35:25 +0200
+Subject: [PATCH 5/8] cleanup: Catch more errors on promises rejections
+
+---
+ appIndicator.js | 4 ++--
+ dbusMenu.js     | 5 ++++-
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/appIndicator.js b/appIndicator.js
+index 6386d8e..d3c9cd8 100644
+--- a/appIndicator.js
++++ b/appIndicator.js
+@@ -211,7 +211,7 @@ var AppIndicator = class AppIndicatorsAppIndicator {
+             this._proxyPropertyList.includes(p)).forEach(p =>
+             Util.refreshPropertyOnProxy(this._proxy, p, {
+                 skipEqualityCheck: p.endsWith('Pixmap'),
+-            }),
++            }).catch(e => logError(e)),
+         );
+     }
+ 
+@@ -865,7 +865,7 @@ class AppIndicatorsIconActor extends St.Icon {
+         this._iconCache.clear();
+         this._cancelLoading();
+ 
+-        this._updateIcon();
++        this._updateIcon().catch(e => logError(e));
+         this._updateOverlayIcon();
+     }
+ 
+diff --git a/dbusMenu.js b/dbusMenu.js
+index c2d5756..5b4f6ee 100644
+--- a/dbusMenu.js
++++ b/dbusMenu.js
+@@ -381,7 +381,10 @@ var DBusClient = class AppIndicatorsDBusClient {
+         } else {
+             // we don't, so let's create us
+             this._items.set(id, new DbusMenuItem(this, id, properties, childrenIds));
+-            this._requestProperties(id);
++            this._requestProperties(id).catch(e => {
++                if (!e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.CANCELLED))
++                    Util.Logger.warn(`Could not get menu properties menu proxy: ${e}`);
++            });
+         }
+ 
+         return id;
+
+From 8512205d73e849e14c17c2b4cf37df2ad1d60765 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Marco=20Trevisan=20=28Trevi=C3=B1o=29?= <mail@3v1n0.net>
+Date: Tue, 19 Apr 2022 15:42:31 +0200
+Subject: [PATCH 6/8] indicatorStatusIcon: Add icons to status area once
+ created
+
+Instead of adding the icons when they are visible, add them once we
+create them and just show them when ready.
+
+So we can cleanup the code a bit splitting a bit the container vs actor
+duties.
+
+Related-to: #351
+---
+ indicatorStatusIcon.js   | 36 +++++++++++++++++++++++++-----------
+ statusNotifierWatcher.js |  1 +
+ trayIconsManager.js      |  1 +
+ 3 files changed, 27 insertions(+), 11 deletions(-)
+
+diff --git a/indicatorStatusIcon.js b/indicatorStatusIcon.js
+index a721b2a..2f5fff3 100644
+--- a/indicatorStatusIcon.js
++++ b/indicatorStatusIcon.js
+@@ -14,7 +14,8 @@
+ // along with this program; if not, write to the Free Software
+ // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ 
+-/* exported BaseStatusIcon, IndicatorStatusIcon, IndicatorStatusTrayIcon */
++/* exported BaseStatusIcon, IndicatorStatusIcon, IndicatorStatusTrayIcon,
++            addIconToPanel */
+ 
+ const Clutter = imports.gi.Clutter;
+ const GObject = imports.gi.GObject;
+@@ -34,6 +35,28 @@ const Util = Extension.imports.util;
+ const PromiseUtils = Extension.imports.promiseUtils;
+ const SettingsManager = Extension.imports.settingsManager;
+ 
++function addIconToPanel(statusIcon) {
++    if (!(statusIcon instanceof BaseStatusIcon))
++        throw TypeError(`Unexpected icon type: ${statusIcon}`);
++
++    const settings = SettingsManager.getDefaultGSettings();
++    const indicatorId = `appindicator-${statusIcon.uniqueId}`;
++
++    const currentIcon = Main.panel.statusArea[indicatorId];
++    if (currentIcon) {
++        if (currentIcon !== statusIcon)
++            currentIcon.destroy();
++
++        Main.panel.statusArea[indicatorId] = null;
++    }
++
++    Main.panel.addToStatusArea(indicatorId, statusIcon, 1,
++        settings.get_string('tray-pos'));
++
++    Util.connectSmart(settings, 'changed::tray-pos', statusIcon, () =>
++        addIconToPanel(statusIcon));
++}
++
+ var BaseStatusIcon = GObject.registerClass(
+ class AppIndicatorsIndicatorBaseStatusIcon extends PanelMenu.Button {
+     _init(menuAlignment, nameText, iconActor, dontCreateMenu) {
+@@ -41,7 +64,6 @@ class AppIndicatorsIndicatorBaseStatusIcon extends PanelMenu.Button {
+ 
+         const settings = SettingsManager.getDefaultGSettings();
+         Util.connectSmart(settings, 'changed::icon-opacity', this, this._updateOpacity);
+-        Util.connectSmart(settings, 'changed::tray-pos', this, this._showIfReady);
+         this.connect('notify::hover', () => this._onHoverChanged());
+ 
+         this._setIconActor(iconActor);
+@@ -74,13 +96,7 @@ class AppIndicatorsIndicatorBaseStatusIcon extends PanelMenu.Button {
+     }
+ 
+     _showIfReady() {
+-        if (!this.isReady())
+-            return;
+-
+-        const indicatorId = `appindicator-${this.uniqueId}`;
+-        Main.panel.statusArea[indicatorId] = null;
+-        Main.panel.addToStatusArea(indicatorId, this, 1,
+-            SettingsManager.getDefaultGSettings().get_string('tray-pos'));
++        this.visible = this.isReady();
+     }
+ 
+     _onHoverChanged() {
+@@ -242,8 +258,6 @@ class AppIndicatorsIndicatorStatusIcon extends BaseStatusIcon {
+         this._updateLabel();
+         this._updateStatus();
+         this._updateMenu();
+-
+-        super._showIfReady();
+     }
+ 
+     vfunc_button_press_event(buttonEvent) {
+diff --git a/statusNotifierWatcher.js b/statusNotifierWatcher.js
+index 1f32c55..c2ef074 100644
+--- a/statusNotifierWatcher.js
++++ b/statusNotifierWatcher.js
+@@ -115,6 +115,7 @@ var StatusNotifierWatcher = class AppIndicatorsStatusNotifierWatcher {
+             // if the desktop is not ready delay the icon creation and signal emissions
+             await Util.waitForStartupCompletion(indicator.cancellable);
+             const statusIcon = new IndicatorStatusIcon.IndicatorStatusIcon(indicator);
++            IndicatorStatusIcon.addIconToPanel(statusIcon);
+             indicator.connect('destroy', () => statusIcon.destroy());
+ 
+             this._dbusImpl.emit_signal('StatusNotifierItemRegistered',
+diff --git a/trayIconsManager.js b/trayIconsManager.js
+index db34d51..229a544 100644
+--- a/trayIconsManager.js
++++ b/trayIconsManager.js
+@@ -53,6 +53,7 @@ var TrayIconsManager = class TrayIconsManager {
+ 
+     onTrayIconAdded(_tray, icon) {
+         const trayIcon = new IndicatorStatusIcon.IndicatorStatusTrayIcon(icon);
++        IndicatorStatusIcon.addIconToPanel(trayIcon);
+         this._icons.push(trayIcon);
+         trayIcon.connect('destroy', () =>
+             this._icons.splice(this._icons.indexOf(trayIcon), 1));
+
+From 32f2ad6493efb3156acbf15d0282b4122ee7a963 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Marco=20Trevisan=20=28Trevi=C3=B1o=29?= <mail@3v1n0.net>
+Date: Tue, 19 Apr 2022 15:53:44 +0200
+Subject: [PATCH 7/8] trayIconsManager: Just use native container to keep track
+ of tray icons
+
+---
+ indicatorStatusIcon.js | 12 +++++++++++-
+ trayIconsManager.js    |  6 +-----
+ 2 files changed, 12 insertions(+), 6 deletions(-)
+
+diff --git a/indicatorStatusIcon.js b/indicatorStatusIcon.js
+index 2f5fff3..78f7433 100644
+--- a/indicatorStatusIcon.js
++++ b/indicatorStatusIcon.js
+@@ -15,7 +15,7 @@
+ // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ 
+ /* exported BaseStatusIcon, IndicatorStatusIcon, IndicatorStatusTrayIcon,
+-            addIconToPanel */
++            addIconToPanel, getTrayIcons, getAppIndicatorIcons */
+ 
+ const Clutter = imports.gi.Clutter;
+ const GObject = imports.gi.GObject;
+@@ -57,6 +57,16 @@ function addIconToPanel(statusIcon) {
+         addIconToPanel(statusIcon));
+ }
+ 
++function getTrayIcons() {
++    return Object.values(Main.panel.statusArea).filter(
++        i => i instanceof IndicatorStatusTrayIcon);
++}
++
++function getAppIndicatorIcons() {
++    return Object.values(Main.panel.statusArea).filter(
++        i => i instanceof IndicatorStatusIcon);
++}
++
+ var BaseStatusIcon = GObject.registerClass(
+ class AppIndicatorsIndicatorBaseStatusIcon extends PanelMenu.Button {
+     _init(menuAlignment, nameText, iconActor, dontCreateMenu) {
+diff --git a/trayIconsManager.js b/trayIconsManager.js
+index 229a544..f4916f4 100644
+--- a/trayIconsManager.js
++++ b/trayIconsManager.js
+@@ -48,15 +48,11 @@ var TrayIconsManager = class TrayIconsManager {
+         Util.connectSmart(this._tray, 'tray-icon-removed', this, this.onTrayIconRemoved);
+ 
+         this._tray.manage_screen(Main.panel);
+-        this._icons = [];
+     }
+ 
+     onTrayIconAdded(_tray, icon) {
+         const trayIcon = new IndicatorStatusIcon.IndicatorStatusTrayIcon(icon);
+         IndicatorStatusIcon.addIconToPanel(trayIcon);
+-        this._icons.push(trayIcon);
+-        trayIcon.connect('destroy', () =>
+-            this._icons.splice(this._icons.indexOf(trayIcon), 1));
+     }
+ 
+     onTrayIconRemoved(_tray, icon) {
+@@ -65,7 +61,7 @@ var TrayIconsManager = class TrayIconsManager {
+ 
+     destroy() {
+         this.emit('destroy');
+-        this._icons.forEach(i => i.destroy());
++        IndicatorStatusIcon.getTrayIcons().forEach(i => i.destroy());
+         if (this._tray.unmanage_screen) {
+             this._tray.unmanage_screen();
+             this._tray = null;
+
+From b39f10f20b73e46bb2b61c301d6a9ea85afad7de Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Marco=20Trevisan=20=28Trevi=C3=B1o=29?= <mail@3v1n0.net>
+Date: Tue, 19 Apr 2022 17:47:20 +0200
+Subject: [PATCH 8/8] trayIconsManager: Destroy panel parent icon instead of
+ the child on removal
+
+We used to remove the shell tray icon but not its parent, and this may
+have lead to wrong behavior, other than errors on the logs:
+
+  (gnome-shell:1330802): Clutter-CRITICAL **: clutter_actor_iter_next:
+    assertion 'ri->age == ri->root->priv->age' failed
+
+Closes: #351
+---
+ indicatorStatusIcon.js | 4 ++++
+ trayIconsManager.js    | 7 ++++++-
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+
+diff --git a/indicatorStatusIcon.js b/indicatorStatusIcon.js
+index 78f7433..41b6ada 100644
+--- a/indicatorStatusIcon.js
++++ b/indicatorStatusIcon.js
+@@ -101,6 +101,10 @@ class AppIndicatorsIndicatorBaseStatusIcon extends PanelMenu.Button {
+         throw new GObject.NotImplementedError('isReady() in %s'.format(this.constructor.name));
+     }
+ 
++    get icon() {
++        return this._icon;
++    }
++
+     get uniqueId() {
+         throw new GObject.NotImplementedError('uniqueId in %s'.format(this.constructor.name));
+     }
+diff --git a/trayIconsManager.js b/trayIconsManager.js
+index f4916f4..f2659de 100644
+--- a/trayIconsManager.js
++++ b/trayIconsManager.js
+@@ -56,7 +56,12 @@ var TrayIconsManager = class TrayIconsManager {
+     }
+ 
+     onTrayIconRemoved(_tray, icon) {
+-        icon.destroy();
++        try {
++            const [trayIcon] = IndicatorStatusIcon.getTrayIcons().filter(i => i.icon === icon);
++            trayIcon.destroy();
++        } catch (e) {
++            Util.Logger.warning(`No icon container found for ${icon.title} (${icon})`);
++        }
+     }
+ 
+     destroy() {
