@@ -32,7 +32,7 @@
 - gnome-characters 43.0
 - gnome-clocks 43.0
 - gnome-connections 43.0
-- gnome-console 43.rc
+- gnome-console 43.0
 - gnome-contacts 43.0
 - gnome-control-center 43.0
 - gnome-desktop 43
