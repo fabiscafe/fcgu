@@ -1,0 +1,86 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+
+pkgbase=libgda
+pkgname=(libgda6 libgda6-{postgres,sqlcipher})
+pkgver=6.0.0+r73+g94fa90ca2
+pkgrel=0.1
+pkgdesc="Database access library"
+arch=(x86_64)
+url="https://gitlab.gnome.org/GNOME/libgda"
+license=(GPL2)
+makedepends=(postgresql-libs sqlcipher json-glib iso-codes libsecret gtk3 graphviz
+             intltool gobject-introspection valgrind vala meson git)
+options=(debug)
+_commit=94fa90ca28bf68d1f819bd6b226345864a5c2ff4  # tags/LIBGDA_6_0_0^0
+source=("git+https://gitlab.gnome.org/GNOME/libgda.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgbase
+  git describe --tags | sed 's/LIBGDA_//;s/_/./g;s/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgbase
+  sed -i 's/libcryp-config/libgcrypt-config/g;s/libcryp-config/libcrypt-config/' meson.build
+}
+
+build() {
+
+ local meson_options=(
+    -D libsoup=false
+    -D graphviz=true
+    -D libsecret=true
+    -D doc=true
+  )
+  
+  arch-meson $pkgbase build "${meson_options[@]}"
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+_pick() {
+  local p="$1" f d; shift
+  for f; do
+    d="$srcdir/$p/${f#$pkgdir/}"
+    mkdir -p "$(dirname "$d")"
+    mv "$f" "$d"
+    rmdir -p --ignore-fail-on-non-empty "$(dirname "$f")"
+  done
+}
+
+package_libgda6() {
+  depends=(json-glib iso-codes libsecret gtk3 graphviz)
+  optdepends=('libgda6-postgres: provider for PostgreSQL'
+              'libgda6-sqlcipher: provider for SQLCipher')
+  meson install -C build --destdir "$pkgdir"
+  
+  cd "$pkgdir"
+  
+  # PostgreSQL
+  _pick libgda-postgres usr/lib/pkgconfig/libgda-postgres-*.pc
+  _pick libgda-postgres usr/lib/libgda-*/providers/libgda-postgres-*.so
+  
+  # SQLCipher
+  _pick libgda-sqlcipher usr/lib/pkgconfig/libgda-sqlcipher-*.pc
+  _pick libgda-sqlcipher usr/lib/libgda-*/providers/libgda-sqlcipher-*.so
+}
+
+package_libgda6-postgres() {
+  pkgdesc="libgda6 provider for PostgreSQL"
+  depends=(libgda6 postgresql-libs)
+  
+  mv libgda-postgres/* "$pkgdir"
+}
+
+package_libgda6-sqlcipher() {
+  pkgdesc="libgda6 provider for SQLCipher"
+  depends=(libgda6 sqlcipher)
+  
+  mv libgda-sqlcipher/* "$pkgdir"
+}
+# vim:set ts=2 sw=2 et:.git#commit=$_commit")
+

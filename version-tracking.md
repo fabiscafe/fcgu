@@ -64,6 +64,7 @@
 - gsettings-desktop-schemas 43.0
 - gtksourceview5 5.6.1
 - js102 102.3.0
+- libgda6 master(2022-03-13)
 - libgweather-4 4.2.0
 - libhandy 1.8.0
 - libosinfo 1.10.0
