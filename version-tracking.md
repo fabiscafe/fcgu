@@ -65,7 +65,6 @@
 - js102 102.3.0
 - libgda6 master(2022-03-13)
 - libgweather-4 4.2.0
-- libhandy 1.8.0
 - libosinfo 1.10.0
 - libnma 1.10.2
 - libpanel 1.0.1
