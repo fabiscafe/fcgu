@@ -50,7 +50,7 @@
 - gnome-settings-daemon 43.0
 - gnome-shell 43.0
 - gnome-shell-extensions 43.0
-- gnome-shell-extension-appindicator master(2022-09-24)+PR364
+- gnome-shell-extension-appindicator 43
 - gnome-software 43.rc
 - gnome-sound-recorder 43.beta
 - gnome-terminal 3.46.1

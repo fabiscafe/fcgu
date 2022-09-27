@@ -3,7 +3,7 @@
 # Contributor: kpcyrd <kpcyrd[at]archlinux[dot]org>
 
 pkgname=gnome-shell-extension-appindicator
-pkgver=42+r8+g794c4a7
+pkgver=43.0
 pkgrel=0.1
 pkgdesc='AppIndicator/KStatusNotifierItem support for GNOME Shell'
 url='https://github.com/ubuntu/gnome-shell-extension-appindicator'
@@ -15,22 +15,17 @@ optdepends=(
   'libappindicator-gtk2: support GTK+2 applications'
   'libappindicator-gtk3: support GTK+3 applications'
 )
-_commit=794c4a7471932a72f46c7a8146d1e5c2bcec1f07 # master
-source=(
-  "git+https://github.com/ubuntu/${pkgname}.git#commit=${_commit}"
-  "gnome43-comp.patch::https://patch-diff.githubusercontent.com/raw/ubuntu/gnome-shell-extension-appindicator/pull/364.patch"
-)
-sha256sums=('SKIP'
-            'e41495987e1363154d79231fc697d5202b254028136501bd4dd0b3d74a395783')
+_commit=c49dde65b2c9e02fb7d6109e2efdd0b6aa34db2c # tags/43^0
+source=("git+https://github.com/ubuntu/${pkgname}.git#commit=${_commit}")
+sha256sums=('SKIP')
 
 pkgver() {
   cd "${pkgname}"
-  git describe --tags | sed 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed -r '/\.([0-9])/!s/$/\.0/;s/^v//;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
   cd "${pkgname}"
-  patch --forward --strip=1 --input="${srcdir}/gnome43-comp.patch"
 }
 
 build() {
