@@ -17,7 +17,7 @@
 - folks 0.15.5
 - gcr-4 3.92.0
 - gdm 43.0
-- geary main(2022-08-26)
+- geary main(2022-09-26)
 - gedit 43.alpha
 - geocode-glib-2 3.26.4
 - gjs 1.74.0
