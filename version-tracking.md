@@ -70,7 +70,7 @@
 - libhandy 1.8.0
 - libosinfo 1.10.0
 - libnma 1.10.2
-- libpanel 1.0.0
+- libpanel 1.0.1
 - libpeas libpeas-1.34.0
 - librest 0.9.1
 - libshumate 1.0.1

@@ -1,7 +1,7 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=libpanel
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=0.1
 pkgdesc="helps to create IDE-like applications using GTK 4 and libadwaita."
 url="https://gitlab.gnome.org/chergert/libpanel"
@@ -11,7 +11,7 @@ depends=(libadwaita)
 makedepends=(git gi-docgen gobject-introspection meson vala)
 provides=(libpanel-1.so)
 options=(debug)
-_commit=aaa0a3ade2e0708f2eafc0b963d9e9d7e54fc108  # tags/1.0.0^0
+_commit=1403a020e5d65e21bc0e16133aeb2b6e7cdca2de  # tags/1.0.1^0
 source=("git+https://gitlab.gnome.org/chergert/libpanel.git#commit=$_commit")
 sha256sums=('SKIP')
 
