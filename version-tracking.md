@@ -58,7 +58,6 @@
 - gnome-tour 43.0
 - gnome-user-docs 43.0
 - gnome-weather 43.0
-- gobject-introspection 1.74.0
 - grilo grilo-0.3.15
 - grilo-plugins grilo-plugins-0.3.15
 - gsettings-desktop-schemas 43.0
