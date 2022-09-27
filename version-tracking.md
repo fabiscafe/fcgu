@@ -21,7 +21,6 @@
 - gedit 43.alpha
 - geocode-glib-2 3.26.4
 - gjs 1.74.0
-- glib2 2.74.0
 - glib-networking 2.74.0
 - gnome-backgrounds 43
 - gnome-boxes 43.0
@@ -71,7 +70,6 @@
 - libpeas libpeas-1.34.0
 - librest 0.9.1
 - libshumate 1.0.1
-- libsoup3 3.2.0
 - malcontent 0.11.0
 - mutter 43.0
 - nautilus 43.0
