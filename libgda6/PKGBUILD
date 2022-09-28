@@ -3,7 +3,7 @@
 pkgbase=libgda
 pkgname=(libgda6 libgda6-{postgres,sqlcipher})
 pkgver=6.0.0+r73+g94fa90ca2
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="Database access library"
 arch=(x86_64)
 url="https://gitlab.gnome.org/GNOME/libgda"
@@ -27,11 +27,15 @@ prepare() {
 
 build() {
 
- local meson_options=(
-    -D libsoup=false
+  local meson_options=(
+    -D ui=true
+    -D help=true
     -D graphviz=true
+    -D libsoup=false
     -D libsecret=true
     -D doc=true
+    -D ldap=true
+    -D vapi=true
   )
   
   arch-meson $pkgbase build "${meson_options[@]}"
@@ -67,6 +71,7 @@ package_libgda6() {
   # SQLCipher
   _pick libgda-sqlcipher usr/lib/pkgconfig/libgda-sqlcipher-*.pc
   _pick libgda-sqlcipher usr/lib/libgda-*/providers/libgda-sqlcipher-*.so
+  _pick libgda-sqlcipher usr/include/libgda-*/providers/sqlcipher/gda-sqlcipher-provider.h
 }
 
 package_libgda6-postgres() {
