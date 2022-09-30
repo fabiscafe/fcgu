@@ -4,16 +4,17 @@
 
 pkgname=newsflash
 _pkgname=news_flash_gtk
-pkgver=2.0.1
+pkgver=2.1.0
 pkgrel=0.1
 pkgdesc='Desktop application designed to complement an already existing web-based RSS reader account'
 arch=('x86_64')
 url='https://gitlab.com/news-flash/news_flash_gtk'
 license=('GPL3')
+options=('debug')
 depends=('libadwaita' 'webkit2gtk-5.0')
 makedepends=('appstream-glib' 'meson' 'rust')
 source=("https://gitlab.com/news-flash/$_pkgname/-/archive/v.$pkgver/$_pkgname-v.$pkgver.tar.gz")
-sha256sums=('8dca3d9528d9f6c3f24af1fb2f93156a73765d2890c97aca2b76e6559434b747')
+sha256sums=('6aea3fc74265f126f34a4f4a034a53504a7d562af8181f6b857ce2b7811353b9')
 
 build() {
   export PASSWORD_CRYPT_KEY="ypsSXCLhJngks9qGUAqShd8JjRaZ824wT3e"
