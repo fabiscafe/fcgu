@@ -73,7 +73,7 @@
 - mutter 43.0
 - nautilus 43.0
 - python-nautilus 4.0
-- newsflash v.2.1.0
+- newsflash v.2.1.2
 - orca ORCA_43_0
 - phodav 3.0
 - sofia-sip 1.13.9
