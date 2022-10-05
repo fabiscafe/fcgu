@@ -80,7 +80,6 @@
 - sysprof 3.46.0
 - template-glib 3.36.0
 - totem 43.0
-- tracker3-miners 3.4.0
 - vte3 0.70.0
 - xdg-desktop-portal-gnome 43.0
 
