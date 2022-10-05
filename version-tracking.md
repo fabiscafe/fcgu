@@ -4,7 +4,6 @@
 - callaudiod 0.1.4
 - cheese 43.alpha
 - clapper 0.5.2
-- dconf-editor 43.0
 - d-spy 1.4.0
 - eog 43.0
 - epiphany 43.0
