@@ -68,6 +68,7 @@
 - libshumate 1.0.1
 - malcontent 0.11.0
 - mutter 43.0
+- mutter-dynamic-buffering triple-buffering-v4(2022-09-21)
 - nautilus 43.0
 - python-nautilus 4.0
 - newsflash v.2.1.2
