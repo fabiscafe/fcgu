@@ -22,7 +22,7 @@
 - gjs 1.74.0
 - gnome-backgrounds 43
 - gnome-boxes 43.0
-- gnome-builder 43.1¹
+- gnome-builder 43.2¹
 - gnome-calculator 43.0.1
 - gnome-calendar 43.0
 - gnome-calls v43.0
@@ -88,7 +88,8 @@
 - xdg-desktop-portal-gnome 43.0
 
 ## Wontbuild
-- gnome-builder 43.1 (gnome-builder-libide-docs)
+- gnome-builder 43.2 (gnome-builder-libide-docs)
+  - https://gitlab.gnome.org/GNOME/gnome-builder/-/issues/1793
 
 ## Exclude
 - none
