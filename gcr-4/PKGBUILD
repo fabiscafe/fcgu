@@ -3,8 +3,8 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=gcr-4
-pkgver=3.92.0
-pkgrel=1
+pkgver=4.0.0
+pkgrel=0.1
 pkgdesc="A library for bits of crypto UI and parsing"
 url="https://gitlab.gnome.org/GNOME/gcr"
 arch=(x86_64)
@@ -13,7 +13,7 @@ depends=(gtk3 gtk4 libgcrypt p11-kit openssh libsecret)
 makedepends=(gi-docgen gobject-introspection vala libxslt git gtk-doc meson)
 provides=(libgck-2.so libgcr-4.so)
 options=(debug)
-_commit=c15a18f7d23f66fb70deabba11313ecdb23cd375  # tags/3.92.0^0
+_commit=dc33aca73a142ef2a4d5c4ed75161bafccd15d3e  # tags/4.0.0^0
 backup=(etc/security/limits.d/10-gcr-4.conf)
 install=gcr.install
 source=("git+https://gitlab.gnome.org/GNOME/gcr.git#commit=$_commit")
