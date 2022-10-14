@@ -73,6 +73,7 @@
 - newsflash v.2.1.2
 - orca ORCA_43_0
 - phodav 3.0
+- seahorse 43.0
 - sofia-sip 1.13.9
 - spice-gtk 0.41
 - sushi 43.0
