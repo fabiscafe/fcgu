@@ -3,7 +3,7 @@
 pkgbase=libgda
 pkgname=(libgda6 libgda6-{postgres,sqlcipher})
 pkgver=6.0.0+r73+g94fa90ca2
-pkgrel=0.2
+pkgrel=0.3
 pkgdesc="Database access library"
 arch=(x86_64)
 url="https://gitlab.gnome.org/GNOME/libgda"
@@ -31,10 +31,17 @@ build() {
     -D ui=true
     -D help=true
     -D graphviz=true
-    -D libsoup=false
+    -D json=true
+    -D sqlcipher=true
+    -D libsoup=false # If enabled, will break apps that also depend on libsoup3
     -D libsecret=true
+    -D examples=false
+    -D tools=false
     -D doc=true
+    -D experimental=false
     -D ldap=true
+    -D web=false # If enabled, pulls in libsoup, see -D libsoup
+    -D flatpak=false
     -D vapi=true
   )
   
