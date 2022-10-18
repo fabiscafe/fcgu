@@ -81,7 +81,7 @@
 - template-glib 3.36.0
 - totem 43.0
 - vte3 0.70.0
-- xdg-desktop-portal-gnome 43.0
+- xdg-desktop-portal-gnome 43.1
 
 ## Wontbuild
 - gnome-builder 43.2 (gnome-builder-libide-docs)
