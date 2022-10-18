@@ -30,7 +30,7 @@
 - gnome-connections 43.0
 - gnome-console 43.0
 - gnome-contacts 43.0
-- gnome-control-center 43.0
+- gnome-control-center 43.1
 - gnome-desktop 43
 - gnome-disk-utility 43.0
 - gnome-endeavour v42.0
