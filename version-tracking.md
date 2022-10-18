@@ -23,7 +23,7 @@
 - gnome-boxes 43.0
 - gnome-builder 43.2¹
 - gnome-calculator 43.0.1
-- gnome-calendar 43.0
+- gnome-calendar 43.1
 - gnome-calls v43.0
 - gnome-characters 43.0
 - gnome-clocks 43.0
