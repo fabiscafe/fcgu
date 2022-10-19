@@ -2,7 +2,7 @@
 # Contributor: Balló György <ballogyor+arch at gmail dot com>
 
 pkgname=gnome-initial-setup
-pkgver=43.0
+pkgver=43.1
 pkgrel=0.1
 pkgdesc='Simple, easy, and safe way to prepare a new system'
 arch=('x86_64')
@@ -12,7 +12,7 @@ options=(debug !strip)
 depends=('cheese' 'gdm' 'gnome-online-accounts' 'ibus' 'malcontent' 'libgweather-4' 
          'libnm' 'libnma-gtk4' 'librest' 'geocode-glib-2' 'webkit2gtk-5.0')
 makedepends=('git' 'meson')
-_commit=9e28b0d67ac2113f590bef0acba8df07ef084cff # tags/43.0^0
+_commit=da49ec6a9f50e1c65a3b60c2121bf9c9cc25a499 # tags/43.1^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-initial-setup.git#commit=$_commit")
 sha256sums=('SKIP')
 
