@@ -3,7 +3,7 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=evolution-data-server
-pkgver=3.46.0
+pkgver=3.46.1
 pkgrel=0.1
 pkgdesc="Centralized access to appointments and contacts"
 url="https://wiki.gnome.org/Apps/Evolution"
@@ -16,7 +16,7 @@ provides=(libcamel-1.2.so libebackend-1.2.so libebook-1.2.so libebook-contacts-1
           libedataserverui-1.2.so)
 license=(GPL)
 options=(debug)
-_commit=ed45e3272a88ea9097a4fe25b5d6bfed4e1272ce  # tags/3.46.0^0
+_commit=29cf85dd84f211cf2174dac2c714bfe7c6def679  # tags/3.46.1^0
 source=("git+https://gitlab.gnome.org/GNOME/evolution-data-server.git#commit=$_commit"
         fix-tests.diff)
 sha256sums=('SKIP'

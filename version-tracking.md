@@ -9,7 +9,7 @@
 - epiphany 43.0
 - evince 43.0
 - evolution 3.46.0
-- evolution-data-server 3.46.0
+- evolution-data-server 3.46.1
 - evolution-ews 3.46.0
 - feedbackd 0.0.0+git20220520
 - file-roller 43.0
