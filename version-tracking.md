@@ -65,7 +65,7 @@
 - libosinfo 1.10.0
 - libnma 1.10.2
 - libpanel 1.0.1
-- libshumate 1.0.1
+- libshumate 1.0.2
 - malcontent 0.11.0
 - mutter 43.0
 - mutter-dynamic-buffering triple-buffering-v4(2022-09-21)
