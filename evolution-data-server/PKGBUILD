@@ -4,7 +4,7 @@
 
 pkgname=evolution-data-server
 pkgver=3.46.1
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="Centralized access to appointments and contacts"
 url="https://wiki.gnome.org/Apps/Evolution"
 arch=(x86_64)
