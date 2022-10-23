@@ -2,19 +2,19 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-remote-desktop
-pkgver=43.0
+pkgver=43.1
 pkgrel=0.1
 pkgdesc="GNOME Remote Desktop server"
 url="https://wiki.gnome.org/Projects/Mutter/RemoteDesktop"
 arch=(x86_64)
 license=(GPL2)
-depends=(cairo freerdp "glib2>=2.73.3" pipewire systemd libvncserver libsecret libnotify
-         dconf fuse3 libxkbcommon libepoxy)
+depends=(cairo freerdp glib2 pipewire systemd libvncserver libsecret libnotify
+         dconf fuse3 libxkbcommon libepoxy libfdk-aac)
 makedepends=(asciidoc git meson ffnvcodec-headers)
 checkdepends=(xorg-server-xvfb python-dbus python-gobject mutter wireplumber)
 groups=(gnome)
 options=(debug)
-_commit=d13870c7eee77e5f7229625fa06b795b4bff96b1  # tags/43.0^0
+_commit=8bd9270365213e2d2d088385e30d9ff192e2c095  # tags/43.1^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-remote-desktop.git#commit=$_commit")
 sha256sums=('SKIP')
 
