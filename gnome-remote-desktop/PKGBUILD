@@ -3,7 +3,7 @@
 
 pkgname=gnome-remote-desktop
 pkgver=43.1
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="GNOME Remote Desktop server"
 url="https://wiki.gnome.org/Projects/Mutter/RemoteDesktop"
 arch=(x86_64)
@@ -11,7 +11,7 @@ license=(GPL2)
 depends=(cairo freerdp glib2 pipewire systemd libvncserver libsecret libnotify
          dconf fuse3 libxkbcommon libepoxy libfdk-aac)
 makedepends=(asciidoc git meson ffnvcodec-headers)
-checkdepends=(xorg-server-xvfb python-dbus python-gobject mutter wireplumber)
+checkdepends=(python-dbus python-gobject mutter wireplumber)
 groups=(gnome)
 options=(debug)
 _commit=8bd9270365213e2d2d088385e30d9ff192e2c095  # tags/43.1^0
@@ -38,8 +38,13 @@ _check() (
   glib-compile-schemas "${GSETTINGS_SCHEMA_DIR:=$PWD/build/src}"
   export XDG_CONFIG_HOME XDG_RUNTIME_DIR GSETTINGS_SCHEMA_DIR
 
+  openssl req -new -newkey rsa:4096 -days 720 -nodes -x509 -subj /C=DE/ST=NONE/L=NONE/O=GNOME/CN=gnome.org -keyout tls.key -out tls.crt
+
   export GSETTINGS_BACKEND=keyfile
-  gsettings set org.gnome.desktop.remote-desktop.vnc enable true
+  gsettings set org.gnome.desktop.remote-desktop.rdp tls-cert $(realpath tls.crt)
+  gsettings set org.gnome.desktop.remote-desktop.rdp tls-key $(realpath tls.key)
+  gsettings set org.gnome.desktop.remote-desktop.rdp screen-share-mode extend
+  gsettings set org.gnome.desktop.remote-desktop.rdp enable true
 
   pipewire &
   _p1=$!
@@ -53,7 +58,7 @@ _check() (
 )
 
 check() {
-  dbus-run-session bash -c "$(declare -f _check); _check" ||:
+  dbus-run-session bash -c "$(declare -f _check); _check"
 }
 
 package() {
