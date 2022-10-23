@@ -5,7 +5,7 @@
 - cheese 43.alpha
 - clapper 0.5.2
 - d-spy 1.4.0
-- eog 43.0
+- eog 43.1
 - epiphany 43.0
 - evince 43.0
 - evolution 3.46.1
