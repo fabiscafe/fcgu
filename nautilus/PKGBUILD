@@ -16,10 +16,8 @@ makedepends=(gobject-introspection git gi-docgen meson libcloudproviders appstre
 checkdepends=(python-gobject)
 options=(debug)
 _commit=4e4c1e8a729d02d293bf39f6caec61fd72ac1d0a  # tags/43.0^0
-source=("git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit"
-        "git+https://gitlab.gnome.org/GNOME/libgd.git")
-sha256sums=('SKIP'
-            'SKIP')
+source=("git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit")
+sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgbase
@@ -30,7 +28,6 @@ prepare() {
   cd $pkgbase
 
   git submodule init
-  git submodule set-url subprojects/libgd "$srcdir/libgd"
   git submodule update
 }
 
