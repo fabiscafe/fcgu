@@ -5,7 +5,7 @@
 pkgbase=nautilus
 pkgname=(nautilus libnautilus-extension)
 pkgver=43.0
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="Default file manager for GNOME"
 url="https://wiki.gnome.org/Apps/Files"
 arch=(x86_64)
@@ -26,9 +26,6 @@ pkgver() {
 
 prepare() {
   cd $pkgbase
-
-  git submodule init
-  git submodule update
 }
 
 build() {
