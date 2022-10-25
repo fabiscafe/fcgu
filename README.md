@@ -1,9 +1,10 @@
-# FabisCafe Gnome Unstable
-or short "FCGU" is a GNOME Unstable repository for [**Arch Linux**](https://archlinux.org). That contains *beta* and *rc* releases of GNOME for testing and bugreporting purposes.
+# FCGU - Repo for GNOME pre-releases
+"FCGU" is a Git repo that provides PKGBUILDs as well as a binary repo of GNOME pre-releases for [**Arch Linux**](https://archlinux.org). It's made for testing and bughunting purposes and so contains *beta* and *rc* releases most of the time.
 
 ### Support
 #### Ko-Fi (Also for Paypal and one-time donations)
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R5R4CALOG)
+
 #### Liberapay
 [![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/Fabiscafe/donate)
 ![Liberapay receiving](https://img.shields.io/liberapay/receives/fabiscafe?style=for-the-badge) ![Liberapay patrons](https://img.shields.io/liberapay/patrons/fabiscafe?style=for-the-badge)
@@ -16,7 +17,7 @@ Feel free to [join us at our matrix group](https://matrix.to/#/#fcgu:matrix.org)
 ## Looking For New Mirrors
 FCGU is a free community project. That's why we need your help. If you own a server that could become a mirror of the project, please let us know.
 
-![preview](https://codeberg.org/fabiscafe/gnome-unstable/raw/branch/main/assets/fcgu.png)
+![preview](https://codeberg.org/fabiscafe/fcgu/raw/branch/main/assets/fcgu.png)
 
 ## Installation
 ### Disable unsupported repos
@@ -31,7 +32,7 @@ All of our packages are signed. To be able to install trustworthy packages it's 
 ```
 
 ### Mirror-List
-[fcgu-mirrorlist](https://codeberg.org/fabiscafe/gnome-unstable/src/branch/main/fcgu-mirrorlist) is an own package that should be available from all mirror servers. You need to install.
+[fcgu-mirrorlist](https://codeberg.org/fabiscafe/fcgu/src/branch/main/fcgu-mirrorlist) is an own package that should be available from all mirror servers. You need to install.
 ```
 # pacman -U https://vmi394248.contaboserver.net/fcgu/fcgu-mirrorlist-2-4-any.pkg.tar.zst
 ```
@@ -121,11 +122,11 @@ Because of this, pamac was set as conflict. If you still want to use pamac **You
 In order to do this, the PKGBUILDs would need a lot of extra work and testing, just for the packaging part. Because time is a very limited resource that's not possible to do right now (and not planned for the future).
 
 ### I want to provide a mirror.
-If you want to have your own mirror, please do a [PR](https://codeberg.org/fabiscafe/gnome-unstable/pulls) and add your mirror to the [fcgu-mirrorlist](https://codeberg.org/fabiscafe/gnome-unstable/src/branch/main/fcgu-mirrorlist/mirrorlist). If that's done. [Join us on matrix](https://codeberg.org/fabiscafe/gnome-unstable#chat-matrix), as we also need your servers IP6/4 addresses to allow the sync. Alternatively you can also ask one of the current mirror providers in order to mirror a mirror.
+If you want to have your own mirror, please do a [PR](https://codeberg.org/fabiscafe/fcgu/pulls) and add your mirror to the [fcgu-mirrorlist](https://codeberg.org/fabiscafe/fcgu/src/branch/main/fcgu-mirrorlist/mirrorlist). If that's done. [Join us on matrix](https://codeberg.org/fabiscafe/fcgu#chat-matrix), as we also need your servers IP6/4 addresses to allow the sync. Alternatively you can also ask one of the current mirror providers in order to mirror a mirror.
 
 ## Troubleshooting
 ### error: GPGME error: No data
-You might have hit a broken mirrorserver. Please [report this](https://codeberg.org/fabiscafe/gnome-unstable/issues).
+You might have hit a broken mirrorserver. Please [report this](https://codeberg.org/fabiscafe/fcgu/issues).
 Feel free to switch to another mirror. In case you still can't sync (`-Syu`) you have to delete */var/lib/pacman/sync/fcgu.db* manually.
 
 ```
