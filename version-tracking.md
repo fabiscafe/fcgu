@@ -47,7 +47,7 @@
 - gnome-session 43.0
 - gnome-settings-daemon 43.0
 - gnome-shell 43.0
-- gnome-shell-extensions 43.0
+- gnome-shell-extensions 43.1
 - gnome-software 43.1
 - gnome-sound-recorder 43.beta
 - gnome-terminal 3.46.3
