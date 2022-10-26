@@ -21,7 +21,7 @@
 - geocode-glib-2 3.26.4
 - gjs 1.74.0
 - gnome-backgrounds 43
-- gnome-boxes 43.0
+- gnome-boxes 43.1
 - gnome-builder 43.2¹
 - gnome-calculator 43.0.1
 - gnome-calendar 43.1
