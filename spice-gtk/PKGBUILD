@@ -8,7 +8,7 @@
 
 pkgname=spice-gtk
 pkgver=0.41
-pkgrel=2.1
+pkgrel=3.1
 pkgdesc="GTK+ client library for SPICE"
 arch=('x86_64')
 url="https://www.spice-space.org/"
@@ -20,7 +20,7 @@ depends=(
     'libgtk-3.so'
     'libjpeg.so'
     'libopus.so'
-    "phodav>=3.0"
+    'phodav>=3.0'
     'polkit'
     'usbredir'
 )
@@ -34,8 +34,9 @@ makedepends=(
 )
 provides=("spice-glib=$pkgver" "spice-gtk3=$pkgver")
 replaces=('spice-glib' 'spice-gtk3')
-source=("https://www.spice-space.org/download/gtk/$pkgname-$pkgver.tar.xz"{,.sig})
 install=spice-gtk.install
+options=('debug')
+source=("https://www.spice-space.org/download/gtk/$pkgname-$pkgver.tar.xz"{,.sig})
 sha256sums=('d8f8b5cbea9184702eeb8cc276a67d72acdb6e36e7c73349fb8445e5bca0969f'
             'SKIP')
 validpgpkeys=('206D3B352F566F3B0E6572E997D9123DE37A484F') # Victor Toso de Carvalho <me@victortoso.com>
