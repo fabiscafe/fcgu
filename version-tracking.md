@@ -7,7 +7,7 @@
 - d-spy 1.4.0
 - eog 43.1
 - epiphany 43.0
-- evince 43.0
+- evince 43.1
 - evolution 3.46.1
 - evolution-data-server 3.46.1
 - evolution-ews 3.46.1
