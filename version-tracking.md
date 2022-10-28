@@ -15,7 +15,6 @@
 - file-roller 43.0
 - folks 0.15.5
 - gcr-4 4.0.0
-- gdm 43.0
 - geary 43.0
 - gedit 43.alpha
 - geocode-glib-2 3.26.4
