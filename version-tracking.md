@@ -17,7 +17,7 @@
 - geary 43.0
 - gedit 43.alpha
 - geocode-glib-2 3.26.4
-- gjs 1.74.0
+- gjs 1.74.1
 - gnome-backgrounds 43
 - gnome-boxes 43.1
 - gnome-builder 43.2¹
