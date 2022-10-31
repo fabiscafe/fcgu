@@ -6,7 +6,7 @@
 pkgbase=mutter
 pkgname=(mutter-dynamic-buffering mutter-dynamic-buffering-docs)
 pkgver=43.0+r6463+g01f700fc1
-pkgrel=1
+pkgrel=1.1
 pkgdesc="A window manager for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
 arch=(x86_64)
@@ -76,9 +76,9 @@ _pick() {
 }
 
 package_mutter-dynamic-buffering() {
+  pkgdesc+=" (experimental, unsupported branch)"
   conflicts=(mutter)
   provides=(mutter libmutter-11.so)
-  groups=(gnome)
 
   meson install -C build --destdir "$pkgdir"
 
@@ -86,7 +86,7 @@ package_mutter-dynamic-buffering() {
 }
 
 package_mutter-dynamic-buffering-docs() {
-  pkgdesc+=" (documentation)"
+  pkgdesc+=" (experimental, unsupported branch; documentation)"
   conflicts=(mutter-docs)
   provides=(mutter-docs)
   depends=()
