@@ -4,7 +4,6 @@
 - d-spy 1.4.0
 - feedbackd 0.0.0+git20220520
 - gedit 43.alpha
-- gnome-backgrounds 43
 - gnome-boxes 43.1
 - gnome-calls v43.0
 - gnome-desktop 43
