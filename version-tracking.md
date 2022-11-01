@@ -30,7 +30,6 @@
 - gnome-contacts 43.0
 - gnome-control-center 43.1
 - gnome-desktop 43
-- gnome-disk-utility 43.0
 - gnome-endeavour v42.0
 - gnome-podcasts master(2022-07-29)
 - gnome-shell-extensions 43.1
