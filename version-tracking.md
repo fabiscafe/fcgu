@@ -52,7 +52,6 @@
 - gnome-tour 43.0
 - gnome-user-docs 43.0
 - gnome-weather 43.0
-- grilo grilo-0.3.15
 - gtranslator 42.0
 - libgda6 master(2022-03-13)
 - python-nautilus 4.0
