@@ -13,7 +13,6 @@
 - feedbackd 0.0.0+git20220520
 - file-roller 43.0
 - folks 0.15.5
-- gcr-4 4.0.0
 - gedit 43.alpha
 - gnome-backgrounds 43
 - gnome-boxes 43.1
