@@ -61,7 +61,6 @@
 - libosinfo 1.10.0
 - libnma 1.10.2
 - libpanel 1.0.1
-- libshumate 1.0.2
 - python-nautilus 4.0
 - sofia-sip 1.13.9
 
