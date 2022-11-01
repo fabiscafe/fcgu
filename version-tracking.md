@@ -62,7 +62,6 @@
 - libnma 1.10.2
 - libpanel 1.0.1
 - libshumate 1.0.2
-- malcontent 0.11.0
 - python-nautilus 4.0
 - sofia-sip 1.13.9
 
