@@ -14,7 +14,6 @@
 - gnome-podcasts master(2022-07-29)
 - gnome-shell-extensions 43.1
 - gnome-sound-recorder 43.beta
-- gnome-terminal 3.46.3
 - gtranslator 42.0
 - libgda6 master(2022-03-13)
 - python-nautilus 4.0
