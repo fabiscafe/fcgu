@@ -21,7 +21,6 @@
 - gnome-backgrounds 43
 - gnome-boxes 43.1
 - gnome-calculator 43.0.1
-- gnome-calendar 43.1
 - gnome-calls v43.0
 - gnome-desktop 43
 - gnome-endeavour v42.0
