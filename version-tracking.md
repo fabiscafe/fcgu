@@ -49,7 +49,6 @@
 - gnome-sound-recorder 43.beta
 - gnome-terminal 3.46.3
 - gnome-text-editor 43.1
-- gnome-tour 43.0
 - gnome-user-docs 43.0
 - gtranslator 42.0
 - libgda6 master(2022-03-13)
