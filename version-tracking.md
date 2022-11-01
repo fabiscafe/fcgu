@@ -5,7 +5,6 @@
 - clapper 0.5.2
 - d-spy 1.4.0
 - eog 43.1
-- epiphany 43.0
 - feedbackd 0.0.0+git20220520
 - gedit 43.alpha
 - gnome-backgrounds 43
