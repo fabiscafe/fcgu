@@ -39,7 +39,6 @@
 - gnome-online-accounts 3.46.0
 - gnome-photos 43.0
 - gnome-podcasts master(2022-07-29)
-- gnome-power-manager GNOME_POWER_MANAGER_43_0
 - gnome-shell-extensions 43.1
 - gnome-sound-recorder 43.beta
 - gnome-terminal 3.46.3
