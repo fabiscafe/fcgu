@@ -33,7 +33,6 @@
 - gnome-disk-utility 43.0
 - gnome-endeavour v42.0
 - gnome-font-viewer 43.0
-- gnome-initial-setup 43.1
 - gnome-podcasts master(2022-07-29)
 - gnome-shell-extensions 43.1
 - gnome-sound-recorder 43.beta
