@@ -72,7 +72,6 @@
 - seahorse 43.0
 - sofia-sip 1.13.9
 - spice-gtk 0.41
-- sushi 43.0
 
 ## Wontbuild
 
