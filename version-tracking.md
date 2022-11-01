@@ -36,7 +36,6 @@
 - gnome-initial-setup 43.1
 - gnome-logs gnome-logs-43.0
 - gnome-maps v43.1
-- gnome-online-accounts 3.46.0
 - gnome-podcasts master(2022-07-29)
 - gnome-shell-extensions 43.1
 - gnome-sound-recorder 43.beta
