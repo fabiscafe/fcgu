@@ -12,7 +12,6 @@
 - gnome-sound-recorder 43.beta
 - gtranslator 42.0
 - libgda6 master(2022-03-13)
-- python-nautilus 4.0
 - sofia-sip 1.13.9
 
 ## Wontbuild
