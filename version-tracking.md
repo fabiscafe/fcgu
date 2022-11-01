@@ -1,5 +1,4 @@
 ## Done
-- adwaita-icon-theme 43
 - callaudiod 0.1.4
 - cheese 43.alpha
 - clapper 0.5.2
