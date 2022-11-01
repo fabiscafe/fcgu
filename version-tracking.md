@@ -26,7 +26,6 @@
 - gnome-characters 43.0
 - gnome-clocks 43.0
 - gnome-connections 43.0
-- gnome-console 43.0
 - gnome-desktop 43
 - gnome-endeavour v42.0
 - gnome-podcasts master(2022-07-29)
