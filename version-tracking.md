@@ -59,7 +59,6 @@
 - libgda6 master(2022-03-13)
 - libgweather-4 4.2.0
 - libosinfo 1.10.0
-- libnma 1.10.2
 - python-nautilus 4.0
 - sofia-sip 1.13.9
 
