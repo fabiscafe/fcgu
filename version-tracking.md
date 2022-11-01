@@ -1,6 +1,5 @@
 ## Done
 - callaudiod 0.1.4
-- cheese 43.alpha
 - clapper 0.5.2
 - d-spy 1.4.0
 - feedbackd 0.0.0+git20220520
