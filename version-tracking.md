@@ -24,7 +24,6 @@
 - gnome-calendar 43.1
 - gnome-calls v43.0
 - gnome-characters 43.0
-- gnome-clocks 43.0
 - gnome-desktop 43
 - gnome-endeavour v42.0
 - gnome-podcasts master(2022-07-29)
