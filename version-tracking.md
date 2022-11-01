@@ -12,7 +12,6 @@
 - evolution-ews 3.46.1
 - feedbackd 0.0.0+git20220520
 - file-roller 43.0
-- folks 0.15.5
 - gedit 43.alpha
 - gnome-backgrounds 43
 - gnome-boxes 43.1
