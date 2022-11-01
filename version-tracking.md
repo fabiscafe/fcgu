@@ -63,8 +63,6 @@
 - libpanel 1.0.1
 - libshumate 1.0.2
 - malcontent 0.11.0
-- mutter 43.0
-- mutter-dynamic-buffering triple-buffering-v4(2022-09-21)
 - python-nautilus 4.0
 - sofia-sip 1.13.9
 
