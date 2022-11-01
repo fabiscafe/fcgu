@@ -68,7 +68,6 @@
 - nautilus 43.0
 - python-nautilus 4.0
 - newsflash v.2.1.2
-- phodav 3.0
 - sofia-sip 1.13.9
 
 ## Wontbuild
