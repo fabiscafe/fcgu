@@ -75,7 +75,6 @@
 - sushi 43.0
 - sysprof 3.46.0
 - template-glib 3.36.0
-- totem 43.0
 
 ## Wontbuild
 
