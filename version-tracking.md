@@ -57,7 +57,6 @@
 - gsettings-desktop-schemas 43.0
 - gtranslator 42.0
 - libgda6 master(2022-03-13)
-- libgweather-4 4.2.0
 - python-nautilus 4.0
 - sofia-sip 1.13.9
 
