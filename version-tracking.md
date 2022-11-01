@@ -6,7 +6,6 @@
 - gedit 43.alpha
 - gnome-boxes 43.1
 - gnome-calls v43.0
-- gnome-desktop 43
 - gnome-endeavour v42.0
 - gnome-podcasts master(2022-07-29)
 - gnome-shell-extensions 43.1
