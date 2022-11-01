@@ -15,7 +15,6 @@
 - gnome-shell-extensions 43.1
 - gnome-sound-recorder 43.beta
 - gnome-terminal 3.46.3
-- gnome-user-docs 43.0
 - gtranslator 42.0
 - libgda6 master(2022-03-13)
 - python-nautilus 4.0
