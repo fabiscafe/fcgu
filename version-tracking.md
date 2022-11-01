@@ -73,7 +73,6 @@
 - sofia-sip 1.13.9
 - spice-gtk 0.41
 - sushi 43.0
-- sysprof 3.46.0
 
 ## Wontbuild
 
