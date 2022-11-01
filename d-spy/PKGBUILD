@@ -1,31 +1,30 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
-pkgbase=d-spy
-pkgname=(d-spy libdspy)
+pkgname=d-spy
 pkgver=1.4.0
-pkgrel=0.1
-pkgdesc="a simple tool to explore D-Bus connections"
-url="https://gitlab.gnome.org/chergert/libpanel"
+pkgrel=1.1
+pkgdesc="D-Bus debugger for GNOME"
+url="https://gitlab.gnome.org/GNOME/d-spy"
 arch=(x86_64)
-license=(GPL)
-depends=("glib2>=2.74.0" libadwaita)
+license=(GPL3 LGPL3)
+depends=(gtk4 libadwaita)
 makedepends=(git meson)
+provides=(libdspy-1.so)
+conflicts=(libdspy)
+replaces=(libdspy)
 options=(debug)
 _commit=687dc766770a0938e72fd747308f13a460b5a76f  # tags/1.4.0^0
 source=("git+https://gitlab.gnome.org/GNOME/d-spy.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
-  cd $pkgname
-  git describe --tags | sed -r 's/[^-]*-g/r&/;s/-/+/g'
-}
-
-prepare() {
-  cd $pkgname
+  cd d-spy
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 build() {
-  arch-meson $pkgname build
+  arch-meson d-spy build
   meson compile -C build
 }
 
@@ -33,34 +32,9 @@ check() {
   meson test -C build --print-errorlogs
 }
 
-_pick() {
-  local p="$1" f d; shift
-  for f; do
-    d="$srcdir/$p/${f#$pkgdir/}"
-    mkdir -p "$(dirname "$d")"
-    mv "$f" "$d"
-    rmdir -p --ignore-fail-on-non-empty "$(dirname "$f")"
-  done
-}
-
-package_d-spy() {
-  depends+=(libdspy)
-
+package() {
   meson install -C build --destdir "$pkgdir"
-
-  cd "$pkgdir"
-
-  _pick libdspy usr/lib/libdspy-*
-  _pick libdspy usr/lib/pkgconfig/dspy-*.pc
-  _pick libdspy usr/include/dspy-*/dspy*.h
 }
 
-package_libdspy() {
-  pkgdesc+=" - library"
-  provides=(libdspy-1.so)
-
-  mv libdspy/* "$pkgdir"
-}
-
-# vim:set sw=2 et:
+# vim:set sw=2 sts=-1 et:
 
