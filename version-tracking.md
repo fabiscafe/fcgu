@@ -71,7 +71,6 @@
 - phodav 3.0
 - seahorse 43.0
 - sofia-sip 1.13.9
-- spice-gtk 0.41
 
 ## Wontbuild
 
