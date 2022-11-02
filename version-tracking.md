@@ -8,7 +8,6 @@
 - gnome-calls v43.0
 - gnome-endeavour v42.0
 - gnome-podcasts master(2022-07-29)
-- gnome-shell-extensions 43.1
 - gnome-sound-recorder 43.beta
 - gtranslator 42.0
 - sofia-sip 1.13.9
