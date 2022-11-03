@@ -7,7 +7,7 @@
 - gedit 43.0
 - gnome-boxes 43.1
 - gnome-calls v43.0
-- gnome-endeavour v42.0
+- gnome-endeavour v43.0
 - gnome-podcasts master(2022-07-29)
 - gnome-sound-recorder 43.beta
 - gtranslator 42.0
