@@ -4,7 +4,7 @@
 - clapper 0.5.2
 - d-spy 1.4.0
 - feedbackd 0.0.0+git20220520
-- gedit 43.alpha
+- gedit 43.0
 - gnome-boxes 43.1
 - gnome-calls v43.0
 - gnome-endeavour v42.0
