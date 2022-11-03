@@ -12,6 +12,7 @@
 - gnome-sound-recorder 43.beta
 - gtranslator 42.0
 - sofia-sip 1.13.9
+- tepl 6.2.0
 
 ## Wontbuild
 
