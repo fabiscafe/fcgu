@@ -3,7 +3,7 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gedit
-pkgver=43.0
+pkgver=43.1
 pkgrel=0.1
 pkgdesc="GNOME Text Editor"
 url="https://wiki.gnome.org/Apps/Gedit"
@@ -16,13 +16,11 @@ optdepends=('gedit-plugins: Additional features')
 conflicts=('gedit-code-assistance<=3.16.0+4+gd19b879-1')
 groups=(gnome)
 options=(debug)
-_commit=385d0327aa18bfdb0145238ef8bdde3d6be0e1b6  # tags/43.0^0
+_commit=549daad83dbe515c83a9fe5828a584989bc6a6e0  # tags/43.1^0
 source=("git+https://gitlab.gnome.org/GNOME/gedit.git#commit=$_commit"
-        "git+https://gitlab.gnome.org/GNOME/libgd.git"
-        "0001_positional-arg.patch::https://gitlab.gnome.org/GNOME/gedit/-/merge_requests/124.diff")
+        "git+https://gitlab.gnome.org/GNOME/libgd.git")
 sha256sums=('SKIP'
-            'SKIP'
-            'd46a4c791e9f4e0b33b29a703bb5f6e798050d04491505d08c2a395522f53de8')
+            'SKIP')
 
 pkgver() {
   cd gedit
@@ -35,9 +33,6 @@ prepare() {
   git submodule init
   git submodule set-url subprojects/libgd "$srcdir/libgd"
   git -c protocol.file.allow=always submodule update
-
-  # https://gitlab.gnome.org/GNOME/gedit/-/issues/531
-  git apply -3 ../0001_positional-arg.patch
 }
 
 build() {
@@ -48,8 +43,7 @@ build() {
 }
 
 check() {
-  # https://gitlab.gnome.org/GNOME/gedit/-/issues/532
-  meson test -C build --print-errorlogs ||:
+  meson test -C build --print-errorlogs
 }
 
 package() {
