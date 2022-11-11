@@ -11,7 +11,6 @@
 - gnome-latex 3.40.0
 - gnome-podcasts master(2022-11-01)
 - gnome-sound-recorder 43.beta
-- gtranslator 42.0
 - sofia-sip 1.13.9
 - tepl 6.2.0
 
