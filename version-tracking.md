@@ -6,7 +6,6 @@
 - gedit 43.1
 - gnome-calls v43.0
 - gnome-endeavour v43.0
-- gnome-latex 3.40.0
 - gnome-podcasts master(2022-11-01)
 - gnome-sound-recorder 43.beta
 - sofia-sip 1.13.9
