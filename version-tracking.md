@@ -12,7 +12,6 @@
 - gnome-podcasts master(2022-11-01)
 - gnome-sound-recorder 43.beta
 - sofia-sip 1.13.9
-- tepl 6.2.0
 
 ## Wontbuild
 
