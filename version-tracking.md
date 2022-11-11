@@ -4,7 +4,6 @@
 - d-spy 1.4.0
 - feedbackd 0.0.1
 - gedit 43.1
-- gnome-boxes 43.1
 - gnome-calls v43.0
 - gnome-endeavour v43.0
 - gnome-latex 3.40.0
