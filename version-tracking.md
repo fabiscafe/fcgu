@@ -3,7 +3,7 @@
 - callaudiod 0.1.4
 - clapper 0.5.2
 - d-spy 1.4.0
-- feedbackd 0.0.0+git20220520
+- feedbackd 0.0.1
 - gedit 43.1
 - gnome-boxes 43.1
 - gnome-calls v43.0
