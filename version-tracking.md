@@ -1,5 +1,4 @@
 ## Done
-- amtk 5.6.0
 - callaudiod 0.1.4
 - clapper 0.5.2
 - d-spy 1.4.0
