@@ -1,7 +1,7 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=gnome-calls
-pkgver=43.0
+pkgver=43.2
 pkgrel=0.1
 pkgdesc="A Phone dialer and call handler."
 arch=(x86_64)
@@ -15,7 +15,7 @@ depends=(callaudiod feedbackd folks gom
 	 libhandy libpeas modemmanager sofia-sip)
 makedepends=(appstream git gobject-introspection meson python-docutils vala)
 checkdepends=(xorg-server-xvfb)
-_commit=fcee1a3b6a03383974d67ca67701eba246a646ae  # tags/v43.0^0
+_commit=5fa511c556145e0bdaa6f3eb79a9092965f91f3b  # tags/v43.2^0
 source=("git+https://gitlab.gnome.org/GNOME/calls.git#commit=$_commit"
 "git+https://gitlab.gnome.org/World/Phosh/libcall-ui.git")
 sha256sums=('SKIP'
@@ -31,7 +31,7 @@ prepare() {
   
   git submodule init
   git submodule set-url subprojects/libcall-ui "$srcdir/libcall-ui"
-  git submodule update
+  git -c protocol.file.allow=always submodule update
 }
 
 build() {

@@ -3,7 +3,7 @@
 - clapper 0.5.2
 - d-spy 1.4.0
 - feedbackd 0.0.1
-- gnome-calls v43.0
+- gnome-calls v43.2
 - gnome-endeavour v43.0
 - gnome-podcasts master(2022-11-01)
 - gnome-sound-recorder 43.beta
