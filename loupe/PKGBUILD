@@ -1,7 +1,7 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=loupe
-pkgver=0.0.0+r140+94086b1
+pkgver=0.0.0+r152+ccfbcf6
 pkgrel=1
 pkgdesc="A simple image viewer for GNOME (pre-release)"
 url="https://gitlab.gnome.org/BrainBlasted/loupe"
@@ -10,7 +10,7 @@ license=(GPL)
 depends=(libadwaita)
 makedepends=(git itstool meson rust)
 options=(debug)
-_commit=94086b1650ccdf2ba2a33307946e07a124dc1eae  # main^0
+_commit=ccfbcf60a8f5f2c20bf48b5efd2efc3f01315d32  # main^0
 source=("git+https://gitlab.gnome.org/BrainBlasted/loupe.git#commit=$_commit")
 sha256sums=('SKIP')
 

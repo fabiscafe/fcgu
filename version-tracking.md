@@ -7,7 +7,7 @@
 - gnome-endeavour v43.0
 - gnome-podcasts master(2022-11-01)
 - gnome-sound-recorder 43.beta
-- loupe(2022-11-22)
+- loupe(2022-11-28)
 - sofia-sip 1.13.9
 
 ## Wontbuild
