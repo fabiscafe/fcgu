@@ -2,15 +2,15 @@
 options=(debug !strip)
 
 pkgname=callaudiod
-pkgver=0.1.4
-pkgrel=0.2
+pkgver=0.1.5
+pkgrel=0.1
 pkgdesc="Call audio routing daemon"
 arch=(x86_64)
 url="https://gitlab.com/mobian1/callaudiod"
 license=(GPL3)
 depends=(alsa-lib glib2 libpulse)
 makedepends=(git gtk-doc meson)
-_commit=a7ca6ce9d4c947f19c3f99ff2cab986c64434e57  # tags/0.1.4^0
+_commit=6ac94ccd5c397479292355b4a43e6dc10c8c5558  # tags/0.1.5^0
 source=("git+https://gitlab.com/mobian1/callaudiod.git#commit=$_commit")
 sha256sums=('SKIP')
 
