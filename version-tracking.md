@@ -1,5 +1,5 @@
 ## Done
-- callaudiod 0.1.5
+- callaudiod 0.1.6
 - clapper 0.5.2
 - d-spy 1.4.0
 - feedbackd 0.0.1
