@@ -2,7 +2,7 @@
 - callaudiod 0.1.6
 - clapper 0.5.2
 - d-spy 1.4.0
-- feedbackd 0.0.1
+- feedbackd 0.0.2
 - gnome-calls v43.2
 - gnome-endeavour v43.0
 - gnome-podcasts master(2022-11-01)
