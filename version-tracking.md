@@ -4,7 +4,7 @@
 - d-spy 1.4.0
 - feedbackd 0.0.2
 - gnome-calls v43.2
-- gnome-podcasts master(2022-11-01)
+- gnome-podcasts master(2022-12-16)
 - gnome-sound-recorder 43.beta
 - loupe(2022-12-08) (last pre-GTK4.10 commit)
 - sofia-sip 1.13.11
