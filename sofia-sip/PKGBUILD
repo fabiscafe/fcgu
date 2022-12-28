@@ -5,7 +5,7 @@
 options=(debug !strip)
 
 pkgname=sofia-sip
-pkgver=1.13.10
+pkgver=1.13.11
 pkgrel=0.1
 pkgdesc="An open-source SIP User-Agent library"
 arch=('x86_64' 'i686')
@@ -13,7 +13,7 @@ url="http://sofia-sip.sourceforge.net"
 license=('LGPL')
 depends=('glib2' 'openssl' 'gawk')
 makedepends=('git')
-_commit=2cb3820d9fa934f96f318c7cea197f54e8c277c7  # tags/v1.13.10^0
+_commit=ad508835797e3cb5bc0cd45b9e98869cbf44c868  # tags/v1.13.11^0
 source=("git+https://github.com/freeswitch/sofia-sip.git#commit=$_commit")
 sha256sums=('SKIP')
 

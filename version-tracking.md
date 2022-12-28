@@ -7,7 +7,7 @@
 - gnome-podcasts master(2022-11-01)
 - gnome-sound-recorder 43.beta
 - loupe(2022-12-08) (last pre-GTK4.10 commit)
-- sofia-sip 1.13.10
+- sofia-sip 1.13.11
 
 ## Wontbuild
 
