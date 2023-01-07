@@ -10,6 +10,7 @@
 - glib-networking 2.76.alpha
 - gnome-calls v43.2
 - gnome-podcasts master(2022-12-16)
+- gnome-software 44.alpha
 - gnome-sound-recorder 43.beta
 - gtk4 4.9.2
 - libadwaita 1.3.alpha
