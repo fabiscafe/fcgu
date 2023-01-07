@@ -1,0 +1,40 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+
+pkgname=evolution-ews
+pkgver=3.47.1
+pkgrel=1
+pkgdesc="MS Exchange integration through Exchange Web Services"
+url="https://wiki.gnome.org/Apps/Evolution/EWS"
+arch=(x86_64)
+license=(LGPL2.1)
+depends=(libmspack evolution)
+makedepends=(git intltool python cmake ninja systemd)
+options=(debug)
+_commit=a045fb47b9dd3e81615cf81ce736d3edc6bb326f  # tags/3.47.1^0
+source=("git+https://gitlab.gnome.org/GNOME/evolution-ews.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  cmake -S $pkgname -B build -G Ninja \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DLIBEXEC_INSTALL_DIR=/usr/lib \
+    -DSYSCONF_INSTALL_DIR=/etc
+  cmake --build build
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+}
+
+# vim:set sw=2 sts=-1 et:
