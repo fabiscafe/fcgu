@@ -1,0 +1,54 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+
+pkgname=epiphany
+pkgver=44alpha
+pkgrel=1
+pkgdesc="A GNOME web browser based on the WebKit rendering engine"
+url="https://wiki.gnome.org/Apps/Web"
+arch=(x86_64)
+license=(GPL)
+depends=(webkit2gtk-6.0 gcr-4 icu libdazzle libadwaita libarchive libportal-gtk4
+         libsoup3)
+makedepends=(docbook-xml startup-notification lsb-release gobject-introspection
+             yelp-tools git meson)
+checkdepends=(xorg-server-xvfb aspell hspell hunspell nuspell libvoikko)
+groups=(gnome)
+options=(debug)
+_commit=756f36948205bca65af3f597ae03eba5e04e4a31  # tags/44.alpha^0
+source=(
+  "git+https://gitlab.gnome.org/GNOME/epiphany.git#commit=$_commit"
+  fix-test.diff
+)
+sha256sums=('SKIP'
+            'faa710836067fa199954701e6f68a54aa4a67223b7f851113cafaf7b1f0c9d48')
+
+pkgver() {
+  cd epiphany
+  git describe --tags | sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd epiphany
+
+  # Fix encoding test; perhaps caused by different glibc or locale env
+  # https://gitlab.gnome.org/GNOME/epiphany/-/issues/1842
+  git apply -3 ../fix-test.diff
+}
+
+build() {
+  arch-meson epiphany build
+  meson compile -C build
+}
+
+check() {
+  dbus-run-session xvfb-run -s '-nolisten local' \
+    meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
+
+# vim:set sw=2 sts=-1 et:
