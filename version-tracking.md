@@ -12,6 +12,7 @@
 - libadwaita 1.3.alpha
 - loupe(2022-12-08) (last pre-GTK4.10 commit)
 - sofia-sip 1.13.11
+- webkit2gtk-6.0 2.39.3
 
 ## Wontbuild
 
