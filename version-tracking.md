@@ -3,6 +3,7 @@
 - clapper 0.5.2
 - d-spy 1.4.0
 - feedbackd 0.0.2
+- glib-networking 2.76.alpha
 - gnome-calls v43.2
 - gnome-podcasts master(2022-12-16)
 - gnome-sound-recorder 43.beta
