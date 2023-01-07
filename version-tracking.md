@@ -9,6 +9,7 @@
 - gnome-podcasts master(2022-12-16)
 - gnome-sound-recorder 43.beta
 - gtk4 4.9.2
+- libadwaita 1.3.alpha
 - loupe(2022-12-08) (last pre-GTK4.10 commit)
 - sofia-sip 1.13.11
 
