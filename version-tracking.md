@@ -23,9 +23,9 @@
 
 ## Dev releases
 * X.beta.1 -> X.beta1
-  * `sed -r 's/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'`
-* X.0.beta.1 -> X.0beta1
-  * `sed -r 's/\.([a-z])/\1/;s/[^-]*-g/r&/;s/-/+/g'`
+* X.1.beta -> X.1beta
+* X.0.beta.1 -> X.0beta.1
+  * `sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'`
 
 ## Stable releases
 * pkgver: 1 -> 0.1
