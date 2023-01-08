@@ -1,0 +1,57 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+
+pkgbase=eog
+pkgname=(eog eog-docs)
+pkgver=44alpha
+pkgrel=1
+pkgdesc="Eye of Gnome: An image viewing and cataloging program"
+url="https://wiki.gnome.org/Apps/EyeOfGnome"
+arch=(x86_64)
+license=(GPL)
+depends=(gnome-desktop libexif lcms2 exempi libpeas librsvg libhandy
+         webp-pixbuf-loader)
+makedepends=(gobject-introspection gi-docgen git meson yelp-tools systemd)
+options=(debug)
+_commit=ff8828d6e19320bfb88d1459f543c7870a348840  # tags/44.alpha^0
+source=("git+https://gitlab.gnome.org/GNOME/eog.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd eog
+  git describe --tags | sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
+}
+
+build() {
+  local meson_options=(
+    -D gtk_doc=true
+    -D libportal=false
+  )
+
+  arch-meson eog build "${meson_options[@]}"
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package_eog() {
+  optdepends=('eog-plugins: Additional features')
+  groups=(gnome)
+
+  meson install -C build --destdir "$pkgdir"
+
+  mkdir -p doc/usr/share
+  mv {"$pkgdir",doc}/usr/share/gtk-doc
+}
+
+package_eog-docs() {
+  pkgdesc+=" (documentation)"
+  depends=()
+
+  mv doc/* "$pkgdir"
+}
+
+# vim:set sw=2 sts=-1 et:
