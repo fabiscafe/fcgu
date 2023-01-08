@@ -2,8 +2,12 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 # Contributor: Eric Bélanger <eric@archlinux.org>
 
-pkgbase=webkit2gtk-6.0
-pkgname=(webkit2gtk-6.0 webkit2gtk-6.0-docs)
+# Name change due to API change of former webkit2gtk-5.0 to webkitgtk-6.0. This also reflects the library names.
+# Other Projects
+# https://gitlab.gnome.org/GNOME/gnome-build-meta/-/merge_requests/1864
+# https://src.fedoraproject.org/rpms/webkitgtk/c/f1d95b90e57fec87a68637fb6270dd7ab4dbd50f?branch=rawhide
+pkgbase=webkitgtk-6.0
+pkgname=(webkitgtk-6.0 webkitgtk-6.0-docs)
 pkgver=2.39.3
 pkgrel=1
 pkgdesc="Web content engine for GTK"
@@ -104,9 +108,10 @@ build() {
   cmake --build build
 }
 
-package_webkit2gtk-6.0() {
+package_webkitgtk-6.0() {
   depends+=(libwpe-1.0.so libWPEBackend-fdo-1.0.so)
-  provides+=(libjavascriptcoregtk-6.0.so libwebkit2gtk-6.0.so)
+  provides+=(libjavascriptcoregtk-6.0.so libwebkitgtk-6.0.so)
+  conflicts=(webkit2gtk-5.0)
   optdepends=('geoclue: Geolocation support'
               'gst-plugins-good: media decoding'
               'gst-plugins-bad: media decoding'
@@ -127,7 +132,7 @@ package_webkit2gtk-6.0() {
     install -Dm644 /dev/stdin "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
 
-package_webkit2gtk-6.0-docs() {
+package_webkitgtk-6.0-docs() {
   pkgdesc+=" (documentation)"
   depends=()
 
