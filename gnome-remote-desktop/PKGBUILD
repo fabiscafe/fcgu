@@ -1,0 +1,67 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+
+pkgname=gnome-remote-desktop
+pkgver=44alpha
+pkgrel=1
+pkgdesc="GNOME Remote Desktop server"
+url="https://wiki.gnome.org/Projects/Mutter/RemoteDesktop"
+arch=(x86_64)
+license=(GPL2)
+depends=(cairo freerdp glib2 pipewire systemd libvncserver libsecret libnotify
+         dconf fuse3 libxkbcommon libepoxy libfdk-aac)
+makedepends=(asciidoc git meson ffnvcodec-headers)
+checkdepends=(python-dbus python-gobject mutter wireplumber)
+groups=(gnome)
+options=(debug)
+_commit=76ea41dd430e1f09b3bdd323910781ae8bb51703  # tags/44.alpha^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-remote-desktop.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+_check() (
+  mkdir -p -m 700 "${XDG_CONFIG_HOME:=$PWD/config-dir}"
+  mkdir -p -m 700 "${XDG_RUNTIME_DIR:=$PWD/runtime-dir}"
+  glib-compile-schemas "${GSETTINGS_SCHEMA_DIR:=$PWD/build/src}"
+  export XDG_CONFIG_HOME XDG_RUNTIME_DIR GSETTINGS_SCHEMA_DIR
+
+  openssl req -new -newkey rsa:4096 -days 720 -nodes -x509 -subj /C=DE/ST=NONE/L=NONE/O=GNOME/CN=gnome.org -keyout tls.key -out tls.crt
+
+  export GSETTINGS_BACKEND=keyfile
+  gsettings set org.gnome.desktop.remote-desktop.rdp tls-cert $(realpath tls.crt)
+  gsettings set org.gnome.desktop.remote-desktop.rdp tls-key $(realpath tls.key)
+  gsettings set org.gnome.desktop.remote-desktop.rdp screen-share-mode extend
+  gsettings set org.gnome.desktop.remote-desktop.rdp enable true
+
+  pipewire &
+  _p1=$!
+
+  wireplumber &
+  _p2=$!
+
+  trap "kill $_p1 $_p2; wait" EXIT
+
+  meson test -C build --print-errorlogs -t 3
+)
+
+check() {
+  dbus-run-session bash -c "$(declare -f _check); _check"
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
+

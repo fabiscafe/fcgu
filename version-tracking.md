@@ -15,6 +15,7 @@
 - gnome-initial-setup master(2022-01-05)
 - gnome-maps v44.alpha
 - gnome-podcasts master(2022-12-16)
+- gnome-remote-desktop 44.alpha
 - gnome-software 44.alpha
 - gnome-sound-recorder 43.beta
 - gtk4 4.9.2
