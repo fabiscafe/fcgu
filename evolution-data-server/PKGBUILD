@@ -4,7 +4,7 @@
 
 pkgname=evolution-data-server
 pkgver=3.47.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Centralized access to appointments and contacts"
 url="https://wiki.gnome.org/Apps/Evolution"
 arch=(x86_64)
@@ -18,7 +18,7 @@ depends=(
   libphonenumber
   nss
   sqlite
-  webkit2gtk-6.0
+  webkitgtk-6.0
 )
 makedepends=(
   boost
