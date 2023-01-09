@@ -12,7 +12,7 @@
 - glib2 2.75.2
 - glib-networking 2.76.alpha
 - gnome-calls v43.2
-- gnome-initial-setup master(2022-01-05)
+- gnome-initial-setup 44.alpha.2
 - gnome-maps v44.alpha
 - gnome-podcasts master(2022-12-16)
 - gnome-remote-desktop 44.alpha
