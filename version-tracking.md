@@ -22,6 +22,7 @@
 - gtk4 4.9.2
 - libadwaita 1.3.alpha
 - loupe(2022-12-08) (last pre-GTK4.10 commit)
+- nautilus 44.alpha
 - sofia-sip 1.13.11
 - webkitgtk-6.0 2.39.3
 - xdg-desktop-portal-gnome 44.alpha

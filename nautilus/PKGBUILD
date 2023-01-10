@@ -1,0 +1,87 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+
+pkgbase=nautilus
+pkgname=(nautilus libnautilus-extension libnautilus-extension-docs)
+pkgver=44alpha
+pkgrel=1
+pkgdesc="Default file manager for GNOME"
+url="https://wiki.gnome.org/Apps/Files"
+arch=(x86_64)
+license=(GPL)
+depends=(libgexiv2 gdk-pixbuf2 gst-plugins-base-libs gnome-desktop-4 gvfs dconf
+         tracker3 tracker3-miners gnome-autoar libadwaita libportal-gtk4
+         libcloudproviders)
+makedepends=(gobject-introspection git gi-docgen meson appstream-glib)
+checkdepends=(python-gobject)
+options=(debug)
+_commit=67a0dac3859b300008a00d88e381a57375bcceca  # tags/44.alpha^0
+source=("git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd nautilus
+  git describe --tags | sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd nautilus
+}
+
+build() {
+  local meson_options=(
+    -D docs=true
+    -D packagekit=false
+  )
+
+  arch-meson nautilus build "${meson_options[@]}"
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+_pick() {
+  local p="$1" f d; shift
+  for f; do
+    d="$srcdir/$p/${f#$pkgdir/}"
+    mkdir -p "$(dirname "$d")"
+    mv "$f" "$d"
+    rmdir -p --ignore-fail-on-non-empty "$(dirname "$f")"
+  done
+}
+
+package_nautilus() {
+  depends+=(libnautilus-extension.so)
+  optdepends=('nautilus-sendto: Send files via mail extension')
+  groups=(gnome)
+
+  meson install -C build --destdir "$pkgdir"
+
+  cd "$pkgdir"
+
+  _pick libne usr/include
+  _pick libne usr/lib/{girepository-1.0,libnautilus-extension*,pkgconfig}
+  _pick libne usr/share/gir-1.0
+
+  _pick ldocs usr/share/doc
+}
+
+package_libnautilus-extension() {
+  pkgdesc="Extension interface for Nautilus"
+  depends=(glib2 gcc-libs)
+  provides=(libnautilus-extension.so)
+
+  mv libne/* "$pkgdir"
+}
+
+package_libnautilus-extension-docs() {
+  pkgdesc="Extension interface for Nautilus (documentation)"
+  depends=()
+
+  mv ldocs/* "$pkgdir"
+}
+
+# vim:set sw=2 sts=-1 et:
