@@ -12,6 +12,7 @@
 - glib2 2.75.2
 - glib-networking 2.76.alpha
 - gnome-calls v43.2
+- gnome-control-center 44.alpha
 - gnome-initial-setup 44.alpha.2
 - gnome-maps v44.alpha
 - gnome-podcasts master(2022-12-16)
