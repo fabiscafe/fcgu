@@ -23,6 +23,7 @@
 - gtk4 4.9.2
 - gtksourceview5 5.7.0
 - libadwaita 1.3.alpha
+- libpanel main(2023-01-07)
 - loupe(2022-12-08) (last pre-GTK4.10 commit)
 - nautilus 44.alpha
 - sofia-sip 1.13.11
