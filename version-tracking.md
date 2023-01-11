@@ -21,6 +21,7 @@
 - gnome-software 44.alpha
 - gnome-sound-recorder 43.beta
 - gnome-text-editor 44.alpha
+- gobject-introspection 1.75.4
 - gtk4 4.9.2
 - gtksourceview5 5.7.0
 - libadwaita 1.3.alpha
