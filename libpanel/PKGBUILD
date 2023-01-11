@@ -3,7 +3,7 @@
 
 pkgbase=libpanel
 pkgname=(libpanel libpanel-docs)
-pkgver=1.0.2+r32+gb0e81a8
+pkgver=1.1.0
 pkgrel=1
 pkgdesc="Dock/panel library for GTK 4"
 url="https://gitlab.gnome.org/GNOME/libpanel"
@@ -12,13 +12,13 @@ license=(LGPL)
 depends=(gtk4 libadwaita)
 makedepends=(git meson vala gobject-introspection gi-docgen)
 options=(debug)
-_commit=b0e81a8efdf56e0fd4ec8ff90791bd48c2b5157a  # master^0
+_commit=1dc0ffc6646781a69d1f0b4651d0d5513ff51d83  # tags/1.1.0^0
 source=("git+https://gitlab.gnome.org/GNOME/libpanel.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g;s/1.0.0/1.0.2/'
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 build() {
