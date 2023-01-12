@@ -68,7 +68,7 @@ package_gobject-introspection() {
 
 package_gobject-introspection-runtime() {
   pkgdesc+=" (runtime library)"
-  depends=("glib2>=2.75.2")
+  depends=("glib2>=$_glibver")
   provides+=(libgirepository-1.0.so)
 
   mv runtime/* "$pkgdir"
