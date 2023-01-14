@@ -30,6 +30,7 @@
 - nautilus 44.alpha
 - sofia-sip 1.13.11
 - tracker 3.5.0.alpha
+- tracker-miners 3.5.0.alpha
 - webkitgtk-6.0 2.39.3
 - xdg-desktop-portal-gnome 44.alpha
 
