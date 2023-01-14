@@ -29,6 +29,7 @@
 - loupe(2022-12-08) (last pre-GTK4.10 commit)
 - nautilus 44.alpha
 - sofia-sip 1.13.11
+- tracker 3.5.0.alpha
 - webkitgtk-6.0 2.39.3
 - xdg-desktop-portal-gnome 44.alpha
 
