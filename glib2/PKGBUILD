@@ -4,8 +4,8 @@
 
 pkgbase=glib2
 pkgname=(glib2 glib2-docs)
-pkgver=2.75.2
-pkgrel=2
+pkgver=2.75.2+r24+g5d0db7f0b
+pkgrel=1
 pkgdesc="Low level core library"
 url="https://wiki.gnome.org/Projects/GLib"
 license=(LGPL)
@@ -36,9 +36,10 @@ options=(
   debug
   staticlibs
 )
-_commit=ec3b1bfc45216850c1a861055ad2fd9d9906813a  # tags/2.75.2^0
+_commit=5d0db7f0b8ed0fc0eede8b20df930d7703cf430d  # main^0
 source=(
-  "git+https://gitlab.gnome.org/GNOME/glib.git?signed#commit=$_commit"
+  "git+https://gitlab.gnome.org/GNOME/glib.git#commit=$_commit"
+  #"git+https://gitlab.gnome.org/GNOME/glib.git?signed#commit=$_commit"
   "git+https://gitlab.gnome.org/GNOME/gvdb.git"
   0001-glib-compile-schemas-Remove-noisy-deprecation-warnin.patch
   gio-querymodules.{hook,script}

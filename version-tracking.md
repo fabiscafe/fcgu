@@ -9,7 +9,7 @@
 - evolution-data-server 3.47.1
 - evolution-ews 3.47.1
 - feedbackd 0.0.2
-- glib2 2.75.2
+- glib2 main(2023-01-14)
 - glib-networking 2.76.alpha
 - gnome-builder 44.alpha
 - gnome-calls v44_alpha.1
