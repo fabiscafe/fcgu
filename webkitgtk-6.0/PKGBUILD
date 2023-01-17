@@ -9,7 +9,7 @@
 pkgbase=webkitgtk-6.0
 pkgname=(webkitgtk-6.0 webkitgtk-6.0-docs)
 pkgver=2.39.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Web content engine for GTK"
 url="https://webkitgtk.org"
 arch=(x86_64)
@@ -68,6 +68,7 @@ makedepends=(
   gobject-introspection
   gperf
   gst-plugins-bad
+  mold
   ninja
   python
   ruby
@@ -75,8 +76,9 @@ makedepends=(
   unifdef
   wayland-protocols
 )
-#!lto: https://bugs.webkit.org/show_bug.cgi?id=249368
-options=(debug !lto)
+
+
+options=(debug)
 source=($url/releases/webkitgtk-$pkgver.tar.xz{,.asc})
 sha256sums=('44a56a68f43fc8684aaa55ddd0fb108503ab4ab0b24e31535e9d8b9dd57563ef'
             'SKIP')
@@ -90,8 +92,10 @@ prepare() {
 build() {
   # Produce minimal debug info: 4.3 GB of debug data makes the
   # build too slow and is too much to package for debuginfod
-  CFLAGS+=' -g1'
-  CXXFLAGS+=' -g1'
+  # Use mold as linker to build with lto enabled
+  # https://bugs.webkit.org/show_bug.cgi?id=249368
+  CFLAGS+=' -g1 -fuse-ld=mold'
+  CXXFLAGS+=' -g1 -fuse-ld=mold'
 
   cmake -S webkitgtk-$pkgver -B build -G Ninja \
     -DPORT=GTK \
