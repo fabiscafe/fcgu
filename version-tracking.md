@@ -28,7 +28,7 @@
 - libpanel 1.1.0
 - loupe(2022-12-08) (last pre-GTK4.10 commit)
 - nautilus 44.alpha
-- sofia-sip 1.13.11
+- sofia-sip 1.13.12
 - tracker 3.5.0.alpha
 - tracker-miners 3.5.0.alpha
 - webkitgtk-6.0 2.39.4
