@@ -1,0 +1,48 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+
+pkgbase=libdex
+pkgname=(libdex)
+pkgver=0.000000000000+r438+1a16c84
+pkgrel=1
+pkgdesc="A library supporting 'Deferred Execution'"
+url="https://gitlab.gnome.org/chergert/libdex"
+arch=(x86_64)
+license=(LGPL2.1)
+depends=(gobject-introspection-runtime
+         libsoup3 
+         liburing)
+makedepends=(meson
+             git
+             gobject-introspection
+             vala)
+#checkdepends=(weston)
+options=(debug)
+_commit=1a16c8423a4a302fbc610663c71eb9707dd6888f  # main^0
+source=("git+https://gitlab.gnome.org/chergert/libdex.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgbase
+  printf "0.000000000000+r%s+%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+prepare() {
+  cd $pkgbase
+}
+
+build() {
+  local meson_options=(
+    -D examples=false
+  )
+
+  arch-meson $pkgbase build "${meson_options[@]}"
+  meson compile -C build
+}
+
+check() (
+  meson test -C build --print-errorlogs
+)
+
+package_libdex() {
+  meson install -C build --destdir "$pkgdir"
+}
