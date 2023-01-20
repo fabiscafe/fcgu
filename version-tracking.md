@@ -14,7 +14,7 @@
 - gnome-builder main(2023-01-20)
 - gnome-calls v44_alpha.1
 - gnome-control-center 44.alpha
-- gnome-initial-setup 44.alpha.2
+- gnome-initial-setup master(2023-01-20)
 - gnome-maps v44.alpha
 - gnome-podcasts master(2022-12-16)
 - gnome-remote-desktop 44.alpha
