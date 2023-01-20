@@ -8,8 +8,8 @@
 # https://src.fedoraproject.org/rpms/webkitgtk/c/f1d95b90e57fec87a68637fb6270dd7ab4dbd50f?branch=rawhide
 pkgbase=webkitgtk-6.0
 pkgname=(webkitgtk-6.0 webkitgtk-6.0-docs)
-pkgver=2.39.4
-pkgrel=2
+pkgver=2.39.5
+pkgrel=1
 pkgdesc="Web content engine for GTK"
 url="https://webkitgtk.org"
 arch=(x86_64)
@@ -80,7 +80,7 @@ makedepends=(
 
 options=(debug)
 source=($url/releases/webkitgtk-$pkgver.tar.xz{,.asc})
-sha256sums=('44a56a68f43fc8684aaa55ddd0fb108503ab4ab0b24e31535e9d8b9dd57563ef'
+sha256sums=('56b96dbdb3b3c42501471f1b9ec268642d5624f1aad473d3ab4f862d2633f9d7'
             'SKIP')
 validpgpkeys=('D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos <cgarcia@igalia.com>
               '5AA3BC334FD7E3369E7C77B291C559DBE4C9123B') # Adrián Pérez de Castro <aperez@igalia.com>
