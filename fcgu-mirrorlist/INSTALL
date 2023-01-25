@@ -1,6 +1,20 @@
 post_install() {
   set -o pipefail
 
+  local core_idx=$(/usr/bin/pacman-conf -l | /usr/bin/grep -nx core | /usr/bin/cut -d: -f1)
+  local fcgu_idx=$(/usr/bin/pacman-conf -l | /usr/bin/grep -nx fcgu | /usr/bin/cut -d: -f1)
+
+  # Check if the fcgu repository is in pacman.conf
+  if [ -z $fcgu_idx ]; then
+    printf '\n  You are missing the [fcgu] repo from your pacman.conf\n\n'
+
+  # Check if the fcgu repo sits below core
+  elif [ $fcgu_idx -gt $core_idx ]; then
+    printf '\n  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓'
+    printf '\n  Please set [fcgu] to be above [core] in your pacman.conf'
+    printf '\n  ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑\n\n'
+  fi
+
   printf "Generating fcgu mirrorlist, please wait …\n"
 
   /usr/bin/rankmirrors -r fcgu '/usr/share/pacman.d/fcgu-mirrorlist/mirrorlist' \

@@ -33,12 +33,13 @@ All of our packages are signed. To be able to install trustworthy packages it's 
 
 ### Mirror-List
 [fcgu-mirrorlist](https://codeberg.org/fabiscafe/fcgu/src/branch/main/fcgu-mirrorlist) is an own package that should be available from all mirror servers. You need to install.
+
 ```
-# pacman -U https://vmi394248.contaboserver.net/fcgu/fcgu-mirrorlist-2-4-any.pkg.tar.zst
+# pacman -U https://br-mirror.amanoteam.com/fcgu/fcgu-mirrorlist-3-1-any.pkg.tar.zst
 ```
 
 ### Repository
-This repository entry should be *below* the **[core]** repo, but *above* every other one in */etc/pacman.conf*.
+This repository entry should be *above* the **[core]**, and every other enabled repo in */etc/pacman.conf*.
 
 ```
 [fcgu]
@@ -48,7 +49,6 @@ Include = /etc/pacman.d/fcgu-mirrorlist
 Here is a preview how it should look:
 
 ```
-
 ...
 # The testing repositories are disabled by default. To enable, uncomment the
 # repo name header and Include lines. You can add preferred servers immediately
@@ -57,11 +57,11 @@ Here is a preview how it should look:
 #[testing]
 #Include = /etc/pacman.d/mirrorlist
 
-[core]
-Include = /etc/pacman.d/mirrorlist
-
 [fcgu]
 Include = /etc/pacman.d/fcgu-mirrorlist
+
+[core]
+Include = /etc/pacman.d/mirrorlist
 
 [extra]
 Include = /etc/pacman.d/mirrorlist
