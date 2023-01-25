@@ -28,6 +28,7 @@
 - libadwaita 1.3.alpha
 - libdex main(2023-01-20)
 - libpanel 1.1.0
+- libsoup3 3.3.0
 - loupe(2022-12-08) (last pre-GTK4.10 commit)
 - nautilus 44.alpha
 - sofia-sip 1.13.12
