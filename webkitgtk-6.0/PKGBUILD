@@ -8,7 +8,7 @@
 # https://src.fedoraproject.org/rpms/webkitgtk/c/f1d95b90e57fec87a68637fb6270dd7ab4dbd50f?branch=rawhide
 pkgbase=webkitgtk-6.0
 pkgname=(webkitgtk-6.0 webkitgtk-6.0-docs)
-pkgver=2.39.6
+pkgver=2.39.7
 pkgrel=1
 pkgdesc="Web content engine for GTK"
 url="https://webkitgtk.org"
@@ -78,23 +78,14 @@ makedepends=(
 
 # !lto: https://bugs.webkit.org/show_bug.cgi?id=249368
 options=(debug !lto)
-source=($url/releases/webkitgtk-$pkgver.tar.xz{,.asc}
-        # https://github.com/WebKit/WebKit/pull/9306
-        0001_dont-include-WebKitPrintCustomWidget-h.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/9306.patch
-        # https://github.com/WebKit/WebKit/pull/9344
-        0002_fix-attempt-to-include-WebKitPrintCustomWidget-h.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/9344.patch)
-sha256sums=('a174f7d03a907936f32ca26abc27d9e9f34bd0811f3ffd32844555d2642ded87'
-            'SKIP'
-            '7ae5abbd20a39060bd225225e16cfa9d625ab83140e17e031b8beb00381f71ec'
-            '637f36ac27f28583596a6bbc5e2997847c79413679d81b4dbc58ebcdde145a6d')
+source=($url/releases/webkitgtk-$pkgver.tar.xz{,.asc})
+sha256sums=('bb7da0346388d349f560ef0f2c666880d068e77c195cbcf644a0ae69230244b2'
+            'SKIP')
 validpgpkeys=('D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos <cgarcia@igalia.com>
               '5AA3BC334FD7E3369E7C77B291C559DBE4C9123B') # Adrián Pérez de Castro <aperez@igalia.com>
 
 prepare() {
   cd webkitgtk-$pkgver
-
-  patch --forward --strip=1 --input="${srcdir}/0001_dont-include-WebKitPrintCustomWidget-h.patch"
-  patch --forward --strip=1 --input="${srcdir}/0002_fix-attempt-to-include-WebKitPrintCustomWidget-h.patch"
 }
 
 build() {
