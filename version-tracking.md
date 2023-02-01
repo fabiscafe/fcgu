@@ -16,7 +16,7 @@
 - gnome-control-center 44.alpha
 - gnome-disks-utility 44.alpha
 - gnome-initial-setup master(2023-01-20)
-- gnome-maps v44.alpha
+- gnome-maps v44.beta
 - gnome-podcasts master(2022-12-16)
 - gnome-remote-desktop 44.alpha
 - gnome-software 44.alpha
