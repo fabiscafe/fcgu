@@ -3,7 +3,7 @@
 
 pkgbase=gnome-builder
 pkgname=(gnome-builder)
-pkgver=44alpha+r68+g986a26eb3
+pkgver=44alpha+r157+g5325678fe
 pkgrel=1
 pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
@@ -19,7 +19,7 @@ depends=(autoconf-archive
          editorconfig-core-c
          flatpak-builder
          gjs
-         "glib2>=2.75.0"
+         glib2
          gspell
          gtksourceview5
          jsonrpc-glib
@@ -48,7 +48,7 @@ makedepends=(appstream-glib
              yelp-tools)
 checkdepends=(weston)
 options=(debug)
-_commit=986a26eb30b917348d26bb40a4bff65839e59d04  # main^0
+_commit=5325678fe15e4e5cda5188980664e2e5e3b6eebd  # main^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
 sha256sums=('SKIP')
 

@@ -11,7 +11,7 @@
 - feedbackd 0.0.2
 - glib2 main(2023-01-20)
 - glib-networking 2.76.alpha
-- gnome-builder main(2023-01-20)
+- gnome-builder main(2023-02-01)
 - gnome-calls v44_alpha.1
 - gnome-control-center 44.alpha
 - gnome-disks-utility 44.alpha
