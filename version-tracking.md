@@ -29,7 +29,7 @@
 - libdex main(2023-01-20)
 - libpanel 1.1.0
 - libsoup3 3.3.0
-- loupe(2022-12-08) (last pre-GTK4.10 commit)
+- loupe(2023-02-02)
 - nautilus 44.alpha
 - sofia-sip 1.13.12
 - tracker 3.5.0.alpha
