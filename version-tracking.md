@@ -6,7 +6,7 @@
 - eog 44.alpha
 - epiphany master(2023-02-01)
 - evolution 3.47.1
-- evolution-data-server master(2023-01-20)
+- evolution-data-server master(2023-02-01)
 - evolution-ews 3.47.1
 - feedbackd 0.0.3
 - glib2 main(2023-01-20)

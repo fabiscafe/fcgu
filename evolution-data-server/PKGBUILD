@@ -3,7 +3,7 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=evolution-data-server
-pkgver=3.47.1+r11+g354f41211
+pkgver=3.47.1+r27+g02703b28d
 pkgrel=1
 pkgdesc="Centralized access to appointments and contacts"
 url="https://wiki.gnome.org/Apps/Evolution"
@@ -44,7 +44,7 @@ provides=(
 )
 license=(GPL)
 options=(debug)
-_commit=354f41211953fe30000268478e2b33782bb1e753  # master^0
+_commit=02703b28d798931afccebf79c842b54625a8dcd0  # master^0
 source=("git+https://gitlab.gnome.org/GNOME/evolution-data-server.git#commit=$_commit")
 sha256sums=('SKIP')
 
