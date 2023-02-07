@@ -31,7 +31,7 @@
 - libsoup3 3.3.0
 - loupe(2023-02-02)
 - nautilus 44.alpha
-- sofia-sip 1.13.12
+- sofia-sip 1.13.13
 - tracker 3.5.0.alpha
 - tracker-miners 3.5.0.alpha
 - webkitgtk-6.0 2.39.7
