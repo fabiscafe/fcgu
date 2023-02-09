@@ -10,7 +10,7 @@
 - evolution-ews 3.47.1
 - feedbackd 0.0.3
 - glib2 main(2023-01-20)
-- glib-networking 2.76.alpha
+- glib-networking 2.76.beta
 - gnome-builder main(2023-02-01)
 - gnome-calls v44_alpha.1
 - gnome-control-center 44.alpha
