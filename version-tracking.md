@@ -14,7 +14,7 @@
 - gnome-builder main(2023-02-01)
 - gnome-calls v44_alpha.1
 - gnome-control-center 44.alpha
-- gnome-disks-utility 44.alpha
+- gnome-disks-utility 44.beta
 - gnome-initial-setup master(2023-01-20)
 - gnome-maps v44.beta
 - gnome-podcasts master(2022-12-16)
