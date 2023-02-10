@@ -5,7 +5,7 @@
 - d-spy 1.4.0
 - eog 44.alpha
 - epiphany master(2023-02-01)
-- evolution 3.47.1
+- evolution 3.47.2
 - evolution-data-server 3.47.2
 - evolution-ews 3.47.1
 - feedbackd 0.0.3
