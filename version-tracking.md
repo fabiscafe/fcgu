@@ -7,7 +7,7 @@
 - epiphany master(2023-02-01)
 - evolution 3.47.2
 - evolution-data-server 3.47.2
-- evolution-ews 3.47.1
+- evolution-ews 3.47.2
 - feedbackd 0.0.3
 - glib2 main(2023-01-20)
 - glib-networking 2.76.beta
