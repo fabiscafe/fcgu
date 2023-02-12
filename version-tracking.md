@@ -15,6 +15,7 @@
 - gnome-builder main(2023-02-01)
 - gnome-calculator 44.beta
 - gnome-calls v44_alpha.1
+- gnome-characters 44.beta
 - gnome-clocks 44.beta
 - gnome-connections 44.beta
 - gnome-control-center 44.alpha
