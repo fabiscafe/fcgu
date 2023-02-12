@@ -12,6 +12,7 @@
 - glib2 main(2023-01-20)
 - glib-networking 2.76.beta
 - gnome-builder main(2023-02-01)
+- gnome-calculator 44.beta
 - gnome-calls v44_alpha.1
 - gnome-control-center 44.alpha
 - gnome-disks-utility 44.beta
