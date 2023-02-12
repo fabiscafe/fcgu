@@ -15,6 +15,7 @@
 - gnome-calculator 44.beta
 - gnome-calls v44_alpha.1
 - gnome-clocks 44.beta
+- gnome-connections 44.beta
 - gnome-control-center 44.alpha
 - gnome-disks-utility 44.beta
 - gnome-initial-setup master(2023-01-20)
