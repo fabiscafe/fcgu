@@ -1,0 +1,51 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+
+pkgname=gnome-system-monitor
+pkgver=44beta
+pkgrel=1
+pkgdesc="View current processes and monitor system state"
+url="https://wiki.gnome.org/Apps/SystemMonitor"
+arch=(x86_64)
+license=(GPL)
+depends=(
+  gtkmm3
+  libgtop
+  libhandy
+  librsvg
+  polkit
+  systemd
+)
+makedepends=(
+  appstream-glib
+  git
+  meson
+  yelp-tools
+)
+groups=(gnome)
+_commit=5854be6b059c1286652fa56732e406817ed651ea  # tags/44.beta^0
+source=("git+https://gitlab.gnome.org/GNOME/gnome-system-monitor.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
