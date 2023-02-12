@@ -3,7 +3,7 @@
 - callaudiod 0.1.6
 - clapper 0.5.2
 - d-spy 1.4.0
-- eog 44.alpha
+- eog 44.beta
 - epiphany master(2023-02-01)
 - evolution 3.47.2
 - evolution-data-server 3.47.2
