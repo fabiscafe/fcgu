@@ -4,7 +4,7 @@
 - clapper 0.5.2
 - d-spy 1.4.0
 - eog 44.beta
-- epiphany master(2023-02-01)
+- epiphany 44.beta
 - evolution 3.47.2
 - evolution-data-server 3.47.2
 - evolution-ews 3.47.2
