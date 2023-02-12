@@ -21,6 +21,7 @@
 - gnome-remote-desktop 44.alpha
 - gnome-software 44.alpha
 - gnome-sound-recorder 43.beta
+- gnome-terminal 3.47.92
 - gnome-text-editor 44.alpha
 - gobject-introspection 1.75.4
 - gtk4 4.9.3
