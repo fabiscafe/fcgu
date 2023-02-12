@@ -30,7 +30,7 @@
 - libpanel 1.1.0
 - libsoup3 3.3.0
 - loupe(2023-02-02)
-- nautilus 44.alpha
+- nautilus 44.beta
 - sofia-sip 1.13.13
 - tracker 3.5.0.alpha
 - tracker-miners 3.5.0.alpha

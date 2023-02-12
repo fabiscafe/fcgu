@@ -4,7 +4,7 @@
 
 pkgbase=nautilus
 pkgname=(nautilus libnautilus-extension libnautilus-extension-docs)
-pkgver=44alpha
+pkgver=44beta
 pkgrel=1
 pkgdesc="Default file manager for GNOME"
 url="https://wiki.gnome.org/Apps/Files"
@@ -16,7 +16,7 @@ depends=(libgexiv2 gdk-pixbuf2 gst-plugins-base-libs gnome-desktop-4 gvfs dconf
 makedepends=(gobject-introspection git gi-docgen meson appstream-glib)
 checkdepends=(python-gobject)
 options=(debug)
-_commit=67a0dac3859b300008a00d88e381a57375bcceca  # tags/44.alpha^0
+_commit=62729bae5f6c3503c223b8dae6114f438a94555a  # tags/44.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/nautilus.git#commit=$_commit")
 sha256sums=('SKIP')
 
