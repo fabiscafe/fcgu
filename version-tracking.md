@@ -25,7 +25,7 @@
 - gobject-introspection 1.75.4
 - gtk4 4.9.3
 - gtksourceview5 5.7.0
-- libadwaita 1.3.alpha
+- libadwaita 1.3.beta
 - libdex main(2023-01-20)
 - libpanel 1.1.0
 - libsoup3 3.3.0
