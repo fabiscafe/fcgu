@@ -28,6 +28,7 @@
 - gnome-system-monitor 44.beta
 - gnome-terminal 3.47.92
 - gnome-text-editor 44.alpha
+- gnome-weather 44.beta
 - gobject-introspection 1.75.4
 - gtk4 4.9.3
 - gtksourceview5 5.7.0
