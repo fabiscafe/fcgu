@@ -3,14 +3,17 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgbase=gobject-introspection
-pkgname=(gobject-introspection gobject-introspection-runtime)
+pkgname=(
+  gobject-introspection
+  gobject-introspection-runtime
+)
 pkgver=1.75.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Introspection system for GObject-based libraries"
 url="https://wiki.gnome.org/Projects/GObjectIntrospection"
 arch=(x86_64)
 license=(LGPL GPL)
-_glibver=2.75.2
+_glibver=2.75.3
 depends=(
   python-mako
   python-markdown
@@ -25,7 +28,7 @@ makedepends=(
 )
 _commit=26998a2dfa169c4e02f0d2f0370c9026bb5cce11  # tags/1.75.4^0
 source=("git+https://gitlab.gnome.org/GNOME/gobject-introspection.git#commit=$_commit"
-        "git+https://gitlab.gnome.org/GNOME/glib.git?signed#tag=$_glibver")
+        "git+https://gitlab.gnome.org/GNOME/glib.git#tag=$_glibver")
 sha512sums=('SKIP'
             'SKIP')
 validpgpkeys=('923B7025EE03C1C59F42684CF0942E894B2EAFA0'  # Philip Withnall <philip@tecnocode.co.uk>
