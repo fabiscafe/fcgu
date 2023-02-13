@@ -37,7 +37,7 @@
 - libadwaita 1.3.beta
 - libdex main(2023-01-20)
 - libpanel 1.1.0
-- libsoup3 3.3.0
+- libsoup3 3.3.1
 - loupe(2023-02-12)
 - nautilus 44.beta
 - sofia-sip 1.13.13

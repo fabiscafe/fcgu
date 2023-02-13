@@ -4,7 +4,7 @@
 
 pkgbase=libsoup3
 pkgname=(libsoup3 libsoup3-docs)
-pkgver=3.3.0
+pkgver=3.3.1
 pkgrel=1
 pkgdesc="HTTP client/server library for GNOME"
 url="https://wiki.gnome.org/Projects/libsoup"
@@ -13,7 +13,7 @@ license=(LGPL)
 depends=(
   brotli
   glib-networking
-  "glib2>=2.75"
+  glib2
   krb5
   libnghttp2
   libpsl
@@ -33,7 +33,7 @@ checkdepends=(
   apache
   php-apache
 )
-_commit=5777b78a4e2f83d5d7af1cd6d0faa94e412f0af9 # tags/3.3.0^0
+_commit=d5557a1b54c38239695a2ab537d1a03d9c9c1800 # tags/3.3.1^0
 source=("git+https://gitlab.gnome.org/GNOME/libsoup.git#commit=$_commit")
 b2sums=('SKIP')
 
