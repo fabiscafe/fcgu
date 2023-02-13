@@ -18,6 +18,7 @@
 - gnome-characters 44.beta
 - gnome-clocks 44.beta
 - gnome-connections 44.beta
+- gnome-contacts 44.beta
 - gnome-control-center 44.alpha
 - gnome-disks-utility 44.beta
 - gnome-font-viewer 44.beta
