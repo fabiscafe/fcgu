@@ -3,9 +3,12 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgbase=glib2
-pkgname=(glib2 glib2-docs)
-pkgver=2.75.2+r94+gce876ab28
-pkgrel=2
+pkgname=(
+  glib2
+  glib2-docs
+)
+pkgver=2.75.3
+pkgrel=1
 pkgdesc="Low level core library"
 url="https://wiki.gnome.org/Projects/GLib"
 license=(LGPL)
@@ -33,7 +36,7 @@ checkdepends=(
   glib2
 )
 options=(staticlibs)
-_commit=ce876ab28bb81ac0b1c313223284de722d8208a1  # main^0
+_commit=b65044c52b78fab65a0415e2148f4b98a1680da2  # tags/2.75.3^0
 source=(
   "git+https://gitlab.gnome.org/GNOME/glib.git#commit=$_commit"
   #"git+https://gitlab.gnome.org/GNOME/glib.git?signed#commit=$_commit"
