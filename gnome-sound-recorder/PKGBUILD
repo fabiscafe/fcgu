@@ -9,9 +9,18 @@ pkgdesc="A utility to make simple audio recording from your GNOME desktop"
 url="https://wiki.gnome.org/Apps/SoundRecorder"
 arch=(any)
 license=(GPL)
-depends=(gjs gst-plugins-good gst-plugins-base gst-plugins-bad-libs
-         libadwaita)
-makedepends=(gobject-introspection git meson)
+depends=(
+  gjs
+  gst-plugins-bad-libs
+  gst-plugins-base
+  gst-plugins-good
+  libadwaita
+)
+makedepends=(
+  git
+  gobject-introspection
+  meson
+)
 groups=(gnome-extra)
 options=(debug)
 _commit=aaae3311d1a88f1268a2b4cacf50b42ed918fc88  # tags/43.beta^0

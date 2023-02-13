@@ -9,9 +9,23 @@ pkgdesc="A simple GNOME 3 maps application"
 url="https://wiki.gnome.org/Apps/Maps"
 arch=(x86_64)
 license=(GPL)
-depends=(gjs gtk4 libadwaita geocode-glib-2 geoclue libshumate librest libxml2
-         libgweather-4)
-makedepends=(gobject-introspection git meson yelp-tools)
+depends=(
+  geoclue
+  geocode-glib-2
+  gjs
+  gtk4
+  libadwaita
+  libgweather-4
+  librest
+  libshumate
+  libxml2
+)
+makedepends=(
+  git
+  gobject-introspection
+  meson
+  yelp-tools
+)
 groups=(gnome)
 options=(debug)
 _commit=4204e53a70049bb2c7eb25d9af073f61c3894848  # tags/v44.beta^0

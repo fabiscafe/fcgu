@@ -9,11 +9,16 @@ pkgdesc="Network extensions for GLib"
 url="https://gitlab.gnome.org/GNOME/glib-networking"
 arch=(x86_64)
 license=(GPL2)
-depends=(glib2
-         gnutls
-         gsettings-desktop-schemas
-         libproxy)
-makedepends=(git meson)
+depends=(
+  glib2
+  gnutls
+  gsettings-desktop-schemas
+  libproxy
+)
+makedepends=(
+  git
+  meson
+)
 checkdepends=(ca-certificates)
 options=(debug)
 _commit=28371b5b9359cb26350dd434b6713133b66f727e  # tags/2.76.beta^0

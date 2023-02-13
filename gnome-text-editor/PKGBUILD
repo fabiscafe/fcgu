@@ -1,6 +1,5 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
-# Contributor: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=gnome-text-editor
 pkgver=44alpha
@@ -9,8 +8,19 @@ pkgdesc="A simple text editor for the GNOME desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-text-editor"
 arch=(x86_64)
 license=(GPL3)
-depends=(enchant editorconfig-core-c gtksourceview5 glib2 libadwaita)
-makedepends=(appstream-glib git meson yelp-tools)
+depends=(
+  editorconfig-core-c
+  enchant
+  glib2
+  gtksourceview5
+  libadwaita
+)
+makedepends=(
+  appstream-glib
+  git
+  meson
+  yelp-tools
+)
 groups=(gnome)
 options=(debug)
 _commit=d50c3692e87142d8436ee12f5ae266bf2e28391e  # tags/44.alpha^0

@@ -3,17 +3,43 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgbase=evolution
-pkgname=(evolution evolution-bogofilter evolution-spamassassin)
+pkgname=(
+  evolution
+  evolution-bogofilter
+  evolution-spamassassin
+)
 pkgver=3.47.2
 pkgrel=1
 pkgdesc="Manage your email, contacts and schedule"
 url="https://wiki.gnome.org/Apps/Evolution"
 arch=(x86_64)
 license=(GPL)
-depends=(gnome-desktop evolution-data-server libcanberra libpst libytnef gspell
-         gnome-autoar libgweather-4 enchant cmark)
-makedepends=(intltool itstool docbook-xsl networkmanager bogofilter
-             spamassassin highlight gtk-doc yelp-tools git cmake ninja)
+depends=(
+  cmark
+  enchant
+  evolution-data-server
+  gnome-autoar
+  gnome-desktop
+  gspell
+  libcanberra
+  libgweather-4
+  libpst
+  libytnef
+)
+makedepends=(
+  bogofilter
+  cmake
+  docbook-xsl
+  git
+  gtk-doc
+  highlight
+  intltool
+  itstool
+  networkmanager
+  ninja
+  spamassassin
+  yelp-tools
+)
 options=(!emptydirs debug)
 _commit=24f545b4dac1c4b1d7214c74eb48a01be37b2438  # tags/3.47.2^0
 source=("git+https://gitlab.gnome.org/GNOME/evolution.git#commit=$_commit")
@@ -29,12 +55,15 @@ prepare() {
 }
 
 build() {
-  cmake -S $pkgbase -B build -G Ninja \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DLIBEXEC_INSTALL_DIR=/usr/lib \
-    -DSYSCONF_INSTALL_DIR=/etc \
-    -DENABLE_SMIME=ON \
+  local cmake_options=(
+    -DCMAKE_INSTALL_PREFIX=/usr
+    -DLIBEXEC_INSTALL_DIR=/usr/lib
+    -DSYSCONF_INSTALL_DIR=/etc
+    -DENABLE_SMIME=ON
     -DENABLE_GTK_DOC=ON
+  )
+
+  cmake -S $pkgbase -B build -G Ninja "${cmake_options[@]}"
   cmake --build build
 }
 
@@ -49,8 +78,14 @@ _pick() {
 }
 
 package_evolution() {
-  depends+=(libcamel-1.2.so libebook-1.2.so libebook-contacts-1.2.so
-            libecal-2.0.so libedataserver-1.2.so libedataserverui-1.2.so)
+  depends+=(
+    libcamel-1.2.so
+    libebook-1.2.so
+    libebook-contacts-1.2.so
+    libecal-2.0.so
+    libedataserver-1.2.so
+    libedataserverui-1.2.so
+  )
   optdepends=('highlight: text highlight plugin'
               'evolution-spamassassin: Spamassassin spam check plugin'
               'evolution-bogofilter: Bogofilter spam check plugin')

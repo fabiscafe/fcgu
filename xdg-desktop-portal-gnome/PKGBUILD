@@ -8,9 +8,17 @@ pkgdesc="A backend implementation for xdg-desktop-portal for the GNOME desktop e
 url="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome"
 arch=(x86_64)
 license=(LGPL)
-depends=('xdg-desktop-portal-gtk>=1.10.0-2' libadwaita gnome-keyring
-         gnome-desktop-4)
-makedepends=(xdg-desktop-portal meson git)
+depends=(
+  gnome-desktop-4
+  gnome-keyring
+  libadwaita
+  'xdg-desktop-portal-gtk>=1.10.0-2'
+)
+makedepends=(
+  git
+  meson
+  xdg-desktop-portal
+)
 optdepends=('evince: Print previews')
 provides=(xdg-desktop-portal-impl)
 conflicts=('xdg-desktop-portal-gtk<1.10.0-2')

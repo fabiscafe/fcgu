@@ -9,18 +9,23 @@ arch=('x86_64')
 url='https://gitlab.gnome.org/GNOME/gnome-initial-setup'
 license=('GPL')
 options=(debug !strip)
-depends=('cheese'
-         'gdm'
-         'geocode-glib-2'
-         'gnome-online-accounts'
-         'ibus'
-         'libgweather-4'
-         'libnm'
-         'libnma-gtk4'
-         'librest'
-         'malcontent'
-         'webkitgtk-6.0')
-makedepends=('git' 'meson')
+depends=(
+  'cheese'
+  'gdm'
+  'geocode-glib-2'
+  'gnome-online-accounts'
+  'ibus'
+  'libgweather-4'
+  'libnm'
+  'libnma-gtk4'
+  'librest'
+  'malcontent'
+  'webkitgtk-6.0'
+)
+makedepends=(
+  'git'
+  'meson'
+)
 _commit=9e726394b11cac8780e5e87df29e01becbd9cbab # master^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-initial-setup.git#commit=$_commit")
 sha256sums=('SKIP')

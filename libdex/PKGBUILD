@@ -8,14 +8,17 @@ pkgdesc="A library supporting 'Deferred Execution'"
 url="https://gitlab.gnome.org/chergert/libdex"
 arch=(x86_64)
 license=(LGPL2.1)
-depends=(gobject-introspection-runtime
-         libsoup3 
-         liburing)
-makedepends=(meson
-             git
-             gobject-introspection
-             vala)
-#checkdepends=(weston)
+depends=(
+  gobject-introspection-runtime
+  libsoup3
+  liburing
+)
+makedepends=(
+  git
+  gobject-introspection
+  meson
+  vala
+)
 options=(debug)
 _commit=1a16c8423a4a302fbc610663c71eb9707dd6888f  # main^0
 source=("git+https://gitlab.gnome.org/chergert/libdex.git#commit=$_commit")

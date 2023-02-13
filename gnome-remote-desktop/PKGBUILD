@@ -8,10 +8,33 @@ pkgdesc="GNOME Remote Desktop server"
 url="https://wiki.gnome.org/Projects/Mutter/RemoteDesktop"
 arch=(x86_64)
 license=(GPL2)
-depends=(cairo freerdp glib2 pipewire systemd libvncserver libsecret libnotify
-         dconf fuse3 libxkbcommon libepoxy libfdk-aac)
-makedepends=(asciidoc git meson ffnvcodec-headers)
-checkdepends=(python-dbus python-gobject mutter wireplumber)
+depends=(
+  cairo
+  dconf
+  freerdp
+  fuse3
+  glib2
+  libepoxy
+  libfdk-aac
+  libnotify
+  libsecret
+  libvncserver
+  libxkbcommon
+  pipewire
+  systemd
+)
+makedepends=(
+  asciidoc
+  ffnvcodec-headers
+  git
+  meson
+)
+checkdepends=(
+  mutter
+  python-dbus
+  python-gobject
+  wireplumber
+)
 groups=(gnome)
 options=(debug)
 _commit=76ea41dd430e1f09b3bdd323910781ae8bb51703  # tags/44.alpha^0

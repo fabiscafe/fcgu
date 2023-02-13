@@ -9,8 +9,18 @@ arch=(x86_64)
 url="https://gitlab.gnome.org/World/podcasts"
 license=(GPL3)
 options=(debug)
-depends=(gst-plugins-bad gst-plugins-base gst-plugins-good libadwaita)
-makedepends=(appstream-glib git meson rust)
+depends=(
+  gst-plugins-bad
+  gst-plugins-base
+  gst-plugins-good
+  libadwaita
+)
+makedepends=(
+  appstream-glib
+  git
+  meson
+  rust
+)
 optdepends=('gst-plugins-ugly: Extra media codecs'
             'gst-libav: Extra media codecs')
 _commit=906932675d3ed6e41ea64d09c74fddc55255543f # master^0

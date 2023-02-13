@@ -3,17 +3,38 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgbase=nautilus
-pkgname=(nautilus libnautilus-extension libnautilus-extension-docs)
+pkgname=(
+  nautilus
+  libnautilus-extension
+  libnautilus-extension-docs
+)
 pkgver=44beta
 pkgrel=1
 pkgdesc="Default file manager for GNOME"
 url="https://wiki.gnome.org/Apps/Files"
 arch=(x86_64)
 license=(GPL)
-depends=(libgexiv2 gdk-pixbuf2 gst-plugins-base-libs gnome-desktop-4 gvfs dconf
-         tracker3 tracker3-miners gnome-autoar libadwaita libportal-gtk4
-         libcloudproviders)
-makedepends=(gobject-introspection git gi-docgen meson appstream-glib)
+depends=(
+  dconf
+  gdk-pixbuf2
+  gnome-autoar
+  gnome-desktop-4
+  gst-plugins-base-libs
+  gvfs
+  libadwaita
+  libcloudproviders
+  libgexiv2
+  libportal-gtk4
+  tracker3
+  tracker3-miners
+)
+makedepends=(
+  appstream-glib
+  gi-docgen
+  git
+  gobject-introspection
+  meson
+)
 checkdepends=(python-gobject)
 options=(debug)
 _commit=62729bae5f6c3503c223b8dae6114f438a94555a  # tags/44.beta^0
@@ -71,7 +92,10 @@ package_nautilus() {
 
 package_libnautilus-extension() {
   pkgdesc="Extension interface for Nautilus"
-  depends=(glib2 gcc-libs)
+  depends=(
+    gcc-libs
+    glib2
+  )
   provides=(libnautilus-extension.so)
 
   mv libne/* "$pkgdir"

@@ -11,8 +11,18 @@ pkgdesc="A text widget adding syntax highlighting and more to GNOME"
 url="https://wiki.gnome.org/Projects/GtkSourceView"
 arch=(x86_64)
 license=(LGPL)
-depends=(gtk4 libxml2 pcre2)
-makedepends=(gobject-introspection vala gi-docgen git meson)
+depends=(
+  gtk4
+  libxml2
+  pcre2
+)
+makedepends=(
+  gi-docgen
+  git
+  gobject-introspection
+  meson
+  vala
+)
 checkdepends=(xorg-server-xvfb)
 options=(debug)
 _commit=f0038941dce1743f56e28cdfa3ff7ae690b9d44e  # tags/5.7.0^0
@@ -29,7 +39,11 @@ prepare() {
 }
 
 build() {
-  arch-meson gtksourceview build -D gtk_doc=true
+  local meson_options=(
+    -D gtk_doc=true
+  )
+
+  arch-meson gtksourceview build "${meson_options[@]}"
   meson compile -C build
 }
 

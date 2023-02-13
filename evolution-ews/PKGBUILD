@@ -9,8 +9,18 @@ pkgdesc="MS Exchange integration through Exchange Web Services"
 url="https://wiki.gnome.org/Apps/Evolution/EWS"
 arch=(x86_64)
 license=(LGPL2.1)
-depends=(libmspack evolution)
-makedepends=(git intltool python cmake ninja systemd)
+depends=(
+  evolution
+  libmspack
+)
+makedepends=(
+  cmake
+  git
+  intltool
+  ninja
+  python
+  systemd
+)
 options=(debug)
 _commit=608114d5f53aaddd101ff77c0fe3a7ee13e7aa3f  # tags/3.47.2^0
 source=("git+https://gitlab.gnome.org/GNOME/evolution-ews.git#commit=$_commit")
@@ -26,10 +36,13 @@ prepare() {
 }
 
 build() {
-  cmake -S $pkgname -B build -G Ninja \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DLIBEXEC_INSTALL_DIR=/usr/lib \
+  local cmake_options=(
+    -DCMAKE_INSTALL_PREFIX=/usr
+    -DLIBEXEC_INSTALL_DIR=/usr/lib
     -DSYSCONF_INSTALL_DIR=/etc
+  )
+
+  cmake -S $pkgbase -B build -G Ninja "${cmake_options[@]}"
   cmake --build build
 }
 

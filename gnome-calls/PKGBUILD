@@ -11,9 +11,24 @@ replaces=("calls")
 conflicts=("calls")
 provides=("calls")
 options=(debug !strip)
-depends=(callaudiod feedbackd folks gom
-	 libhandy libpeas modemmanager sofia-sip)
-makedepends=(appstream git gobject-introspection meson python-docutils vala)
+depends=(
+  callaudiod
+  feedbackd
+  folks
+  gom
+  libhandy
+  libpeas
+  modemmanager
+  sofia-sip
+)
+makedepends=(
+  appstream
+  git
+  gobject-introspection
+  meson
+  python-docutils
+  vala
+)
 checkdepends=(xorg-server-xvfb)
 _commit=a7678e496f75a409bc3a6b5cffeca8685e49494f  # tags/v44_alpha.1^0
 source=("git+https://gitlab.gnome.org/GNOME/calls.git#commit=$_commit"
@@ -35,10 +50,12 @@ prepare() {
 }
 
 build() {
-  arch-meson calls build \
-    -D gtk_doc=true \
+  local meson_options=(
+    -D gtk_doc=true
     -D tests=false
-  meson compile -C build
+  )
+
+  arch-meson calls build "${meson_options[@]}"
 }
 
 check() {

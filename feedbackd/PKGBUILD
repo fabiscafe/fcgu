@@ -9,8 +9,18 @@ arch=(x86_64)
 url="https://source.puri.sm/Librem5/feedbackd"
 license=(GPL3)
 options=(debug)
-depends=(gsound libgudev json-glib)
-makedepends=(gi-docgen git gobject-introspection meson vala)
+depends=(
+  gsound
+  json-glib
+  libgudev
+)
+makedepends=(
+  gi-docgen
+  git
+  gobject-introspection
+  meson
+  vala
+)
 _commit=25913a6aad24e612d56a74aa6a7f280020a4e5a5  # tags/v0.0.3^0
 source=("git+https://source.puri.sm/Librem5/feedbackd.git#commit=$_commit")
 sha256sums=('SKIP')
@@ -21,9 +31,12 @@ pkgver() {
 }
 
 build() {
-  arch-meson $pkgname build \
-    -D gtk_doc=true \
+  local meson_options=(
+    -D gtk_doc=true
     -D tests=false
+  )
+
+  arch-meson $pkgname build "${meson_options[@]}"
   meson compile -C build
 }
 

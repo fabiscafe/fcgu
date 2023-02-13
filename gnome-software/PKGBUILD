@@ -11,10 +11,26 @@ pkgdesc="GNOME Software Tools"
 url="https://wiki.gnome.org/Apps/Software/"
 arch=(x86_64)
 license=(GPL)
-makedepends=(appstream gsettings-desktop-schemas libpackagekit-glib flatpak
-             fwupd docbook-xsl git gobject-introspection gtk-doc meson
-             gnome-online-accounts libxmlb malcontent gtk4 libadwaita
-             libsysprof-capture libglib-testing libsoup3)
+makedepends=(
+  appstream
+  docbook-xsl
+  flatpak
+  fwupd
+  git
+  gnome-online-accounts
+  gobject-introspection
+  gsettings-desktop-schemas
+  gtk4
+  gtk-doc
+  libadwaita
+  libglib-testing
+  libpackagekit-glib
+  libsoup3
+  libsysprof-capture
+  libxmlb
+  malcontent
+  meson
+)
 options=(debug)
 _commit=2726c620f46685edeef7ad9f11edc1bff463e45a  # tags/44.alpha^0
 source=(
@@ -56,11 +72,22 @@ _pick() {
 
 package_gnome-software() {
   groups=(gnome)
-  depends=(libxmlb gsettings-desktop-schemas libpackagekit-glib gtk4 libadwaita
-           gnome-online-accounts appstream libsysprof-capture libsoup3)
-  optdepends=('flatpak: Flatpak support plugin'
-              'fwupd: fwupd support plugin'
-              'malcontent: Parental control plugin')
+  depends=(
+    appstream
+    gnome-online-accounts
+    gsettings-desktop-schemas
+    gtk4
+    libadwaita
+    libpackagekit-glib
+    libsoup3
+    libsysprof-capture
+    libxmlb
+  )
+  optdepends=(
+    'flatpak: Flatpak support plugin'
+    'fwupd: fwupd support plugin'
+    'malcontent: Parental control plugin'
+  )
 
   meson install -C build --destdir "$pkgdir"
 
@@ -70,7 +97,11 @@ package_gnome-software() {
 
 package_gnome-software-packagekit-plugin() {
   pkgdesc="PackageKit support plugin for GNOME Software"
-  depends=(archlinux-appstream-data gnome-software packagekit)
+  depends=(
+    archlinux-appstream-data
+    gnome-software
+    packagekit
+  )
   mv packagekit-plugin/* "$pkgdir"
 }
 

@@ -8,8 +8,14 @@ pkgdesc="D-Bus debugger for GNOME"
 url="https://gitlab.gnome.org/GNOME/d-spy"
 arch=(x86_64)
 license=(GPL3 LGPL3)
-depends=(gtk4 libadwaita)
-makedepends=(git meson)
+depends=(
+  gtk4
+  libadwaita
+)
+makedepends=(
+  git
+  meson
+)
 provides=(libdspy-1.so)
 conflicts=(libdspy)
 replaces=(libdspy)

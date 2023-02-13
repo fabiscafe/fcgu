@@ -9,43 +9,47 @@ pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
 arch=(x86_64)
 license=(GPL3)
-depends=(autoconf-archive
-         clang
-         cmark
-         ctags
-         desktop-file-utils
-         devhelp
-         d-spy
-         editorconfig-core-c
-         flatpak-builder
-         gjs
-         glib2
-         gspell
-         gtksourceview5
-         jsonrpc-glib
-         libadwaita
-         libdex
-         libgit2-glib
-         libpanel
-         libpeas
-         libportal-gtk4
-         meson
-         python-gobject
-         python-lxml
-         python-sphinx
-         sysprof
-         template-glib
-         vala
-         vte4
-         webkitgtk-6.0)
-makedepends=(appstream-glib
-             git
-             gobject-introspection
-             jedi-language-server
-             llvm
-             mm-common
-             python-sphinx_rtd_theme
-             yelp-tools)
+depends=(
+  autoconf-archive
+  clang
+  cmark
+  ctags
+  desktop-file-utils
+  devhelp
+  d-spy
+  editorconfig-core-c
+  flatpak-builder
+  gjs
+  glib2
+  gspell
+  gtksourceview5
+  jsonrpc-glib
+  libadwaita
+  libdex
+  libgit2-glib
+  libpanel
+  libpeas
+  libportal-gtk4
+  meson
+  python-gobject
+  python-lxml
+  python-sphinx
+  sysprof
+  template-glib
+  vala
+  vte4
+  webkitgtk-6.0
+)
+makedepends=(
+  appstream-glib
+  git
+  gobject-introspection
+  jedi-language-server
+  llvm
+  mm-common
+  python-sphinx_rtd_theme
+  yelp-tools
+)
 checkdepends=(weston)
 options=(debug)
 _commit=5325678fe15e4e5cda5188980664e2e5e3b6eebd  # main^0

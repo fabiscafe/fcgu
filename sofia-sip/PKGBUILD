@@ -10,7 +10,11 @@ pkgdesc="An open-source SIP User-Agent library"
 arch=('x86_64' 'i686')
 url="http://sofia-sip.sourceforge.net"
 license=('LGPL')
-depends=('glib2' 'openssl' 'gawk')
+depends=(
+  gawk
+  glib2
+  openssl
+)
 makedepends=('git')
 options=(debug !strip)
 _commit=dd9803c6db2c05f3cc1736bdf7fca2f5dae100ed  # tags/v1.13.13^0

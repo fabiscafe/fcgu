@@ -9,8 +9,17 @@ pkgdesc="Dock/panel library for GTK 4"
 url="https://gitlab.gnome.org/GNOME/libpanel"
 arch=(x86_64)
 license=(LGPL)
-depends=(gtk4 libadwaita)
-makedepends=(git meson vala gobject-introspection gi-docgen)
+depends=(
+  gtk4
+  libadwaita
+)
+makedepends=(
+  gi-docgen
+  git
+  gobject-introspection
+  meson
+  vala
+)
 options=(debug)
 _commit=1dc0ffc6646781a69d1f0b4651d0d5513ff51d83  # tags/1.1.0^0
 source=("git+https://gitlab.gnome.org/GNOME/libpanel.git#commit=$_commit")

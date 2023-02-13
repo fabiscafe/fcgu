@@ -8,8 +8,16 @@ arch=(x86_64)
 url="https://gitlab.com/mobian1/callaudiod"
 license=(GPL3)
 options=(debug !strip)
-depends=(alsa-lib glib2 libpulse)
-makedepends=(git gtk-doc meson)
+depends=(
+  alsa-lib
+  glib2
+  libpulse
+)
+makedepends=(
+  git
+  gtk-doc
+  meson
+)
 _commit=a029a5ce7cf77c052a58ee079e74102966428ab9  # tags/0.1.6^0
 source=("git+https://gitlab.com/mobian1/callaudiod.git#commit=$_commit")
 sha256sums=('SKIP')
@@ -20,8 +28,11 @@ pkgver() {
 }
 
 build() {
-  arch-meson $pkgname build \
+  local meson_options=(
     -D gtk_doc=true
+  )
+
+  arch-meson $pkgname build "${meson_options[@]}"
   meson compile -C build
 }
 
