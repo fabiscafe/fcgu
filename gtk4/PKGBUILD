@@ -8,7 +8,7 @@ pkgname=(
   gtk4-docs
   gtk-update-icon-cache
 )
-pkgver=4.9.3
+pkgver=4.9.4
 pkgrel=1
 epoch=1
 pkgdesc="GObject-based multi-platform GUI toolkit"
@@ -67,8 +67,7 @@ makedepends=(
   wayland-protocols
 )
 checkdepends=(weston)
-options=(debug)
-_commit=907f878c9f2d4bbf17691efb1f4d841a39c1ab1b  # tags/4.9.3^0
+_commit=8967b2da0182b2496d858bddc8ae8c7a76aef9c9  # tags/4.9.4^0
 source=(
   "git+https://gitlab.gnome.org/GNOME/gtk.git#commit=$_commit"
   gtk-update-icon-cache.{hook,script}
