@@ -6,7 +6,7 @@
 pkgbase=gnome-software
 pkgname=(gnome-software gnome-software-packagekit-plugin)
 pkgver=44alpha
-pkgrel=1
+pkgrel=2
 pkgdesc="GNOME Software Tools"
 url="https://wiki.gnome.org/Apps/Software/"
 arch=(x86_64)
@@ -31,7 +31,6 @@ makedepends=(
   malcontent
   meson
 )
-options=(debug)
 _commit=2726c620f46685edeef7ad9f11edc1bff463e45a  # tags/44.alpha^0
 source=(
   "git+https://gitlab.gnome.org/GNOME/gnome-software.git#commit=$_commit"

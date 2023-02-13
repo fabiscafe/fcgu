@@ -4,7 +4,7 @@
 
 pkgname=gnome-characters
 pkgver=44beta
-pkgrel=1
+pkgrel=2
 pkgdesc="A character map application"
 arch=(x86_64)
 url="https://gitlab.gnome.org/GNOME/gnome-characters"

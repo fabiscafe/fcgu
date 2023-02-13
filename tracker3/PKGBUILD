@@ -4,9 +4,12 @@
 # Contributor: Alexander Fehr <pizzapunk gmail com>
 
 pkgbase=tracker3
-pkgname=(tracker3 tracker3-docs)
+pkgname=(
+  tracker3
+  tracker3-docs
+)
 pkgver=3.5.0alpha
-pkgrel=1
+pkgrel=2
 pkgdesc="Desktop-neutral user information store, search tool and indexer"
 url="https://wiki.gnome.org/Projects/Tracker"
 arch=(x86_64)
@@ -36,7 +39,6 @@ makedepends=(
   systemd
   vala
 )
-options=(debug)
 _commit=f950246939464de0474f97c421b996f916ffcc94  # tags/3.5.0.alpha^0
 source=("git+https://gitlab.gnome.org/GNOME/tracker.git#commit=$_commit")
 sha256sums=('SKIP')

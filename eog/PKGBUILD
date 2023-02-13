@@ -3,9 +3,12 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgbase=eog
-pkgname=(eog eog-docs)
+pkgname=(
+  eog
+  eog-docs
+)
 pkgver=44beta
-pkgrel=1
+pkgrel=2
 pkgdesc="Eye of Gnome: An image viewing and cataloging program"
 url="https://wiki.gnome.org/Apps/EyeOfGnome"
 arch=(x86_64)

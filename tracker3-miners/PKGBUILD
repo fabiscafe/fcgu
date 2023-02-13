@@ -3,7 +3,7 @@
 
 pkgname=tracker3-miners
 pkgver=3.5.0alpha
-pkgrel=1
+pkgrel=2
 pkgdesc="Collection of data extractors for Tracker/Nepomuk"
 url="https://wiki.gnome.org/Projects/Tracker"
 arch=(x86_64)
@@ -41,7 +41,6 @@ checkdepends=(
   python-tappy
 )
 groups=(gnome)
-options=(debug)
 _commit=145a7e1952858187e185f5b54f0946089680bf67  # tags/3.5.0.alpha^0
 source=("git+https://gitlab.gnome.org/GNOME/tracker-miners.git#commit=$_commit")
 sha256sums=('SKIP')

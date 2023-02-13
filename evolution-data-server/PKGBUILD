@@ -4,7 +4,7 @@
 
 pkgname=evolution-data-server
 pkgver=3.47.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Centralized access to appointments and contacts"
 url="https://wiki.gnome.org/Apps/Evolution"
 arch=(x86_64)
@@ -43,7 +43,6 @@ provides=(
   libedataserverui4-1.0.so
 )
 license=(GPL)
-options=(debug)
 _commit=15cad429873d370e64e105a7ed3e5294855b3f4f  # tags/3.47.2^0
 source=("git+https://gitlab.gnome.org/GNOME/evolution-data-server.git#commit=$_commit")
 sha256sums=('SKIP')

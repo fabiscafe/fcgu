@@ -3,12 +3,11 @@
 pkgbase=feedbackd
 pkgname=(${pkgbase} ${pkgbase}-doc)
 pkgver=0.0.3
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="A daemon to provide haptic (and later more) feedback on events"
 arch=(x86_64)
 url="https://source.puri.sm/Librem5/feedbackd"
 license=(GPL3)
-options=(debug)
 depends=(
   gsound
   json-glib

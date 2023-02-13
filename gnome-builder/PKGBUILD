@@ -4,7 +4,7 @@
 pkgbase=gnome-builder
 pkgname=(gnome-builder)
 pkgver=44alpha+r157+g5325678fe
-pkgrel=1
+pkgrel=2
 pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
 arch=(x86_64)
@@ -51,7 +51,6 @@ makedepends=(
   yelp-tools
 )
 checkdepends=(weston)
-options=(debug)
 _commit=5325678fe15e4e5cda5188980664e2e5e3b6eebd  # main^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
 sha256sums=('SKIP')

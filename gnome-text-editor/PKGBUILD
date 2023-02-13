@@ -3,7 +3,7 @@
 
 pkgname=gnome-text-editor
 pkgver=44alpha
-pkgrel=1
+pkgrel=2
 pkgdesc="A simple text editor for the GNOME desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-text-editor"
 arch=(x86_64)
@@ -22,7 +22,6 @@ makedepends=(
   yelp-tools
 )
 groups=(gnome)
-options=(debug)
 _commit=d50c3692e87142d8436ee12f5ae266bf2e28391e  # tags/44.alpha^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-text-editor.git#commit=$_commit")
 sha256sums=('SKIP')

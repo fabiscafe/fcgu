@@ -5,7 +5,7 @@
 
 pkgname=gnome-disk-utility
 pkgver=44beta
-pkgrel=1
+pkgrel=2
 pkgdesc="Disk Management Utility for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-disk-utility"
 arch=(x86_64)

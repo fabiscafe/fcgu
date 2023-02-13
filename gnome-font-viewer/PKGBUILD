@@ -3,7 +3,7 @@
 
 pkgname=gnome-font-viewer
 pkgver=44beta
-pkgrel=1
+pkgrel=2
 pkgdesc="A font viewer utility for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-font-viewer"
 arch=(x86_64)

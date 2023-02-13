@@ -4,7 +4,7 @@
 
 pkgname=gnome-system-monitor
 pkgver=44beta
-pkgrel=1
+pkgrel=2
 pkgdesc="View current processes and monitor system state"
 url="https://wiki.gnome.org/Apps/SystemMonitor"
 arch=(x86_64)

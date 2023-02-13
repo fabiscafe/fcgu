@@ -2,9 +2,12 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgbase=libpanel
-pkgname=(libpanel libpanel-docs)
+pkgname=(
+  libpanel
+  libpanel-docs
+)
 pkgver=1.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Dock/panel library for GTK 4"
 url="https://gitlab.gnome.org/GNOME/libpanel"
 arch=(x86_64)
@@ -20,7 +23,6 @@ makedepends=(
   meson
   vala
 )
-options=(debug)
 _commit=1dc0ffc6646781a69d1f0b4651d0d5513ff51d83  # tags/1.1.0^0
 source=("git+https://gitlab.gnome.org/GNOME/libpanel.git#commit=$_commit")
 sha256sums=('SKIP')

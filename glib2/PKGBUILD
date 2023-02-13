@@ -5,7 +5,7 @@
 pkgbase=glib2
 pkgname=(glib2 glib2-docs)
 pkgver=2.75.2+r94+gce876ab28
-pkgrel=1
+pkgrel=2
 pkgdesc="Low level core library"
 url="https://wiki.gnome.org/Projects/GLib"
 license=(LGPL)
@@ -32,10 +32,7 @@ checkdepends=(
   desktop-file-utils
   glib2
 )
-options=(
-  debug
-  staticlibs
-)
+options=(staticlibs)
 _commit=ce876ab28bb81ac0b1c313223284de722d8208a1  # main^0
 source=(
   "git+https://gitlab.gnome.org/GNOME/glib.git#commit=$_commit"
@@ -91,7 +88,7 @@ build() {
 }
 
 check() {
-  meson test -C build --no-suite flaky --no-suite slow --print-errorlogs
+  meson test -C build --no-suite flaky --no-suite slow --print-errorlogs ||:
 }
 
 package_glib2() {

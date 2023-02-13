@@ -3,12 +3,11 @@
 
 pkgname=gnome-podcasts
 pkgver=0.5.1+r58+g9069326
-pkgrel=1
+pkgrel=2
 pkgdesc="Podcast application for GNOME"
 arch=(x86_64)
 url="https://gitlab.gnome.org/World/podcasts"
 license=(GPL3)
-options=(debug)
 depends=(
   gst-plugins-bad
   gst-plugins-base

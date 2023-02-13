@@ -23,7 +23,6 @@ makedepends=(
   python-sphinx
   meson
 )
-options=(debug)
 _commit=26998a2dfa169c4e02f0d2f0370c9026bb5cce11  # tags/1.75.4^0
 source=("git+https://gitlab.gnome.org/GNOME/gobject-introspection.git#commit=$_commit"
         "git+https://gitlab.gnome.org/GNOME/glib.git?signed#tag=$_glibver")

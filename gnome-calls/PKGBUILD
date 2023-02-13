@@ -2,7 +2,7 @@
 
 pkgname=gnome-calls
 pkgver=44alpha1
-pkgrel=1
+pkgrel=2
 pkgdesc="A Phone dialer and call handler."
 arch=(x86_64)
 url="https://gitlab.gnome.org/GNOME/calls"
@@ -10,7 +10,7 @@ license=(GPL3)
 replaces=("calls")
 conflicts=("calls")
 provides=("calls")
-options=(debug !strip)
+options=(!strip)
 depends=(
   callaudiod
   feedbackd

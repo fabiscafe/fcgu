@@ -2,12 +2,12 @@
 
 pkgname=callaudiod
 pkgver=0.1.6
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="Call audio routing daemon"
 arch=(x86_64)
 url="https://gitlab.com/mobian1/callaudiod"
 license=(GPL3)
-options=(debug !strip)
+options=(!strip)
 depends=(
   alsa-lib
   glib2

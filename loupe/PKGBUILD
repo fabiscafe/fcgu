@@ -2,7 +2,7 @@
 
 pkgname=loupe
 pkgver=0.0.0+r203+70d8d00
-pkgrel=1
+pkgrel=2
 pkgdesc="A simple image viewer for GNOME (pre-release)"
 url="https://gitlab.gnome.org/Incubator/loupe"
 arch=(any)

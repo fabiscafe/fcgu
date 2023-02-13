@@ -9,7 +9,7 @@ pkgname=(
   evolution-spamassassin
 )
 pkgver=3.47.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Manage your email, contacts and schedule"
 url="https://wiki.gnome.org/Apps/Evolution"
 arch=(x86_64)
@@ -40,7 +40,7 @@ makedepends=(
   spamassassin
   yelp-tools
 )
-options=(!emptydirs debug)
+options=(!emptydirs)
 _commit=24f545b4dac1c4b1d7214c74eb48a01be37b2438  # tags/3.47.2^0
 source=("git+https://gitlab.gnome.org/GNOME/evolution.git#commit=$_commit")
 sha256sums=('SKIP')

@@ -4,7 +4,7 @@
 pkgbase=libadwaita
 pkgname=(libadwaita libadwaita-docs libadwaita-demos)
 pkgver=1.3beta
-pkgrel=1
+pkgrel=2
 epoch=1
 pkgdesc="Building blocks for modern adaptive GNOME applications"
 url="https://gnome.pages.gitlab.gnome.org/libadwaita/"
@@ -20,7 +20,6 @@ makedepends=(
   vala
 )
 checkdepends=(weston)
-options=(debug)
 _commit=dcf02bd2b6f4aa846d3d4c16fed0e7f384130e21  # tags/1.3.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/libadwaita.git#commit=$_commit")
 sha256sums=('SKIP')

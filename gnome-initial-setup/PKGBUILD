@@ -8,7 +8,7 @@ pkgdesc='Simple, easy, and safe way to prepare a new system'
 arch=('x86_64')
 url='https://gitlab.gnome.org/GNOME/gnome-initial-setup'
 license=('GPL')
-options=(debug !strip)
+options=(!strip)
 depends=(
   'cheese'
   'gdm'
@@ -18,6 +18,7 @@ depends=(
   'libgweather-4'
   'libnm'
   'libnma-gtk4'
+  'libpwquality'
   'librest'
   'malcontent'
   'webkitgtk-6.0'
