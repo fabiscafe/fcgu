@@ -44,6 +44,7 @@
 - librsvg 2.55.91
 - libsoup3 3.3.1
 - loupe(2023-02-12)
+- mutter 44.beta
 - nautilus 44.beta
 - sofia-sip 1.13.13
 - tracker 3.5.0.alpha
