@@ -4,9 +4,12 @@
 # Contributor: Yosef Or Boczko <yoseforb@gnome.org>
 
 pkgbase=gnome-software
-pkgname=(gnome-software gnome-software-packagekit-plugin)
-pkgver=44alpha
-pkgrel=2
+pkgname=(
+  gnome-software
+  gnome-software-packagekit-plugin
+)
+pkgver=44beta
+pkgrel=1
 pkgdesc="GNOME Software Tools"
 url="https://wiki.gnome.org/Apps/Software/"
 arch=(x86_64)
@@ -31,7 +34,7 @@ makedepends=(
   malcontent
   meson
 )
-_commit=2726c620f46685edeef7ad9f11edc1bff463e45a  # tags/44.alpha^0
+_commit=7470316a94880fda98c9b5e81c9b5948678f5b7f # tags/44.beta^0
 source=(
   "git+https://gitlab.gnome.org/GNOME/gnome-software.git#commit=$_commit"
   "git+https://gitlab.gnome.org/mwleeds/gnome-pwa-list.git"

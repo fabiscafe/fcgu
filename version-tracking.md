@@ -27,7 +27,7 @@
 - gnome-maps v44.beta
 - gnome-podcasts master(2022-12-16)
 - gnome-remote-desktop 44.alpha
-- gnome-software 44.alpha
+- gnome-software 44.beta
 - gnome-sound-recorder 43.beta
 - gnome-system-monitor 44.beta
 - gnome-terminal 3.47.92
