@@ -20,6 +20,7 @@
 - gnome-connections 44.beta
 - gnome-contacts 44.beta
 - gnome-control-center 44.alpha
+- gnome-desktop 44.beta
 - gnome-disks-utility 44.beta
 - gnome-font-viewer 44.beta
 - gnome-initial-setup master(2023-01-20)
