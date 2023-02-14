@@ -30,6 +30,7 @@
 - gnome-podcasts master(2022-12-16)
 - gnome-remote-desktop 44.alpha
 - gnome-shell 44.beta
+- gnome-shell-extensions 44.beta
 - gnome-software 44.beta
 - gnome-sound-recorder 43.beta
 - gnome-system-monitor 44.beta
