@@ -26,6 +26,7 @@
 - gnome-font-viewer 44.beta
 - gnome-initial-setup 44.beta
 - gnome-maps v44.beta
+- gnome-music 44.beta
 - gnome-podcasts master(2022-12-16)
 - gnome-remote-desktop 44.alpha
 - gnome-software 44.beta
