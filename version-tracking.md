@@ -12,6 +12,7 @@
 - feedbackd 0.0.3
 - glib2 2.75.3
 - glib-networking 2.76.beta
+- gnome-boxes 44.beta
 - gnome-builder main(2023-02-01)
 - gnome-calculator 44.beta
 - gnome-calls v44_alpha.1
