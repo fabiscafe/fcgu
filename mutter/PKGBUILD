@@ -9,7 +9,7 @@ pkgname=(
   mutter-docs
 )
 pkgver=44beta
-pkgrel=1
+pkgrel=2
 pkgdesc="Window manager and compositor for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
 arch=(x86_64)
@@ -94,7 +94,7 @@ _check() (
 
 check() {
   dbus-run-session xvfb-run -s '-nolisten local +iglx -noreset' \
-    bash -c "$(declare -f _check); _check" ||:
+    bash -c "$(declare -f _check); _check"
 }
 
 _pick() {
