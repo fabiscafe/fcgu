@@ -54,7 +54,7 @@
 - nautilus 44.beta
 - sofia-sip 1.13.13
 - tracker 3.5.0.beta
-- tracker-miners 3.5.0.alpha
+- tracker-miners 3.5.0.beta
 - vte 0.71.92
 - webkitgtk-6.0 2.39.7
 - wpewebkit 2.39.5
