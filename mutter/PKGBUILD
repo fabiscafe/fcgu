@@ -65,14 +65,17 @@ prepare() {
 }
 
 build() {
+  local meson_options=(
+    -D egl_device=true
+    -D wayland_eglstream=true
+    -D docs=true
+    -D installed_tests=false
+  )
+
   CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
   LDFLAGS+=" -Wl,-Bsymbolic-functions"
 
-  arch-meson mutter build \
-    -D egl_device=true \
-    -D wayland_eglstream=true \
-    -D docs=true \
-    -D installed_tests=false
+  arch-meson mutter "${meson_options[@]}"
   meson compile -C build
 }
 
