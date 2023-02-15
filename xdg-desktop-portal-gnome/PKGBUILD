@@ -2,8 +2,8 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=xdg-desktop-portal-gnome
-pkgver=44alpha
-pkgrel=2
+pkgver=44beta
+pkgrel=1
 pkgdesc="A backend implementation for xdg-desktop-portal for the GNOME desktop environment"
 url="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome"
 arch=(x86_64)
@@ -23,7 +23,7 @@ optdepends=('evince: Print previews')
 provides=(xdg-desktop-portal-impl)
 conflicts=('xdg-desktop-portal-gtk<1.10.0-2')
 replaces=('xdg-desktop-portal-gtk<1.10.0-2')
-_commit=be65d654dbd98b6bcbeddf7bb611ce2b32e0b431  # tags/44.alpha^0
+_commit=c6488bdeaa6a4d89140fb13946303cf58981c751  # tags/44.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome.git#commit=$_commit")
 sha256sums=('SKIP')
 
