@@ -8,8 +8,8 @@ pkgname=(
   tracker3
   tracker3-docs
 )
-pkgver=3.5.0alpha
-pkgrel=2
+pkgver=3.5.0beta
+pkgrel=1
 pkgdesc="Desktop-neutral user information store, search tool and indexer"
 url="https://wiki.gnome.org/Projects/Tracker"
 arch=(x86_64)
@@ -39,7 +39,7 @@ makedepends=(
   systemd
   vala
 )
-_commit=f950246939464de0474f97c421b996f916ffcc94  # tags/3.5.0.alpha^0
+_commit=d2083119e57afa1f088026dfcaa8617add99b49e  # tags/3.5.0.beta^0
 source=("git+https://gitlab.gnome.org/GNOME/tracker.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -53,7 +53,11 @@ prepare() {
 }
 
 build() {
-  arch-meson tracker build -D tests_tap_protocol=true
+  local meson_options=(
+    -D tests_tap_protocol=true
+  )
+
+  arch-meson tracker build "${meson_options[@]}"
   meson compile -C build
 }
 

@@ -53,7 +53,7 @@
 - mutter 44.beta
 - nautilus 44.beta
 - sofia-sip 1.13.13
-- tracker 3.5.0.alpha
+- tracker 3.5.0.beta
 - tracker-miners 3.5.0.alpha
 - vte 0.71.92
 - webkitgtk-6.0 2.39.7
