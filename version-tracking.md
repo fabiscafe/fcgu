@@ -31,6 +31,7 @@
 - gnome-music 44.beta
 - gnome-podcasts master(2022-12-16)
 - gnome-remote-desktop 44.alpha
+- gnome-settings-daemon 44.beta
 - gnome-shell 44.beta
 - gnome-shell-extensions 44.beta
 - gnome-software 44.beta
