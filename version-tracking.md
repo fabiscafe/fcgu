@@ -21,7 +21,7 @@
 - gnome-connections 44.beta
 - gnome-console 44.beta
 - gnome-contacts 44.beta
-- gnome-control-center 44.alpha
+- gnome-control-center 44.beta
 - gnome-desktop 44.beta
 - gnome-disks-utility 44.beta
 - gnome-font-viewer 44.beta
