@@ -10,36 +10,36 @@ arch=(x86_64)
 license=(GPL)
 depends=(
   dconf
+  gcr-4
+  geoclue
+  geocode-glib-2
   gnome-desktop
   gsettings-desktop-schemas
+  gtk3
   libcanberra-pulse
+  libgudev
+  libgweather-4
+  libnm
   libnotify
-  systemd
+  librsvg
   libwacom
+  nss
   pulseaudio
   pulseaudio-alsa
+  systemd
   upower
-  librsvg
-  libgweather-4
-  geocode-glib-2
-  geoclue
-  nss
-  libgudev
-  gtk3
-  libnm
-  gcr-4
 )
 makedepends=(
-  libxslt
   docbook-xsl
-  python
   git
+  libxslt
   meson
+  python
   usbguard
 )
 checkdepends=(
-  python-gobject
   python-dbusmock
+  python-gobject
 )
 optdepends=('usbguard: USB protection support')
 groups=(gnome)
