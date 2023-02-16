@@ -9,10 +9,11 @@
 [![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/Fabiscafe/donate)
 ![Liberapay receiving](https://img.shields.io/liberapay/receives/fabiscafe?style=for-the-badge) ![Liberapay patrons](https://img.shields.io/liberapay/patrons/fabiscafe?style=for-the-badge)
 
-### Chat / Matrix
-![Matrix](https://img.shields.io/matrix/fcgu:matrix.org?style=for-the-badge)
+### Chat / Matrix & Mastodon / Fediverse
+![Matrix](https://img.shields.io/matrix/fcgu:matrix.org?logo=Matrix&style=for-the-badge)
+![Mastodon Follow](https://img.shields.io/mastodon/follow/000293265?domain=https%3A%2F%2Fmstdn.social&logo=Mastodon&style=for-the-badge)
 
-Feel free to [join us at our matrix group](https://matrix.to/#/#fcgu:matrix.org) or [ping me](https://matrix.to/#/@fabiscafe:matrix.org) directly.
+Feel free to [join us at our matrix group](https://matrix.to/#/#fcgu:matrix.org) or [ping me](https://matrix.to/#/@fabiscafe:matrix.org), or on mastodon/fedi [follow me on the fediverse](https://mstdn.social/@fabiscafe) directly. 😜️
 
 ## Looking For New Mirrors
 FCGU is a free community project. That's why we need your help. If you own a server that could become a mirror of the project, please let us know.
