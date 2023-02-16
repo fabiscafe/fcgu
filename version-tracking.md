@@ -43,7 +43,7 @@
 - gobject-introspection 1.75.6
 - gsettings-desktop-schemas 44.beta
 - gtk4 4.9.4
-- gtksourceview5 5.7.0
+- gtksourceview5 5.7.1
 - libadwaita 1.3.beta
 - libdex main(2023-01-20)
 - libpanel 1.1.1
