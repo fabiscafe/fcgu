@@ -13,7 +13,7 @@
 - glib2 2.75.3
 - glib-networking 2.76.beta
 - gnome-boxes 44.beta.1
-- gnome-builder main(2023-02-01)
+- gnome-builder 44.beta
 - gnome-calculator 44.beta
 - gnome-calendar 44.beta
 - gnome-calls v44_alpha.1
