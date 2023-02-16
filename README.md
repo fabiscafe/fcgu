@@ -13,7 +13,7 @@
 ![Matrix](https://img.shields.io/matrix/fcgu:matrix.org?logo=Matrix&style=for-the-badge)
 ![Mastodon Follow](https://img.shields.io/mastodon/follow/000293265?domain=https%3A%2F%2Fmstdn.social&logo=Mastodon&style=for-the-badge)
 
-Feel free to [join us at our matrix group](https://matrix.to/#/#fcgu:matrix.org) or [ping me](https://matrix.to/#/@fabiscafe:matrix.org), or on mastodon/fedi [follow me on the fediverse](https://mstdn.social/@fabiscafe) directly. 😜️
+Feel free to [join us at our matrix group](https://matrix.to/#/#fcgu:matrix.org) or ping me on [Matrix](https://matrix.to/#/@fabiscafe:matrix.org), or [on Fediverse/Mastodon](https://mstdn.social/@fabiscafe) directly. 😜️
 
 ## Looking For New Mirrors
 FCGU is a free community project. That's why we need your help. If you own a server that could become a mirror of the project, please let us know.
