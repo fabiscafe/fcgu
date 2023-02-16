@@ -38,7 +38,7 @@
 - gnome-sound-recorder 43.beta
 - gnome-system-monitor 44.beta
 - gnome-terminal 3.47.92
-- gnome-text-editor 44.alpha
+- gnome-text-editor 44.beta
 - gnome-weather 44.beta
 - gobject-introspection 1.75.6
 - gsettings-desktop-schemas 44.beta
