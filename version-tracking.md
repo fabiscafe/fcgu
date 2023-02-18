@@ -1,4 +1,5 @@
 ## Done
+- adwaita-icon-theme 44.beta
 - at-spi2-core 2.47.1
 - baobab 44.beta
 - callaudiod 0.1.6
