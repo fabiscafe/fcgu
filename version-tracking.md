@@ -13,6 +13,7 @@
 - feedbackd 0.0.3
 - glib2 2.75.3
 - glib-networking 2.76.beta
+- gnome-backgrounds 44.beta
 - gnome-boxes 44.beta.1
 - gnome-builder 44.beta
 - gnome-calculator 44.beta
