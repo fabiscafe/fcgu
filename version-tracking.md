@@ -54,7 +54,7 @@
 - loupe(2023-02-12)
 - mutter 44.beta
 - nautilus 44.beta
-- sofia-sip 1.13.13
+- sofia-sip 1.13.14
 - tracker 3.5.0.beta
 - tracker-miners 3.5.0.beta
 - vte 0.71.92

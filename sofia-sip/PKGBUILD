@@ -4,8 +4,8 @@
 # Contributor: Bjorn Lindeijer <bjorn lindeijer nl>
 
 pkgname=sofia-sip
-pkgver=1.13.13
-pkgrel=2
+pkgver=1.13.14
+pkgrel=1
 pkgdesc="An open-source SIP User-Agent library"
 arch=('x86_64' 'i686')
 url="http://sofia-sip.sourceforge.net"
@@ -17,7 +17,7 @@ depends=(
 )
 makedepends=('git')
 options=(!strip)
-_commit=dd9803c6db2c05f3cc1736bdf7fca2f5dae100ed  # tags/v1.13.13^0
+_commit=3f17604d0c427a276839ea96b6dc31d7da69d27c  # tags/v1.13.14^0
 source=("git+https://github.com/freeswitch/sofia-sip.git#commit=$_commit")
 sha256sums=('SKIP')
 
