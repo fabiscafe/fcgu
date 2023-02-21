@@ -2,12 +2,15 @@
 # Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=d-spy
-pkgver=1.4.0
-pkgrel=1.2
+pkgver=1.5.0
+pkgrel=1
 pkgdesc="D-Bus debugger for GNOME"
 url="https://gitlab.gnome.org/GNOME/d-spy"
 arch=(x86_64)
-license=(GPL3 LGPL3)
+license=(
+  GPL3
+  LGPL3
+)
 depends=(
   gtk4
   libadwaita
@@ -17,9 +20,7 @@ makedepends=(
   meson
 )
 provides=(libdspy-1.so)
-conflicts=(libdspy)
-replaces=(libdspy)
-_commit=687dc766770a0938e72fd747308f13a460b5a76f  # tags/1.4.0^0
+_commit=ef353dbf4f28c1dc4b03155211a2a3146c06c8b2  # tags/1.5.0^0
 source=("git+https://gitlab.gnome.org/GNOME/d-spy.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -42,4 +43,3 @@ package() {
 }
 
 # vim:set sw=2 sts=-1 et:
-
