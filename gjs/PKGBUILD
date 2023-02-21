@@ -1,0 +1,69 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+
+pkgname=gjs
+pkgver=1.75.2
+pkgrel=1
+epoch=2
+pkgdesc="Javascript Bindings for GNOME"
+url="https://wiki.gnome.org/Projects/Gjs"
+arch=(x86_64)
+license=(GPL)
+depends=(
+  cairo
+  gobject-introspection-runtime
+  js102
+  dconf
+  readline
+  libsysprof-capture
+)
+makedepends=(
+  gobject-introspection
+  git
+  meson
+  dbus
+)
+checkdepends=(
+  xorg-server-xvfb
+  gtk3
+  gtk4
+)
+provides=(libgjs.so)
+_commit=666755b3b09d765e43d415e76105b828517b5509  # tags/1.75.2^0
+source=("git+https://gitlab.gnome.org/GNOME/gjs.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd gjs
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd gjs
+}
+
+build() {
+  local meson_options=(
+    -D installed_tests=false
+  )
+
+  CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
+  CXXFLAGS="${CXXFLAGS/-O2/-O3} -fno-semantic-interposition"
+  LDFLAGS+=" -Wl,-Bsymbolic-functions"
+
+  arch-meson gjs build "${meson_options[@]}"
+  meson compile -C build
+}
+
+check() {
+  xvfb-run -s '-nolisten local' \
+    meson test -C build --print-errorlogs
+}
+
+package() {
+  depends+=(libreadline.so)
+  meson install -C build --destdir "$pkgdir"
+}
+
+# vim:set sw=2 sts=-1 et:
