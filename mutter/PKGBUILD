@@ -9,7 +9,7 @@ pkgname=(
   mutter-docs
 )
 pkgver=44beta
-pkgrel=2
+pkgrel=3
 pkgdesc="Window manager and compositor for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
 arch=(x86_64)
@@ -75,7 +75,7 @@ build() {
   CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
   LDFLAGS+=" -Wl,-Bsymbolic-functions"
 
-  arch-meson mutter "${meson_options[@]}"
+  arch-meson mutter build "${meson_options[@]}"
   meson compile -C build
 }
 
