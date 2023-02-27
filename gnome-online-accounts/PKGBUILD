@@ -10,20 +10,20 @@ url="https://wiki.gnome.org/Projects/GnomeOnlineAccounts"
 arch=(x86_64)
 license=(LGPL)
 depends=(
-  webkit2gtk-4.1
+  gcr
   json-glib
+  krb5
   libnotify
   librest
   libsecret
-  krb5
-  gcr
+  webkit2gtk-4.1
 )
 makedepends=(
+  git
   gobject-introspection
   gtk-doc
-  vala
-  git
   meson
+  vala
 )
 optdepends=(
   'gvfs-goa: Virtual file systems, e.g. OwnCloud'
