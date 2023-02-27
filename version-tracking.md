@@ -56,6 +56,7 @@
 - loupe(2023-02-12)
 - mutter 44.beta
 - nautilus 44.beta
+- pygobject 3.43.1
 - sofia-sip 1.13.14
 - tracker 3.5.0.beta
 - tracker-miners 3.5.0.beta
