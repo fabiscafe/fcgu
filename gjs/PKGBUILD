@@ -12,22 +12,22 @@ arch=(x86_64)
 license=(GPL)
 depends=(
   cairo
+  dconf
   gobject-introspection-runtime
   js102
-  dconf
-  readline
   libsysprof-capture
+  readline
 )
 makedepends=(
-  gobject-introspection
-  git
-  meson
   dbus
+  git
+  gobject-introspection
+  meson
 )
 checkdepends=(
-  xorg-server-xvfb
   gtk3
   gtk4
+  xorg-server-xvfb
 )
 provides=(libgjs.so)
 _commit=666755b3b09d765e43d415e76105b828517b5509  # tags/1.75.2^0
