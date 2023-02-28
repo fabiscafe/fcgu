@@ -2,13 +2,14 @@
 
 pkgbase=feedbackd
 pkgname=(${pkgbase} ${pkgbase}-doc)
-pkgver=0.0.3
-pkgrel=0.2
+pkgver=0.1.0
+pkgrel=0.1
 pkgdesc="A daemon to provide haptic (and later more) feedback on events"
 arch=(x86_64)
 url="https://source.puri.sm/Librem5/feedbackd"
 license=(GPL3)
 depends=(
+  dconf
   gsound
   json-glib
   libgudev
@@ -20,7 +21,7 @@ makedepends=(
   meson
   vala
 )
-_commit=25913a6aad24e612d56a74aa6a7f280020a4e5a5  # tags/v0.0.3^0
+_commit=2db8a72ef9432f80894eb5b36ce1e667496a931b  # tags/v0.1.0^0
 source=("git+https://source.puri.sm/Librem5/feedbackd.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -44,6 +45,7 @@ check() {
 }
 
 package_feedbackd() {
+  provides+=(libfeedback-0.0.so)
   meson install -C build --destdir "${pkgdir}"
 
   # Split up docs
