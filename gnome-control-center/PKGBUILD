@@ -3,7 +3,7 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-control-center
-pkgver=44beta
+pkgver=44beta+r47+g8f6ee22d7
 pkgrel=1
 pkgdesc="GNOME's main interface to configure various aspects of the desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-control-center"
@@ -60,7 +60,7 @@ optdepends=(
   'system-config-printer: Printer settings'
 )
 groups=(gnome)
-_commit=e7acaa15ded4a997b216808ecf00aa5be11d94b1  # tags/44.beta^0
+_commit=8f6ee22d7036a039b33629f2182db72e926f2e0b  # main^0
 source=(
   "git+https://gitlab.gnome.org/GNOME/gnome-control-center.git#commit=$_commit"
   "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git"
