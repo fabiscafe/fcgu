@@ -53,7 +53,7 @@
 - libpanel 1.1.1
 - librsvg 2.55.91
 - libsoup3 3.3.1
-- loupe(2023-02-12)
+- loupe(2023-02-24)
 - mutter 44.beta
 - nautilus 44.beta
 - pygobject 3.43.1
