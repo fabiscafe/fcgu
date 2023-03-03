@@ -27,7 +27,7 @@
 - gnome-contacts 44.beta
 - gnome-control-center main(2023-03-01)
 - gnome-desktop 44.beta
-- gnome-disks-utility 44.beta
+- gnome-disks-utility 44.rc
 - gnome-font-viewer 44.beta
 - gnome-initial-setup 44.beta
 - gnome-maps v44.beta
