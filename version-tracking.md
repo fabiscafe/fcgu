@@ -8,7 +8,7 @@
 - eog 44.beta
 - epiphany 44.beta
 - evolution 3.47.2
-- evolution-data-server 3.47.2
+- evolution-data-server 3.47.3
 - evolution-ews 3.47.2
 - feedbackd 0.1.0
 - gjs 1.75.2
