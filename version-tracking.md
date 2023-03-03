@@ -7,7 +7,7 @@
 - d-spy 1.5.0
 - eog 44.beta
 - epiphany 44.beta
-- evolution 3.47.2
+- evolution 3.47.3
 - evolution-data-server 3.47.3
 - evolution-ews 3.47.2
 - feedbackd 0.1.0
