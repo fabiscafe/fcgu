@@ -12,7 +12,7 @@
 - evolution-ews 3.47.3
 - feedbackd 0.1.0
 - gjs 1.75.2
-- glib2 2.75.3
+- glib2 2.75.4
 - glib-networking 2.76.beta
 - gnome-backgrounds 44.beta
 - gnome-boxes 44.beta.1
