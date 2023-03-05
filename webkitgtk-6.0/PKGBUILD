@@ -104,6 +104,10 @@ validpgpkeys=('D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos
 
 prepare() {
   cd webkitgtk-$pkgver
+
+  patch -Np1 -i "$srcdir/0001-10362.patch"
+  patch -Np1 -i "$srcdir/0002-10417.patch"
+  patch -Np1 -i "$srcdir/0003-10458.patch"
 }
 
 build() {
