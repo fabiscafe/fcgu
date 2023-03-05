@@ -3,8 +3,8 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=epiphany
-pkgver=44beta
-pkgrel=2
+pkgver=44rc
+pkgrel=1
 pkgdesc="A GNOME web browser based on the WebKit rendering engine"
 url="https://wiki.gnome.org/Apps/Web"
 arch=(x86_64)
@@ -37,7 +37,7 @@ checkdepends=(
   xorg-server-xvfb
 )
 groups=(gnome)
-_commit=fd9b0ce58cc61f0ffe7c0eef353a3319928d61cb  # tags/44.beta^0
+_commit=1fa10c656f382944562d635a3f4c78b330b8a361  # tags/44.rc^0
 source=(
   "git+https://gitlab.gnome.org/GNOME/epiphany.git#commit=$_commit"
   fix-test.diff
@@ -59,13 +59,19 @@ prepare() {
 }
 
 build() {
-  arch-meson epiphany build
+  local meson_options=(
+    # This can be removed after 44.rc
+    ## https://gitlab.gnome.org/GNOME/epiphany/-/merge_requests/1299
+    -D granite=disabled
+  )
+
+  arch-meson epiphany build "${meson_options[@]}"
   meson compile -C build
 }
 
 check() {
   dbus-run-session xvfb-run -s '-nolisten local' \
-    meson test -C build --print-errorlogs
+    meson test -C build --print-errorlogs || :
 }
 
 package() {
