@@ -6,7 +6,7 @@ pkgname=(
   libpanel
   libpanel-docs
 )
-pkgver=1.1.1
+pkgver=1.1.2
 pkgrel=1
 pkgdesc="Dock/panel library for GTK 4"
 url="https://gitlab.gnome.org/GNOME/libpanel"
@@ -23,7 +23,7 @@ makedepends=(
   meson
   vala
 )
-_commit=a529350afeed3fc936f2d84d19b83948456bac58 # tags/1.1.1^0
+_commit=e62e070b73f5f84832738351ea6ccfcfcee1588f # tags/1.1.2^0
 source=("git+https://gitlab.gnome.org/GNOME/libpanel.git#commit=$_commit")
 sha256sums=('SKIP')
 
