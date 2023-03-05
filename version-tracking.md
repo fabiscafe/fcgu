@@ -38,7 +38,7 @@
 - gnome-settings-daemon 44.beta
 - gnome-shell 44.beta
 - gnome-shell-extensions 44.beta
-- gnome-software 44.beta
+- gnome-software 44.rc
 - gnome-sound-recorder 43.beta
 - gnome-system-monitor 44.beta
 - gnome-terminal 3.47.92
