@@ -61,7 +61,7 @@
 - sofia-sip 1.13.14
 - tracker 3.5.0.beta
 - tracker-miners 3.5.0.beta
-- vte 0.71.92
+- vte 0.71.99
 - webkitgtk-6.0 2.39.7
 - wpewebkit 2.39.5
 - xdg-desktop-portal-gnome 44.beta
