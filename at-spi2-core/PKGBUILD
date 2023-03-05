@@ -3,9 +3,12 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgbase=at-spi2-core
-pkgname=(at-spi2-core at-spi2-core-docs)
-pkgver=2.47.1
-pkgrel=2
+pkgname=(
+  at-spi2-core
+  at-spi2-core-docs
+)
+pkgver=2.47.90
+pkgrel=1
 pkgdesc="Protocol definitions and daemon for D-Bus at-spi"
 url="https://gitlab.gnome.org/GNOME/at-spi2-core"
 arch=(x86_64)
@@ -27,7 +30,7 @@ makedepends=(
   meson
   python-sphinx
 )
-_commit=eb268c1dab213a0717d4cf860867ab9e3c7d2826  # tags/AT_SPI2_CORE_2_47_1^0
+_commit=f7fdcb9ddb054724657794b2ee944dcf53fe77db  # tags/AT_SPI2_CORE_2_47_90^0
 source=("git+https://gitlab.gnome.org/GNOME/at-spi2-core.git#commit=$_commit")
 sha256sums=('SKIP')
 
