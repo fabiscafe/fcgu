@@ -49,7 +49,7 @@
 - gtk4 4.10.0
 - gtksourceview5 5.7.2
 - jsonrpc-glib 3.43.0
-- libadwaita 1.3.beta
+- libadwaita 1.3.rc
 - libdex 0.1.1
 - libpanel 1.1.2
 - librsvg 2.55.91
