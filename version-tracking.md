@@ -22,7 +22,7 @@
 - gnome-calls v44_alpha.1
 - gnome-characters 44.beta
 - gnome-clocks 44.beta
-- gnome-connections 44.beta
+- gnome-connections 44.rc
 - gnome-console 44.beta
 - gnome-contacts 44.beta
 - gnome-control-center main(2023-03-01)

@@ -2,8 +2,8 @@
 # Contributor: Balló György <ballogyor+arch at gmail dot com>
 
 pkgname=gnome-connections
-pkgver=44beta
-pkgrel=2
+pkgver=44rc
+pkgrel=1
 pkgdesc='Remote desktop client for the GNOME desktop environment'
 arch=('x86_64')
 url='https://gitlab.gnome.org/GNOME/connections'
@@ -24,7 +24,7 @@ makedepends=(
 )
 groups=('gnome-extra')
 options=('!emptydirs')
-_commit=78ceea5f4fbf4065a4bf96d47e2d5cac10a39a7a  # tags/44.beta^0
+_commit=72ff74d844792e56c6548c2630cb7f721bad006d  # tags/44.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/connections.git#commit=$_commit")
 sha256sums=('SKIP')
 
