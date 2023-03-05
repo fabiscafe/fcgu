@@ -17,7 +17,7 @@
 - gnome-backgrounds 44.beta
 - gnome-boxes 44.beta.1
 - gnome-builder 44.beta
-- gnome-calculator 44.beta
+- gnome-calculator 44.rc
 - gnome-calendar 44.beta
 - gnome-calls v44_alpha.1
 - gnome-characters 44.beta
