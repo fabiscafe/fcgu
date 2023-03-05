@@ -3,7 +3,7 @@
 
 pkgbase=gnome-builder
 pkgname=(gnome-builder)
-pkgver=44beta
+pkgver=44rc
 pkgrel=1
 pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
@@ -51,7 +51,7 @@ makedepends=(
   yelp-tools
 )
 checkdepends=(weston)
-_commit=d7d6202a6c5be1ed2446a316189ad68334a5461d  # tags/44.beta^0
+_commit=64592a09b1ed6fb766074d99c7e3fdeceed8f327  # tags/44.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -87,8 +87,10 @@ check() (
 
 package_gnome-builder() {
   depends+=(libgit2.so)
-  optdepends=('jedi-language-server: Python code assistance'
-              'bash-language-server: Shell code assistance')
+  optdepends=(
+    'jedi-language-server: Python code assistance'
+    'bash-language-server: Shell code assistance'
+  )
   groups=(gnome-extra)
 
   meson install -C build --destdir "$pkgdir"
