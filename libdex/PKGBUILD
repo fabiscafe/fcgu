@@ -2,8 +2,8 @@
 
 pkgbase=libdex
 pkgname=(libdex)
-pkgver=0.000000000000+r446+a9b09f8
-pkgrel=1
+pkgver=0.1.1
+pkgrel=0.1
 pkgdesc="A library supporting 'Deferred Execution'"
 url="https://gitlab.gnome.org/chergert/libdex"
 arch=(x86_64)
@@ -19,13 +19,13 @@ makedepends=(
   meson
   vala
 )
-_commit=a9b09f891b073b00fd6ca5499db5afc5afb7f80b  # main^0
+_commit=520ec2c2ed87bc7c782ef49b4c88ebda56163617  # tags/0.1.1^0
 source=("git+https://gitlab.gnome.org/chergert/libdex.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgbase
-  printf "0.000000000000+r%s+%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git describe --tags | sed -r 's/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {

@@ -50,7 +50,7 @@
 - gtksourceview5 5.7.2
 - jsonrpc-glib 3.43.0
 - libadwaita 1.3.beta
-- libdex main(2023-02-01)
+- libdex 0.1.1
 - libpanel 1.1.2
 - librsvg 2.55.91
 - libsoup3 3.3.1
