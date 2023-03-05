@@ -3,8 +3,8 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-maps
-pkgver=44beta
-pkgrel=2
+pkgver=44rc
+pkgrel=1
 pkgdesc="A simple GNOME 3 maps application"
 url="https://wiki.gnome.org/Apps/Maps"
 arch=(x86_64)
@@ -27,7 +27,7 @@ makedepends=(
   yelp-tools
 )
 groups=(gnome)
-_commit=4204e53a70049bb2c7eb25d9af073f61c3894848  # tags/v44.beta^0
+_commit=b09ad0aee1ab895f0fee1ccca0097a92d8a0da79 # tags/v44.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-maps.git#commit=$_commit")
 sha256sums=('SKIP')
 
