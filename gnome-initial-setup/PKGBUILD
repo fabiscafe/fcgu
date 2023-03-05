@@ -3,7 +3,7 @@
 
 pkgname=gnome-initial-setup
 pkgver=44rc
-pkgrel=1
+pkgrel=2
 pkgdesc='Simple, easy, and safe way to prepare a new system'
 arch=('x86_64')
 url='https://gitlab.gnome.org/GNOME/gnome-initial-setup'
