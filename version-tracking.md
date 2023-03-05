@@ -43,6 +43,7 @@
 - gnome-system-monitor 44.rc
 - gnome-terminal 3.47.99
 - gnome-text-editor 44.rc
+- gnome-user-docs 44.rc
 - gnome-weather 44.beta
 - gobject-introspection 1.75.6
 - gsettings-desktop-schemas 44.beta
