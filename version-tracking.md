@@ -46,7 +46,7 @@
 - gnome-weather 44.beta
 - gobject-introspection 1.75.6
 - gsettings-desktop-schemas 44.beta
-- gtk4 4.9.4
+- gtk4 4.10.0
 - gtksourceview5 5.7.2
 - jsonrpc-glib 3.43.0
 - libadwaita 1.3.beta
