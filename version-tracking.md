@@ -29,7 +29,7 @@
 - gnome-desktop 44.beta
 - gnome-disks-utility 44.rc
 - gnome-font-viewer 44.beta
-- gnome-initial-setup 44.beta
+- gnome-initial-setup 44.rc
 - gnome-maps v44.beta
 - gnome-music 44.beta
 - gnome-online-accounts 3.47.1
