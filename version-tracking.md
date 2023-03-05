@@ -40,7 +40,7 @@
 - gnome-shell-extensions 44.beta
 - gnome-software 44.rc
 - gnome-sound-recorder 43.beta
-- gnome-system-monitor 44.beta
+- gnome-system-monitor 44.rc
 - gnome-terminal 3.47.92
 - gnome-text-editor 44.beta
 - gnome-weather 44.beta

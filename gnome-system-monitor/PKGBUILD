@@ -3,8 +3,8 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-system-monitor
-pkgver=44beta
-pkgrel=2
+pkgver=44rc
+pkgrel=1
 pkgdesc="View current processes and monitor system state"
 url="https://wiki.gnome.org/Apps/SystemMonitor"
 arch=(x86_64)
@@ -24,7 +24,7 @@ makedepends=(
   yelp-tools
 )
 groups=(gnome)
-_commit=5854be6b059c1286652fa56732e406817ed651ea  # tags/44.beta^0
+_commit=f13191742437b781124105110863c6e8c14c397b  # tags/44.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-system-monitor.git#commit=$_commit")
 sha256sums=('SKIP')
 
