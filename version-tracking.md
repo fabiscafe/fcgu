@@ -41,7 +41,7 @@
 - gnome-software 44.rc
 - gnome-sound-recorder 43.beta
 - gnome-system-monitor 44.rc
-- gnome-terminal 3.47.92
+- gnome-terminal 3.47.99
 - gnome-text-editor 44.rc
 - gnome-weather 44.beta
 - gobject-introspection 1.75.6
