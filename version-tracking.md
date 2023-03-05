@@ -21,7 +21,7 @@
 - gnome-calendar 44.beta
 - gnome-calls v44_alpha.1
 - gnome-characters 44.beta
-- gnome-clocks 44.beta
+- gnome-clocks 44.rc
 - gnome-connections 44.rc
 - gnome-console 44.beta
 - gnome-contacts 44.beta
