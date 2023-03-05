@@ -4,8 +4,11 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgbase=gtksourceview5
-pkgname=(gtksourceview5 gtksourceview5-docs)
-pkgver=5.7.1
+pkgname=(
+  gtksourceview5
+  gtksourceview5-docs
+)
+pkgver=5.7.2
 pkgrel=1
 pkgdesc="A text widget adding syntax highlighting and more to GNOME"
 url="https://wiki.gnome.org/Projects/GtkSourceView"
@@ -24,7 +27,7 @@ makedepends=(
   vala
 )
 checkdepends=(xorg-server-xvfb)
-_commit=b03138a8a233a3b06b9bb7dfce7b6786713ef409  # tags/5.7.1^0
+_commit=b71a1ad1e84c0e71112d7ac0c45c85113ee763b5  # tags/5.7.2^0
 source=("git+https://gitlab.gnome.org/GNOME/gtksourceview.git#commit=$_commit")
 sha256sums=('SKIP')
 
