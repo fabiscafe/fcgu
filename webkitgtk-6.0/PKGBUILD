@@ -7,8 +7,11 @@
 # https://gitlab.gnome.org/GNOME/gnome-build-meta/-/merge_requests/1864
 # https://src.fedoraproject.org/rpms/webkitgtk/c/f1d95b90e57fec87a68637fb6270dd7ab4dbd50f?branch=rawhide
 pkgbase=webkitgtk-6.0
-pkgname=(webkitgtk-6.0 webkitgtk-6.0-docs)
-pkgver=2.39.7
+pkgname=(
+  webkitgtk-6.0
+  webkitgtk-6.0-docs
+)
+pkgver=2.39.90
 pkgrel=1
 pkgdesc="Web content engine for GTK"
 url="https://webkitgtk.org"
@@ -77,10 +80,25 @@ makedepends=(
 )
 
 # !lto: https://bugs.webkit.org/show_bug.cgi?id=249368
-options=(debug !lto)
-source=($url/releases/webkitgtk-$pkgver.tar.xz{,.asc})
-sha256sums=('bb7da0346388d349f560ef0f2c666880d068e77c195cbcf644a0ae69230244b2'
-            'SKIP')
+options=(!lto)
+source=($url/releases/webkitgtk-$pkgver.tar.xz{,.asc}
+# [GLib] Installed API headers are unusable with the new 2022 API
+## https://github.com/WebKit/WebKit/pull/10362
+0001-10362.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10362.patch
+
+# LLIntAssembly.h:38532:23: error: ‘g_superSamplerCount’ was not declared in this scope
+## https://github.com/WebKit/WebKit/pull/10417
+0002-10417.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10417.patch
+
+# [CMake] Rework decision to enable -gsplit-dwarf by default
+## https://bugs.webkit.org/show_bug.cgi?id=252679
+0003-10458.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10458.patch
+)
+sha256sums=('8275866c3529a715c23cae38dbf2edd310d8188546a47c5a2f709d193f7a5fc0'
+            'SKIP'
+            '09ee276799b0b9500df158da16a9fbad261f4df88eb397ba53a97f3f1b777a31'
+            'dc77c21225a3e408f5c609270fea46d60a57f12bd53838451cf4cd6ed785fb01'
+            '9f81f736f6f8936b029887bb5eba00e5c69447724267a4b3db2ee6b7cb96cf20')
 validpgpkeys=('D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos <cgarcia@igalia.com>
               '5AA3BC334FD7E3369E7C77B291C559DBE4C9123B') # Adrián Pérez de Castro <aperez@igalia.com>
 
@@ -89,35 +107,44 @@ prepare() {
 }
 
 build() {
+  local cmake_options=(
+    -DPORT=GTK
+    -DCMAKE_BUILD_TYPE=Release
+    -DCMAKE_INSTALL_PREFIX=/usr
+    -DCMAKE_INSTALL_LIBDIR=lib
+    -DCMAKE_INSTALL_LIBEXECDIR=lib
+    -DCMAKE_SKIP_RPATH=ON
+    -DUSE_AVIF=ON
+    -DUSE_GTK4=ON
+    -DUSE_JPEGXL=ON
+    -DENABLE_DOCUMENTATION=ON
+    -DENABLE_MINIBROWSER=ON
+  )
+
   # Produce minimal debug info: 4.3 GB of debug data makes the
   # build too slow and is too much to package for debuginfod
   CFLAGS+=' -g1'
   CXXFLAGS+=' -g1'
 
-  cmake -S webkitgtk-$pkgver -B build -G Ninja \
-    -DPORT=GTK \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_INSTALL_LIBDIR=lib \
-    -DCMAKE_INSTALL_LIBEXECDIR=lib \
-    -DCMAKE_SKIP_RPATH=ON \
-    -DUSE_AVIF=ON \
-    -DUSE_GTK4=ON \
-    -DUSE_JPEGXL=ON \
-    -DENABLE_DOCUMENTATION=ON \
-    -DENABLE_MINIBROWSER=ON
+  cmake -S webkitgtk-$pkgver -B build -G Ninja "${cmake_options[@]}"
   cmake --build build
 }
 
 package_webkitgtk-6.0() {
-  depends+=(libwpe-1.0.so libWPEBackend-fdo-1.0.so)
-  provides+=(libjavascriptcoregtk-6.0.so libwebkitgtk-6.0.so)
-  conflicts=(webkit2gtk-5.0)
-  replaces=(webkit2gtk-5.0)
-  optdepends=('geoclue: Geolocation support'
-              'gst-plugins-good: media decoding'
-              'gst-plugins-bad: media decoding'
-              'gst-libav: nonfree media decoding')
+  depends+=(
+    libwpe-1.0.so
+    libWPEBackend-fdo-1.0.so
+  )
+  provides+=(
+    libjavascriptcoregtk-6.0.so
+    libwebkitgtk-6.0.so
+  )
+  optdepends=(
+    'geoclue: Geolocation support'
+    'gst-plugins-good: media decoding'
+    'gst-plugins-bad: media decoding'
+    'gst-libav: nonfree media decoding'
+  )
 
   DESTDIR="$pkgdir" cmake --install build
 
