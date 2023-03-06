@@ -37,7 +37,7 @@
 - gnome-podcasts master(2022-12-16)
 - gnome-remote-desktop 44.rc
 - gnome-session 44.rc
-- gnome-settings-daemon 44.beta
+- gnome-settings-daemon 44.rc
 - gnome-shell 44.beta
 - gnome-shell-extensions 44.beta
 - gnome-software 44.rc
