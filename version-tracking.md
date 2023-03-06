@@ -56,6 +56,7 @@
 - jsonrpc-glib 3.43.0
 - libadwaita 1.3.rc
 - libdex 0.1.1
+- libnma 1.10.6 (gcr-4 rebuild)
 - libpanel 1.1.2
 - librsvg 2.55.91
 - libsoup3 3.3.1
