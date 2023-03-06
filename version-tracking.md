@@ -11,6 +11,7 @@
 - evolution-data-server 3.47.3
 - evolution-ews 3.47.3
 - feedbackd 0.1.0
+- gcr-4 4.1.0
 - gdm 44.rc-real
 - gjs 1.75.90
 - glib2 2.75.4
@@ -31,6 +32,7 @@
 - gnome-disks-utility 44.rc
 - gnome-font-viewer 44.rc
 - gnome-initial-setup 44.rc
+- gnome-keyring 42.1 (gcr-4 rebuild)
 - gnome-maps v44.rc
 - gnome-music 44.rc
 - gnome-online-accounts 3.47.1
@@ -54,6 +56,7 @@
 - jsonrpc-glib 3.43.0
 - libadwaita 1.3.rc
 - libdex 0.1.1
+- libnma 1.10.6 (gcr-4 rebuild)
 - libpanel 1.1.2
 - librsvg 2.55.91
 - libsoup3 3.3.1
