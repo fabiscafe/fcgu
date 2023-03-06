@@ -1,7 +1,7 @@
 ## Done
 - adwaita-icon-theme 44.beta
 - at-spi2-core 2.47.90
-- baobab 44.beta
+- baobab 44.rc
 - callaudiod 0.1.6
 - clapper 0.5.2
 - d-spy 1.5.0

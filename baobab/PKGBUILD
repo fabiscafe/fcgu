@@ -3,8 +3,8 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=baobab
-pkgver=44beta
-pkgrel=2
+pkgver=44rc
+pkgrel=1
 pkgdesc="A graphical directory tree analyzer"
 url="https://wiki.gnome.org/Apps/DiskUsageAnalyzer"
 arch=(x86_64)
@@ -25,9 +25,11 @@ makedepends=(
   yelp-tools
 )
 groups=(gnome)
-_commit=4b73e07425e23c4843a5866ea52aef5d09542fbf  # tags/44.beta^0
-source=("git+https://gitlab.gnome.org/GNOME/baobab.git#commit=$_commit"
-        no-mimetype.diff)
+_commit=2e6b79c2138cafc10219fc406507cac670dbb5cd  # tags/44.rc^0
+source=(
+  "git+https://gitlab.gnome.org/GNOME/baobab.git#commit=$_commit"
+  no-mimetype.diff
+)
 sha256sums=('SKIP'
             '958a85fe3a2001d16ebcf71b51888f260508af87224a0de3410a6bbe685e59d0')
 
