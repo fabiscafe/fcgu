@@ -32,6 +32,7 @@
 - gnome-disks-utility 44.rc
 - gnome-font-viewer 44.rc
 - gnome-initial-setup 44.rc
+- gnome-keyring 42.1 (gcr-4 rebuild)
 - gnome-maps v44.rc
 - gnome-music 44.rc
 - gnome-online-accounts 3.47.1
