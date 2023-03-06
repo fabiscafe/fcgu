@@ -32,7 +32,7 @@
 - gnome-font-viewer 44.beta
 - gnome-initial-setup 44.rc
 - gnome-maps v44.rc
-- gnome-music 44.beta
+- gnome-music 44.rc
 - gnome-online-accounts 3.47.1
 - gnome-podcasts master(2022-12-16)
 - gnome-remote-desktop 44.rc
