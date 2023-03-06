@@ -17,7 +17,7 @@
 - glib2 2.75.4
 - glib-networking 2.76.beta
 - gnome-backgrounds 44.beta
-- gnome-boxes 44.beta.1
+- gnome-boxes 44.rc
 - gnome-builder 44.rc
 - gnome-calculator 44.rc
 - gnome-calendar 44.beta
