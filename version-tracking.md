@@ -27,7 +27,7 @@
 - gnome-connections 44.rc
 - gnome-console 44.beta
 - gnome-contacts 44.beta
-- gnome-control-center main(2023-03-01)
+- gnome-control-center 44.rc
 - gnome-desktop 44.beta
 - gnome-disks-utility 44.rc
 - gnome-font-viewer 44.rc
