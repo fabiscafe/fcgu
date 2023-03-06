@@ -3,8 +3,8 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-characters
-pkgver=44beta
-pkgrel=2
+pkgver=44rc
+pkgrel=1
 pkgdesc="A character map application"
 arch=(x86_64)
 url="https://gitlab.gnome.org/GNOME/gnome-characters"
@@ -25,7 +25,7 @@ makedepends=(
   meson
 )
 groups=(gnome)
-_commit=639d592f6cb6917b32cd04215c24e64d6843d87a  # tags/44.beta^0
+_commit=9463e475d6722f144ce87677e69997dde3cda3a2  # tags/44.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-characters.git#commit=$_commit")
 sha256sums=('SKIP')
 

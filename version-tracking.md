@@ -21,7 +21,7 @@
 - gnome-calculator 44.rc
 - gnome-calendar 44.beta
 - gnome-calls v44_alpha.1
-- gnome-characters 44.beta
+- gnome-characters 44.rc
 - gnome-clocks 44.rc
 - gnome-connections 44.rc
 - gnome-console 44.beta
