@@ -63,7 +63,7 @@
 - pygobject 3.43.1
 - sofia-sip 1.13.14
 - tracker 3.5.0.rc
-- tracker-miners 3.5.0.beta
+- tracker-miners 3.5.0.rc
 - vte 0.71.99
 - webkitgtk-6.0 2.39.7
 - wpewebkit 2.39.5
