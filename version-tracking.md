@@ -61,7 +61,7 @@
 - librsvg 2.55.91
 - libsoup3 3.3.1
 - loupe(2023-02-24)
-- mutter 44.beta
+- mutter 44.rc
 - nautilus 44.rc
 - pygobject 3.43.1
 - sofia-sip 1.13.14
