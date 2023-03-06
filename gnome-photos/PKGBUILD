@@ -1,0 +1,74 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+
+pkgname=gnome-photos
+pkgver=44.0
+pkgrel=0.1
+epoch=1
+pkgdesc="Access, organize, and share your photos on GNOME"
+arch=(x86_64)
+url="https://wiki.gnome.org/Apps/Photos"
+license=(GPL)
+depends=(
+  exempi
+  gtk3
+  libexif
+  librsvg
+  babl
+  gegl
+  gsettings-desktop-schemas
+  lcms2
+  tracker3-miners
+  geocode-glib-2
+  libgdata
+  libgexiv2
+  libraw
+  gnome-online-accounts
+  dleyna
+  libdazzle
+  libhandy
+  libportal-gtk3
+)
+makedepends=(
+  python
+  yelp-tools
+  git
+  meson
+  docbook-xsl
+)
+groups=(gnome)
+_commit=a0eb37bfb6760aa1414fa41ee1ff007336301b8c  # tags/44.0^0
+source=(
+  "git+https://gitlab.gnome.org/GNOME/gnome-photos.git#commit=$_commit"
+  "git+https://gitlab.gnome.org/GNOME/libgd.git"
+)
+sha256sums=('SKIP'
+            'SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+
+  git submodule init
+  git submodule set-url subprojects/libgd "$srcdir/libgd"
+  git -c protocol.file.allow=always submodule update
+}
+
+build() {
+  local meson_options=(
+    -D manuals=true
+  )
+
+  arch-meson $pkgname build "${meson_options[@]}"
+  meson compile -C build
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
+
+# vim:set sw=2 sts=-1 et:

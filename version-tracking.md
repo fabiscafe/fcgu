@@ -36,6 +36,7 @@
 - gnome-maps v44.rc
 - gnome-music 44.rc
 - gnome-online-accounts 3.47.1
+- gnome-photos 44.0
 - gnome-podcasts master(2022-12-16)
 - gnome-remote-desktop 44.rc
 - gnome-session 44.rc
