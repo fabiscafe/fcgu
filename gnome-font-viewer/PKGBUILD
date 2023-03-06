@@ -2,8 +2,8 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-font-viewer
-pkgver=44beta
-pkgrel=2
+pkgver=44rc
+pkgrel=1
 pkgdesc="A font viewer utility for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-font-viewer"
 arch=(x86_64)
@@ -18,7 +18,7 @@ makedepends=(
   meson
 )
 groups=(gnome)
-_commit=666e383aee67facd55aa57bd6b552c62c7b4b341  # tags/44.beta^0
+_commit=a6940fd40074bf33a70235653c155bb0963383ec  # tags/44.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-font-viewer.git#commit=$_commit")
 sha256sums=('SKIP')
 

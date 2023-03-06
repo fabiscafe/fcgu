@@ -29,7 +29,7 @@
 - gnome-control-center main(2023-03-01)
 - gnome-desktop 44.beta
 - gnome-disks-utility 44.rc
-- gnome-font-viewer 44.beta
+- gnome-font-viewer 44.rc
 - gnome-initial-setup 44.rc
 - gnome-maps v44.rc
 - gnome-music 44.rc
