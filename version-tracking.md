@@ -40,7 +40,7 @@
 - gnome-remote-desktop 44.rc
 - gnome-session 44.rc
 - gnome-settings-daemon 44.rc
-- gnome-shell 44.beta
+- gnome-shell 44.rc
 - gnome-shell-extensions 44.beta
 - gnome-software 44.rc
 - gnome-sound-recorder 43.beta
