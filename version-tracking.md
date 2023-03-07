@@ -69,7 +69,7 @@
 - tracker 3.5.0.rc
 - tracker-miners 3.5.0.rc
 - vte 0.71.99
-- webkitgtk-6.0 2.39.7
+- webkitgtk-6.0 2.39.90
 - wpewebkit 2.39.5
 - xdg-desktop-portal-gnome 44.rc
 

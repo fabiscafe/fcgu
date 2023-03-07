@@ -12,7 +12,7 @@ pkgname=(
   webkitgtk-6.0-docs
 )
 pkgver=2.39.90
-pkgrel=1
+pkgrel=2
 pkgdesc="Web content engine for GTK"
 url="https://webkitgtk.org"
 arch=(x86_64)
@@ -81,18 +81,19 @@ makedepends=(
 
 # !lto: https://bugs.webkit.org/show_bug.cgi?id=249368
 options=(!lto)
-source=($url/releases/webkitgtk-$pkgver.tar.xz{,.asc}
-# [GLib] Installed API headers are unusable with the new 2022 API
-## https://github.com/WebKit/WebKit/pull/10362
-0001-10362.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10362.patch
+source=(
+  $url/releases/webkitgtk-$pkgver.tar.xz{,.asc}
+  # [GLib] Installed API headers are unusable with the new 2022 API
+  ## https://github.com/WebKit/WebKit/pull/10362
+  0001-Installed_API_headers_are_unusable_with_the_new_2022_API.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10362.patch
 
-# LLIntAssembly.h:38532:23: error: ‘g_superSamplerCount’ was not declared in this scope
-## https://github.com/WebKit/WebKit/pull/10417
-0002-10417.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10417.patch
+  # LLIntAssembly.h:38532:23: error: ‘g_superSamplerCount’ was not declared in this scope
+  ## https://github.com/WebKit/WebKit/pull/10417
+  0002-LLIntAssembly.h_38532_23_error_g_superSamplerCount_was_not_declared_in_this_scope.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10417.patch
 
-# [CMake] Rework decision to enable -gsplit-dwarf by default
-## https://bugs.webkit.org/show_bug.cgi?id=252679
-0003-10458.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10458.patch
+  # [CMake] Rework decision to enable -gsplit-dwarf by default
+  ## https://bugs.webkit.org/show_bug.cgi?id=252679
+  0003-CMake_Rework_decision_to_enable_gsplit-dwarf_by_default.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10458.patch
 )
 sha256sums=('8275866c3529a715c23cae38dbf2edd310d8188546a47c5a2f709d193f7a5fc0'
             'SKIP'
@@ -105,9 +106,9 @@ validpgpkeys=('D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos
 prepare() {
   cd webkitgtk-$pkgver
 
-  patch -Np1 -i "$srcdir/0001-10362.patch"
-  patch -Np1 -i "$srcdir/0002-10417.patch"
-  patch -Np1 -i "$srcdir/0003-10458.patch"
+  patch -Np1 -i "$srcdir/0001-Installed_API_headers_are_unusable_with_the_new_2022_API.patch"
+  patch -Np1 -i "$srcdir/0002-LLIntAssembly.h_38532_23_error_g_superSamplerCount_was_not_declared_in_this_scope.patch"
+  patch -Np1 -i "$srcdir/0003-CMake_Rework_decision_to_enable_gsplit-dwarf_by_default.patch"
 }
 
 build() {
@@ -143,6 +144,8 @@ package_webkitgtk-6.0() {
     libjavascriptcoregtk-6.0.so
     libwebkitgtk-6.0.so
   )
+  conflicts=(webkit2gtk-5.0)
+  replaces=(webkit2gtk-5.0)
   optdepends=(
     'geoclue: Geolocation support'
     'gst-plugins-good: media decoding'
