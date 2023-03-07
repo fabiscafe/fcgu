@@ -20,7 +20,7 @@
 - gnome-boxes 44.rc
 - gnome-builder 44.rc
 - gnome-calculator 44.rc
-- gnome-calendar 44.beta
+- gnome-calendar 44.rc
 - gnome-calls v44_alpha.1
 - gnome-characters 44.rc
 - gnome-clocks 44.rc

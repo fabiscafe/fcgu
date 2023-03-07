@@ -3,7 +3,7 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-calendar
-pkgver=44beta
+pkgver=44rc
 pkgrel=1
 pkgdesc="Simple and beautiful calendar application designed to perfectly fit the GNOME desktop"
 url="https://wiki.gnome.org/Apps/Calendar"
@@ -25,7 +25,7 @@ makedepends=(
 )
 optdepends=('gnome-control-center: Manage online accounts')
 groups=(gnome)
-_commit=9393f186b5a5eaa31263bf296911c4f7a57a11bb  # tags/44.beta^0
+_commit=6b3676a53ffb79e5dfa8f289b0061b0ff31f7633  # tags/44.rc^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-calendar.git#commit=$_commit")
 sha256sums=('SKIP')
 
