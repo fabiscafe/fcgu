@@ -66,6 +66,7 @@
 | loupe                     | 2023-02-24      |    X    |
 | mutter                    | 44.rc           |    X    |
 | nautilus                  | 44.rc           |    X    |
+| orca                      | ORCA_44_RC      |    X    |
 | pygobject                 | 3.43.1          |    X    |
 | sofia-sip                 | 1.13.14         |    X    |
 | tracker                   | 3.5.0.rc        |    X    |
