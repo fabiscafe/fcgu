@@ -11,8 +11,8 @@ pkgname=(
   webkitgtk-6.0
   webkitgtk-6.0-docs
 )
-pkgver=2.39.90
-pkgrel=2
+pkgver=2.39.91
+pkgrel=1
 pkgdesc="Web content engine for GTK"
 url="https://webkitgtk.org"
 arch=(x86_64)
@@ -83,32 +83,27 @@ makedepends=(
 options=(!lto)
 source=(
   $url/releases/webkitgtk-$pkgver.tar.xz{,.asc}
-  # [GLib] Installed API headers are unusable with the new 2022 API
-  ## https://github.com/WebKit/WebKit/pull/10362
-  0001-Installed_API_headers_are_unusable_with_the_new_2022_API.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10362.patch
 
-  # LLIntAssembly.h:38532:23: error: ‘g_superSamplerCount’ was not declared in this scope
-  ## https://github.com/WebKit/WebKit/pull/10417
-  0002-LLIntAssembly.h_38532_23_error_g_superSamplerCount_was_not_declared_in_this_scope.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10417.patch
+  # [GLib] Clean builds fail with ENABLE_2022_GLIB_API #1
+  ## https://github.com/WebKit/WebKit/pull/11221
+  0001-GLib_Clean_builds_fail_with_ENABLE_2022_GLIB_API.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/11221.patch
 
-  # [CMake] Rework decision to enable -gsplit-dwarf by default
-  ## https://bugs.webkit.org/show_bug.cgi?id=252679
-  0003-CMake_Rework_decision_to_enable_gsplit-dwarf_by_default.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/10458.patch
+  # [GLib] Clean builds fail with ENABLE_2022_GLIB_API #2
+  ## https://github.com/WebKit/WebKit/pull/11222
+  0002-GLib_Clean_builds_fail_with_ENABLE_2022_GLIB_API.patch::https://patch-diff.githubusercontent.com/raw/WebKit/WebKit/pull/11222.patch
 )
-sha256sums=('8275866c3529a715c23cae38dbf2edd310d8188546a47c5a2f709d193f7a5fc0'
+sha256sums=('92e8a6f599450529eb0bd552e4fc2d1f691831eb4d89caffb96fb581d2c836d3'
             'SKIP'
-            '09ee276799b0b9500df158da16a9fbad261f4df88eb397ba53a97f3f1b777a31'
-            'dc77c21225a3e408f5c609270fea46d60a57f12bd53838451cf4cd6ed785fb01'
-            '9f81f736f6f8936b029887bb5eba00e5c69447724267a4b3db2ee6b7cb96cf20')
+            '687806df3fc62238374d6ba171cdb16802f92a6739d6bf2c42bedac8514f593d'
+            '2c3bedb4956861764f34b1864187871d7702704c32dcf696d65894839b82c941')
 validpgpkeys=('D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3'  # Carlos Garcia Campos <cgarcia@igalia.com>
               '5AA3BC334FD7E3369E7C77B291C559DBE4C9123B') # Adrián Pérez de Castro <aperez@igalia.com>
 
 prepare() {
   cd webkitgtk-$pkgver
 
-  patch -Np1 -i "$srcdir/0001-Installed_API_headers_are_unusable_with_the_new_2022_API.patch"
-  patch -Np1 -i "$srcdir/0002-LLIntAssembly.h_38532_23_error_g_superSamplerCount_was_not_declared_in_this_scope.patch"
-  patch -Np1 -i "$srcdir/0003-CMake_Rework_decision_to_enable_gsplit-dwarf_by_default.patch"
+  patch -Np1 -i "$srcdir/0001-GLib_Clean_builds_fail_with_ENABLE_2022_GLIB_API.patch"
+  patch -Np1 -i "$srcdir/0002-GLib_Clean_builds_fail_with_ENABLE_2022_GLIB_API.patch"
 }
 
 build() {
