@@ -7,6 +7,7 @@
 - d-spy 1.5.0
 - eog 44.beta
 - epiphany 44.rc
+- evince 44.rc
 - evolution 3.47.3
 - evolution-data-server 3.47.3
 - evolution-ews 3.47.3
