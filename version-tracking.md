@@ -26,7 +26,7 @@
 - gnome-clocks 44.rc
 - gnome-connections 44.rc
 - gnome-console 44.beta
-- gnome-contacts 44.beta
+- gnome-contacts 44.rc
 - gnome-control-center 44.rc
 - gnome-desktop 44.beta
 - gnome-disks-utility 44.rc
