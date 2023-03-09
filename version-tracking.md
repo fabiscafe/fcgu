@@ -11,7 +11,7 @@
 | clapper                   | 0.5.2           |    X    |
 | d-spy                     | 1.5.0           |    X    |
 | eog                       | 44.beta         |    X    |
-| epiphany                  | 44.rc           |    X    |
+| epiphany                  | 2023-03-09 (master)|    Y    |
 | evince                    | 44.rc           |    X    |
 | evolution                 | 3.47.3          |    X    |
 | evolution-data-server     | 3.47.3          |    X    |
