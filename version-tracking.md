@@ -64,7 +64,7 @@
 | librsvg                   | 2.55.91         |    X    |
 | libsoup3                  | 3.3.1           |    X    |
 | loupe                     | 2023-02-24      |    X    |
-| mutter                    | 44.rc           |    X    |
+| mutter                    | 44.rc           |    Y    |
 | nautilus                  | 44.rc           |    X    |
 | orca                      | ORCA_44_RC      |    X    |
 | pygobject                 | 3.43.1          |    X    |
