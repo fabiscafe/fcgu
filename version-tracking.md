@@ -20,7 +20,7 @@
 | gcr-4                     | 4.1.0           |    X    |
 | gdm                       | 44.rc-real      |    X    |
 | gjs                       | 1.75.90         |    X    |
-| glib2                     | 2.76.0          |    Y    |
+| glib2                     | Arch Linux      |    X    |
 | glib-networking           | 2.76.beta       |    X    |
 | gnome-backgrounds         | 44.beta         |    X    |
 | gnome-boxes               | 44.rc           |    X    |
