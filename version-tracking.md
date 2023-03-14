@@ -60,6 +60,7 @@
 | jsonrpc-glib              | 3.43.0          |    X    |
 | libadwaita                | 1.3.rc          |    X    |
 | libdex                    | 0.1.1           |    X    |
+| libdmapsharing4           | LIBDMAPSHARING_3_9_11|    X    |
 | libpanel                  | 1.1.2           |    X    |
 | librsvg                   | 2.55.91         |    X    |
 | libsoup3                  | 3.3.1           |    X    |
