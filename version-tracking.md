@@ -54,7 +54,7 @@
 | gnome-text-editor         | 44.rc           |    X    |
 | gnome-user-docs           | 44.rc           |    X    |
 | gnome-weather             | 44.rc           |    X    |
-| gobject-introspection     | 1.75.6          |    X    |
+| gobject-introspection     | 1.76.0          |    X    |
 | gsettings-desktop-schemas | 44.beta         |    X    |
 | gtksourceview5            | 5.7.2           |    X    |
 | jsonrpc-glib              | 3.43.0          |    X    |
