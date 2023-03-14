@@ -84,6 +84,7 @@
 | Package       |  Version  | Patches | Reason |
 |---------------|:---------:|:-------:|--------|
 | gnome-keyring | 42.1      |    X    | gcr-4  |
+| grilo         | 0.3.15    |    X    | gnome-music(libsoup3) |
 | libnma        | 1.10.6    |    X    | gcr-4  |
 
 
