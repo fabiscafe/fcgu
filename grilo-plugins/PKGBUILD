@@ -1,4 +1,5 @@
-# Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=grilo-plugins
 pkgver=0.3.15
@@ -53,11 +54,11 @@ prepare() {
 build() {
   local meson_args=(
     -D enable-tracker=no
-    
+
     # Gnome-music
-    ## music is not compatible with soup2 anymore. If plugins are found that 
+    ## music is not compatible with soup2 anymore. If plugins are found that
     ## still uses soup2 gnome-music will refuse to start.
-    ## One downside of this change is that totem wont be able to search for 
+    ## One downside of this change is that totem wont be able to search for
     ## subtitles and youtube. The Youtube video fetcher of totem however
     ## also seems to be broken on Arch. So no real reason to keep this enabled.
     ## It works btw on flatpak.
