@@ -47,7 +47,7 @@
 | gnome-settings-daemon     | 44.rc           |    X    |
 | gnome-shell               | 44.rc           |    X    |
 | gnome-shell-extensions    | 44.rc           |    X    |
-| gnome-software            | 44.rc           |    X    |
+| gnome-software            | 44.0            |    X    |
 | gnome-sound-recorder      | 43.beta         |    X    |
 | gnome-system-monitor      | 44.rc           |    X    |
 | gnome-terminal            | 3.47.99         |    X    |
