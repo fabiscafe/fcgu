@@ -26,7 +26,7 @@
 | gnome-boxes               | 44.rc           |    X    |
 | gnome-builder             | 44.rc           |    X    |
 | gnome-calculator          | 44.rc           |    X    |
-| gnome-calendar            | 44.rc           |    X    |
+| gnome-calendar            | 44.0            |    X    |
 | gnome-calls               | v44_alpha.1     |    X    |
 | gnome-characters          | 44.rc           |    X    |
 | gnome-clocks              | 44.rc           |    X    |
