@@ -2,8 +2,8 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-clocks
-pkgver=44rc
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="Clocks applications for GNOME"
 url="https://wiki.gnome.org/Apps/Clocks"
 arch=(x86_64)
@@ -25,7 +25,7 @@ makedepends=(
   yelp-tools
 )
 groups=(gnome)
-_commit=6479186a5a866b33c72a22d2ecc370b0eab6fdf7  # tags/44.rc^0
+_commit=220460fde76ef779436dacb07bc3b0589995e608  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-clocks.git#commit=$_commit")
 sha256sums=('SKIP')
 

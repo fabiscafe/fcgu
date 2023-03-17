@@ -29,7 +29,7 @@
 | gnome-calendar            | 44.0            |    X    |
 | gnome-calls               | v44_alpha.1     |    X    |
 | gnome-characters          | 44.rc           |    X    |
-| gnome-clocks              | 44.rc           |    X    |
+| gnome-clocks              | 44.0            |    X    |
 | gnome-connections         | 44.rc           |    X    |
 | gnome-console             | 44.beta         |    X    |
 | gnome-contacts            | 44.rc           |    X    |
