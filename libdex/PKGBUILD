@@ -2,7 +2,7 @@
 
 pkgbase=libdex
 pkgname=(libdex)
-pkgver=0.1.1
+pkgver=0.2.0
 pkgrel=0.1
 pkgdesc="A library supporting 'Deferred Execution'"
 url="https://gitlab.gnome.org/chergert/libdex"
@@ -19,7 +19,7 @@ makedepends=(
   meson
   vala
 )
-_commit=520ec2c2ed87bc7c782ef49b4c88ebda56163617  # tags/0.1.1^0
+_commit=c59ec85110954d8e9a1bf31322944225e1dc6874  # tags/0.2.0^0
 source=("git+https://gitlab.gnome.org/chergert/libdex.git#commit=$_commit")
 sha256sums=('SKIP')
 
