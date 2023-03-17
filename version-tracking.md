@@ -74,7 +74,7 @@
 | tracker                   | 3.5.0.rc        |    X    |
 | tracker-miners            | 3.5.0.rc        |    X    |
 | vte                       | 0.71.99         |    X    |
-| webkitgtk-6.0             | 2.39.91         |    Y    |
+| webkitgtk-6.0             | 2.40.0          |    x    |
 | wpewebkit                 | 2.39.5          |    X    |
 | xdg-desktop-portal-gnome  | 44.rc           |    X    |
 
