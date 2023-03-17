@@ -4,8 +4,8 @@
 # Contributor: Silvio Knizek (killermoehre)
 
 pkgname=gnome-disk-utility
-pkgver=44rc
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="Disk Management Utility for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-disk-utility"
 arch=(x86_64)
@@ -28,7 +28,7 @@ makedepends=(
   git
   meson
 )
-_commit=6a5c6bc5426e0981e28d6bbdb3387315c105004d  # tags/44.rc^0
+_commit=68c13081e29973b31ee37245626b1755b8cd53a6  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-disk-utility.git#commit=$_commit")
 sha256sums=('SKIP')
 

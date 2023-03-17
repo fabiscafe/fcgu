@@ -35,7 +35,7 @@
 | gnome-contacts            | 44.rc           |    X    |
 | gnome-control-center      | 44.rc           |    X    |
 | gnome-desktop             | 44.beta         |    X    |
-| gnome-disks-utility       | 44.rc           |    X    |
+| gnome-disks-utility       | 44.0            |    X    |
 | gnome-font-viewer         | 44.rc           |    X    |
 | gnome-initial-setup       | 44.rc           |    X    |
 | gnome-maps                | v44.rc          |    X    |
