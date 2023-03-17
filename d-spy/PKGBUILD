@@ -2,8 +2,8 @@
 # Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=d-spy
-pkgver=1.5.0
-pkgrel=1
+pkgver=1.6.0
+pkgrel=0.1
 pkgdesc="D-Bus debugger for GNOME"
 url="https://gitlab.gnome.org/GNOME/d-spy"
 arch=(x86_64)
@@ -20,7 +20,7 @@ makedepends=(
   meson
 )
 provides=(libdspy-1.so)
-_commit=ef353dbf4f28c1dc4b03155211a2a3146c06c8b2  # tags/1.5.0^0
+_commit=9268a01e3fcc7d15c617f4bb57f2fe213bb4d078  # tags/1.6.0^0
 source=("git+https://gitlab.gnome.org/GNOME/d-spy.git#commit=$_commit")
 sha256sums=('SKIP')
 

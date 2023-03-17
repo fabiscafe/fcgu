@@ -9,7 +9,7 @@
 | baobab                    | 44.rc           |    X    |
 | callaudiod                | 0.1.6           |    X    |
 | clapper                   | 0.5.2           |    X    |
-| d-spy                     | 1.5.0           |    X    |
+| d-spy                     | 1.6.0           |    X    |
 | eog                       | 44.beta         |    X    |
 | epiphany                  | 2023-03-09 (master)|    Y    |
 | evince                    | 44.rc           |    X    |
