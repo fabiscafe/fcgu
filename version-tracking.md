@@ -23,7 +23,7 @@
 | glib2                     | Arch Linux      |    X    |
 | glib-networking           | 2.76.0          |    X    |
 | gnome-backgrounds         | 44.beta         |    X    |
-| gnome-boxes               | 44.rc           |    X    |
+| gnome-boxes               | 44.0            |    X    |
 | gnome-builder             | 44.rc           |    X    |
 | gnome-calculator          | 44.rc           |    X    |
 | gnome-calendar            | 44.0            |    X    |
