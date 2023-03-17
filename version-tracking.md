@@ -61,7 +61,7 @@
 | libadwaita                | 1.3.1           |    X    |
 | libdex                    | 0.2.0           |    X    |
 | libdmapsharing4           | LIBDMAPSHARING_3_9_11|    X    |
-| libpanel                  | 1.1.2           |    X    |
+| libpanel                  | 1.2.0           |    X    |
 | libpeas                   | 1.36.0          |    X    |
 | librsvg                   | 2.55.91         |    X    |
 | libsoup3                  | 3.4.0           |    X    |
