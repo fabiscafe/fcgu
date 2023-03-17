@@ -58,7 +58,7 @@
 | gsettings-desktop-schemas | 44.beta         |    X    |
 | gtksourceview5            | 5.7.2           |    X    |
 | jsonrpc-glib              | 3.43.0          |    X    |
-| libadwaita                | 1.3.rc          |    X    |
+| libadwaita                | 1.3.1           |    X    |
 | libdex                    | 0.1.1           |    X    |
 | libdmapsharing4           | LIBDMAPSHARING_3_9_11|    X    |
 | libpanel                  | 1.1.2           |    X    |
