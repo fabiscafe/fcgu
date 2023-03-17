@@ -67,7 +67,7 @@
 | libsoup3                  | 3.4.0           |    X    |
 | loupe                     | 2023-02-24      |    X    |
 | mutter                    | 44.rc           |    Y    |
-| nautilus                  | 44.rc           |    X    |
+| nautilus                  | 44.0            |    X    |
 | orca                      | ORCA_44_RC      |    X    |
 | pygobject                 | 3.43.1          |    X    |
 | sofia-sip                 | 1.13.14         |    X    |
