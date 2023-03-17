@@ -15,7 +15,7 @@
 | evince                    | 44.rc           |    X    |
 | evolution                 | 3.48.0          |    X    |
 | evolution-data-server     | 3.48.0          |    X    |
-| evolution-ews             | 3.47.3          |    X    |
+| evolution-ews             | 3.48.0          |    X    |
 | feedbackd                 | 0.1.0           |    X    |
 | gcr-4                     | 4.1.0           |    X    |
 | gdm                       | 44.rc-real      |    X    |
