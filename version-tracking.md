@@ -21,7 +21,7 @@
 | gdm                       | 44.rc-real      |    X    |
 | gjs                       | 1.75.90         |    X    |
 | glib2                     | Arch Linux      |    X    |
-| glib-networking           | 2.76.beta       |    X    |
+| glib-networking           | 2.76.0          |    X    |
 | gnome-backgrounds         | 44.beta         |    X    |
 | gnome-boxes               | 44.rc           |    X    |
 | gnome-builder             | 44.rc           |    X    |
