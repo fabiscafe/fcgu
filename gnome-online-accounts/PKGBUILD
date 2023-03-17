@@ -3,8 +3,8 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=gnome-online-accounts
-pkgver=3.47.1
-pkgrel=1
+pkgver=3.48.0
+pkgrel=0.1
 pkgdesc="Single sign-on framework for GNOME"
 url="https://wiki.gnome.org/Projects/GnomeOnlineAccounts"
 arch=(x86_64)
@@ -33,7 +33,7 @@ provides=(
   libgoa-1.0.so
   libgoa-backend-1.0.so
 )
-_commit=280292b03b3b262508f4c85ae671458c3d2b3450  # tags/3.47.1^0
+_commit=ebab108d4d8505b56cc313acad341520ed18df8f  # tags/3.48.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-online-accounts.git#commit=$_commit")
 sha256sums=('SKIP')
 

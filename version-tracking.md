@@ -40,7 +40,7 @@
 | gnome-initial-setup       | 44.rc           |    X    |
 | gnome-maps                | v44.rc          |    X    |
 | gnome-music               | 44.rc           |    X    |
-| gnome-online-accounts     | 3.47.1          |    X    |
+| gnome-online-accounts     | 3.48.0          |    X    |
 | gnome-podcasts            | 2022-12-16 (master)|    X    |
 | gnome-remote-desktop      | 44.rc           |    X    |
 | gnome-session             | 44.rc           |    X    |
