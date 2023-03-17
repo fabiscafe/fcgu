@@ -63,7 +63,7 @@
 | libdmapsharing4           | LIBDMAPSHARING_3_9_11|    X    |
 | libpanel                  | 1.1.2           |    X    |
 | librsvg                   | 2.55.91         |    X    |
-| libsoup3                  | 3.3.1           |    X    |
+| libsoup3                  | 3.4.0           |    X    |
 | loupe                     | 2023-02-24      |    X    |
 | mutter                    | 44.rc           |    Y    |
 | nautilus                  | 44.rc           |    X    |
