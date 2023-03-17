@@ -37,7 +37,7 @@
 | gnome-desktop             | 44.beta         |    X    |
 | gnome-disks-utility       | 44.0            |    X    |
 | gnome-font-viewer         | 44.rc           |    X    |
-| gnome-initial-setup       | 44.rc           |    X    |
+| gnome-initial-setup       | 44.0            |    X    |
 | gnome-maps                | v44.rc          |    X    |
 | gnome-music               | 44.rc           |    X    |
 | gnome-online-accounts     | 3.48.0          |    X    |

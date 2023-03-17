@@ -2,8 +2,8 @@
 # Contributor: Balló György <ballogyor+arch at gmail dot com>
 
 pkgname=gnome-initial-setup
-pkgver=44rc
-pkgrel=3
+pkgver=44.0
+pkgrel=0.1
 pkgdesc='Simple, easy, and safe way to prepare a new system'
 arch=('x86_64')
 url='https://gitlab.gnome.org/GNOME/gnome-initial-setup'
@@ -27,7 +27,7 @@ makedepends=(
   'git'
   'meson'
 )
-_commit=9ad52746ed822692283351731d35369f7b7b21b7 # tags/44.rc^0
+_commit=f4604a34095eb95da5f7039c8a9e0ab9082d4a3e # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-initial-setup.git#commit=$_commit")
 sha256sums=('SKIP')
 
