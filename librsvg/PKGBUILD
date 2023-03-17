@@ -7,8 +7,8 @@ pkgname=(
   librsvg
   librsvg-docs
 )
-pkgver=2.55.91
-pkgrel=1
+pkgver=2.56.0
+pkgrel=0.1
 epoch=2
 pkgdesc="SVG rendering library"
 url="https://wiki.gnome.org/Projects/LibRsvg"
@@ -32,7 +32,7 @@ makedepends=(
   vala
 )
 checkdepends=(ttf-dejavu)
-_commit=89fe9d988089009b52bd9f3b09d7e3dfeafc6d0b  # tags/2.55.91^0
+_commit=b831e077174ae608d8cd09e532fc0e7ce1fe5c4f  # tags/2.56.0^0
 source=("git+https://gitlab.gnome.org/GNOME/librsvg.git#commit=$_commit")
 sha256sums=('SKIP')
 
