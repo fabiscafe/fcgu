@@ -3,8 +3,8 @@
 
 pkgbase=gnome-builder
 pkgname=(gnome-builder)
-pkgver=44rc
-pkgrel=2
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
 arch=(x86_64)
@@ -51,9 +51,13 @@ makedepends=(
   yelp-tools
 )
 checkdepends=(weston)
-_commit=64592a09b1ed6fb766074d99c7e3fdeceed8f327  # tags/44.rc^0
-source=("git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit")
-sha256sums=('SKIP')
+_commit=f92ddd5a6aa4dbab2044c8189dec5856b4b145d4  # tags/44.0^0
+source=(
+  "git+https://gitlab.gnome.org/GNOME/gnome-builder.git#commit=$_commit"
+  "PATCH_Revert_Fix_adw_expander_row_add_action_deprecation.patch::https://gitlab.gnome.org/GNOME/gnome-builder/-/commit/d89a5c95e43f4a4e1a4e9d063e3962bac8e51db0.patch"
+)
+sha256sums=('SKIP'
+            '1ab1afeaac1e58dc52b8d26f495b233b9f85e1ae07837bc82c120537e30eb6c1')
 
 pkgver() {
   cd $pkgbase
@@ -62,6 +66,9 @@ pkgver() {
 
 prepare() {
   cd $pkgbase
+  # FTB Builder 44.0: error: implicit declaration of function ‘adw_expander_row_add_suffix’
+  ## https://gitlab.gnome.org/GNOME/gnome-builder/-/issues/2010
+  git apply "$srcdir/PATCH_Revert_Fix_adw_expander_row_add_action_deprecation.patch"
 }
 
 build() {
