@@ -12,7 +12,7 @@
 | d-spy                     | 1.6.0           |    X    |
 | eog                       | 44.beta         |    X    |
 | epiphany                  | 44.0            |    X    |
-| evince                    | 44.rc           |    X    |
+| evince                    | 44.0            |    X    |
 | evolution                 | 3.48.0          |    X    |
 | evolution-data-server     | 3.48.0          |    X    |
 | evolution-ews             | 3.48.0          |    X    |

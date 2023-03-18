@@ -7,8 +7,8 @@ pkgname=(
   evince
   evince-lib-docs
 )
-pkgver=44rc
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)"
 url="https://wiki.gnome.org/Apps/Evince"
 arch=(x86_64)
@@ -40,7 +40,7 @@ makedepends=(
   texlive-bin
   yelp-tools
 )
-_commit=6a22065b9c79ca7ce46c603397c11193d27116d6  # tags/44.rc^0
+_commit=9912cf2cb589f493b3c193fb76e73d00c20fc1ba  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/evince.git#commit=$_commit")
 sha256sums=('SKIP')
 
