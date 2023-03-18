@@ -1,8 +1,8 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=gnome-calls
-pkgver=44alpha1
-pkgrel=2
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="A Phone dialer and call handler."
 arch=(x86_64)
 url="https://gitlab.gnome.org/GNOME/calls"
@@ -30,7 +30,7 @@ makedepends=(
   vala
 )
 checkdepends=(xorg-server-xvfb)
-_commit=a7678e496f75a409bc3a6b5cffeca8685e49494f  # tags/v44_alpha.1^0
+_commit=89632184788aa951ee9ba413bf43c9ac9f116dcb  # tags/v44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/calls.git#commit=$_commit"
 "git+https://gitlab.gnome.org/World/Phosh/libcall-ui.git")
 sha256sums=('SKIP'
