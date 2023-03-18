@@ -38,7 +38,7 @@
 | gnome-disks-utility       | 44.0            |    X    |
 | gnome-font-viewer         | 44.rc           |    X    |
 | gnome-initial-setup       | 44.0            |    X    |
-| gnome-maps                | v44.rc          |    X    |
+| gnome-maps                | v44.0           |    X    |
 | gnome-music               | 44.rc           |    X    |
 | gnome-online-accounts     | 3.48.0          |    X    |
 | gnome-podcasts            | 2022-12-16 (master)|    X    |
