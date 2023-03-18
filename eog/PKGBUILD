@@ -7,8 +7,8 @@ pkgname=(
   eog
   eog-docs
 )
-pkgver=44beta
-pkgrel=2
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="Eye of Gnome: An image viewing and cataloging program"
 url="https://wiki.gnome.org/Apps/EyeOfGnome"
 arch=(x86_64)
@@ -31,7 +31,7 @@ makedepends=(
   systemd
   yelp-tools
 )
-_commit=f98a4ebdd0a7bf6b94ed506ee676aa9d50e327ed  # tags/44.beta^0
+_commit=5f5790bdbb1077073d3c9ce7b0cd55e1ab6a4da0  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/eog.git#commit=$_commit")
 sha256sums=('SKIP')
 

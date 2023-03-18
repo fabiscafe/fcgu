@@ -10,7 +10,7 @@
 | callaudiod                | 0.1.6           |    X    |
 | clapper                   | 0.5.2           |    X    |
 | d-spy                     | 1.6.0           |    X    |
-| eog                       | 44.beta         |    X    |
+| eog                       | 44.0            |    X    |
 | epiphany                  | 44.0            |    X    |
 | evince                    | 44.0            |    X    |
 | evolution                 | 3.48.0          |    X    |
