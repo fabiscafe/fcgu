@@ -2,8 +2,8 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-text-editor
-pkgver=44rc
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="A simple text editor for the GNOME desktop"
 url="https://gitlab.gnome.org/GNOME/gnome-text-editor"
 arch=(x86_64)
@@ -22,7 +22,7 @@ makedepends=(
   yelp-tools
 )
 groups=(gnome)
-_commit=deb1a6aa458e9b8b2175f46d50f5aa0191fd3e68  # tags/44.rc^0
+_commit=2ed7d45ff481f5d0a2cda54e0ec75ce5a823f40e  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-text-editor.git#commit=$_commit")
 sha256sums=('SKIP')
 

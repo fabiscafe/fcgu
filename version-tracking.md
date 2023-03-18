@@ -51,7 +51,7 @@
 | gnome-sound-recorder      | 43.beta         |    X    |
 | gnome-system-monitor      | 44.rc           |    X    |
 | gnome-terminal            | 3.47.99         |    X    |
-| gnome-text-editor         | 44.rc           |    X    |
+| gnome-text-editor         | 44.0            |    X    |
 | gnome-user-docs           | 44.rc           |    X    |
 | gnome-weather             | 44.rc           |    X    |
 | gobject-introspection     | 1.76.0          |    X    |
