@@ -25,7 +25,7 @@
 | gnome-backgrounds         | 44.beta         |    X    |
 | gnome-boxes               | 44.0            |    X    |
 | gnome-builder             | 44.rc           |    X    |
-| gnome-calculator          | 44.rc           |    X    |
+| gnome-calculator          | 44.0            |    X    |
 | gnome-calendar            | 44.0            |    X    |
 | gnome-calls               | v44_alpha.1     |    X    |
 | gnome-characters          | 44.rc           |    X    |

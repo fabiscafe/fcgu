@@ -3,8 +3,8 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-calculator
-pkgver=44rc
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="GNOME Scientific calculator"
 url="https://wiki.gnome.org/Apps/Calculator"
 arch=(x86_64)
@@ -30,7 +30,7 @@ provides=(
   libgci-1.so
 )
 groups=(gnome)
-_commit=2c3e74cd9c2ddc8aaa382f9f5c5250670f473130  # tags/44.rc^0
+_commit=2fc61459192ffa7ad91acdbafb4d692a20743bca  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-calculator.git#commit=$_commit")
 sha256sums=('SKIP')
 
