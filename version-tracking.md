@@ -32,7 +32,7 @@
 | gnome-clocks              | 44.0            |    X    |
 | gnome-connections         | 44.0            |    X    |
 | gnome-console             | 44.beta         |    X    |
-| gnome-contacts            | 44.rc           |    X    |
+| gnome-contacts            | 44.0            |    X    |
 | gnome-control-center      | 44.rc           |    X    |
 | gnome-desktop             | 44.beta         |    X    |
 | gnome-disks-utility       | 44.0            |    X    |

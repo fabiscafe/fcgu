@@ -3,8 +3,8 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=gnome-contacts
-pkgver=44rc
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="Contacts Manager for GNOME"
 url="https://wiki.gnome.org/Apps/Contacts"
 arch=(x86_64)
@@ -27,7 +27,7 @@ makedepends=(
   vala
 )
 groups=(gnome)
-_commit=165b10faf26fddde7ec336279a257937060aed11  # tags/44.rc^0
+_commit=7de4264212aac05f8acec29ba54adac90ae8ed39  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-contacts.git#commit=$_commit")
 b2sums=('SKIP')
 
