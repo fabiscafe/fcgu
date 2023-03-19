@@ -3,8 +3,8 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=gnome-user-docs
-pkgver=44.rc
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="User documentation for GNOME"
 url="https://gitlab.gnome.org/GNOME/gnome-user-docs"
 arch=(any)
@@ -15,13 +15,13 @@ makedepends=(
   yelp-tools
 )
 groups=(gnome)
-_commit=a5eda88d6696e93fb86edb24d2030b78a60148f7  # tags/44.rc^0
+_commit=920239806b278c8be448692c6e7316f581a01dac  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-user-docs.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+  git describe --tags | sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
