@@ -4,8 +4,8 @@
 # Contributor: Flamelab <panosfilip@gmail.com
 
 pkgname=gnome-shell
-pkgver=44rc
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 epoch=1
 pkgdesc="Next generation desktop shell"
 url="https://wiki.gnome.org/Projects/GnomeShell"
@@ -20,6 +20,7 @@ depends=(
   gnome-settings-daemon
   gsettings-desktop-schemas
   gtk4
+  libadwaita
   libcanberra-pulse
   libgdm
   libgweather-4
@@ -43,7 +44,7 @@ makedepends=(
   sassc
 )
 checkdepends=(
-  ibus
+  appstream-glib
   python-dbusmock
   xorg-server-xvfb  
 )
@@ -58,13 +59,15 @@ optdepends=(
   'switcheroo-control: Multi-GPU support'
 )
 groups=(gnome)
-_commit=c4f36eefd656333b9f5e1abafa6f4bb80b0e4545  # tags/44.rc^0
+_commit=b6a7cac28ff84fdaa99be08b64b0ff50b6cf4894  # tags/44.0^0
 source=(
   "git+https://gitlab.gnome.org/GNOME/gnome-shell.git#commit=$_commit"
   "git+https://gitlab.gnome.org/GNOME/libgnome-volume-control.git"
+  "0001-make_gtk_doc_build.patch"
 )
 b2sums=('SKIP'
-        'SKIP')
+        'SKIP'
+        '36ee8a6a7849ec5cda9ab753ecef0d1f567326cd3cf837e1e74348362077ba217b5b05d4fd143388706385e69970bf69e189030a8fd810397f89ef1f485d315a')
 
 pkgver() {
   cd $pkgname
@@ -77,6 +80,10 @@ prepare() {
   git submodule init
   git submodule set-url subprojects/gvc "$srcdir/libgnome-volume-control"
   git -c protocol.file.allow=always submodule update
+
+  # 44.rc: fail to build with -Dgtk_doc=true
+  ## https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/6486
+  patch -Np1 -i "$srcdir/0001-make_gtk_doc_build.patch"
 }
 
 build() {
@@ -84,7 +91,7 @@ build() {
   LDFLAGS+=" -Wl,-Bsymbolic-functions"
 
   local meson_options=(
-    -D gtk_doc=false
+    -D gtk_doc=true
   )
 
   arch-meson $pkgname build "${meson_options[@]}"
@@ -95,12 +102,12 @@ _check() (
   export XDG_RUNTIME_DIR="$PWD/runtime-dir"
   mkdir -p -m 700 "$XDG_RUNTIME_DIR"
 
-  meson test -C build --print-errorlogs ||:
+  meson test -C build --print-errorlogs
 )
 
 check() {
-  dbus-run-session xvfb-run -s '-nolisten local +iglx -noreset' \
-    bash -c "$(declare -f _check); _check"
+  dbus-run-session -- xvfb-run -s '-nolisten local +iglx -noreset' \
+    bash -c "$(declare -f _check); _check" || :
 }
 
 package() {
