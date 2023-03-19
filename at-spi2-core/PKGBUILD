@@ -7,8 +7,8 @@ pkgname=(
   at-spi2-core
   at-spi2-core-docs
 )
-pkgver=2.47.90
-pkgrel=1
+pkgver=2.48.0
+pkgrel=0.1
 pkgdesc="Protocol definitions and daemon for D-Bus at-spi"
 url="https://gitlab.gnome.org/GNOME/at-spi2-core"
 arch=(x86_64)
@@ -30,7 +30,7 @@ makedepends=(
   meson
   python-sphinx
 )
-_commit=f7fdcb9ddb054724657794b2ee944dcf53fe77db  # tags/AT_SPI2_CORE_2_47_90^0
+_commit=d963aff7f6977e50517fb2ffe8b31f1db142107d  # tags/AT_SPI2_CORE_2_48_0^0
 source=("git+https://gitlab.gnome.org/GNOME/at-spi2-core.git#commit=$_commit")
 sha256sums=('SKIP')
 
