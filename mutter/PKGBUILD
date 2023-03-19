@@ -8,8 +8,8 @@ pkgname=(
   mutter
   mutter-docs
 )
-pkgver=44rc
-pkgrel=2
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="Window manager and compositor for GNOME"
 url="https://gitlab.gnome.org/GNOME/mutter"
 arch=(x86_64)
@@ -49,13 +49,9 @@ checkdepends=(
   xorg-server-xvfb
   zenity
 )
-_commit=f2a94cf7a72163fc0de31cb40d2e2704241075c6  # tags/44.rc^0
-source=(
-  "git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit"
-  "0001-core_Retrieve_DESKTOP_AUTOSTART_ID_early_on_startup.patch::https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/2906.patch"
-)
-b2sums=('SKIP'
-        '6c67bdbc4030acddfeff7ddf525ee828b45f8709be66b39f33b5b3af5a80ec1996f97f827e362d64946da0c57a13374b282c07bd0572b9d94bd650571144d392')
+_commit=a958417e952cc80b6102a4441d6e48235efa1c5d  # tags/44.0^0
+source=("git+https://gitlab.gnome.org/GNOME/mutter.git#commit=$_commit")
+b2sums=('SKIP')
 
 pkgver() {
   cd mutter
@@ -64,22 +60,18 @@ pkgver() {
 
 prepare() {
   cd mutter
-
-  # core: Retrieve DESKTOP_AUTOSTART_ID early on startup
-  ## https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/2906
-  patch -Np1 -i "$srcdir/0001-core_Retrieve_DESKTOP_AUTOSTART_ID_early_on_startup.patch"
 }
 
 build() {
+  CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
+  LDFLAGS+=" -Wl,-Bsymbolic-functions"
+
   local meson_options=(
     -D egl_device=true
     -D wayland_eglstream=true
     -D docs=true
     -D installed_tests=false
   )
-
-  CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
-  LDFLAGS+=" -Wl,-Bsymbolic-functions"
 
   arch-meson mutter build "${meson_options[@]}"
   meson compile -C build
