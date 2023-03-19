@@ -2,8 +2,8 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-weather
-pkgver=44rc
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="Access current weather conditions and forecasts"
 url="https://wiki.gnome.org/Apps/Weather"
 arch=(any)
@@ -22,7 +22,7 @@ makedepends=(
   meson
 )
 groups=(gnome)
-_commit=f281a62895a1989010f1df8e11b90335c9132791  # tags/44.rc^0
+_commit=120d816ee05a466555a63eb0cad762b960e8f425  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-weather.git#commit=$_commit")
 sha256sums=('SKIP')
 
