@@ -69,7 +69,7 @@
 | mutter                    | 44.rc           |    Y    |
 | nautilus                  | 44.0            |    X    |
 | orca                      | ORCA_44_RC      |    X    |
-| pygobject                 | 3.43.1          |    X    |
+| pygobject                 | 3.44.0          |    X    |
 | sofia-sip                 | 1.13.14         |    X    |
 | sysprof                   | 3.48.0          |    X    |
 | tracker                   | 3.5.0.rc        |    X    |

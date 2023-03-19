@@ -4,14 +4,15 @@
 
 pkgbase=pygobject
 pkgname=(python-gobject)
-pkgver=3.43.1
-pkgrel=1
+pkgver=3.44.0
+pkgrel=0.1
 pkgdesc="Python Bindings for GLib/GObject/GIO/GTK+"
 url="https://wiki.gnome.org/Projects/PyGObject"
 arch=(x86_64)
 license=(LGPL)
 depends=(
   gobject-introspection-runtime
+  gtk3
   python
 )
 makedepends=(
@@ -21,7 +22,6 @@ makedepends=(
   python-cairo
 )
 checkdepends=(
-  gtk3
   python-pytest
   xorg-server-xvfb
 )
@@ -29,7 +29,7 @@ optdepends=('cairo: Cairo bindings')
 provides=("pygobject-devel=$pkgver")
 conflicts=(pygobject-devel)
 replaces=('pygobject-devel<=3.36.1-1')
-_commit=3c10d970270cd3ed645e8bc11a00273df00cb496  # tags/3.43.1^0
+_commit=894f8b1dd3246bad6edb75aa86f61f6d83531a33  # tags/3.44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/pygobject.git#commit=$_commit")
 sha256sums=('SKIP')
 
