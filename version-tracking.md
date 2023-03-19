@@ -36,7 +36,7 @@
 | gnome-control-center      | 44.0            |    X    |
 | gnome-desktop             | 44.beta         |    X    |
 | gnome-disks-utility       | 44.0            |    X    |
-| gnome-font-viewer         | 44.rc           |    X    |
+| gnome-font-viewer         | 44.0            |    X    |
 | gnome-initial-setup       | 44.0            |    X    |
 | gnome-maps                | v44.0           |    X    |
 | gnome-music               | 44.rc           |    X    |
