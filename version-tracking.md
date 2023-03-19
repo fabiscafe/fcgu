@@ -78,7 +78,7 @@
 | vte                       | 0.72.0          |    X    |
 | webkitgtk-6.0             | 2.40.0          |    x    |
 | wpewebkit                 | 2.39.5          |    X    |
-| xdg-desktop-portal-gnome  | 44.rc           |    X    |
+| xdg-desktop-portal-gnome  | 44.0            |    X    |
 
 
 |  Arch Linux Rebuilds  |
