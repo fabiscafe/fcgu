@@ -8,8 +8,8 @@ pkgname=(
   gnome-desktop
   gnome-desktop-4
 )
-pkgver=44beta
-pkgrel=1
+pkgver=44
+pkgrel=0.1
 epoch=1
 pkgdesc="Library with common API for various GNOME modules"
 url="https://gitlab.gnome.org/GNOME/gnome-desktop"
@@ -32,7 +32,7 @@ makedepends=(
   yelp-tools
 )
 checkdepends=(xorg-server-xvfb)
-_commit=9181dd153caff6e3ebfb70419444e0430cfb74fa  # tags/44.beta^0
+_commit=ba2e8602e844af7ae2993b46fcf5e6129365ebe9  # tags/44^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-desktop.git#commit=$_commit")
 sha256sums=('SKIP')
 

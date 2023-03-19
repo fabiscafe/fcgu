@@ -34,7 +34,7 @@
 | gnome-console             | 44.beta         |    X    |
 | gnome-contacts            | 44.0            |    X    |
 | gnome-control-center      | 44.0            |    X    |
-| gnome-desktop             | 44.beta         |    X    |
+| gnome-desktop             | 44              |    X    |
 | gnome-disks-utility       | 44.0            |    X    |
 | gnome-font-viewer         | 44.0            |    X    |
 | gnome-initial-setup       | 44.0            |    X    |
