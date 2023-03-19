@@ -1,0 +1,55 @@
+# Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Thomas Dziedzic < gostrc at gmail >
+# Contributor: Jaroslav Lichtblau <dragonlord@aur.archlinux.org>
+# Contributor: Joeny Ang <ang(dot)joeny(at)gmail(dot)com>
+
+pkgname=simple-scan
+pkgver=44.0
+pkgrel=0.1
+pkgdesc="Simple scanning utility"
+url="https://gitlab.gnome.org/GNOME/simple-scan"
+arch=(x86_64)
+license=(GPL3)
+groups=(gnome)
+depends=(
+  colord-sane
+  dconf
+  gtk3
+  libgusb
+  libhandy
+  sane
+)
+makedepends=(
+  git
+  meson
+  vala
+  yelp-tools
+)
+_commit=85794e3a443f3817c60f4466ebcbc107d8a63a77  # tags/44.0^0
+source=("git+https://gitlab.gnome.org/GNOME/simple-scan.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/[^-]*-g/r&/;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
+
+# vim:set sw=2 sts=-1 et:

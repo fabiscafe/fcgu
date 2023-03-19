@@ -71,6 +71,7 @@
 | orca                      | ORCA_44_RC      |    X    |
 | pygobject                 | 3.44.0          |    X    |
 | sofia-sip                 | 1.13.14         |    X    |
+| simple-scan               | 44.0            |    X    |
 | sysprof                   | 3.48.0          |    X    |
 | tracker                   | 3.5.0.rc        |    X    |
 | tracker-miners            | 3.5.0.rc        |    X    |
