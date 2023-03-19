@@ -6,7 +6,7 @@
 |---------------------------|:---------------:|:-------:|
 | adwaita-icon-theme        | 44.beta         |    X    |
 | at-spi2-core              | 2.48.0          |    X    |
-| baobab                    | 44.rc           |    X    |
+| baobab                    | 44.0            |    X    |
 | callaudiod                | 0.1.6           |    X    |
 | clapper                   | 0.5.2           |    X    |
 | d-spy                     | 1.6.0           |    X    |
