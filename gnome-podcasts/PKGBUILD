@@ -2,8 +2,8 @@
 # Contributor: Balló György <ballogyor+arch at gmail dot com>
 
 pkgname=gnome-podcasts
-pkgver=0.5.1+r58+g9069326
-pkgrel=2
+pkgver=0.5.1+r61+gf8d30dd
+pkgrel=1
 pkgdesc="Podcast application for GNOME"
 arch=(x86_64)
 url="https://gitlab.gnome.org/World/podcasts"
@@ -20,9 +20,11 @@ makedepends=(
   meson
   rust
 )
-optdepends=('gst-plugins-ugly: Extra media codecs'
-            'gst-libav: Extra media codecs')
-_commit=906932675d3ed6e41ea64d09c74fddc55255543f # master^0
+optdepends=(
+  'gst-plugins-ugly: Extra media codecs'
+  'gst-libav: Extra media codecs'
+)
+_commit=f8d30dd75f8125d5d37ceb3676953c6cc8ebab9b # master^0
 source=("git+https://gitlab.gnome.org/World/podcasts.git#commit=${_commit}")
 sha256sums=('SKIP')
 
@@ -41,7 +43,7 @@ build() {
 }
 
 check() {
-  meson test -C build --print-errorlogs || true
+  meson test -C build --print-errorlogs || :
 }
 
 package() {
