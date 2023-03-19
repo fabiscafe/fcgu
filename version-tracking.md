@@ -28,7 +28,7 @@
 | gnome-calculator          | 44.0            |    X    |
 | gnome-calendar            | 44.0            |    X    |
 | gnome-calls               | v44.0           |    X    |
-| gnome-characters          | 44.rc           |    X    |
+| gnome-characters          | 44.0            |    X    |
 | gnome-clocks              | 44.0            |    X    |
 | gnome-connections         | 44.0            |    X    |
 | gnome-console             | 44.beta         |    X    |
