@@ -3,8 +3,8 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=gjs
-pkgver=1.75.90
-pkgrel=1
+pkgver=1.76.0
+pkgrel=0.1
 epoch=2
 pkgdesc="Javascript Bindings for GNOME"
 url="https://wiki.gnome.org/Projects/Gjs"
@@ -30,7 +30,7 @@ checkdepends=(
   xorg-server-xvfb
 )
 provides=(libgjs.so)
-_commit=4c31b77f8a509d7586a0932552d74d9896b0b080  # tags/1.75.90^0
+_commit=ff2e1b2f15cf246eb391a356a0ac0ea09fafc2e6  # tags/1.76.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gjs.git#commit=$_commit")
 sha256sums=('SKIP')
 
@@ -44,13 +44,13 @@ prepare() {
 }
 
 build() {
-  local meson_options=(
-    -D installed_tests=false
-  )
-
   CFLAGS="${CFLAGS/-O2/-O3} -fno-semantic-interposition"
   CXXFLAGS="${CXXFLAGS/-O2/-O3} -fno-semantic-interposition"
   LDFLAGS+=" -Wl,-Bsymbolic-functions"
+
+  local meson_options=(
+    -D installed_tests=false
+  )
 
   arch-meson gjs build "${meson_options[@]}"
   meson compile -C build
