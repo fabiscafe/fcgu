@@ -7,8 +7,8 @@ pkgname=(
   gdm
   libgdm
 )
-pkgver=44rc
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="Display manager and login screen"
 url="https://wiki.gnome.org/Projects/GDM"
 arch=(x86_64)
@@ -32,7 +32,7 @@ makedepends=(
   yelp-tools
 )
 checkdepends=(check)
-_commit=fd6619cd2308ac084f9d56def10e8e322505c343  # tags/44.rc-real^0
+_commit=6f137e9b59a0bb4b5a47d4af723c64bce053ea1d  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gdm.git#commit=$_commit"
         0001-Xsession-Don-t-start-ssh-agent-by-default.patch
         0002-pam-arch-Remove-user_readenv-1-from-pam_env.patch)

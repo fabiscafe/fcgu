@@ -18,7 +18,7 @@
 | evolution-ews             | 3.48.0          |    X    |
 | feedbackd                 | 0.1.0           |    X    |
 | gcr-4                     | 4.1.0           |    X    |
-| gdm                       | 44.rc-real      |    X    |
+| gdm                       | 44.0            |    X    |
 | gjs                       | 1.76.0          |    X    |
 | glib2                     | Arch Linux      |    X    |
 | glib-networking           | 2.76.0          |    X    |
