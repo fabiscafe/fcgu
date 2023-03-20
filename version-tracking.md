@@ -44,7 +44,7 @@
 | gnome-podcasts            | 2023-02-27 (master)|    X    |
 | gnome-remote-desktop      | 44.0            |    X    |
 | gnome-session             | 44.rc           |    X    |
-| gnome-settings-daemon     | 44.rc           |    X    |
+| gnome-settings-daemon     | 44.0            |    X    |
 | gnome-shell               | 44.0            |    Y    |
 | gnome-shell-extensions    | 44.0            |    X    |
 | gnome-software            | 44.0            |    X    |
