@@ -24,7 +24,7 @@
 | glib-networking           | 2.76.0          |    X    |
 | gnome-backgrounds         | 44.0            |    X    |
 | gnome-boxes               | 44.0            |    X    |
-| gnome-builder             | 44.0            |    Y    |
+| gnome-builder             | 44.1            |    X    |
 | gnome-calculator          | 44.0            |    X    |
 | gnome-calendar            | 44.0            |    X    |
 | gnome-calls               | v44.0           |    X    |
