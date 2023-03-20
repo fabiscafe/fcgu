@@ -2,8 +2,8 @@
 # Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgname=gnome-session
-pkgver=44rc
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="The GNOME Session Handler"
 url="https://gitlab.gnome.org/GNOME/gnome-session"
 arch=(x86_64)
@@ -29,7 +29,7 @@ makedepends=(
   xtrans
 )
 groups=(gnome)
-_commit=fbbaae7542445c9157abf97be057e27d497f7a1c  # tags/44.rc^0
+_commit=ce29eaa05c68807b9cc5f19f4afb59cc4d806040  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-session.git#commit=$_commit")
 sha256sums=('SKIP')
 

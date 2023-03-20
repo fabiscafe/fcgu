@@ -43,7 +43,7 @@
 | gnome-online-accounts     | 3.48.0          |    X    |
 | gnome-podcasts            | 2023-02-27 (master)|    X    |
 | gnome-remote-desktop      | 44.0            |    X    |
-| gnome-session             | 44.rc           |    X    |
+| gnome-session             | 44.0            |    X    |
 | gnome-settings-daemon     | 44.0            |    X    |
 | gnome-shell               | 44.0            |    Y    |
 | gnome-shell-extensions    | 44.0            |    X    |
