@@ -6,8 +6,8 @@ pkgname=(
   jsonrpc-glib
   jsonrpc-glib-docs
 )
-pkgver=3.43.0
-pkgrel=1
+pkgver=3.44.0
+pkgrel=0.1
 pkgdesc="A JSON-RPC library for GLib"
 url="https://gitlab.gnome.org/GNOME/jsonrpc-glib"
 arch=(x86_64)
@@ -20,7 +20,7 @@ makedepends=(
   gobject-introspection
   gi-docgen
 )
-_commit=370c84c70f415243d7ec4722a3bfde0d1f68350e  # tags/3.43.0^0
+_commit=89f25f9789b8323c6c06ac086d1fba2836113f16  # tags/3.44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/jsonrpc-glib.git#commit=$_commit")
 sha256sums=('SKIP')
 
