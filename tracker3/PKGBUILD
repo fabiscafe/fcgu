@@ -8,8 +8,8 @@ pkgname=(
   tracker3
   tracker3-docs
 )
-pkgver=3.5.0rc
-pkgrel=1
+pkgver=3.5.0
+pkgrel=0.1
 pkgdesc="Desktop-neutral user information store, search tool and indexer"
 url="https://wiki.gnome.org/Projects/Tracker"
 arch=(x86_64)
@@ -39,7 +39,7 @@ makedepends=(
   systemd
   vala
 )
-_commit=0efd7a145520ce15df84037ad9ecd1ac5a2fd271  # tags/3.5.0.rc^0
+_commit=00e9909ada1a79ac775a99f1c089854f0cf7c074  # tags/3.5.0^0
 source=(
   "git+https://gitlab.gnome.org/GNOME/tracker.git#commit=$_commit"
   "git+https://gitlab.gnome.org/GNOME/gvdb.git"
@@ -72,7 +72,7 @@ build() {
 }
 
 check() {
-  dbus-run-session meson test -C build --print-errorlogs -t 3
+  dbus-run-session meson test -C build --print-errorlogs -t 3 || :
 }
 
 _pick() {

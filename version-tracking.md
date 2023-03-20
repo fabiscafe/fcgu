@@ -73,7 +73,7 @@
 | sofia-sip                 | 1.13.14         |    X    |
 | simple-scan               | 44.0            |    X    |
 | sysprof                   | 3.48.0          |    X    |
-| tracker                   | 3.5.0.rc        |    X    |
+| tracker                   | 3.5.0           |    X    |
 | tracker-miners            | 3.5.0.rc        |    X    |
 | vte                       | 0.72.0          |    X    |
 | webkitgtk-6.0             | 2.40.0          |    x    |
