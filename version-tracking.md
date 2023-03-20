@@ -52,6 +52,7 @@
 | gnome-system-monitor      | 44.0            |    X    |
 | gnome-terminal            | 3.48.0          |    X    |
 | gnome-text-editor         | 44.0            |    X    |
+| gnome-tour                | 44.0            |    X    |
 | gnome-user-docs           | 44.0            |    X    |
 | gnome-weather             | 44.0            |    X    |
 | gobject-introspection     | 1.76.0          |    X    |
