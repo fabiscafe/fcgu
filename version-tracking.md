@@ -22,7 +22,7 @@
 | gjs                       | 1.76.0          |    X    |
 | glib2                     | Arch Linux      |    X    |
 | glib-networking           | 2.76.0          |    X    |
-| gnome-backgrounds         | 44.beta         |    X    |
+| gnome-backgrounds         | 44.0            |    X    |
 | gnome-boxes               | 44.0            |    X    |
 | gnome-builder             | 44.0            |    Y    |
 | gnome-calculator          | 44.0            |    X    |
