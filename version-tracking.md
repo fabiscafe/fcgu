@@ -55,7 +55,7 @@
 | gnome-user-docs           | 44.0            |    X    |
 | gnome-weather             | 44.0            |    X    |
 | gobject-introspection     | 1.76.0          |    X    |
-| gsettings-desktop-schemas | 44.beta         |    X    |
+| gsettings-desktop-schemas | 44.0            |    X    |
 | gtksourceview5            | 5.8.0           |    X    |
 | jsonrpc-glib              | 3.43.0          |    X    |
 | libadwaita                | 1.3.1           |    X    |

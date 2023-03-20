@@ -5,8 +5,8 @@
 # Contributor: Adam Hani Schakaki (krzd) <krzd@krzd.net>
 
 pkgname=gsettings-desktop-schemas
-pkgver=44beta
-pkgrel=1
+pkgver=44.0
+pkgrel=0.1
 pkgdesc="Shared GSettings schemas for the desktop"
 url="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas"
 arch=(any)
@@ -22,7 +22,7 @@ makedepends=(
   gobject-introspection
   meson
 )
-_commit=186faa09c329cb72b1712dd34eec38d5adf2ed78  # tags/44.beta^0
+_commit=eff0b3609ff745fcb58cba7198397c642702736e  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas.git#commit=$_commit")
 sha256sums=('SKIP')
 
