@@ -35,7 +35,7 @@
 | gnome-contacts            | 44.0            |    X    |
 | gnome-control-center      | 44.0            |    X    |
 | gnome-desktop             | 44.0            |    X    |
-| gnome-disks-utility       | 44.0            |    X    |
+| gnome-disks-utility       | Arch Linux      |    X    |
 | gnome-font-viewer         | 44.0            |    X    |
 | gnome-initial-setup       | 44.0            |    X    |
 | gnome-maps                | v44.0           |    X    |
