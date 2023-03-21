@@ -21,7 +21,7 @@
 | gdm                       | 44.0            |    X    |
 | gjs                       | 1.76.0          |    X    |
 | glib2                     | Arch Linux      |    X    |
-| glib-networking           | 2.76.0          |    X    |
+| glib-networking           | Arch Linux      |    X    |
 | gnome-backgrounds         | 44.0            |    X    |
 | gnome-boxes               | 44.0            |    X    |
 | gnome-builder             | 44.1            |    X    |
