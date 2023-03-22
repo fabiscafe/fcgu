@@ -56,7 +56,7 @@
 | gnome-user-docs           | 44.0            |    X    |
 | gnome-weather             | 44.0            |    X    |
 | gobject-introspection     | Arch Linux      |    X    |
-| gsettings-desktop-schemas | 44.0            |    X    |
+| gsettings-desktop-schemas | Arch Linux      |    X    |
 | gtksourceview5            | Arch Linux      |    X    |
 | jsonrpc-glib              | 3.44.0          |    X    |
 | libadwaita                | 1.3.1           |    X    |
