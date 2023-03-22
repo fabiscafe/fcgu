@@ -6,7 +6,7 @@
 |---------------------------|:---------------:|:-------:|
 | adwaita-icon-theme        | 44.0            |    X    |
 | at-spi2-core              | Arch Linux      |    X    |
-| baobab                    | 44.0            |    X    |
+| baobab                    | Arch Linux      |    X    |
 | callaudiod                | 0.1.6           |    X    |
 | clapper                   | 0.5.2           |    X    |
 | d-spy                     | Arch Linux      |    X    |
