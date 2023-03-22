@@ -59,7 +59,7 @@
 | gsettings-desktop-schemas | Arch Linux      |    X    |
 | gtksourceview5            | Arch Linux      |    X    |
 | jsonrpc-glib              | 3.44.0          |    X    |
-| libadwaita                | 1.3.1           |    X    |
+| libadwaita                | Arch Linux      |    X    |
 | libdex                    | 0.2.0           |    X    |
 | libdmapsharing4           | LIBDMAPSHARING_3_9_11|    X    |
 | libpanel                  | 1.2.0           |    X    |
