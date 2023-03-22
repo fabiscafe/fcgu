@@ -3,8 +3,8 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-music
-pkgver=44rc
-pkgrel=2
+pkgver=44.0
+pkgrel=0.1
 epoch=1
 pkgdesc="Music player and management application"
 url="https://wiki.gnome.org/Apps/Music"
@@ -38,7 +38,7 @@ optdepends=(
   'gst-plugins-ugly: Extra media codecs'
 )
 groups=(gnome)
-_commit=571ed9d24596e4d63d1d833c3131b8051b3bddce  # tags/44.rc^0
+_commit=11fa1a75fc1377a4afdbffe60c8890fdfe713a3f  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-music.git#commit=$_commit")
 sha256sums=('SKIP')
 

@@ -39,7 +39,7 @@
 | gnome-font-viewer         | 44.0            |    X    |
 | gnome-initial-setup       | 44.0            |    X    |
 | gnome-maps                | v44.0           |    X    |
-| gnome-music               | 44.rc           |    X    |
+| gnome-music               | 44.0            |    X    |
 | gnome-online-accounts     | 3.48.0          |    X    |
 | gnome-podcasts            | 2023-02-27 (master)|    X    |
 | gnome-remote-desktop      | 44.0            |    X    |
