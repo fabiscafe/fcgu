@@ -55,7 +55,7 @@
 | gnome-tour                | 44.0            |    X    |
 | gnome-user-docs           | 44.0            |    X    |
 | gnome-weather             | 44.0            |    X    |
-| gobject-introspection     | 1.76.0          |    X    |
+| gobject-introspection     | Arch Linux      |    X    |
 | gsettings-desktop-schemas | 44.0            |    X    |
 | gtksourceview5            | Arch Linux      |    X    |
 | jsonrpc-glib              | 3.44.0          |    X    |
