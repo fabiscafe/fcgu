@@ -78,7 +78,7 @@
 | tracker-miners            | Arch Linux      |    X    |
 | vte                       | Arch Linux      |    X    |
 | webkitgtk-6.0             | 2.40.0          |    x    |
-| wpewebkit                 | 2.39.5          |    X    |
+| wpewebkit                 | Arch Linux      |    X    |
 | xdg-desktop-portal-gnome  | 44.0            |    X    |
 
 
