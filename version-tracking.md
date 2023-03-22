@@ -74,7 +74,7 @@
 | sofia-sip                 | 1.13.14         |    X    |
 | simple-scan               | 44.0            |    X    |
 | sysprof                   | Arch Linux      |    X    |
-| tracker                   | 3.5.0           |    X    |
+| tracker                   | Arch Linux      |    X    |
 | tracker-miners            | 3.5.0           |    X    |
 | vte                       | Arch Linux      |    X    |
 | webkitgtk-6.0             | 2.40.0          |    x    |
