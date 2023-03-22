@@ -75,7 +75,7 @@
 | simple-scan               | 44.0            |    X    |
 | sysprof                   | Arch Linux      |    X    |
 | tracker                   | Arch Linux      |    X    |
-| tracker-miners            | 3.5.0           |    X    |
+| tracker-miners            | Arch Linux      |    X    |
 | vte                       | Arch Linux      |    X    |
 | webkitgtk-6.0             | 2.40.0          |    x    |
 | wpewebkit                 | 2.39.5          |    X    |
