@@ -69,7 +69,7 @@
 | loupe                     | 2023-03-18(main)|    X    |
 | mutter                    | 44.0            |    X    |
 | nautilus                  | 44.0            |    X    |
-| orca                      | ORCA_44_RC      |    X    |
+| orca                      | ORCA_44_0       |    X    |
 | pygobject                 | 3.44.0          |    X    |
 | sofia-sip                 | 1.13.14         |    X    |
 | simple-scan               | 44.0            |    X    |
