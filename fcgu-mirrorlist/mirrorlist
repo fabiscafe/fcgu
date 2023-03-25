@@ -7,9 +7,9 @@
 ## EOL: 2023-03-14; Sync: *.15.00
 Server = https://br-mirror.amanoteam.com/$repo
 
-# Germany
-## Maintainer: Inetol <contact@inetol.net>
-## EOL: 2023-01-26; Sync: *.35.00
+# Switzerland
+## Maintainer: @inetol:mozilla.org <infra@inetol.net>
+## EOL: 2025-08-31; Sync: *.35.00
 Server = https://mirror.inetol.net/$repo
 
 # Netherlands
