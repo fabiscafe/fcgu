@@ -3,8 +3,8 @@
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgname=libdmapsharing4
-pkgver=3.9.11
-pkgrel=1
+pkgver=3.9.12
+pkgrel=0.1
 pkgdesc="A library that implements the DMAP family of protocols"
 url="https://www.flyn.org/projects/libdmapsharing/index.html"
 arch=(x86_64)
@@ -22,7 +22,7 @@ makedepends=(
   vala
 )
 provides=(libdmapsharing-4.0.so)
-_commit=8ba46fbc26157b634c2a7d71b4307f81c16a53a4  # tags/LIBDMAPSHARING_3_9_11^0
+_commit=2bcf6286fc81ff9c964e5b1bfe918c01a18e98c4  # tags/LIBDMAPSHARING_3_9_12^0
 source=("git+https://gitlab.gnome.org/GNOME/libdmapsharing.git#commit=$_commit")
 sha256sums=('SKIP')
 

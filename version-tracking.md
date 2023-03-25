@@ -61,7 +61,7 @@
 | jsonrpc-glib              | 3.44.0          |    X    |
 | libadwaita                | Arch Linux      |    X    |
 | libdex                    | 0.2.0           |    X    |
-| libdmapsharing4           | LIBDMAPSHARING_3_9_11|    X    |
+| libdmapsharing4           | LIBDMAPSHARING_3_9_12|    X    |
 | libpanel                  | 1.2.0           |    X    |
 | libpeas                   | 1.36.0          |    X    |
 | librsvg                   | Arch Linux      |    X    |
