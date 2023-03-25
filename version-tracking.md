@@ -70,7 +70,7 @@
 | mutter                    | 44.0            |    X    |
 | nautilus                  | 44.0            |    X    |
 | orca                      | ORCA_44_0       |    X    |
-| pygobject                 | 3.44.0          |    X    |
+| pygobject                 | Arch Linux      |    X    |
 | sofia-sip                 | 1.13.14         |    X    |
 | simple-scan               | 44.0            |    X    |
 | sysprof                   | Arch Linux      |    X    |
