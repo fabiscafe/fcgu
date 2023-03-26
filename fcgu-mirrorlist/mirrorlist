@@ -8,7 +8,7 @@
 Server = https://br-mirror.amanoteam.com/$repo
 
 # Switzerland
-## Maintainer: @inetol:mozilla.org <infra@inetol.net>
+## Maintainer: @inetol:mozilla.org <infra[at]inetol.net>
 ## EOL: 2025-08-31; Sync: *.35.00
 Server = https://mirror.inetol.net/$repo
 
