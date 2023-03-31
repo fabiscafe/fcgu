@@ -3,7 +3,7 @@
 # Contributor: Stefano Facchini <stefano.facchini@gmail.com>
 
 pkgname=gnome-boxes
-pkgver=44.0
+pkgver=44.1
 pkgrel=0.1
 pkgdesc='Simple GNOME application to access virtual systems'
 arch=('x86_64')
@@ -35,7 +35,7 @@ makedepends=(
   'yelp-tools'
 )
 groups=('gnome-extra')
-_commit=e7faed97f55730315dbd2cbbd5628a28a3367ad8 # tags/44.0^0
+_commit=19607420385e8610436668893819ff67f92db5e1 # tags/44.1^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-boxes.git#commit=$_commit")
 sha256sums=('SKIP')
 
