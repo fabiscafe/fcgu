@@ -9,10 +9,23 @@ arch=(x86_64)
 url="https://gitlab.gnome.org/World/podcasts"
 license=(GPL3)
 depends=(
+  cairo
+  dbus
+  dconf
+  gdk-pixbuf2
+  glib2
   gst-plugins-bad
+  gst-plugins-bad-libs
   gst-plugins-base
+  gst-plugins-base-libs
   gst-plugins-good
+  gstreamer
+  gtk4
+  hicolor-icon-theme
   libadwaita
+  openssl
+  pango
+  sqlite
 )
 makedepends=(
   appstream-glib
