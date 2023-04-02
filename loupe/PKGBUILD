@@ -8,10 +8,18 @@ url="https://gitlab.gnome.org/Incubator/loupe"
 arch=(x86_64)
 license=(GPL)
 depends=(
+  cairo
+  dconf
+  gdk-pixbuf2
+  glib2
+  graphene
   gtk4
+  hicolor-icon-theme
   libadwaita
   libgweather-4
   libheif
+  libxml2
+  pango
 )
 makedepends=(
   git
