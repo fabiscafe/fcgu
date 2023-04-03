@@ -36,7 +36,7 @@ All of our packages are signed. To be able to install trustworthy packages it's 
 [fcgu-mirrorlist](https://codeberg.org/fabiscafe/fcgu/src/branch/main/fcgu-mirrorlist) is an own package that should be available from all mirror servers. You need to install.
 
 ```
-# pacman -U https://br-mirror.amanoteam.com/fcgu/fcgu-mirrorlist-3-1-any.pkg.tar.zst
+# pacman -U https://br-mirror.amanoteam.com/fcgu/fcgu-mirrorlist-4-2-any.pkg.tar.zst
 ```
 
 ### Repository
