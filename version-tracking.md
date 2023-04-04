@@ -89,7 +89,7 @@
 |---------------|:---------:|:-------:|--------|
 | gnome-keyring | 42.1      |    X    | gcr-4  |
 | grilo         | 0.3.15    |    X    | gnome-music(libsoup3) |
-| grilo-plugins | 0.3.15    |    X    | libdmapsharing4 |
+| grilo-plugins | 0.3.16    |    X    | libdmapsharing4 |
 | libnma        | 1.10.6    |    X    | gcr-4  |
 
 
