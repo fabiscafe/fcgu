@@ -66,7 +66,7 @@
 | libpeas                   | 1.36.0          |    X    |
 | librsvg                   | Arch Linux      |    X    |
 | libsoup3                  | Arch Linux      |    X    |
-| loupe                     | 2023-04-03(main)|    X    |
+| loupe                     | 44.0            |    X    |
 | mutter                    | 44.0            |    X    |
 | nautilus                  | 44.0            |    X    |
 | orca                      | ORCA_44_0       |    X    |

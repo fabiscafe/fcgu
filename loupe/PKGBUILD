@@ -1,9 +1,9 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=loupe
-pkgver=0.0.0+r296+36188ae
-pkgrel=1
-pkgdesc="A simple image viewer for GNOME (pre-release)"
+pkgver=44.0
+pkgrel=0.1
+pkgdesc="A simple image viewer for GNOME"
 url="https://gitlab.gnome.org/Incubator/loupe"
 arch=(x86_64)
 license=(GPL)
@@ -27,13 +27,13 @@ makedepends=(
   meson
   rust
 )
-_commit=36188aece7e168cbf02f7405f04e0058263c4d34  # main^0
+_commit=1b184868263af998b03a2b5f1b57e8fbf041bc21  # tags/44.0^0
 source=("git+https://gitlab.gnome.org/Incubator/loupe.git#commit=$_commit")
 sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgname
-  printf "0.0.0+r%s+%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git describe --tags | sed -r 's/^v//;s/[^-]*-g/r&/;s/-/+/g'
 }
 
 prepare() {
