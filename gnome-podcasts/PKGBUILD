@@ -2,7 +2,7 @@
 # Contributor: Balló György <ballogyor+arch at gmail dot com>
 
 pkgname=gnome-podcasts
-pkgver=0.5.1+r96+g9d8eb672
+pkgver=0.5.1+r99+g922b9d3d
 pkgrel=1
 pkgdesc="Podcast application for GNOME"
 arch=(x86_64)
@@ -37,7 +37,7 @@ optdepends=(
   'gst-plugins-ugly: Extra media codecs'
   'gst-libav: Extra media codecs'
 )
-_commit=9d8eb6725ebff4c74d24429f6d19df6a81df0f97 # master^0
+_commit=922b9d3d8ca207007e23c93acff0c5b49d3c109c # master^0
 source=("git+https://gitlab.gnome.org/World/podcasts.git#commit=${_commit}")
 sha256sums=('SKIP')
 
