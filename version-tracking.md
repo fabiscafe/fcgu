@@ -72,7 +72,7 @@
 | orca                      | ORCA_44_0       |    X    |
 | pygobject                 | Arch Linux      |    X    |
 | sofia-sip                 | 1.13.14         |    X    |
-| simple-scan               | 44.0            |    X    |
+| simple-scan               | Arch Linux      |    X    |
 | sysprof                   | Arch Linux      |    X    |
 | tracker                   | Arch Linux      |    X    |
 | tracker-miners            | Arch Linux      |    X    |
