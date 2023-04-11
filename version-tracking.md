@@ -97,7 +97,7 @@
 ## Wontbuild
 
 ## Exclude
-- none
+- loupe > 44.0 (Will kept at this version until GNOME44.0 hits Arch because it requires GTK4.11)
 
 # Versioning
 ## Git snapshots
