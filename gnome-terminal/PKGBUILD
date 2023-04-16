@@ -3,7 +3,7 @@
 # Contributor: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-terminal
-pkgver=3.48.0
+pkgver=3.48.1
 pkgrel=0.1
 pkgdesc="The GNOME Terminal Emulator"
 url="https://wiki.gnome.org/Apps/Terminal"
@@ -22,7 +22,7 @@ makedepends=(
   yelp-tools
 )
 groups=(gnome-extra)
-_commit=61eb2ac110bac5c86a1250de7cfb8d2ae8da47a0  # tags/3.48.0^0
+_commit=1446ff0abc478bdd03c6665b718214d075729024  # tags/3.48.1^0
 source=("git+https://gitlab.gnome.org/GNOME/gnome-terminal.git#commit=$_commit")
 sha256sums=('SKIP')
 
