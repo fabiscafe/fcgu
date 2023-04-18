@@ -8,7 +8,7 @@
 | at-spi2-core              | Arch Linux      |    X    |
 | baobab                    | Arch Linux      |    X    |
 | callaudiod                | 0.1.6           |    X    |
-| cheese                    | 44.0            |    X    |
+| cheese                    | 44.0.1          |    X    |
 | clapper                   | 0.5.2           |    X    |
 | d-spy                     | Arch Linux      |    X    |
 | eog                       | Arch Linux      |    X    |
