@@ -33,7 +33,7 @@
 | gnome-clocks              | 44.0            |    X    |
 | gnome-connections         | 44.0            |    X    |
 | gnome-contacts            | 44.0            |    X    |
-| gnome-control-center      | 44.0            |    X    |
+| gnome-control-center      | 44.1            |    X    |
 | gnome-desktop             | 44.0            |    X    |
 | gnome-disks-utility       | Arch Linux      |    X    |
 | gnome-font-viewer         | 44.0            |    X    |
