@@ -38,7 +38,7 @@
 | gnome-disks-utility       | Arch Linux      |    X    |
 | gnome-font-viewer         | 44.0            |    X    |
 | gnome-initial-setup       | 44.0            |    X    |
-| gnome-maps                | v44.0           |    X    |
+| gnome-maps                | v44.1           |    X    |
 | gnome-music               | 44.0            |    X    |
 | gnome-online-accounts     | 3.48.0          |    X    |
 | gnome-podcasts            | 2023-04-04 (master)|    X    |
