@@ -16,7 +16,7 @@
 | evince                    | 44.0            |    X    |
 | evolution                 | 3.48.1          |    X    |
 | evolution-data-server     | 3.48.1          |    X    |
-| evolution-ews             | 3.48.0          |    X    |
+| evolution-ews             | 3.48.1          |    X    |
 | feedbackd                 | 0.1.1           |    X    |
 | gcr-4                     | 4.1.0           |    X    |
 | gdm                       | Arch Linux      |    X    |
