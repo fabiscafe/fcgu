@@ -8,7 +8,7 @@ pkgname=(
   gnome-software
   gnome-software-packagekit-plugin
 )
-pkgver=44.0
+pkgver=44.1
 pkgrel=0.1
 pkgdesc="GNOME Software Tools"
 url="https://wiki.gnome.org/Apps/Software/"
@@ -34,7 +34,7 @@ makedepends=(
   malcontent
   meson
 )
-_commit=5ecb94a720ca304d0e6fa7071a13cb4f1e69e158  # tags/44.0^0
+_commit=9afc9643998f39817b9c70f772535178da45b95d  # tags/44.1^0
 source=(
   "git+https://gitlab.gnome.org/GNOME/gnome-software.git#commit=$_commit"
   "git+https://gitlab.gnome.org/mwleeds/gnome-pwa-list.git"
