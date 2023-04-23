@@ -68,7 +68,7 @@
 | libsoup3                  | Arch Linux      |    X    |
 | loupe                     | 44.0            |    X    |
 | mutter                    | 44.0            |    X    |
-| nautilus                  | 44.0            |    X    |
+| nautilus                  | 44.1            |    X    |
 | orca                      | ORCA_44_0       |    X    |
 | pygobject                 | Arch Linux      |    X    |
 | sofia-sip                 | 1.13.14         |    X    |
