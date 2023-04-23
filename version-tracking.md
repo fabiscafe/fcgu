@@ -53,7 +53,7 @@
 | gnome-terminal            | 3.48.1          |    X    |
 | gnome-text-editor         | 44.0            |    X    |
 | gnome-tour                | 44.0            |    X    |
-| gnome-user-docs           | 44.0            |    X    |
+| gnome-user-docs           | 44.1            |    X    |
 | gnome-weather             | 44.0            |    X    |
 | gobject-introspection     | Arch Linux      |    X    |
 | gsettings-desktop-schemas | Arch Linux      |    X    |
