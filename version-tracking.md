@@ -12,7 +12,7 @@
 | clapper                   | 0.5.2           |    X    |
 | d-spy                     | Arch Linux      |    X    |
 | eog                       | Arch Linux      |    X    |
-| epiphany                  | 44.1            |    X    |
+| epiphany                  | 44.2            |    X    |
 | evince                    | 44.0            |    X    |
 | evolution                 | 3.48.1          |    X    |
 | evolution-data-server     | 3.48.1          |    X    |
