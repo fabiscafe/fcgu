@@ -28,7 +28,7 @@
 | gnome-builder             | 44.1            |    X    |
 | gnome-calculator          | 44.0            |    X    |
 | gnome-calendar            | 44.1            |    X    |
-| gnome-calls               | v44.0           |    X    |
+| gnome-calls               | v44.1           |    X    |
 | gnome-characters          | 44.0            |    X    |
 | gnome-clocks              | 44.0            |    X    |
 | gnome-connections         | 44.0            |    X    |
