@@ -97,7 +97,7 @@ Once the stable version of GNOME arrives Arch Linux official repository, fcgu wi
 ### Why do I get downgrade warnings?
 
 ```
-warning: $package: downgrading from version 1:2.34.5+678+g91011d12-1 to version 1:2.34.5+r678+g91011d12-1
+warning: <package>: downgrading from version 1:2.34.5+678+g91011d12-1 to version 1:2.34.5+r678+g91011d12-1
 ```
 
 Sometimes this repo needs to revert versions or change the version numbers scheme. Please use `pacman -Syuu` in these cases.
@@ -125,6 +125,24 @@ In order to do this, the PKGBUILDs would need a lot of extra work and testing, j
 ### I want to provide a mirror.
 If you want to have your own mirror, please do a [PR](https://codeberg.org/fabiscafe/fcgu/pulls) and add your mirror to the [fcgu-mirrorlist](https://codeberg.org/fabiscafe/fcgu/src/branch/main/fcgu-mirrorlist/mirrorlist). If that's done. [Join us on matrix](https://codeberg.org/fabiscafe/fcgu#chat-matrix), as we also need your servers IP6/4 addresses to allow the sync. Alternatively you can also ask one of the current mirror providers in order to mirror a mirror.
 
+### What do the cryptic pkgrel/pkgver numbers mean?
+FCGU tries to keep versions in between what is currently in Arch Linux and what will be in Arch Linux next. So a hassle-free upgrade will be possible. A few rules must be observed for this.
+
+#### Stable releases
+* pkgrel: 1 -> 0.1
+* pkgver: `sed -r '/\.([0-9])/!s/$/\.0/;s/[^-]*-g/r&/;s/-/+/g'`
+  * X -> X.0
+
+#### Dev releases
+* pkgver: `sed -r 's/\.([a-z])/\1/;s/([a-z])\./\1/;s/[^-]*-g/r&/;s/-/+/g'`
+  * X.beta.1 -> X.beta1
+  * X.1.beta -> X.1beta
+  * X.0.beta.1 -> X.0beta.1
+
+#### Git snapshots
+* pkgver: `sed 's/[^-]*-g/r&/;s/-/+/g'`
+  * tag+r60+g3f9dba93c
+
 ## Troubleshooting
 ### error: GPGME error: No data
 You might have hit a broken mirrorserver. Please [report this](https://codeberg.org/fabiscafe/fcgu/issues).
@@ -133,3 +151,103 @@ Feel free to switch to another mirror. In case you still can't sync (`-Syu`) you
 ```
 rm "/var/lib/pacman/sync/fcgu.db"
 ```
+
+## Served packages / PKGBUILDs
+Packages that are or were provided by FCGU.
+
+| Package                   |  Version / Tag  |
+|---------------------------|:---------------:|
+| adwaita-icon-theme        | 44.0            |
+| at-spi2-core              | Arch Linux      |
+| baobab                    | Arch Linux      |
+| callaudiod                | 0.1.6           |
+| cheese                    | 44.0.1          |
+| clapper                   | 0.5.2           |
+| d-spy                     | Arch Linux      |
+| eog                       | Arch Linux      |
+| epiphany                  | 44.2            |
+| evince                    | 44.0            |
+| evolution                 | 3.48.1          |
+| evolution-data-server     | 3.48.1          |
+| evolution-ews             | 3.48.1          |
+| feedbackd                 | 0.1.1           |
+| gcr-4                     | 4.1.0           |
+| gdm                       | Arch Linux      |
+| gjs                       | 1.76.0          |
+| glib2                     | Arch Linux      |
+| glib-networking           | Arch Linux      |
+| gnome-backgrounds         | 44.0            |
+| gnome-boxes               | 44.1            |
+| gnome-builder             | 44.1            |
+| gnome-calculator          | 44.0            |
+| gnome-calendar            | 44.1            |
+| gnome-calls               | v44.1           |
+| gnome-characters          | 44.0            |
+| gnome-clocks              | 44.0            |
+| gnome-connections         | 44.0            |
+| gnome-contacts            | 44.0            |
+| gnome-control-center      | 44.1            |
+| gnome-desktop             | 44.0            |
+| gnome-disks-utility       | Arch Linux      |
+| gnome-font-viewer         | 44.0            |
+| gnome-initial-setup       | 44.0            |
+| gnome-maps                | v44.1           |
+| gnome-music               | 44.0            |
+| gnome-online-accounts     | 3.48.0          |
+| gnome-podcasts            | 2023-04-04 (master)|
+| gnome-remote-desktop      | 44.1            |
+| gnome-session             | 44.0            |
+| gnome-settings-daemon     | 44.1            |
+| gnome-shell               | 44.0            |    Y    |
+| gnome-shell-extensions    | 44.0            |
+| gnome-software            | 44.1            |
+| gnome-sound-recorder      | 43.beta         |
+| gnome-system-monitor      | Arch Linux      |
+| gnome-terminal            | 3.48.1          |
+| gnome-text-editor         | 44.0            |
+| gnome-tour                | 44.0            |
+| gnome-user-docs           | 44.1            |
+| gnome-weather             | 44.0            |
+| gobject-introspection     | Arch Linux      |
+| gsettings-desktop-schemas | Arch Linux      |
+| gtksourceview5            | Arch Linux      |
+| jsonrpc-glib              | 3.44.0          |
+| libadwaita                | Arch Linux      |
+| libdex                    | 0.2.0           |
+| libdmapsharing4           | LIBDMAPSHARING_3_9_12|
+| libpanel                  | 1.2.0           |
+| libpeas                   | 1.36.0          |
+| librsvg                   | Arch Linux      |
+| libsoup3                  | Arch Linux      |
+| loupe                     | 44.0            |
+| mutter                    | 44.0            |
+| nautilus                  | 44.1            |
+| orca                      | ORCA_44_0       |
+| pygobject                 | Arch Linux      |
+| sofia-sip                 | 1.13.14         |
+| simple-scan               | Arch Linux      |
+| sysprof                   | Arch Linux      |
+| tracker                   | Arch Linux      |
+| tracker-miners            | Arch Linux      |
+| vte                       | Arch Linux      |
+| webkitgtk-6.0             | Arch Linux      |
+| wpewebkit                 | Arch Linux      |
+| xdg-desktop-portal-gnome  | 44.1            |
+
+
+### Arch Linux Rebuilds
+Packages that are in the same version that Arch Linux provides but had to be rebuilt to work with FCGU.
+
+| Package       |  Version  |  Reason |
+|---------------|:---------:|---------|
+| gnome-keyring | 42.1      | gcr-4   |
+| grilo         | 0.3.15    | gnome-music(libsoup3) |
+| grilo-plugins | 0.3.16    | libdmapsharing4 |
+| libnma        | 1.10.6    | gcr-4   |
+
+### Exclude
+Packages that can't be deployed.
+
+| Package       |  Version  |  Reason |
+|---------------|:---------:|---------|
+| loupe         | > 44.0    | requires GTK 4.11 |
