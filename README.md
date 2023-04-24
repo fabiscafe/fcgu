@@ -184,7 +184,7 @@ Packages that are or were provided by FCGU.
 | gnome-calls               | v44.1           |
 | gnome-characters          | 44.0            |
 | gnome-clocks              | 44.0            |
-| gnome-connections         | 44.0            |
+| gnome-connections         | 44.1            |
 | gnome-contacts            | 44.0            |
 | gnome-control-center      | 44.1            |
 | gnome-desktop             | 44.0            |
