@@ -170,7 +170,7 @@ Packages that are or were provided by FCGU.
 | evolution                 | 3.48.1          |
 | evolution-data-server     | 3.48.1          |
 | evolution-ews             | 3.48.1          |
-| feedbackd                 | 0.1.1           |
+| feedbackd                 | 0.2             |
 | gcr-4                     | 4.1.0           |
 | gdm                       | Arch Linux      |
 | gjs                       | 1.76.0          |
