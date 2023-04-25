@@ -198,7 +198,7 @@ Packages that are or were provided by FCGU.
 | gnome-remote-desktop      | 44.1            |
 | gnome-session             | 44.0            |
 | gnome-settings-daemon     | 44.1            |
-| gnome-shell               | 44.0            |    Y    |
+| gnome-shell               | 44.1            |
 | gnome-shell-extensions    | 44.0            |
 | gnome-software            | 44.1            |
 | gnome-sound-recorder      | 43.beta         |
