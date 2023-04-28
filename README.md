@@ -178,7 +178,7 @@ Packages that are or were provided by FCGU.
 | glib-networking           | Arch Linux      |
 | gnome-backgrounds         | 44.0            |
 | gnome-boxes               | 44.1            |
-| gnome-builder             | 44.1            |
+| gnome-builder             | 44.2            |
 | gnome-calculator          | 44.0            |
 | gnome-calendar            | 44.1            |
 | gnome-calls               | v44.1           |
