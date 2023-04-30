@@ -4,7 +4,7 @@
 pkgbase=gnome-builder
 pkgname=(gnome-builder)
 pkgver=44.2
-pkgrel=0.1
+pkgrel=0.2
 pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
 arch=(x86_64)
@@ -44,7 +44,6 @@ makedepends=(
   appstream-glib
   git
   gobject-introspection
-  jedi-language-server
   llvm
   mm-common
   python-sphinx_rtd_theme
@@ -88,7 +87,7 @@ check() (
 package_gnome-builder() {
   depends+=(libgit2.so)
   optdepends=(
-    'jedi-language-server: Python code assistance'
+    'python-lsp-server: Python code assistance'
     'bash-language-server: Shell code assistance'
   )
   groups=(gnome-extra)
