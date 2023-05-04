@@ -4,7 +4,7 @@
 pkgbase=gnome-builder
 pkgname=(gnome-builder)
 pkgver=44.2
-pkgrel=0.2
+pkgrel=0.3
 pkgdesc="An IDE for writing GNOME-based software"
 url="https://wiki.gnome.org/Apps/Builder"
 arch=(x86_64)
