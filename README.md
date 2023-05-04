@@ -222,7 +222,7 @@ Packages that are or were provided by FCGU.
 | loupe                     | 44.0            |
 | mutter                    | 44.1            |
 | nautilus                  | 44.1            |
-| orca                      | ORCA_44_0       |
+| orca                      | Arch Linux      |
 | pygobject                 | Arch Linux      |
 | sofia-sip                 | 1.13.14         |
 | simple-scan               | Arch Linux      |
