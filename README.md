@@ -216,7 +216,7 @@ Packages that are or were provided by FCGU.
 | libdex                    | 0.2.0           |
 | libdmapsharing4           | LIBDMAPSHARING_3_9_12|
 | libpanel                  | 1.2.0           |
-| libpeas                   | 1.36.0          |
+| libpeas                   | Arch Linux      |
 | librsvg                   | Arch Linux      |
 | libsoup3                  | Arch Linux      |
 | loupe                     | 44.0            |
