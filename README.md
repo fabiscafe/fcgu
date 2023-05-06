@@ -215,7 +215,7 @@ Packages that are or were provided by FCGU.
 | libadwaita                | Arch Linux      |
 | libdex                    | Arch Linux      |
 | libdmapsharing            | Arch Linux      |
-| libpanel                  | 1.2.0           |
+| libpanel                  | Arch Linux      |
 | libpeas                   | Arch Linux      |
 | librsvg                   | Arch Linux      |
 | libsoup3                  | Arch Linux      |
