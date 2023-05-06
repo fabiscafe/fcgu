@@ -165,7 +165,7 @@ Packages that are or were provided by FCGU.
 | clapper                   | 0.5.2           |
 | d-spy                     | Arch Linux      |
 | eog                       | Arch Linux      |
-| epiphany                  | 44.2            |
+| epiphany                  | Arch Linux      |
 | evince                    | 44.0            |
 | evolution                 | Arch Linux      |
 | evolution-data-server     | Arch Linux      |
