@@ -166,7 +166,7 @@ Packages that are or were provided by FCGU.
 | d-spy                     | Arch Linux      |
 | eog                       | Arch Linux      |
 | epiphany                  | Arch Linux      |
-| evince                    | 44.0            |
+| evince                    | Arch Linux      |
 | evolution                 | Arch Linux      |
 | evolution-data-server     | Arch Linux      |
 | evolution-ews             | Arch Linux      |
