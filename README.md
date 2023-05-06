@@ -197,7 +197,7 @@ Packages that are or were provided by FCGU.
 | gnome-podcasts            | 2023-04-04 (master)|
 | gnome-remote-desktop      | Arch Linux      |
 | gnome-session             | Arch Linux      |
-| gnome-settings-daemon     | 44.1            |
+| gnome-settings-daemon     | Arch Linux      |
 | gnome-shell               | Arch Linux      |
 | gnome-shell-extensions    | Arch Linux      |
 | gnome-software            | Arch Linux      |
