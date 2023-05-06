@@ -203,7 +203,7 @@ Packages that are or were provided by FCGU.
 | gnome-software            | 44.1            |
 | gnome-sound-recorder      | 43.beta         |
 | gnome-system-monitor      | Arch Linux      |
-| gnome-terminal            | 3.48.1          |
+| gnome-terminal            | Arch Linux      |
 | gnome-text-editor         | Arch Linux      |
 | gnome-tour                | Arch Linux      |
 | gnome-user-docs           | Arch Linux      |
