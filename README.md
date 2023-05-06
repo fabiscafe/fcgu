@@ -176,7 +176,7 @@ Packages that are or were provided by FCGU.
 | gjs                       | Arch Linux      |
 | glib2                     | Arch Linux      |
 | glib-networking           | Arch Linux      |
-| gnome-backgrounds         | 44.0            |
+| gnome-backgrounds         | Arch Linux      |
 | gnome-boxes               | Arch Linux      |
 | gnome-builder             | Arch Linux      |
 | gnome-calculator          | Arch Linux      |
