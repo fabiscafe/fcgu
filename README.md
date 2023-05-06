@@ -199,7 +199,7 @@ Packages that are or were provided by FCGU.
 | gnome-session             | 44.0            |
 | gnome-settings-daemon     | 44.1            |
 | gnome-shell               | Arch Linux      |
-| gnome-shell-extensions    | 44.0            |
+| gnome-shell-extensions    | Arch Linux      |
 | gnome-software            | Arch Linux      |
 | gnome-sound-recorder      | 43.beta         |
 | gnome-system-monitor      | Arch Linux      |
