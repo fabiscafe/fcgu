@@ -189,7 +189,7 @@ Packages that are or were provided by FCGU.
 | gnome-control-center      | 44.1            |
 | gnome-desktop             | Arch Linux      |
 | gnome-disks-utility       | Arch Linux      |
-| gnome-font-viewer         | 44.0            |
+| gnome-font-viewer         | Arch Linux      |
 | gnome-initial-setup       | 44.0            |
 | gnome-maps                | Arch Linux      |
 | gnome-music               | Arch Linux      |
