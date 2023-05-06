@@ -200,7 +200,7 @@ Packages that are or were provided by FCGU.
 | gnome-settings-daemon     | 44.1            |
 | gnome-shell               | 44.1            |
 | gnome-shell-extensions    | 44.0            |
-| gnome-software            | 44.1            |
+| gnome-software            | Arch Linux      |
 | gnome-sound-recorder      | 43.beta         |
 | gnome-system-monitor      | Arch Linux      |
 | gnome-terminal            | Arch Linux      |
