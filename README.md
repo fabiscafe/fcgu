@@ -232,7 +232,7 @@ Packages that are or were provided by FCGU.
 | vte                       | Arch Linux      |
 | webkitgtk-6.0             | Arch Linux      |
 | wpewebkit                 | Arch Linux      |
-| xdg-desktop-portal-gnome  | 44.1            |
+| xdg-desktop-portal-gnome  | Arch Linux      |
 
 
 ### Arch Linux Rebuilds
