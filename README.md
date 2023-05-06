@@ -241,7 +241,6 @@ Packages that are in the same version that Arch Linux provides but had to be reb
 | Package       |  Version  |  Reason |
 |---------------|:---------:|---------|
 | gnome-keyring | 42.1      | gcr-4   |
-| grilo         | 0.3.15    | gnome-music(libsoup3) |
 | grilo-plugins | 0.3.16    | libdmapsharing4 |
 | libnma        | 1.10.6    | gcr-4   |
 |libdmapsharing| 3.9.12    | transition from libdmapsharing4 |
