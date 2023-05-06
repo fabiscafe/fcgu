@@ -182,7 +182,7 @@ Packages that are or were provided by FCGU.
 | gnome-calculator          | Arch Linux      |
 | gnome-calendar            | Arch Linux      |
 | gnome-calls               | v44.1           |
-| gnome-characters          | 44.0            |
+| gnome-characters          | Arch Linux      |
 | gnome-clocks              | 44.0            |
 | gnome-connections         | 44.1            |
 | gnome-contacts            | 44.0            |
