@@ -179,7 +179,7 @@ Packages that are or were provided by FCGU.
 | gnome-backgrounds         | 44.0            |
 | gnome-boxes               | Arch Linux      |
 | gnome-builder             | Arch Linux      |
-| gnome-calculator          | 44.0            |
+| gnome-calculator          | Arch Linux      |
 | gnome-calendar            | 44.1            |
 | gnome-calls               | v44.1           |
 | gnome-characters          | 44.0            |
