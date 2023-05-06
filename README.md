@@ -192,7 +192,7 @@ Packages that are or were provided by FCGU.
 | gnome-font-viewer         | 44.0            |
 | gnome-initial-setup       | 44.0            |
 | gnome-maps                | Arch Linux      |
-| gnome-music               | 44.0            |
+| gnome-music               | Arch Linux      |
 | gnome-online-accounts     | Arch Linux      |
 | gnome-podcasts            | 2023-04-04 (master)|
 | gnome-remote-desktop      | 44.1            |
