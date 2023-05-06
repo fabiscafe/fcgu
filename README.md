@@ -211,7 +211,7 @@ Packages that are or were provided by FCGU.
 | gobject-introspection     | Arch Linux      |
 | gsettings-desktop-schemas | Arch Linux      |
 | gtksourceview5            | Arch Linux      |
-| jsonrpc-glib              | 3.44.0          |
+| jsonrpc-glib              | Arch Linux      |
 | libadwaita                | Arch Linux      |
 | libdex                    | 0.2.0           |
 | libdmapsharing            | Arch Linux      |
