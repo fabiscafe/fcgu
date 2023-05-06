@@ -214,7 +214,7 @@ Packages that are or were provided by FCGU.
 | jsonrpc-glib              | 3.44.0          |
 | libadwaita                | Arch Linux      |
 | libdex                    | 0.2.0           |
-| libdmapsharing4           | LIBDMAPSHARING_3_9_12|
+| libdmapsharing            | Arch Linux      |
 | libpanel                  | 1.2.0           |
 | libpeas                   | Arch Linux      |
 | librsvg                   | Arch Linux      |
