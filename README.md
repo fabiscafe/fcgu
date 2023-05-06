@@ -220,7 +220,7 @@ Packages that are or were provided by FCGU.
 | librsvg                   | Arch Linux      |
 | libsoup3                  | Arch Linux      |
 | loupe                     | 44.0            |
-| mutter                    | 44.1            |
+| mutter                    | Arch Linux      |
 | nautilus                  | Arch Linux      |
 | orca                      | Arch Linux      |
 | pygobject                 | Arch Linux      |
