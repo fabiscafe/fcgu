@@ -169,7 +169,7 @@ Packages that are or were provided by FCGU.
 | evince                    | 44.0            |
 | evolution                 | 3.48.1          |
 | evolution-data-server     | Arch Linux      |
-| evolution-ews             | 3.48.1          |
+| evolution-ews             | Arch Linux      |
 | feedbackd                 | 0.2             |
 | gcr-4                     | Arch Linux      |
 | gdm                       | Arch Linux      |
