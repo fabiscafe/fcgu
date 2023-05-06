@@ -186,7 +186,7 @@ Packages that are or were provided by FCGU.
 | gnome-clocks              | Arch Linux      |
 | gnome-connections         | Arch Linux      |
 | gnome-contacts            | Arch Linux      |
-| gnome-control-center      | 44.1            |
+| gnome-control-center      | Arch Linux      |
 | gnome-desktop             | Arch Linux      |
 | gnome-disks-utility       | Arch Linux      |
 | gnome-font-viewer         | Arch Linux      |
