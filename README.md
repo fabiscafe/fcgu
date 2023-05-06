@@ -161,7 +161,7 @@ Packages that are or were provided by FCGU.
 | at-spi2-core              | Arch Linux      |
 | baobab                    | Arch Linux      |
 | callaudiod                | 0.1.6           |
-| cheese                    | 44.0.1          |
+| cheese                    | Arch Linux      |
 | clapper                   | 0.5.2           |
 | d-spy                     | Arch Linux      |
 | eog                       | Arch Linux      |
