@@ -207,7 +207,7 @@ Packages that are or were provided by FCGU.
 | gnome-text-editor         | 44.0            |
 | gnome-tour                | 44.0            |
 | gnome-user-docs           | 44.1            |
-| gnome-weather             | 44.0            |
+| gnome-weather             | Arch Linux      |
 | gobject-introspection     | Arch Linux      |
 | gsettings-desktop-schemas | Arch Linux      |
 | gtksourceview5            | Arch Linux      |
