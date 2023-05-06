@@ -205,7 +205,7 @@ Packages that are or were provided by FCGU.
 | gnome-system-monitor      | Arch Linux      |
 | gnome-terminal            | 3.48.1          |
 | gnome-text-editor         | 44.0            |
-| gnome-tour                | 44.0            |
+| gnome-tour                | Arch Linux      |
 | gnome-user-docs           | Arch Linux      |
 | gnome-weather             | Arch Linux      |
 | gobject-introspection     | Arch Linux      |
