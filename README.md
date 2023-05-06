@@ -193,7 +193,7 @@ Packages that are or were provided by FCGU.
 | gnome-initial-setup       | 44.0            |
 | gnome-maps                | v44.1           |
 | gnome-music               | 44.0            |
-| gnome-online-accounts     | 3.48.0          |
+| gnome-online-accounts     | Arch Linux      |
 | gnome-podcasts            | 2023-04-04 (master)|
 | gnome-remote-desktop      | 44.1            |
 | gnome-session             | 44.0            |
