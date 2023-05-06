@@ -191,7 +191,7 @@ Packages that are or were provided by FCGU.
 | gnome-disks-utility       | Arch Linux      |
 | gnome-font-viewer         | 44.0            |
 | gnome-initial-setup       | 44.0            |
-| gnome-maps                | v44.1           |
+| gnome-maps                | Arch Linux      |
 | gnome-music               | 44.0            |
 | gnome-online-accounts     | Arch Linux      |
 | gnome-podcasts            | 2023-04-04 (master)|
