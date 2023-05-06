@@ -173,7 +173,7 @@ Packages that are or were provided by FCGU.
 | feedbackd                 | 0.2             |
 | gcr-4                     | Arch Linux      |
 | gdm                       | Arch Linux      |
-| gjs                       | 1.76.0          |
+| gjs                       | Arch Linux      |
 | glib2                     | Arch Linux      |
 | glib-networking           | Arch Linux      |
 | gnome-backgrounds         | 44.0            |
