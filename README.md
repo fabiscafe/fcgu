@@ -221,7 +221,7 @@ Packages that are or were provided by FCGU.
 | libsoup3                  | Arch Linux      |
 | loupe                     | 44.0            |
 | mutter                    | 44.1            |
-| nautilus                  | 44.1            |
+| nautilus                  | Arch Linux      |
 | orca                      | Arch Linux      |
 | pygobject                 | Arch Linux      |
 | sofia-sip                 | 1.13.14         |
