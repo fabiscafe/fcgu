@@ -180,7 +180,7 @@ Packages that are or were provided by FCGU.
 | gnome-boxes               | Arch Linux      |
 | gnome-builder             | Arch Linux      |
 | gnome-calculator          | Arch Linux      |
-| gnome-calendar            | 44.1            |
+| gnome-calendar            | Arch Linux      |
 | gnome-calls               | v44.1           |
 | gnome-characters          | 44.0            |
 | gnome-clocks              | 44.0            |
