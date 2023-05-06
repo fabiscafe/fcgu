@@ -213,7 +213,7 @@ Packages that are or were provided by FCGU.
 | gtksourceview5            | Arch Linux      |
 | jsonrpc-glib              | Arch Linux      |
 | libadwaita                | Arch Linux      |
-| libdex                    | 0.2.0           |
+| libdex                    | Arch Linux      |
 | libdmapsharing            | Arch Linux      |
 | libpanel                  | 1.2.0           |
 | libpeas                   | Arch Linux      |
