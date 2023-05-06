@@ -168,7 +168,7 @@ Packages that are or were provided by FCGU.
 | epiphany                  | 44.2            |
 | evince                    | 44.0            |
 | evolution                 | 3.48.1          |
-| evolution-data-server     | 3.48.1          |
+| evolution-data-server     | Arch Linux      |
 | evolution-ews             | 3.48.1          |
 | feedbackd                 | 0.2             |
 | gcr-4                     | Arch Linux      |
