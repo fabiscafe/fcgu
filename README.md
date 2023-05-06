@@ -190,7 +190,7 @@ Packages that are or were provided by FCGU.
 | gnome-desktop             | Arch Linux      |
 | gnome-disks-utility       | Arch Linux      |
 | gnome-font-viewer         | Arch Linux      |
-| gnome-initial-setup       | 44.0            |
+| gnome-initial-setup       | Arch Linux      |
 | gnome-maps                | Arch Linux      |
 | gnome-music               | Arch Linux      |
 | gnome-online-accounts     | Arch Linux      |
