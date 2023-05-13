@@ -224,7 +224,7 @@ Packages that are or were provided by FCGU.
 | nautilus                  | Arch Linux      |
 | orca                      | Arch Linux      |
 | pygobject                 | Arch Linux      |
-| sofia-sip                 | 1.13.14         |
+| sofia-sip                 | 1.13.15         |
 | simple-scan               | Arch Linux      |
 | sysprof                   | Arch Linux      |
 | tracker                   | Arch Linux      |
