@@ -55,20 +55,20 @@ Here is a preview how it should look:
 # repo name header and Include lines. You can add preferred servers immediately
 # after the header, and they will be used before the default mirrors.
 
-#[testing]
-#Include = /etc/pacman.d/mirrorlist
-
 [fcgu]
 Include = /etc/pacman.d/fcgu-mirrorlist
+
+#[core-testing]
+#Include = /etc/pacman.d/mirrorlist
 
 [core]
 Include = /etc/pacman.d/mirrorlist
 
+#[extra-testing]
+#Include = /etc/pacman.d/mirrorlist
+
 [extra]
 Include = /etc/pacman.d/mirrorlist
-
-#[community-testing]
-#Include = /etc/pacman.d/mirrorlist
 ...
 ```
 
