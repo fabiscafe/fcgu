@@ -160,7 +160,7 @@ Packages that are or were provided by FCGU.
 | adwaita-icon-theme        | Arch Linux      |
 | at-spi2-core              | Arch Linux      |
 | baobab                    | Arch Linux      |
-| callaudiod                | 0.1.8           |
+| callaudiod                | 0.1.9           |
 | cheese                    | Arch Linux      |
 | clapper                   | 0.5.2           |
 | d-spy                     | Arch Linux      |

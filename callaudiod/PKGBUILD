@@ -1,7 +1,7 @@
 # Maintainer: Fabian Bornschein <fabiscafe-cat-mailbox-dog-org>
 
 pkgname=callaudiod
-pkgver=0.1.8
+pkgver=0.1.9
 pkgrel=0.1
 pkgdesc="Call audio routing daemon"
 arch=(x86_64)
@@ -18,7 +18,7 @@ makedepends=(
   gtk-doc
   meson
 )
-_commit=b9f431aaf558408401c8170175bdfd9d6a121edc  # tags/0.1.8^0
+_commit=50d1ac3792aac03abe0a3a88ceac77201a43bb3b  # tags/0.1.9^0
 source=("git+https://gitlab.com/mobian1/callaudiod.git#commit=$_commit")
 sha256sums=('SKIP')
 
