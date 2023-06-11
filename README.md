@@ -157,82 +157,14 @@ Packages that are or were provided by FCGU.
 
 | Package                   |  Version / Tag  |
 |---------------------------|:---------------:|
-| adwaita-icon-theme        | Arch Linux      |
-| at-spi2-core              | Arch Linux      |
-| baobab                    | Arch Linux      |
 | callaudiod                | 0.1.9           |
-| cheese                    | Arch Linux      |
 | clapper                   | 0.5.2           |
-| d-spy                     | Arch Linux      |
-| eog                       | Arch Linux      |
-| epiphany                  | Arch Linux      |
-| evince                    | Arch Linux      |
-| evolution                 | Arch Linux      |
-| evolution-data-server     | Arch Linux      |
-| evolution-ews             | Arch Linux      |
 | feedbackd                 | 0.2             |
-| gcr-4                     | Arch Linux      |
-| gdm                       | Arch Linux      |
-| gjs                       | Arch Linux      |
-| glib2                     | Arch Linux      |
-| glib-networking           | Arch Linux      |
-| gnome-backgrounds         | Arch Linux      |
-| gnome-boxes               | Arch Linux      |
-| gnome-builder             | Arch Linux      |
-| gnome-calculator          | Arch Linux      |
-| gnome-calendar            | Arch Linux      |
 | gnome-calls               | v44.1           |
-| gnome-characters          | Arch Linux      |
-| gnome-clocks              | Arch Linux      |
-| gnome-connections         | Arch Linux      |
-| gnome-contacts            | Arch Linux      |
-| gnome-control-center      | Arch Linux      |
-| gnome-desktop             | Arch Linux      |
-| gnome-disks-utility       | Arch Linux      |
-| gnome-font-viewer         | Arch Linux      |
-| gnome-initial-setup       | Arch Linux      |
-| gnome-maps                | Arch Linux      |
-| gnome-music               | Arch Linux      |
-| gnome-online-accounts     | Arch Linux      |
 | gnome-podcasts            | 2023-04-04 (master)|
-| gnome-remote-desktop      | Arch Linux      |
-| gnome-session             | Arch Linux      |
-| gnome-settings-daemon     | Arch Linux      |
-| gnome-shell               | Arch Linux      |
-| gnome-shell-extensions    | Arch Linux      |
-| gnome-software            | Arch Linux      |
 | gnome-sound-recorder      | 43.beta         |
-| gnome-system-monitor      | Arch Linux      |
-| gnome-terminal            | Arch Linux      |
-| gnome-text-editor         | Arch Linux      |
-| gnome-tour                | Arch Linux      |
-| gnome-user-docs           | Arch Linux      |
-| gnome-weather             | Arch Linux      |
-| gobject-introspection     | Arch Linux      |
-| gsettings-desktop-schemas | Arch Linux      |
-| gtksourceview5            | Arch Linux      |
-| jsonrpc-glib              | Arch Linux      |
-| libadwaita                | Arch Linux      |
-| libdex                    | Arch Linux      |
-| libdmapsharing            | Arch Linux      |
-| libpanel                  | Arch Linux      |
-| libpeas                   | Arch Linux      |
-| librsvg                   | Arch Linux      |
-| libsoup3                  | Arch Linux      |
 | loupe                     | 44.0            |
-| mutter                    | Arch Linux      |
-| nautilus                  | Arch Linux      |
-| orca                      | Arch Linux      |
-| pygobject                 | Arch Linux      |
 | sofia-sip                 | 1.13.15         |
-| simple-scan               | Arch Linux      |
-| sysprof                   | Arch Linux      |
-| tracker                   | Arch Linux      |
-| tracker-miners            | Arch Linux      |
-| vte                       | Arch Linux      |
-| webkitgtk-6.0             | Arch Linux      |
-| wpewebkit                 | Arch Linux      |
-| xdg-desktop-portal-gnome  | Arch Linux      |
 
 
 ### Arch Linux Rebuilds
