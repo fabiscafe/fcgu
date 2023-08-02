@@ -2,7 +2,7 @@
 
 pkgname=fcgu-mirrorlist
 pkgver=4
-pkgrel=2
+pkgrel=3
 pkgdesc="The fcgu mirror list file"
 url="https://gitlab.com/fabiscafe/gnome-unstable"
 arch=(any)
