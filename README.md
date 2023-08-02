@@ -1,5 +1,5 @@
 # FCGU - Repo for GNOME pre-releases
-"FCGU" is a Git repo that provides PKGBUILDs as well as a binary repo of GNOME pre-releases for [**Arch Linux**](https://archlinux.org). It's made for testing and bughunting purposes and so contains *beta* and *rc* releases most of the time.
+"FCGU" is a Git repo that provides PKGBUILDs as well as a binary repo of GNOME pre-releases for [**Arch Linux**](https://archlinux.org). It's made for testing and bughunting purposes and so contains *beta* and *rc* releases most of the time. The actual PKGBUILD are nowadays to be found at [gitlab.archlinux.org](https://gitlab.archlinux.org/fabiscafe), in the "fcgu"-branch of every git repo.
 
 ### Support
 #### Ko-Fi (Also for Paypal and one-time donations)
@@ -151,32 +151,3 @@ Feel free to switch to another mirror. In case you still can't sync (`-Syu`) you
 ```
 rm "/var/lib/pacman/sync/fcgu.db"
 ```
-
-## Served packages / PKGBUILDs
-Packages that are or were provided by FCGU.
-
-| Package                   |  Version / Tag  |
-|---------------------------|:---------------:|
-| callaudiod                | 0.1.9           |
-| clapper                   | 0.5.2           |
-| feedbackd                 | 0.2             |
-| gnome-calls               | v44.1           |
-| gnome-podcasts            | 2023-04-04 (master)|
-| gnome-sound-recorder      | 43.beta         |
-| loupe                     | 44.0            |
-| sofia-sip                 | 1.13.15         |
-
-
-### Arch Linux Rebuilds
-Packages that are in the same version that Arch Linux provides but had to be rebuilt to work with FCGU.
-
-| Package       |  Version  |  Reason |
-|---------------|:---------:|---------|
-|libdmapsharing| 3.9.12    | transition from libdmapsharing4 |
-
-### Exclude
-Packages that can't be deployed.
-
-| Package       |  Version  |  Reason |
-|---------------|:---------:|---------|
-| loupe         | > 44.0    | requires GTK 4.11 |
